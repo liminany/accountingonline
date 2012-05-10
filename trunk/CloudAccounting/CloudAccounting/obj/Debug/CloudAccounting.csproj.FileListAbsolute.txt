@@ -1,0 +1,8 @@
+D:\project\code\CloudAccounting\CloudAccounting\bin\CloudAccounting.dll
+D:\project\code\CloudAccounting\CloudAccounting\bin\CloudAccounting.pdb
+D:\project\code\CloudAccounting\CloudAccounting\obj\Debug\ResolveAssemblyReference.cache
+D:\project\code\CloudAccounting\CloudAccounting\obj\Debug\CloudAccounting.dll
+D:\project\code\CloudAccounting\CloudAccounting\obj\Debug\CloudAccounting.pdb
+D:\project\code\CloudAccounting\CloudAccounting\bin\log4net.xml
+D:\project\code\CloudAccounting\CloudAccounting\bin\log4net.dll
+D:\project\code\CloudAccounting\CloudAccounting\bin\log4net.pdb
