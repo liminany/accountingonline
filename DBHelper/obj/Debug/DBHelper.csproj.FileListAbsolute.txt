@@ -1,0 +1,9 @@
+D:\project\LiveKora\DBHelper\bin\Debug\DBHelper.dll
+D:\project\LiveKora\DBHelper\bin\Debug\DBHelper.pdb
+D:\project\LiveKora\DBHelper\obj\Debug\ResolveAssemblyReference.cache
+D:\project\LiveKora\DBHelper\obj\Debug\DBHelper.dll
+D:\project\LiveKora\DBHelper\obj\Debug\DBHelper.pdb
+D:\project\ArabiSky\DBHelper\bin\Debug\DBHelper.dll
+D:\project\ArabiSky\DBHelper\bin\Debug\DBHelper.pdb
+D:\project\ArabiSky\DBHelper\obj\Debug\DBHelper.dll
+D:\project\ArabiSky\DBHelper\obj\Debug\DBHelper.pdb

@@ -1,0 +1,383 @@
+﻿using System;
+using DAL;
+using Entity;
+using NLog;
+
+public partial class ViewAds : System.Web.UI.Page
+{
+    #region variables
+    private static Logger _logger = LogManager.GetCurrentClassLogger();
+    #endregion
+
+    #region Events
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        try
+        {
+            if (!IsPostBack)
+            {
+                if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+                {
+                    if (FormsFunction.GetCookieData().Length != 0)
+                    {
+                        UserAuthentication objUserAuthentication = new UserAuthentication();
+                        string[] arrUserCookieInfo = FormsFunction.GetCookieData();
+                        hfUserID.Value = arrUserCookieInfo[0].ToString();
+                    }
+                    else
+                    {
+                        UserAuthentication objUserAuthentication = new UserAuthentication();
+                        EntityRegUsers objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
+                        if (objEntityRegUsers != null)
+                        {
+                            objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(objEntityRegUsers.UserID);
+                            hfUserID.Value = objEntityRegUsers.UserID.ToString();
+                        }
+                    }
+
+                    DBAdsManager objDBAdsManager = new DBAdsManager();
+                    int nSubCatID = 0;
+                    int nAdsID = 0;
+                    int nAdsHit = 0;
+                    foreach (System.Data.DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"].ToString())).Tables[0].Rows)
+                    {
+                        sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='Category?CatID=" + rows["SubCatID"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
+                        spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
+                        sp_Price.InnerHtml = string.Format("السعر {0} {1}", rows["AdsPrice"].ToString(), GetCurrancyTags());
+                        liCity.InnerHtml = "المدينة : " + rows["CityName"].ToString();
+                        liCountry.InnerHtml = "البلد : " + rows["CountryName"].ToString();
+                        liCreateDate.InnerHtml = "تاريخ الإضافة : " + Convert.ToDateTime(rows["AdsCreateDate"].ToString()).ToShortDateString();
+                        liSection.InnerHtml = "القسم : " + rows["CatName"].ToString();
+                        liSubSection.InnerHtml = "القسم الفرعي : " + rows["SubCategoriesName"].ToString();
+                        hfUpdateDateTime.Value = rows["AdsUpdateCreateDate"].ToString();
+                        nAdsID = Convert.ToInt32(rows["AdsID"].ToString());
+                        nSubCatID = Convert.ToInt32(rows["SubCatID"].ToString());
+                        nAdsHit = Convert.ToInt32(rows["AdsHit"].ToString());
+
+                        hfAdsUserIDOwner.Value = rows["UserID"].ToString();
+                        if (hfAdsUserIDOwner.Value == hfUserID.Value)
+                        {
+                            UserControls.Style.Add("display", "");
+                            div_ContactUser.Style.Add("display", "none");
+                            div_ContactSpace.Style.Add("display", "");
+                        }
+                        else
+                        {
+                            div_ContactUser.Style.Add("display", "");
+                            UserControls.Style.Add("display", "none");
+                            div_ContactSpace.Style.Add("display", "none");
+                        }
+                        if (!string.IsNullOrEmpty(rows["AdsYoutubeURL"].ToString()))
+                        {
+                            div_YouTube.Style.Add("display", "");
+                            div_YouTubeURL.InnerHtml = string.Format("<iframe width='680' height='400' src='{0}' frameborder='0' allowfullscreen=''></iframe>", RunVedio(rows["AdsYoutubeURL"].ToString()));
+                        }
+                        else
+                        {
+                            div_YouTube.Style.Add("display", "none");
+                        }
+                        div_AdsDescription.InnerHtml = rows["AdsDescription"].ToString();
+                        if (!string.IsNullOrEmpty(rows["AdsImages"].ToString()))
+                        {
+                            div_Slider.Style.Add("display", "");
+                            ViewAdsImage(rows["AdsImages"].ToString());
+                        }
+                        else
+                        {
+                            div_Slider.Style.Add("display", "none");
+                        }
+                        rptSlimlerAds.DataSource = objDBAdsManager.GetSimlirAdsTen(nSubCatID, GetCountryCode());
+                        rptSlimlerAds.DataBind();
+
+                        #region UserProfile
+                        sp_UserFullName.InnerHtml = rows["User_FullName"].ToString();
+                        aEmailAddress.InnerHtml = rows["User_EmailAddress"].ToString();
+                        ahrefUserProfile.HRef = "UserProfile?UserID=" + rows["UserID"].ToString();
+                        if (string.IsNullOrEmpty(rows["User_Image"].ToString()))
+                        {
+                            imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                        }
+                        else
+                        {
+                            imgUserProfile.Src = rows["User_Image"].ToString();
+                        }
+                        #endregion
+                    }
+
+                    #region AdsCounterHit
+                    nAdsHit = nAdsHit + 1;
+                    objDBAdsManager.EditAdsCounter(nAdsID, nAdsHit);
+                    #endregion
+
+                    #region Reactive Ads
+                    TimeSpan t = Convert.ToDateTime(hfUpdateDateTime.Value) - DateTime.Now;
+                    if (t.TotalDays >= 0)
+                    {
+                        btnReactivateAds.Visible = false;
+                    }
+                    else
+                    {
+                        if (string.IsNullOrEmpty(hfUserID.Value) || hfAdsUserIDOwner.Value != hfUserID.Value)
+                        {
+                            Response.Redirect("/", false);
+                        }
+                        else
+                        {
+                            btnReactivateAds.Visible = true;
+                        }
+                    }
+
+                    #endregion
+                }
+                else
+                {
+                    Response.Redirect("Login", false);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("ViewAds:::Page_Load:::" + ex.Message);
+        }
+    }
+    protected void btnRejected_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            DBAdsManager objDBAdsManager = new DBAdsManager();
+            int nRetunValue = objDBAdsManager.DeleteAdsAndRejected(int.Parse(Request.QueryString["AdsID"].ToString()));
+            if (nRetunValue == 1)
+            {
+                Response.Redirect("PinddingAds");
+            }
+            else
+            {
+                //sp_UserMessage.InnerHtml = "هناك خطأ في رفض الاعلان الرجاء مراجعة الدعم الفني";
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("ViewAds:::btnRejected_Click:::" + ex.Message);
+        }
+    }
+    protected void btnAccepted_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            DBAdsManager objDBAdsManager = new DBAdsManager();
+            int nRetunValue = objDBAdsManager.ApprovedAds(int.Parse(Request.QueryString["AdsID"].ToString()));
+            if (nRetunValue == 1)
+            {
+                Response.Redirect("PinddingAds");
+            }
+            else
+            {
+                //sp_UserMessage.InnerHtml = "هناك خطأ في قبول الاعلان الرجاء مراجعة الدعم الفني";
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("ViewAds:::btnAccepted_Click:::" + ex.Message);
+        }
+    }
+    protected void btnSendMessage_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            DBUserMessages objDBUserMessages = new DBUserMessages();
+            UserMessages objUserMessages = new UserMessages();
+            objUserMessages.MessageUserID = Convert.ToInt32(hfAdsUserIDOwner.Value);
+            objUserMessages.MessageSendUsers = Convert.ToInt32(hfUserID.Value);
+            objUserMessages.MessageTitle = txtMessageTitle.Text;
+            objUserMessages.MessageBody = editor.Value;
+            int nRetuenValue = objDBUserMessages.SendNewMessageForUser(objUserMessages);
+            if (nRetuenValue == 1)
+            {
+                div_UserMessage.InnerHtml = "لقد تم إرسال الرسالة بنجاح";
+            }
+            else
+            {
+                div_UserMessage.InnerHtml = "هناك خطأ في إرسال الرسالة الرجاء المحاولة فيما بعد";
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("mail:::btnSendMessage_Click:::" + ex.Message);
+        }
+    }
+    protected void btnDeleteAds_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+            {
+                DBAdsManager objDBAdsManager = new DBAdsManager();
+                int nReturnValue = objDBAdsManager.DeleteAdsAndRejected(int.Parse(Request.QueryString["AdsID"].ToString()));
+                if (nReturnValue == 1)
+                {
+                    Response.Redirect("MyAds");
+                }
+                else
+                {
+                    Response.Write("<script>alert('هناك خطأ في حذف الإعلان الرجاء المحاولة فيما بعد');</script>");
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("mail:::btnDeleteAds_Click:::" + ex.Message);
+        }
+    }
+    protected void btnReactivateAds_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+            {
+                DBAdsManager objDBAdsManager = new DBAdsManager();
+                DateTime updateDateTime = Convert.ToDateTime(hfUpdateDateTime.Value);
+                DateTime newUpdateDateTime = updateDateTime.AddDays(6);
+                int nReturnValue = objDBAdsManager.ReActivateAds(Convert.ToInt32(hfUserID.Value), Convert.ToInt32(Request.QueryString["AdsID"].ToString()), newUpdateDateTime);
+                if (nReturnValue == 1)
+                {
+                    Response.Write("<script>alert('لقد تم إعادة تفعيل الإعلان بنجاح');</script>");
+                    btnReactivateAds.Visible = false;
+                }
+                else
+                {
+                    Response.Write("<script>alert('هناك خطأ في إعادة تفعيل الإعلان الرجاء المحاولة فيما بعد');</script>");
+                    btnReactivateAds.Visible = true;
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("mail:::btnReactivateAds_Click:::" + ex.Message);
+        }
+    }
+    protected void btnEditAds_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+            {
+                Response.Redirect("AdsPage?AdsID=" + Request.QueryString["AdsID"].ToString(), false);
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("mail:::btnEditAds_Click:::" + ex.Message);
+        }
+    }
+    #endregion
+
+    #region Methods
+    private string GetCurrancyTags()
+    {
+        try
+        {
+            string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
+            if (!string.IsNullOrEmpty(arabiSkyCountry[0]))
+            {
+                switch (Convert.ToInt16(arabiSkyCountry[0]))
+                {
+                    case 12:
+                        return "دينار أردني";
+                    case 14:
+                        return "ريال سعودي";
+                    case 15:
+                        return "شيكل";
+                    default:
+                        return "دينار أردني";
+                }
+            }
+            else
+            {
+                return "دينار أردني";
+            }
+        }
+        catch (Exception)
+        {
+            return "دينار أردني";
+        }
+    }
+    private int GetCountryCode()
+    {
+        try
+        {
+            string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
+            if (!string.IsNullOrEmpty(arabiSkyCountry[0]))
+            {
+                return Convert.ToInt16(arabiSkyCountry[0]);
+            }
+            else
+            {
+                return 12;
+            }
+        }
+        catch (Exception)
+        {
+            return 12;
+        }
+    }
+    private void ViewAdsImage(string imagesURL)
+    {
+        try
+        {
+            string[] images = imagesURL.Split('|');
+            for (int i = 0; i < images.Length; i++)
+            {
+                ulVidewImages.InnerHtml = ulVidewImages.InnerHtml + "<li style='position: initial;'><img style='width:640px;height:377px;' src='" + images[i].Replace("~", "..") + "' /></li>";
+            }
+        }
+        catch (Exception)
+        {
+
+        }
+    }
+    protected string RunVedio(string VedioURL)
+    {
+        try
+        {
+            return "https://www.youtube.com/embed/" + GetThumnb(VedioURL) + "?feature=player_detailpage";
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
+    protected string GetThumnb(string sYoutubeURL)
+    {
+        try
+        {
+            string[] parts = sYoutubeURL.Split(new[] { "=" }, int.MaxValue, StringSplitOptions.None);
+            return parts[1];
+        }
+        catch (Exception)
+        {
+            return "null";
+        }
+    }
+    protected string CheckImage(string sImageURL)
+    {
+        try
+        {
+            string[] images = sImageURL.Split('|');
+            if (!string.IsNullOrEmpty(images[0]))
+            {
+                return images[0].ToString().Replace("~", "");
+            }
+            else
+            {
+                return "images/ArabiSkyLogo.png";
+            }
+        }
+        catch (Exception)
+        {
+            return "null";
+        }
+    }
+    #endregion 
+
+}
