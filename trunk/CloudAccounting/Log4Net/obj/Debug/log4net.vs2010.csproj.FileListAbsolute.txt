@@ -1,6 +1,0 @@
-D:\project\code\CloudAccounting\build\bin\net\2.0\debug\log4net.dll
-D:\project\code\CloudAccounting\build\bin\net\2.0\debug\log4net.pdb
-D:\project\code\CloudAccounting\build\bin\net\2.0\debug\log4net.xml
-D:\project\code\CloudAccounting\Log4Net\obj\Debug\ResolveAssemblyReference.cache
-D:\project\code\CloudAccounting\Log4Net\obj\Debug\log4net.dll
-D:\project\code\CloudAccounting\Log4Net\obj\Debug\log4net.pdb
