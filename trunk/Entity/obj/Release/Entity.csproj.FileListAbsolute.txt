@@ -1,0 +1,4 @@
+D:\project\LiveKora\Entity\bin\Release\Entity.dll
+D:\project\LiveKora\Entity\bin\Release\Entity.pdb
+D:\project\LiveKora\Entity\obj\Release\Entity.dll
+D:\project\LiveKora\Entity\obj\Release\Entity.pdb

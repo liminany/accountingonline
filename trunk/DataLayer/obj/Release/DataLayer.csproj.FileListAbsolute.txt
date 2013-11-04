@@ -1,0 +1,10 @@
+D:\project\LiveKora\DataLayer\bin\Release\DataLayer.dll
+D:\project\LiveKora\DataLayer\bin\Release\DataLayer.pdb
+D:\project\LiveKora\DataLayer\bin\Release\DBHelper.dll
+D:\project\LiveKora\DataLayer\bin\Release\Entity.dll
+D:\project\LiveKora\DataLayer\bin\Release\NLog.dll
+D:\project\LiveKora\DataLayer\bin\Release\DBHelper.pdb
+D:\project\LiveKora\DataLayer\bin\Release\Entity.pdb
+D:\project\LiveKora\DataLayer\obj\Release\ResolveAssemblyReference.cache
+D:\project\LiveKora\DataLayer\obj\Release\DataLayer.dll
+D:\project\LiveKora\DataLayer\obj\Release\DataLayer.pdb

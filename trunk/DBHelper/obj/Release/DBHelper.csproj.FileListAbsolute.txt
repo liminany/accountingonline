@@ -1,0 +1,4 @@
+D:\project\LiveKora\DBHelper\bin\Release\DBHelper.dll
+D:\project\LiveKora\DBHelper\bin\Release\DBHelper.pdb
+D:\project\LiveKora\DBHelper\obj\Release\DBHelper.dll
+D:\project\LiveKora\DBHelper\obj\Release\DBHelper.pdb

@@ -1,0 +1,137 @@
+﻿@font-face
+{
+    font-family: 'DINNextLTArabicLight';
+    src: url('font/dinnextltarabic-light.eot');
+    src: url('font/dinnextltarabic-light.eot') format('embedded-opentype'), url('../font/dinnextltarabic-light.woff') format('woff'), url('../font/dinnextltarabic-light.ttf') format('truetype'), url('../font/dinnextltarabic-light.svg#DINNextLTArabicLight') format('svg');
+}
+.hdiv1:hover
+{
+    border-bottom: 3px solid #a58b69;
+    cursor: pointer;
+}
+.d1:hover, .d3:hover
+{
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+#arr2
+{
+    background: url('../img/arrwl.png');
+    height: 70px;
+    width: 37px;
+    display: inline-block;
+    bottom: 150px;
+    text-decoration: none;
+    background-position: 0px -70px;
+}
+#arr1
+{
+    background: url('../img/arrwr.png');
+    height: 70px;
+    width: 37px;
+    display: inline-block;
+    bottom: 150px;
+    text-decoration: none;
+    background-position: 0px -70px;
+}
+#arr1:hover, #arr2:hover
+{
+    background-position: 0px 0px;
+}
+.hdiv2:hover
+{
+    border-bottom: 3px solid #43c1c1;
+    cursor: pointer;
+}
+.hdiv3:hover
+{
+    border-bottom: 3px solid #a58b69;
+    cursor: pointer;
+}
+ul#social
+{
+    list-style: none;
+    margin: 0px;
+    display: inline-block;
+}
+ul#social li
+{
+    list-style: none;
+    display: inline-block;
+    padding-right: 10px;
+    background: url(../img/social.png);
+    width: 19px;
+    height: 19px;
+    overflow: hidden;
+    cursor: pointer;
+}
+ul#social li#tw
+{
+    background-position: 29px 0px;
+}
+ul#social li#fb
+{
+    background-position: 67px 0px;
+}
+ul#social li#gp
+{
+    background-position: 105px 0px;
+}
+ul#social li#yt
+{
+    background-position: 144px 0px;
+}
+ul#social li#em
+{
+    background-position: 180px 0px;
+    width: 19px;
+}
+input[type=button]
+{
+    color: #fff;
+    background-color: #3897d6;
+    font-size: 13px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+input[type=button]:hover
+{
+    color: #fff;
+    background-color: #39f;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+input[type=button]:active
+{
+    color: #fff;
+    background-color: #2775b0;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+input[type=submit]
+{
+    color: #fff;
+    background-color: #3897d6;
+    font-size: 13px;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+input[type=submit]:hover
+{
+    color: #fff;
+    background-color: #39f;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+input[type=submit]:active
+{
+    color: #fff;
+    background-color: #2775b0;
+    height: 30px;
+    border: 1px solid #ccc;
+}
+
