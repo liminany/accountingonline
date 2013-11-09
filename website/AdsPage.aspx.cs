@@ -136,7 +136,7 @@ public partial class AdsPage : System.Web.UI.Page
                 objAdsManager.SubCatID = Convert.ToInt32(ddlSubCategoryName.SelectedValue);
                 objAdsManager.CountryID = Convert.ToInt32(hfCountryID.Value);
                 objAdsManager.CityID = Convert.ToInt32(ddlCityName.SelectedValue);
-                objAdsManager.AdsPrice = Convert.ToDouble(txtPrice.Value);
+                objAdsManager.AdsPrice = (!string.IsNullOrEmpty(txtPrice.Value)) ? Convert.ToDouble(txtPrice.Value) : 0;
                 string sTextTitleAds = txtAdsTitle.Value.Replace("ة", "ه");
                 sTextTitleAds = sTextTitleAds.Replace("أ", "ا");
                 sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
@@ -223,7 +223,7 @@ public partial class AdsPage : System.Web.UI.Page
         try
         {
             ManageSubCategory objManageSubCategory = new ManageSubCategory();
-            FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(ddlCategoryName.SelectedIndex), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
+            FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(int.Parse(ddlCategoryName.SelectedValue)), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
         }
         catch (Exception ex)
         {
@@ -334,15 +334,18 @@ public partial class AdsPage : System.Web.UI.Page
         try
         {
             string[] images = imagesURL.Split('|');
-            for (int i = 0; i < images.Length; i++)
+            if (!string.IsNullOrEmpty(images[0].ToString()))
             {
-                imgAdsImage.InnerHtml = imgAdsImage.InnerHtml + string.Format("<div id='div_" + i + "' style='float:right;margin:10px;'><div style='border: 5px solid #f9ae4c;'><img class='AdsImage' src='" + images[i].Replace("~", "..") + "' style='max-width:130px;max-height:130px;' /></div><div style='clear:both;text-align:center;margin-top: 5px;'><a href='javascript:void(0)' style='border: 0px;' onclick='funDeleteImage(\"div_{0}\")'><img src='../images/remove.png' /></a></div></div>", i);
+                for (int i = 0; i < images.Length; i++)
+                {
+                    imgAdsImage.InnerHtml = imgAdsImage.InnerHtml + string.Format("<div id='div_" + i + "' style='float:right;margin:10px;'><div style='border: 5px solid #f9ae4c;'><img class='AdsImage' src='" + images[i].Replace("~", "..") + "' style='max-width:130px;max-height:130px;' /></div><div style='clear:both;text-align:center;margin-top: 5px;'><a href='javascript:void(0)' style='border: 0px;' onclick='funDeleteImage(\"div_{0}\")'><img src='../images/remove.png' /></a></div></div>", i);
+                }
+                file_upload.Attributes.Add("maxlength", (nMaxImageUpload - images.Length).ToString());
             }
-            file_upload.Attributes.Add("maxlength", (nMaxImageUpload - images.Length).ToString());
         }
-        catch (Exception)
+        catch (Exception ex)
         {
-
+            _logger.Error("AdsPage:::ViewAdsImage:::" + ex.Message);
         }
     }
 

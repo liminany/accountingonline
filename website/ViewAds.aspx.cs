@@ -45,7 +45,16 @@ public partial class ViewAds : System.Web.UI.Page
                         spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
                         Page.Title = "سوق سماء العرب - " + rows["AdsTitle"].ToString();
                         Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
-                        sp_Price.InnerHtml = string.Format("السعر {0} {1}", rows["AdsPrice"].ToString(), GetCurrancyTags());
+                        
+                        if (Convert.ToInt32(rows["AdsPrice"].ToString()) > 0)
+                        {
+                            sp_Price.InnerHtml = string.Format("السعر {0} {1}", rows["AdsPrice"].ToString(), GetCurrancyTags());
+                        }
+                        else
+                        {
+                            sp_Price.Style.Add("display", "none");
+                        }
+
                         liCity.InnerHtml = "المدينة : " + rows["CityName"].ToString();
                         liCountry.InnerHtml = "البلد : " + rows["CountryName"].ToString();
                         liCreateDate.InnerHtml = "تاريخ الإضافة : " + Convert.ToDateTime(rows["AdsCreateDate"].ToString()).ToShortDateString();
@@ -205,7 +214,7 @@ public partial class ViewAds : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            _logger.Error("mail:::btnSendMessage_Click:::" + ex.Message);
+            _logger.Error("ViewAds:::btnSendMessage_Click:::" + ex.Message);
         }
     }
     protected void btnDeleteAds_Click(object sender, EventArgs e)
@@ -228,7 +237,7 @@ public partial class ViewAds : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            _logger.Error("mail:::btnDeleteAds_Click:::" + ex.Message);
+            _logger.Error("ViewAds:::btnDeleteAds_Click:::" + ex.Message);
         }
     }
     protected void btnReactivateAds_Click(object sender, EventArgs e)
@@ -255,7 +264,7 @@ public partial class ViewAds : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            _logger.Error("mail:::btnReactivateAds_Click:::" + ex.Message);
+            _logger.Error("ViewAds:::btnReactivateAds_Click:::" + ex.Message);
         }
     }
     protected void btnEditAds_Click(object sender, EventArgs e)
@@ -269,7 +278,7 @@ public partial class ViewAds : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            _logger.Error("mail:::btnEditAds_Click:::" + ex.Message);
+            _logger.Error("ViewAds:::btnEditAds_Click:::" + ex.Message);
         }
     }
     #endregion
@@ -335,7 +344,7 @@ public partial class ViewAds : System.Web.UI.Page
         }
         catch (Exception)
         {
-
+        
         }
     }
     protected string RunVedio(string VedioURL)
@@ -346,8 +355,7 @@ public partial class ViewAds : System.Web.UI.Page
         }
         catch (Exception)
         {
-
-            throw;
+            return "null";
         }
     }
     protected string GetThumnb(string sYoutubeURL)

@@ -48,7 +48,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::LoginUser:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::AdminLoginUser:::" + ex.Message);
                 return 0;
             }
             finally
@@ -99,7 +99,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::LoginUser:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::ClientLoginUser:::" + ex.Message);
                 return objEntityRegUsers;
             }
         }
@@ -134,7 +134,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::GetUserInfo:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::GetUserInfo:::" + ex.Message);
                 objUsers = null;
                 throw;
             }
@@ -179,7 +179,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::GetUserInfo:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::GetUserInfoByUserID:::" + ex.Message);
                 objEntityRegUsers = null;
                 throw;
             }
@@ -210,7 +210,7 @@ namespace DAL
                     objRegUsers.UserID = Convert.ToInt32(reader["UserID"].ToString());
                     objRegUsers.UserFullName = reader["User_FullName"].ToString();
                     objRegUsers.UserEmailAddress = reader["User_EmailAddress"].ToString();
-                    //objRegUsers.UserPassword = reader["User_Password"].ToString();
+                    objRegUsers.UserPassword = reader["User_Password"].ToString();
                     //objRegUsers.UserFacebookID = reader["User_FacebookID"].ToString();
                     //objRegUsers.UserStatus = int.Parse(reader["User_Status"].ToString());
                     //objRegUsers.UserType = int.Parse(reader["User_UserType"].ToString());
@@ -223,7 +223,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::GetUserInfo:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::GetUserInfoByUserEmailAddress:::" + ex.Message);
                 objRegUsers = null;
             }
             return objRegUsers;
@@ -242,8 +242,72 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::GetAllUser:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::GetAllUser:::" + ex.Message);
                 throw;
+            }
+        }
+
+        /// <summary>
+        /// Cerate a new User
+        /// </summary>
+        /// <param name="user">Set User Object "Object Value"</param>
+        /// <returns>return 1 if insert secussfully otherwise return 0</returns>
+        public EntityRegUsers RegisterNewUserFromClient(EntityRegUsers objEntityRegUsers)
+        {
+            IDbConnection connection = _dbHelper.GetConnObject();
+            IDataReader reader = null;
+            try
+            {
+                DBParameter param1 = new DBParameter("@userFullName", objEntityRegUsers.UserFullName);
+                DBParameter param2 = new DBParameter("@userEmailAddress", objEntityRegUsers.UserEmailAddress);
+                DBParameter param3 = new DBParameter("@userPassword", objEntityRegUsers.UserPassword);
+                DBParameter param4 = new DBParameter("@userFacebookID", objEntityRegUsers.UserFacebookID);
+                DBParameter param5 = new DBParameter("@userStatus", objEntityRegUsers.UserStatus);
+                DBParameter param6 = new DBParameter("@userType", objEntityRegUsers.UserType);
+                DBParameter param7 = new DBParameter("@userCountAds", objEntityRegUsers.UserCountAds);
+                DBParameter param8 = new DBParameter("@userMobileNumber", objEntityRegUsers.UserMobileNumber);
+                DBParameter param9 = new DBParameter("@userCountry", objEntityRegUsers.UserCountry);
+                DBParameter param10 = new DBParameter("@userCity", objEntityRegUsers.UserCityAddress);
+                DBParameter param11 = new DBParameter("@userImage", objEntityRegUsers.UserImage);
+
+                DBParameterCollection paramCollection = new DBParameterCollection();
+                paramCollection.Add(param1);
+                paramCollection.Add(param2);
+                paramCollection.Add(param3);
+                paramCollection.Add(param4);
+                paramCollection.Add(param5);
+                paramCollection.Add(param6);
+                paramCollection.Add(param7);
+                paramCollection.Add(param8);
+                paramCollection.Add(param9);
+                paramCollection.Add(param10);
+                paramCollection.Add(param11);
+
+                reader = _dbHelper.ExecuteDataReader("sp_ArabiSky_InsertRegisterUsers_fromClient", connection, paramCollection, CommandType.StoredProcedure);
+                while (reader.Read())
+                {
+                    objEntityRegUsers.UserID = Convert.ToInt32(reader["UserID"].ToString());
+                    objEntityRegUsers.UserFullName = reader["User_FullName"].ToString();
+                    objEntityRegUsers.UserEmailAddress = reader["User_EmailAddress"].ToString();
+                    objEntityRegUsers.UserPassword = reader["User_Password"].ToString();
+                    objEntityRegUsers.UserFacebookID = reader["User_FacebookID"].ToString();
+                    objEntityRegUsers.UserStatus = int.Parse(reader["User_Status"].ToString());
+                    objEntityRegUsers.UserType = int.Parse(reader["User_UserType"].ToString());
+                    objEntityRegUsers.UserCountAds = int.Parse(reader["User_CountAds"].ToString());
+                    objEntityRegUsers.CountAdsUsed = int.Parse(reader["User_CountAdsUsed"].ToString());
+                    objEntityRegUsers.UserMobileNumber = reader["User_MobileNumber"].ToString();
+                    objEntityRegUsers.UserCountry = int.Parse(reader["User_Country"].ToString());
+                    objEntityRegUsers.UserCityAddress = int.Parse(reader["User_City"].ToString());
+                    objEntityRegUsers.UserImage = reader["User_Image"].ToString();
+                    objEntityRegUsers.CreateDateTime = Convert.ToDateTime(reader["User_CreateDate"].ToString());
+                }
+                return objEntityRegUsers;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("DAL:::UserAuthentication:::RegisterNewUserFromClient:::" + ex.Message);
+                objEntityRegUsers.UserID = -1;
+                return objEntityRegUsers;
             }
         }
 
@@ -269,7 +333,7 @@ namespace DAL
                 DBParameter param9 = new DBParameter("@userCountry", objUsers.UserCountry);
                 DBParameter param10 = new DBParameter("@userCity", objUsers.UserCityAddress);
                 DBParameter param11 = new DBParameter("@userImage", objUsers.UserImage);
-                
+
                 DBParameter outParam = new DBParameter("@returnValue", 0, DbType.Int16, ParameterDirection.Output);
                 DBParameterCollection paramCollection = new DBParameterCollection();
                 paramCollection.Add(param1);
@@ -291,7 +355,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::EditUserInfo:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::RegisterNewUserFromAdmin:::" + ex.Message);
                 return -1;
             }
         }
@@ -314,7 +378,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::DeleteUser:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::DeleteUser:::" + ex.Message);
                 return 0;
             }
         }
@@ -370,7 +434,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::EditUserInfo:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::EditUserInfo:::" + ex.Message);
                 return 0;
             }
         }
@@ -421,7 +485,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::EditUserInfo:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::EditUserInfoFormClient:::" + ex.Message);
                 return 0;
             }
         }
@@ -453,7 +517,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::EditUserInfo:::" + ex.Message);
+                _logger.Error("DAL:::UserAuthentication:::EditUserPasswordFormClient:::" + ex.Message);
                 return 0;
             }
         }

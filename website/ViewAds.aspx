@@ -88,9 +88,9 @@
         <div>
             <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
                 text-align: center;">
-                <div id="div_ViewAds" style="float: right; margin-right: 30px; margin-top: 20px;
+                <div id="div_ViewAds" style="float: right; margin-top: 20px;
                     width: 100%;">
-                    <div style="float: left; width: 30%">
+                    <div style="float: left;">
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tbody>
                                 <tr style="height: 100px;">

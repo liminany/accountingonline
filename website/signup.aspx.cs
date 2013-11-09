@@ -10,6 +10,9 @@ public partial class signup : System.Web.UI.Page
 
     #region Varabile
     private static Logger _logger = LogManager.GetCurrentClassLogger();
+    private int _nUserAdsQuta = 10;
+    private int _nUserStatus = 1; //if user status 1 then the user activate otherwise user pendding
+    private int _nUserType = 0;//if user Type 0 then (user permission is default user otherwise Super User)
     #endregion
 
     #region Pagelaod
@@ -44,25 +47,26 @@ public partial class signup : System.Web.UI.Page
             EntityRegUsers objEntityRegUsers = new EntityRegUsers();
             UserAuthentication objUserAuthentication = new UserAuthentication();
 
-            objEntityRegUsers.UserCountAds = 20;
-            objEntityRegUsers.UserType = 0;
-            objEntityRegUsers.UserStatus = 1;
+            objEntityRegUsers.UserCountAds = _nUserAdsQuta;
+            objEntityRegUsers.UserType = _nUserType;
+            objEntityRegUsers.UserStatus = _nUserStatus;
             objEntityRegUsers.UserEmailAddress = email.Value;
-            objEntityRegUsers.UserFullName = string.Empty;
+            objEntityRegUsers.UserFullName = txtUserFullName.Value;
             objEntityRegUsers.UserFacebookID = string.Empty;
-            objEntityRegUsers.UserMobileNumber = string.Empty; 
+            objEntityRegUsers.UserMobileNumber = string.Empty;
             objEntityRegUsers.UserPassword = EncryptionMethods.Encryption.Encrypt(password.Value);
             objEntityRegUsers.UserCountry = GetCountry();
-            int nReturnValue = objUserAuthentication.RegisterNewUserFromAdmin(objEntityRegUsers);
-            if (nReturnValue == -1)
+            objEntityRegUsers = objUserAuthentication.RegisterNewUserFromClient(objEntityRegUsers);
+            if (objEntityRegUsers.UserID < 0)
             {
                 div_UserMessage.InnerHtml = "هناك خطأ في النظام الرجاء المحاولة فيما بعد";
             }
             else
             {
-                if (nReturnValue == 1)
+                if (objEntityRegUsers.UserID >= 1)
                 {
-                    div_UserMessage.InnerHtml = "تم تسجيل الحساب بنجاح <a href='AccountSettings'>أنقر هنا للدخول الى الملف الشخصي</a>";
+                    Session["UserInfo"] = objEntityRegUsers;
+                    Response.Redirect("/", false);
                 }
                 else
                 {

@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
-    CodeFile="Category.aspx.cs" Inherits="Category" %>
+    CodeFile="Categories.aspx.cs" Inherits="Categories" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <meta property="og:image" content='http://arabisky.com/images/ArabiSkyLogo.png' />

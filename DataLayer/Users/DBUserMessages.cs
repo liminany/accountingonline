@@ -96,7 +96,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DALUsers:::GetUserInfo:::" + ex.Message);
+                _logger.Error("DAL:::DBUserMessages:::ReadEmail:::" + ex.Message);
                 throw;
             }
         }

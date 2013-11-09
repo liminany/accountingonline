@@ -41,8 +41,9 @@ namespace DAL
                     return Entity.AddNewCountry.Error;
 
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
+                _logger.Error("DAL:::ManageCountry:::AddNewCountry:::" + ex.Message);
                 return Entity.AddNewCountry.Execption;
             }
         }
@@ -71,8 +72,9 @@ namespace DAL
                 else
                     return Entity.AddNewCountry.Error;
             }
-            catch (System.Exception)
+            catch (System.Exception ex)
             {
+                _logger.Error("DAL:::ManageCountry:::EditCountryInfo:::" + ex.Message);
                 return Entity.AddNewCountry.Execption;
             }
         }
@@ -101,8 +103,9 @@ namespace DAL
                 else
                     return Entity.AddNewCountry.Error;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                _logger.Error("DAL:::ManageCountry:::DeleteCountryInfo:::" + ex.Message);
                 return Entity.AddNewCountry.Execption;
             }
         }
@@ -133,7 +136,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::ManageCategory:::GetCategoryInfo:::" + ex.Message);
+                _logger.Error("DAL:::ManageCountry:::GetCountryInfoByID:::" + ex.Message);
                 objEntiryCountry = null;
                 throw;
             }
@@ -159,7 +162,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::UserCommnets:::GetAllCommentsForOwnArtics:::" + ex.Message);
+                _logger.Error("DAL:::ManageCountry:::GetAllCountry:::" + ex.Message);
                 throw;
             }
         }

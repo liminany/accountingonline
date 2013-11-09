@@ -27,6 +27,14 @@
                             </div>
                             <div class="singInTextField" style="text-align: right;">
                                 <label>
+                                    الإسم :<asp:RequiredFieldValidator runat="server" ID="rfvUserFullName"
+                                        Font-Bold="true" Display="Dynamic" ControlToValidate="txtUserFullName">الرجاء إدخال الإسم</asp:RequiredFieldValidator>
+                                </label>
+                                <input type="text" name="userFullName" runat="server" style="width: 490px; height: 30px;"
+                                    id="txtUserFullName" value="" size="40" class="singinTextBox" />
+                            </div>
+                            <div class="singInTextField" style="text-align: right;">
+                                <label>
                                     البريد الإلكتروني :<asp:RequiredFieldValidator runat="server" ID="rfvEmailAddress"
                                         Font-Bold="true" Display="Dynamic" ControlToValidate="email">الرجاء إدخال البريد الإلكتروني</asp:RequiredFieldValidator>
                                     <asp:RegularExpressionValidator ID="revEmailAddress" runat="server" Font-Bold="true"
@@ -70,7 +78,8 @@
             </td>
         </tr>
         <tr>
-            <td style="height:10px;"></td>
+            <td style="height: 10px;">
+            </td>
         </tr>
         <tr>
             <td>

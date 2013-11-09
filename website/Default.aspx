@@ -10,7 +10,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta itemprop="name" content="ArabiSky" />
     <meta itemprop="description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل" />
-    <meta itemprop="image" content="http://arabisky.com/images/ArabiSky_logo.png" />
+    <meta itemprop="image" content="http://arabisky.com/images/ArabiSkylogo.png" />
     <meta property="fb:page_id" content="507506199302545" />
     <meta property="fb:app_id" content="172727259569815" />
     <meta property="og:image" content='http://arabisky.com/images/ArabiSkyLogo.png' />
@@ -44,7 +44,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:UpdatePanel runat="server" UpdateMode="Conditional">
+    <asp:UpdatePanel ID="upDefaultPage" runat="server" UpdateMode="Conditional">
         <ContentTemplate>
             <div>
                 <div id="arabiSky-content" style="padding-bottom: 0; text-align: right;">
@@ -55,10 +55,10 @@
                             <h2 style="font-size: 13px; font-weight: lighter; padding-bottom: 0px;">
                                 إعلانات مبوبة مجانية للعقارات، وظائف، والسيارات</h2>
                             <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Farabisky&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=567816839920626"
-                                scrolling="no" frameborder="0" style="border: none; overflow: hidden; height: 21px;width: 135px; padding-top: 13px;"
-                                allowtransparency="true"></iframe>
+                                scrolling="no" frameborder="0" style="border: none; overflow: hidden; height: 21px;
+                                width: 135px; padding-top: 13px;" allowtransparency="true"></iframe>
                         </div>
-                        <div style="float: left;">
+                        <div style="float: left;z-index:1000">
                             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                             <!-- ArabiSky_Default_Top -->
                             <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
@@ -148,12 +148,12 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="classifieds/1/46/electronics.html" title="للإيجار" style="color: #111111;
-                                    font-size: 20px;">للإيجار</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=4" title="للإيجار" style="color: #111111; font-size: 20px;">
+                                    للإيجار</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
-                            <div class="arabiSky-indexContent">
+                            <div class="arabiSky-indexContent" style="height: 100px;">
                                 <ul>
                                     <li><a href="Category?CatID=30" title="العقارات و الإسكان">العقارات و الإسكان </a>
                                     </li>
@@ -167,12 +167,12 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="classifieds/1/46/electronics.html" title="للإيجار" style="color: #111111;
-                                    font-size: 20px;">الباحثين عن عمل</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=5" title="الباحثين عن عمل" style="color: #111111; font-size: 20px;">
+                                    الباحثين عن عمل</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
-                            <div class="arabiSky-indexContent">
+                            <div class="arabiSky-indexContent" style="height: 40px;">
                                 <ul>
                                     <li><a href="Category?CatID=33" title="الباحثين عن عمل">الباحثين عن عمل </a></li>
                                 </ul>
@@ -185,13 +185,13 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="classifieds/1/165/home-store.html" title="Home Store" style="color: #111111;
-                                    font-size: 20px;">وظائف شاغرة</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=3" title="وظائف شاغرة" style="color: #111111; font-size: 20px;">
+                                    وظائف شاغرة</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <!-- arabiSky-indexContent starts -->
-                            <div class="arabiSky-indexContent" style="height: 209px;">
+                            <div class="arabiSky-indexContent" style="height: 230px;">
                                 <ul>
                                     <li><a href="Category?CatID=22" title="إدارة / سكرتارية">إدارة / سكرتارية</a></li>
                                     <li><a href="Category?CatID=23" title="تسويق / مبيعات">تسويق / مبيعات </a></li>
@@ -213,12 +213,12 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="classifieds/1/152/education-learning.html" title="Education & Learning"
-                                    style="color: #111111; font-size: 20px;">الخدمات</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=2" title="الخدمات" style="color: #111111; font-size: 20px;">
+                                    الخدمات</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
-                            <div class="arabiSky-indexContent" style="height: 209px;">
+                            <div class="arabiSky-indexContent" style="height: 230px;">
                                 <ul>
                                     <li><a href="Category?CatID=12" title="دروس و دورات تدريبية">دروس و دورات تدريبية</a></li>
                                     <li><a href="Category?CatID=13" title="الكومبيوتر و الإنترنت">الكومبيوتر و الإنترنت</a></li>
@@ -240,12 +240,11 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="classifieds/1/59/jobs.html" title="Jobs" style="color: #111111; font-size: 20px;">
-                                    للبيع</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=1" title="للبيع" style="color: #111111; font-size: 20px;">للبيع</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
-                            <div class="arabiSky-indexContent" style="height: 209px;">
+                            <div class="arabiSky-indexContent" style="height: 120px;">
                                 <ul>
                                     <li><a href="Category?CatID=6" title="العقارات و الإسكان">العقارات و الإسكان</a></li>
                                     <li><a href="Category?CatID=7" title="السيارات و المركبات">السيارات و المركبات</a></li>
@@ -255,6 +254,22 @@
                                     <li><a href="Category?CatID=11" title="أشياء أخرى">أشياء أخرى</a></li>
                                 </ul>
                             </div>
+                        </div>
+                        <div class="arabiSky-indexInnerBlocks">
+                            <div class="arabiSky-indexHeadingLeftCurve">
+                            </div>
+                            <div class="arabiSky-indexHeadingContent">
+                                <a href="Categories?CatID=6" title="مطلوب شراء" style="color: #111111; font-size: 20px;">
+                                    مطلوب شراء</a>&nbsp;<span></span>
+                            </div>
+                            <div class="arabiSky-indexHeadingRightCurve">
+                            </div>
+                            <div class="arabiSky-indexContent">
+                                <ul>
+                                    <li><a href="Category?CatID=34" title="الباحثين عن عمل">مطلوب شراء </a></li>
+                                </ul>
+                            </div>
+                            <!-- closing arabiSky-indexContent -->
                         </div>
                     </div>
                 </div>
