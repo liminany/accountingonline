@@ -131,7 +131,7 @@ function fillDefaultText(obj,fill_text,action)
 if(action=='2'){if(obj.value=='')
 {obj.value=fill_text;obj.style.color='#666666';}}}
 function openChat()
-{window.open('http://chat.click.in/phplive.php','ClickinChat','scrollbars=no,resizable=yes,menubar=no,location=no,screenX=50,screenY=100,width=550,height=410');}
+{window.open('http://chat.click.in/phplive.php','arabiSkyChat','scrollbars=no,resizable=yes,menubar=no,location=no,screenX=50,screenY=100,width=550,height=410');}
 function trackEvent(category,action,opt_label,opt_value){if(typeof(opt_label)=="undefined"||opt_label==null||opt_label==''){opt_label='';}
 if(typeof(opt_value)=="undefined"||opt_value==null||opt_value==''){opt_value=0;}
 _gaq.push(['_trackEvent',category,action,opt_label,opt_value]);}
@@ -799,37 +799,37 @@ function showJobTabs(tab_id)
 {tab_1=document.getElementById('tabs_1');tab_2=document.getElementById('tabs_2');tab_3=document.getElementById('tabs_3');tab_4=document.getElementById('tabs_4');tab_5=document.getElementById('tabs_5');if(tab_id=='1')
 {tab_2.style.display='none';tab_3.style.display='none';tab_4.style.display='none';tab_5.style.display='none';for(i=1;i<=5;i++)
 {if(i==1)
-{document.getElementById('tab1_div1').className="clickin-jobRelatedLinkActiveLeftCurve";document.getElementById('tab1_div2').className="clickin-jobRelatedLinkActiveText";document.getElementById('tab1_div3').className="clickin-jobRelatedLinkActiveRightCurve";document.getElementById('tab1_div4').style.display="";}
+{document.getElementById('tab1_div1').className="arabiSky-jobRelatedLinkActiveLeftCurve";document.getElementById('tab1_div2').className="arabiSky-jobRelatedLinkActiveText";document.getElementById('tab1_div3').className="arabiSky-jobRelatedLinkActiveRightCurve";document.getElementById('tab1_div4').style.display="";}
 else
-{document.getElementById('tab'+i+'_div1').className="clickin-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="clickin-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="clickin-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
+{document.getElementById('tab'+i+'_div1').className="arabiSky-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="arabiSky-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="arabiSky-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
 tab_1.style.display='block';}
 else if(tab_id=='2')
 {tab_1.style.display='none';tab_3.style.display='none';tab_4.style.display='none';tab_5.style.display='none';for(i=1;i<=5;i++)
 {if(i==2)
-{document.getElementById('tab2_div1').className="clickin-jobRelatedLinkActiveLeftCurve";document.getElementById('tab2_div2').className="clickin-jobRelatedLinkActiveText";document.getElementById('tab2_div3').className="clickin-jobRelatedLinkActiveRightCurve";document.getElementById('tab2_div4').style.display="";}
+{document.getElementById('tab2_div1').className="arabiSky-jobRelatedLinkActiveLeftCurve";document.getElementById('tab2_div2').className="arabiSky-jobRelatedLinkActiveText";document.getElementById('tab2_div3').className="arabiSky-jobRelatedLinkActiveRightCurve";document.getElementById('tab2_div4').style.display="";}
 else
-{document.getElementById('tab'+i+'_div1').className="clickin-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="clickin-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="clickin-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
+{document.getElementById('tab'+i+'_div1').className="arabiSky-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="arabiSky-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="arabiSky-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
 tab_2.style.display='block';}
 else if(tab_id=='3')
 {tab_1.style.display='none';tab_2.style.display='none';tab_4.style.display='none';tab_5.style.display='none';for(i=1;i<=5;i++)
 {if(i==3)
-{document.getElementById('tab3_div1').className="clickin-jobRelatedLinkActiveLeftCurve";document.getElementById('tab3_div2').className="clickin-jobRelatedLinkActiveText";document.getElementById('tab3_div3').className="clickin-jobRelatedLinkActiveRightCurve";document.getElementById('tab3_div4').style.display="";}
+{document.getElementById('tab3_div1').className="arabiSky-jobRelatedLinkActiveLeftCurve";document.getElementById('tab3_div2').className="arabiSky-jobRelatedLinkActiveText";document.getElementById('tab3_div3').className="arabiSky-jobRelatedLinkActiveRightCurve";document.getElementById('tab3_div4').style.display="";}
 else
-{document.getElementById('tab'+i+'_div1').className="clickin-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="clickin-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="clickin-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
+{document.getElementById('tab'+i+'_div1').className="arabiSky-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="arabiSky-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="arabiSky-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
 tab_3.style.display='block';}
 else if(tab_id=='4')
 {tab_1.style.display='none';tab_2.style.display='none';tab_3.style.display='none';tab_5.style.display='none';for(i=1;i<=5;i++)
 {if(i==4)
-{document.getElementById('tab4_div1').className="clickin-jobRelatedLinkActiveLeftCurve";document.getElementById('tab4_div2').className="clickin-jobRelatedLinkActiveText";document.getElementById('tab4_div3').className="clickin-jobRelatedLinkActiveRightCurve";document.getElementById('tab4_div4').style.display="";}
+{document.getElementById('tab4_div1').className="arabiSky-jobRelatedLinkActiveLeftCurve";document.getElementById('tab4_div2').className="arabiSky-jobRelatedLinkActiveText";document.getElementById('tab4_div3').className="arabiSky-jobRelatedLinkActiveRightCurve";document.getElementById('tab4_div4').style.display="";}
 else
-{document.getElementById('tab'+i+'_div1').className="clickin-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="clickin-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="clickin-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
+{document.getElementById('tab'+i+'_div1').className="arabiSky-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="arabiSky-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="arabiSky-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
 tab_4.style.display='block';}
 else if(tab_id=='5')
 {tab_1.style.display='none';tab_2.style.display='none';tab_3.style.display='none';tab_4.style.display='none';for(i=1;i<=5;i++)
 {if(i==5)
-{document.getElementById('tab5_div1').className="clickin-jobRelatedLinkActiveLeftCurve";document.getElementById('tab5_div2').className="clickin-jobRelatedLinkActiveText";document.getElementById('tab5_div3').className="clickin-jobRelatedLinkActiveRightCurve";document.getElementById('tab5_div4').style.display="";}
+{document.getElementById('tab5_div1').className="arabiSky-jobRelatedLinkActiveLeftCurve";document.getElementById('tab5_div2').className="arabiSky-jobRelatedLinkActiveText";document.getElementById('tab5_div3').className="arabiSky-jobRelatedLinkActiveRightCurve";document.getElementById('tab5_div4').style.display="";}
 else
-{document.getElementById('tab'+i+'_div1').className="clickin-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="clickin-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="clickin-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
+{document.getElementById('tab'+i+'_div1').className="arabiSky-jobRelatedLinkInActiveLeftCurve";document.getElementById('tab'+i+'_div2').className="arabiSky-jobRelatedLinkInActiveText";document.getElementById('tab'+i+'_div3').className="arabiSky-jobRelatedLinkInActiveRightCurve";document.getElementById('tab'+i+'_div4').style.display="none";}}
 tab_5.style.display='block';}}
 function naviagteToUrl(category_url)
 {window.location.href=category_url;}

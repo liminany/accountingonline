@@ -7,12 +7,13 @@ namespace Entity
 {
     public class AdsManager
     {
+        private int _nAdsID = 0;
         private int _nUserID = 0;
         private int _nCatID = 0;
         private int _nSubCatID = 0;
         private int _nCountryID = 0;
         private int _nCityID = 0;
-        private int _nAdsPrice = 0;
+        private double _nAdsPrice = 0;
         private string _sAdsTitle = string.Empty;
         private string _sAdsDescription = string.Empty;
         private DateTime _dtCreateDate;
@@ -23,6 +24,11 @@ namespace Entity
         private string _sAdsYouTubeURL = string.Empty;
 
 
+        public int AdsID
+        {
+            get { return _nAdsID; }
+            set { _nAdsID = value; }
+        }
         public int UserID
         {
             get { return _nUserID; }
@@ -48,7 +54,7 @@ namespace Entity
             get { return _nCityID; }
             set { _nCityID = value; }
         }
-        public int AdsPrice
+        public double AdsPrice
         {
             get { return _nAdsPrice; }
             set { _nAdsPrice = value; }

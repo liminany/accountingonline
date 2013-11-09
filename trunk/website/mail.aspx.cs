@@ -39,6 +39,8 @@ public partial class mail : System.Web.UI.Page
                         foreach (System.Data.DataRow rowItemMessage in objDBUserMessages.ReadEmail(nMessageID, Convert.ToInt32(hfUserID.Value)).Tables[0].Rows)
                         {
                             ahrefUserProfile.HRef = "UserProfile?UserID=" + rowItemMessage["UserID"].ToString();
+                            Page.Title = rowItemMessage["MessageTitle"].ToString() + "- ArabiSky.com";
+                            Page.MetaDescription = rowItemMessage["MessageTitle"].ToString() + "- ArabiSky.com | موقع سماء العرب";
                             spMessageTitle.InnerHtml = rowItemMessage["MessageTitle"].ToString();
                             spUserFullName.InnerText = rowItemMessage["sender"].ToString();
                             div_EmailBody.InnerHtml = rowItemMessage["MessageBody"].ToString();

@@ -1,6 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
+﻿<%@ Page Title="سوق سماء العرب | رسائلي الخاصة" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="Inbox.aspx.cs" Inherits="Inbox" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
         function DeleteCityInfo(MessageID) {
@@ -36,12 +35,12 @@
     </div>
     <div style="width: 100%; height: auto;">
         <div>
-            <div class="clickin-indexHeadingLeftCurve">
+            <div class="arabiSky-indexHeadingLeftCurve">
             </div>
-            <div class="clickin-indexHeadingContent" style="width: 97%;">
+            <div class="arabiSky-indexHeadingContent" style="width: 97%;">
                 <span style="color: #111111; font-size: 20px;">رسائلي</span>
             </div>
-            <div class="clickin-indexHeadingRightCurve">
+            <div class="arabiSky-indexHeadingRightCurve">
             </div>
         </div>
         <div style="clear: both;">
@@ -77,11 +76,11 @@
                                 <td align="right" style="width: 10%; padding-right: 30px;">
                                     <img src="images/DeleteMessage.png" width="15" height="15" title="حذف الرسالة" style="cursor: pointer;"
                                         onclick="return DeleteCityInfo(<%# DataBinder.Eval(Container.DataItem, "MessageID")%>);"
-                                        alt="ArabiSky-Delete Message" />
+                                        alt="ArabiSky.com"/>
                                     &nbsp;
                                     <img src="images/imgReadMessage.png" width="15" height="15" title="تصفح الرسالة"
                                         style="cursor: pointer;" onclick="window.location='mail?messageID=<%# DataBinder.Eval(Container.DataItem, "MessageID")%>'"
-                                        alt="ArabiSky-View Message" />
+                                        alt="ArabiSky.com" />
                                 </td>
                                 <td align="right" style="width: 15%; padding-right: 30px;">
                                     <%# DataBinder.Eval(Container.DataItem, "sender")%>
@@ -94,7 +93,7 @@
                                 </td>
                                 <td align="center" style="padding-left: 20px; width: 10%">
                                     <a href="UserProfile?UserID=<%# DataBinder.Eval(Container.DataItem, "UserID")%>">
-                                        <img alt="ArabiSky UserImage" style="border: 0px;" src="<%# GetUserImageProfile(DataBinder.Eval(Container.DataItem, "User_Image").ToString())%>"
+                                        <img alt="ArabiSky.com" style="border: 0px;" src="<%# GetUserImageProfile(DataBinder.Eval(Container.DataItem, "User_Image").ToString())%>"
                                             width="30" height="30" />
                                     </a>
                                 </td>
@@ -135,6 +134,16 @@
              <div style="text-align:center;border:1px solid #ccc;margin-right: 10px;height: 45px;padding-top: 30px;font-weight:bold;font-size:20px;" id="div_EmptyEmailTable" runat="server">
                لايوجد رسائل خاصة
             </div>
+        </div>
+        <div style="clear: both; height: 10px;">
+        </div>
+        <div style="text-align: center;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ArabiSky_Default_Top -->
+            <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
         </div>
     </div>
     <asp:Button ID="lbtnRefreshGV" CssClass="ClassHideDiv" runat="server" Text="" Height="0px"

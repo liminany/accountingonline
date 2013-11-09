@@ -33,10 +33,14 @@ public partial class Search : System.Web.UI.Page
                     {
                         case "SearchLast":
                             sp_SearchTitle.InnerHtml = "تابع مشاهدة اخر الإعلانات";
+                            Page.Title = "موقع سماء العرب | " + sp_SearchTitle.InnerHtml;
+                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
                             nSearchID = 2;
                             break;
                         case "Newest":
                             sp_SearchTitle.InnerHtml = "تابع أكثر الإعلانات مشاهدة";
+                            Page.Title = "موقع سماء العرب | " + sp_SearchTitle.InnerHtml;
+                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
                             nSearchID = 1;
                             break;
                         case "Search":
@@ -44,15 +48,23 @@ public partial class Search : System.Web.UI.Page
                             nCountryCode = int.Parse(Request.QueryString["CountryCode"].ToString());
                             nCityID = int.Parse(Request.QueryString["CityID"].ToString());
                             nSearchSubCat = int.Parse(Request.QueryString["SubCat"].ToString());
+                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
                             nSearchID = 4;
                             break;
                         default:
                             sp_SearchTitle.InnerHtml = Request.QueryString["text"].ToString();
                             sSearchText = Request.QueryString["text"].ToString();
                             nSearchSubCat = int.Parse(Request.QueryString["subID"].ToString());
+                            Page.Title = "موقع سماء العرب | " + sSearchText;
+                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
                             nSearchID = 3;
                             break;
                     }
+
+                    sSearchText = sSearchText.Replace("ة", "ه");
+                    sSearchText = sSearchText.Replace("أ", "ا");
+                    sSearchText = sSearchText.Replace("إ", "ا");
+                    sSearchText = sSearchText.Replace("إ", "ا"); 
 
                     DBAdsManager obDBAdsManager = new DBAdsManager();
                     string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();

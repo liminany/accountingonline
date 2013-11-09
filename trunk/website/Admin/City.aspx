@@ -127,7 +127,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <img src="../img/shared/blank.gif" width="695" height="1" alt="blank">
+                        <img src="../img/shared/blank.gif" width="695" height="1" alt="ArabiSky.com">
                     </td>
                 </tr>
             </tbody>

@@ -2,7 +2,6 @@
     CodeFile="mail.aspx.cs" Inherits="mail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <script src="../Scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
     <script type="text/javascript">
         tinyMCE.init({
             // General options
@@ -61,13 +60,13 @@
     </div>
     <div style="width: 100%; height: auto;">
         <div>
-            <div class="clickin-indexHeadingLeftCurve">
+            <div class="arabiSky-indexHeadingLeftCurve">
             </div>
-            <div class="clickin-indexHeadingContent" style="width: 97%;">
+            <div class="arabiSky-indexHeadingContent" style="width: 97%;">
                 <a href="" title="Education & Learning" style="color: #111111; font-size: 20px;"
                     id="spMessageTitle" runat="server"></a>&nbsp;<span></span>
             </div>
-            <div class="clickin-indexHeadingRightCurve">
+            <div class="arabiSky-indexHeadingRightCurve">
             </div>
         </div>
         <div style="clear: both;">
@@ -169,6 +168,16 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+            <div style="clear: both; height: 10px;">
+            </div>
+            <div style="text-align: center;">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ArabiSky_Default_Top -->
+                <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                    data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+                <script>                    (adsbygoogle = window.adsbygoogle || []).push({});</script>
+                <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
             </div>
         </div>
     </div>

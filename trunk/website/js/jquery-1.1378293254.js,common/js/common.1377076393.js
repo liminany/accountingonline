@@ -131,7 +131,7 @@ function fillDefaultText(obj,fill_text,action)
 if(action=='2'){if(obj.value=='')
 {obj.value=fill_text;obj.style.color='#666666';}}}
 function openChat()
-{window.open('http://chat.click.in/phplive.php','ClickinChat','scrollbars=no,resizable=yes,menubar=no,location=no,screenX=50,screenY=100,width=550,height=410');}
+{window.open('http://chat.click.in/phplive.php','arabiSkyChat','scrollbars=no,resizable=yes,menubar=no,location=no,screenX=50,screenY=100,width=550,height=410');}
 function trackEvent(category,action,opt_label,opt_value){if(typeof(opt_label)=="undefined"||opt_label==null||opt_label==''){opt_label='';}
 if(typeof(opt_value)=="undefined"||opt_value==null||opt_value==''){opt_value=0;}
 _gaq.push(['_trackEvent',category,action,opt_label,opt_value]);}

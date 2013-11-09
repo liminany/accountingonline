@@ -11,14 +11,14 @@
     </div>
     <div style="width: 100%; height: auto;">
         <div>
-            <div class="clickin-indexHeadingLeftCurve">
+            <div class="arabiSky-indexHeadingLeftCurve">
             </div>
-            <div class="clickin-indexHeadingContent" style="width: 97%;">
+            <div class="arabiSky-indexHeadingContent" style="width: 97%;">
                 <div style="float: right;">
                     <span style="color: #111111; font-size: 20px;" id="CatName" runat="server"></span>
                 </div>
             </div>
-            <div class="clickin-indexHeadingRightCurve">
+            <div class="arabiSky-indexHeadingRightCurve">
             </div>
         </div>
         <div style="clear: both;">
@@ -60,7 +60,7 @@
                                 </td>
                                 <td align="center" style="padding-left: 20px; width: 10%">
                                     <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                        width="50" height="50" />
+                                        width="50" height="50" alt="ArabiSky.com" />
                                 </td>
                             </tr>
                         </ItemTemplate>
@@ -78,13 +78,23 @@
                                 </td>
                                 <td align="center" style="padding-left: 20px; width: 10%">
                                     <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                        width="50" height="50" />
+                                        width="50" height="50" alt="ArabiSky.com" />
                                 </td>
                             </tr>
                         </AlternatingItemTemplate>
                     </asp:Repeater>
                 </table>
             </div>
+        </div>
+        <div style="clear: both; height: 10px;">
+        </div>
+        <div style="text-align: center;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ArabiSky_Default_Top -->
+            <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
         </div>
     </div>
 </asp:Content>

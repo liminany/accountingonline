@@ -28,6 +28,8 @@ public partial class Category : System.Web.UI.Page
                     DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()));
                     string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
                     CatName.InnerHtml = pageTitle;
+                    Page.Title = " سوق سماء العرب | " + pageTitle;
+                    Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
                     sp_PageTitle.InnerHtml = pageTitle;
                     rptSlimlerAds.DataSource = objDataSet;
                     rptSlimlerAds.DataBind();

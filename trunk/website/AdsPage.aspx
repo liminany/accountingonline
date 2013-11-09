@@ -2,30 +2,29 @@
     CodeFile="AdsPage.aspx.cs" Inherits="AdsPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-    <script src="Scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
-    <script src="Scripts/jquery.MultiFile.js" type="text/javascript"></script>
     <script type="text/javascript">
-        tinyMCE.init({
-            // General options
-            mode: "textareas",
-            theme: "advanced",
-            plugins: "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",
-            // Theme options
-            theme_advanced_buttons1: "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
-            theme_advanced_buttons3: "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
-            theme_advanced_buttons4: "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft,visualblocks",
-            theme_advanced_toolbar_location: "top",
-            theme_advanced_toolbar_align: "left",
-            theme_advanced_statusbar_location: "bottom",
-            theme_advanced_resizing: true,
-            // Example content CSS (should be your site CSS)
-            // Drop lists for link/image/media/template dialogs
-            template_external_list_url: "lists/template_list.js",
-            external_link_list_url: "lists/link_list.js",
-            external_image_list_url: "lists/image_list.js",
-            media_external_list_url: "lists/media_list.js",
-            // Style formats
-            style_formats: [
+        $(document).ready(function () {
+            tinyMCE.init({
+                // General options
+                mode: "textareas",
+                theme: "advanced",
+                plugins: "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",
+                // Theme options
+                theme_advanced_buttons1: "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
+                theme_advanced_buttons3: "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
+                theme_advanced_buttons4: "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft,visualblocks",
+                theme_advanced_toolbar_location: "top",
+                theme_advanced_toolbar_align: "left",
+                theme_advanced_statusbar_location: "bottom",
+                theme_advanced_resizing: true,
+                // Example content CSS (should be your site CSS)
+                // Drop lists for link/image/media/template dialogs
+                template_external_list_url: "lists/template_list.js",
+                external_link_list_url: "lists/link_list.js",
+                external_image_list_url: "lists/image_list.js",
+                media_external_list_url: "lists/media_list.js",
+                // Style formats
+                style_formats: [
 			{ title: 'Bold text', inline: 'b' },
 			{ title: 'Red text', inline: 'span', styles: { color: '#ff0000'} },
 			{ title: 'Red header', block: 'h1', styles: { color: '#ff0000'} },
@@ -34,37 +33,51 @@
 			{ title: 'Table styles' },
 			{ title: 'Table row 1', selector: 'tr', classes: 'tablerow1' }
 		],
-            // Replace values for the template plugin
-            template_replace_values: {
-                username: "Some User",
-                staffid: "991234"
-            }
-        }); 
+                // Replace values for the template plugin
+                template_replace_values: {
+                    username: "Some User",
+                    staffid: "991234"
+                }
+            });
+        });
+
+        function funDeleteImage(imgID) {
+            $("#" + imgID).remove();
+        }
+
+        function GetImageToUpdateAds() {
+            var imageNew = "";
+            $('img.AdsImage').each(function () {
+                imageNew = imageNew + $(this).attr("src").replace("../", "~/") + "|";
+            });
+            $("#ctl00_ContentPlaceHolder1_hfEditImageAds").val(imageNew);
+        }
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfUserID" Value="0" />
     <asp:HiddenField runat="server" ID="hfCountryID" Value="0" />
+    <asp:HiddenField runat="server" ID="hfEditImageAds" Value="0" />
     <div style="height: 30px; float: right;">
-        <a href='/'>سوق سماء العرب </a>» إضافة إعلان جديد
+        <a href='/'>سوق سماء العرب </a>» <span id="spPageTitle" runat="server"></span>
     </div>
     <div style="clear: both;">
     </div>
     <div style="width: 100%; height: auto;">
         <div>
-            <div class="clickin-indexHeadingLeftCurve">
+            <div class="arabiSky-indexHeadingLeftCurve">
             </div>
-            <div class="clickin-indexHeadingContent" style="width: 97%;">
-                <a href="" title="Education & Learning" style="color: #111111; font-size: 20px;">إضافة
-                    إعلان</a>&nbsp;<span></span>
+            <div class="arabiSky-indexHeadingContent" style="width: 97%;">
+                <a href="" title="Education & Learning" style="color: #111111; font-size: 20px;"
+                    runat="server" id="spAdsTitle">إضافة إعلان</a>
             </div>
-            <div class="clickin-indexHeadingRightCurve">
+            <div class="arabiSky-indexHeadingRightCurve">
             </div>
         </div>
         <div style="clear: both;">
         </div>
         <div>
-            <div style="border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px;
+            <div style="float: right; border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px;
                 text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr id="trUserMessage" runat="server" style="display: none;">
@@ -101,7 +114,7 @@
                                                 القسم :
                                             </td>
                                             <td align="right" colspan="2">
-                                                <asp:DropDownList ID="ddlCategoryName" runat="server" CssClass="clickin-homeSelectbox"
+                                                <asp:DropDownList ID="ddlCategoryName" runat="server" CssClass="arabiSky-homeSelectbox"
                                                     Style="width: 250px;" AutoPostBack="true" OnSelectedIndexChanged="ddlCategoryName_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlCategoryName"
@@ -113,7 +126,7 @@
                                                 القسم الفرعي :
                                             </td>
                                             <td align="right" colspan="2">
-                                                <asp:DropDownList ID="ddlSubCategoryName" runat="server" CssClass="clickin-homeSelectbox"
+                                                <asp:DropDownList ID="ddlSubCategoryName" runat="server" CssClass="arabiSky-homeSelectbox"
                                                     Style="width: 250px;">
                                                 </asp:DropDownList>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlCategoryName"
@@ -139,7 +152,7 @@
                             المدينة :
                         </td>
                         <td align="right" colspan="2">
-                            <asp:DropDownList ID="ddlCityName" runat="server" CssClass="clickin-homeSelectbox"
+                            <asp:DropDownList ID="ddlCityName" runat="server" CssClass="arabiSky-homeSelectbox"
                                 Style="width: 250px;">
                             </asp:DropDownList>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCategoryName"
@@ -159,7 +172,7 @@
                         <td align="right" style="font-weight: bold">
                             نص الإعلان :
                         </td>
-                        <td colspan="2" align="right">
+                        <td colspan="2" align="right" style="text-align:right;">
                             <textarea runat="server" id="editor" name="elm1" rows="5" cols="80" style="width: 80%"
                                 runat="server">
 			                            </textarea>
@@ -198,7 +211,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="3">
-                                        <asp:FileUpload ID="file_upload" class="multi" runat="server" accept="png|jpg" maxlength="5" />
+                                        <asp:FileUpload ID="file_upload" class="multi" runat="server" accept="png|jpg" maxlength="6" />
                                         <asp:Label ID="lblMessage" runat="server" />
                                     </td>
                                 </tr>
@@ -210,6 +223,14 @@
                         </td>
                     </tr>
                     <tr>
+                        <td colspan="3" align="right" id="imgAdsImage" runat="server">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 10px;">
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f5f5f5; height: 50px; border: 1px solid #ccc;">
                         <td>
                             &nbsp;
                         </td>
@@ -226,6 +247,16 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+            <div style="clear: both; height: 10px;">
+            </div>
+            <div style="text-align: center;">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ArabiSky_Default_Top -->
+                <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                    data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+                <script>                    (adsbygoogle = window.adsbygoogle || []).push({});</script>
+                <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
             </div>
         </div>
     </div>
