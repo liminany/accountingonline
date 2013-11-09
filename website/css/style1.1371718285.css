@@ -237,18 +237,18 @@ a
     text-decoration: none;
 }
 
-a.myClickin
+a.myarabiSky
 {
-    background: url(../images/myClickinLeftCurve.jpg) no-repeat left top;
+    background: url(../images/myarabiSkyLeftCurve.jpg) no-repeat left top;
     height: 21px;
     float: left;
     padding-left: 4px;
     color: #FFF;
 }
 
-a.myClickin span
+a.myarabiSky span
 {
-    background: url(..//images/myClickinRightCurve.jpg) no-repeat right top;
+    background: url(..//images/myarabiSkyRightCurve.jpg) no-repeat right top;
     height: 21px;
     float: left;
     padding-right: 14px;
@@ -1311,14 +1311,14 @@ h1
     color: #000;
 }
 
-#otherCategoriesClickin
+#otherCategoriesarabiSky
 {
     clear: both;
     padding-bottom: 5px;
     font-family: Arial,Helvetica,sans-serif;
 }
 
-#otherCategoriesClickin a
+#otherCategoriesarabiSky a
 {
     color: #06C;
     text-decoration: none;
@@ -2486,7 +2486,7 @@ a.otherCity
     font-weight: 700;
 }
 
-.myclickin-ccavenueForm #upgradePlansMain
+.myarabiSky-ccavenueForm #upgradePlansMain
 {
     width: auto;
 }
@@ -4782,7 +4782,7 @@ a.xml
     background: url(../images/emailRightCurve.jpg) no-repeat right top;
 }
 
-#clickin-topMenuMain
+#arabiSky-topMenuMain
 {
     width: 100%;
     clear: both;
@@ -4790,7 +4790,7 @@ a.xml
     padding-top: 4px;
 }
 
-#clickin-topMenu
+#arabiSky-topMenu
 {
     width: 988px;
     position: relative;
@@ -4798,7 +4798,7 @@ a.xml
     margin: 0 auto;
 }
 
-.clickin-menuLinks
+.arabiSky-menuLinks
 {
     float: right;
     color: #000;
@@ -4806,7 +4806,7 @@ a.xml
     position: relative;
 }
 
-.clickin-menuLinksConnected
+.arabiSky-menuLinksConnected
 {
     float: right;
     color: #000;
@@ -4815,7 +4815,7 @@ a.xml
     padding-top: 6px;
 }
 
-.clickin-menuLinks a
+.arabiSky-menuLinks a
 {
     background: none repeat scroll 0 0 #EDEDED;
     border: 1px solid #C3C3C3;
@@ -4828,7 +4828,7 @@ a.xml
     padding: 0 8px;
 }
 
-.clickin-menuLinksConnected a
+.arabiSky-menuLinksConnected a
 {
     color: #000;
     text-indent: -9999px;
@@ -4840,25 +4840,25 @@ a.xml
 
 a.facebookSmall
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left -223px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left -223px;
 }
 
 a.twitterSmall
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left -185px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left -185px;
 }
 
 a.mobileSmall
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left -204px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left -204px;
 }
 
 a.gplusSmall
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left -380px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left -380px;
 }
 
-#clickin-headerMain
+#arabiSky-headerMain
 {
     width: 100%;
     clear: both;
@@ -4866,7 +4866,7 @@ a.gplusSmall
     height: 67px;
 }
 
-#clickin-header
+#arabiSky-header
 {
     width: 988px;
     position: relative;
@@ -4875,28 +4875,28 @@ a.gplusSmall
     padding: 6px 0;
 }
 
-#clickin-logo
+#arabiSky-logo
 {
     float: left;
     width: 215px;
     position: relative;
 }
 
-.clickin-topLinks
+.arabiSky-topLinks
 {
     padding-left: 50px;
 }
 
-.clickin-topLinks a
+.arabiSky-topLinks a
 {
     font-size: 15px;
     color: #fea841;
     text-decoration: none;
 }
 
-a.myClickIn
+a.myarabiSky
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left -38px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left -38px;
     height: 34px;
     float: left;
     padding-left: 30px;
@@ -4906,7 +4906,7 @@ a.myClickIn
 
 a.mySupport
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left 0;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left 0;
     height: 33px;
     float: left;
     padding-top: 5px;
@@ -4914,7 +4914,7 @@ a.mySupport
     cursor: pointer;
 }
 
-.clickin-searchBlock
+.arabiSky-searchBlock
 {
     background: none repeat scroll 0 0 #EDEDED;
     border: 1px solid #C3C3C3;
@@ -4923,16 +4923,16 @@ a.mySupport
     float: left;
 }
 
-.clickin-searchLeftCurve
+.arabiSky-searchLeftCurve
 {
     float: left;
     width: 450px;
     padding: 5px 0 5px 5px;
 }
 
-.clickin-searchRightCurve
+.arabiSky-searchRightCurve
 {
-    /*background: url(http://udham-singh-nagar.click.in/images/clickin-sprite.5.png) no-repeat left -242px;*/
+    /*background: url(http://udham-singh-nagar.click.in/images/arabiSky-sprite.5.png) no-repeat left -242px;*/
     float: left;
     width: 112px;
     height: 30px;
@@ -4940,7 +4940,7 @@ a.mySupport
     padding: 12px 0 10px 10px;
 }
 
-.clickin-postClassifieds
+.arabiSky-postClassifieds
 {
     float: right;
     width: 180px;
@@ -4951,7 +4951,7 @@ a.mySupport
     padding: 5px;
 }
 
-.clickin-postClassifieds a
+.arabiSky-postClassifieds a
 {
     color: #262626;
     font-size: 14px;
@@ -4962,14 +4962,14 @@ a.mySupport
     padding-top: 7px;
 }
 
-.clickin-searchbox
+.arabiSky-searchbox
 {
     float: left;
     width: 220px;
     padding-right: 5px;
 }
 
-.clickin-searchTextbox
+.arabiSky-searchTextbox
 {
     color: #5a5a5a;
     background-color: #fff;
@@ -4978,7 +4978,7 @@ a.mySupport
     padding: 4px;
 }
 
-.clickin-searchcategories
+.arabiSky-searchcategories
 {
     float: left;
     margin-right: 5px;
@@ -4995,7 +4995,7 @@ a.mySupport
     background-color: #fff;
 }
 
-.clickin-searchcategories a
+.arabiSky-searchcategories a
 {
     background: url(../images/downarrow.png) no-repeat right center;
     color: #4b4a4a;
@@ -5004,7 +5004,7 @@ a.mySupport
     width: 210px;
 }
 
-.clickin-searchCategoriesContent
+.arabiSky-searchCategoriesContent
 {
     width: 200px;
     background: #fff;
@@ -5019,14 +5019,14 @@ a.mySupport
     padding: 5px;
 }
 
-.clickin-searchCategoriesContent ul li a
+.arabiSky-searchCategoriesContent ul li a
 {
     font-size: 12px;
     line-height: 20px;
     color: #000;
 }
 
-.clickin-citySelector
+.arabiSky-citySelector
 {
     margin-right: 5px;
     color: #4b4a4a;
@@ -5043,7 +5043,7 @@ a.mySupport
     background-color: #fff;
 }
 
-.clickin-citySelector a
+.arabiSky-citySelector a
 {
     background: url(../images/downarrow.png) no-repeat right center;
     color: #4b4a4a;
@@ -5052,7 +5052,7 @@ a.mySupport
     width: 325px;
 }
 
-.clickin-citySelectorContent
+.arabiSky-citySelectorContent
 {
     position: absolute;
     width: 258px;
@@ -5067,7 +5067,7 @@ a.mySupport
     padding: 5px;
 }
 
-.clickin-citySelectorContent ul li
+.arabiSky-citySelectorContent ul li
 {
     font-size: 13px;
     padding-left: 1px;
@@ -5075,14 +5075,14 @@ a.mySupport
     cursor: pointer;
 }
 
-.clickin-citySelectorContent ul li a
+.arabiSky-citySelectorContent ul li a
 {
     font-size: 13px;
     line-height: 20px;
     color: #000;
 }
 
-.clickin-search
+.arabiSky-search
 {
     border: none;
     background: transparent;
@@ -5092,13 +5092,13 @@ a.mySupport
     cursor: pointer;
 }
 
-.clickin-searchBottom
+.arabiSky-searchBottom
 {
     position: relative;
     z-index: 10000;
 }
 
-.clickin-selectCity
+.arabiSky-selectCity
 {
     color: #000;
     font-size: 14px;
@@ -5107,7 +5107,7 @@ a.mySupport
     text-align: center;
 }
 
-.clickin-selectCity span
+.arabiSky-selectCity span
 {
     background: url(../images/downarrow.png) no-repeat scroll right 4px transparent;
     color: #000;
@@ -5116,7 +5116,7 @@ a.mySupport
     text-decoration: none;
 }
 
-.clickin-selectCityLeftCurve
+.arabiSky-selectCityLeftCurve
 {
     background: url(../images/selectCityLeftCurve.jpg) no-repeat left top;
     width: 6px;
@@ -5124,12 +5124,12 @@ a.mySupport
     height: 23px;
 }
 
-.clickin-selectCityContent
+.arabiSky-selectCityContent
 {
     height: 23px;
 }
 
-.clickin-selectCityRightCurve
+.arabiSky-selectCityRightCurve
 {
     background: url(../images/selectCityRightCurve.jpg) no-repeat left top;
     width: 6px;
@@ -5137,14 +5137,14 @@ a.mySupport
     height: 23px;
 }
 
-.clickin-diffLanguages a
+.arabiSky-diffLanguages a
 {
     color: #000;
     font-size: 12px;
     padding: 0 5px;
 }
 
-.clickin-cityContent
+.arabiSky-cityContent
 {
     width: 215px;
     background: #fefefe;
@@ -5157,7 +5157,7 @@ a.mySupport
     padding: 0 10px 10px;
 }
 
-.clickin-cityContent ul li a
+.arabiSky-cityContent ul li a
 {
     font-size: 14px;
     line-height: 20px;
@@ -5165,7 +5165,7 @@ a.mySupport
     display: block;
 }
 
-#clickin-content
+#arabiSky-content
 {
     width: 988px;
     clear: both;
@@ -5173,7 +5173,7 @@ a.mySupport
     margin: 0 auto;
 }
 
-.clickin-breadcrumb
+.arabiSky-breadcrumb
 {
     font-size: 14px;
     color: #000;
@@ -5182,7 +5182,7 @@ a.mySupport
     padding: 10px 0;
 }
 
-#clickin-leftPanelInner
+#arabiSky-leftPanelInner
 {
     width: 664px;
     float: left;
@@ -5190,7 +5190,7 @@ a.mySupport
     position: relative;
 }
 
-.clickin-postDetailsBlock
+.arabiSky-postDetailsBlock
 {
     width: 662px;
     border: 1px solid #c5c6c6;
@@ -5198,12 +5198,12 @@ a.mySupport
     margin-bottom: 5px;
 }
 
-.clickin-postDetails
+.arabiSky-postDetails
 {
     padding: 5px 10px 20px;
 }
 
-.clickin-premiumAd
+.arabiSky-premiumAd
 {
     background: url(../images/premium_star.png) no-repeat left top;
     position: absolute;
@@ -5213,14 +5213,14 @@ a.mySupport
     height: 25px;
 }
 
-.clickin-postDetails h1
+.arabiSky-postDetails h1
 {
     color: #000;
     font-size: 25px;
     font-weight: 400;
 }
 
-.clickin-priceText
+.arabiSky-priceText
 {
     color: #140b00;
     font-size: 13px;
@@ -5228,14 +5228,14 @@ a.mySupport
     float: left;
 }
 
-.clickin-postedOn
+.arabiSky-postedOn
 {
     color: #000;
     font-size: 12px;
     float: right;
 }
 
-.clickin-normalText
+.arabiSky-normalText
 {
     color: #000;
     font-size: 12px;
@@ -5243,7 +5243,7 @@ a.mySupport
     padding: 10px;
 }
 
-.clickin-normalTextBold
+.arabiSky-normalTextBold
 {
     color: #000;
     font-size: 13px;
@@ -5252,27 +5252,27 @@ a.mySupport
     padding-left: 10px;
 }
 
-.clickin-shareThisBlock
+.arabiSky-shareThisBlock
 {
     position: relative;
     margin: 1px;
 }
 
-#clickin-rightPanelInner
+#arabiSky-rightPanelInner
 {
     width: 324px;
     float: left;
     padding: 0;
 }
 
-#clickin-replyToAdBlock
+#arabiSky-replyToAdBlock
 {
     margin-bottom: 0;
     position: relative;
     z-index: 1000;
 }
 
-.clickin-replyToArrow
+.arabiSky-replyToArrow
 {
     background: url(../images/replyarrow.png) no-repeat left top;
     position: absolute;
@@ -5282,7 +5282,7 @@ a.mySupport
     height: 25px;
 }
 
-.clickin-replyBoxPremiumTopRight
+.arabiSky-replyBoxPremiumTopRight
 {
     float: left;
     width: 9px;
@@ -5291,7 +5291,7 @@ a.mySupport
     font-size: 0;
 }
 
-.clickin-replyBoxPremiumContent
+.arabiSky-replyBoxPremiumContent
 {
     background: #FB9C1E;
     clear: both;
@@ -5303,7 +5303,7 @@ a.mySupport
     position: absolute;
 }
 
-.clickin-replyBoxPremiumBottomRight
+.arabiSky-replyBoxPremiumBottomRight
 {
     float: left;
     width: 9px;
@@ -5312,7 +5312,7 @@ a.mySupport
     font-size: 0;
 }
 
-.clickin-replyBoxNonPremiumTopRight
+.arabiSky-replyBoxNonPremiumTopRight
 {
     float: left;
     width: 9px;
@@ -5321,14 +5321,14 @@ a.mySupport
     font-size: 0;
 }
 
-.clickin-replyBoxNonPremiumContent
+.arabiSky-replyBoxNonPremiumContent
 {
     background: #51443e;
     clear: both;
     padding: 5px 10px 5px 20px;
 }
 
-.clickin-replyBoxNonPremiumBottomRight
+.arabiSky-replyBoxNonPremiumBottomRight
 {
     float: left;
     width: 9px;
@@ -5337,7 +5337,7 @@ a.mySupport
     font-size: 0;
 }
 
-.clickin-relatedAdsBlock
+.arabiSky-relatedAdsBlock
 {
     background: #f7f9fa;
     border: 1px solid #c5c6c6;
@@ -5345,31 +5345,31 @@ a.mySupport
     padding: 5px;
 }
 
-.clickin-relatedAdsHeading
+.arabiSky-relatedAdsHeading
 {
     font-size: 18px;
     color: #06c;
     padding-bottom: 10px;
 }
 
-.clickin-relatedAdsContent
+.arabiSky-relatedAdsContent
 {
     font-size: 14px;
     color: #06c;
 }
 
-.clickin-relatedAdsContent ul li
+.arabiSky-relatedAdsContent ul li
 {
     padding-bottom: 6px;
 }
 
-.clickin-seperator20x
+.arabiSky-seperator20x
 {
     clear: both;
     height: 20px;
 }
 
-#clickin-rightPanelInner1
+#arabiSky-rightPanelInner1
 {
     width: 300px;
     padding-left: 24px;
@@ -5385,7 +5385,7 @@ h2
     font-weight: 400;
 }
 
-.clickin-replyToAdHeading
+.arabiSky-replyToAdHeading
 {
     color: #000;
     font-size: 18px;
@@ -5393,7 +5393,7 @@ h2
     margin-bottom: 10px;
 }
 
-.clickin-sendresponse
+.arabiSky-sendresponse
 {
     color: #fff;
     background: url(../images/email_alert_middle.png) repeat-x left top;
@@ -5404,19 +5404,19 @@ h2
     padding-top: 2px;
 }
 
-.clickin-phoneNumberVerifyBlock
+.arabiSky-phoneNumberVerifyBlock
 {
     text-align: center;
     float: left;
     padding: 10px 0 0 10px;
 }
 
-.clickin-phoneNumberVerifyBlock a
+.arabiSky-phoneNumberVerifyBlock a
 {
     padding-right: 0;
 }
 
-.clickin-adDetails
+.arabiSky-adDetails
 {
     float: left;
     width: 300px;
@@ -5425,7 +5425,7 @@ h2
     color: #000;
 }
 
-.clickin-adDetails ul li
+.arabiSky-adDetails ul li
 {
     list-style-image: url(../images/bullet.png);
     padding-top: 5px;
@@ -5433,19 +5433,19 @@ h2
     clear: both;
 }
 
-#clickin-footerTextMain
+#arabiSky-footerTextMain
 {
     background: #c3c8cc;
 }
 
-#clickin-footerText
+#arabiSky-footerText
 {
     width: 988px;
     margin: 0 auto;
     padding: 10px 0;
 }
 
-.clickin-footerBlock1, .clickin-footerBlock2
+.arabiSky-footerBlock1, .arabiSky-footerBlock2
 {
     width: 260px;
     float: left;
@@ -5454,13 +5454,13 @@ h2
     background: url(../images/footerSeperator.jpg) repeat-y right top;
 }
 
-.clickin-footerBlock3
+.arabiSky-footerBlock3
 {
     float: left;
     width: 380px;
 }
 
-.clickin-footerHeading
+.arabiSky-footerHeading
 {
     color: #000;
     font-size: 15px;
@@ -5468,7 +5468,7 @@ h2
     padding-bottom: 10px;
 }
 
-.clickin-footerContent
+.arabiSky-footerContent
 {
     border: 1px solid #b2b1b1;
     background: #e7e7e7;
@@ -5479,7 +5479,7 @@ h2
     padding: 5px 10px;
 }
 
-.clickin-footerContent1
+.arabiSky-footerContent1
 {
     border: 1px solid #b2b1b1;
     background: #e7e7e7;
@@ -5490,14 +5490,14 @@ h2
     padding: 5px 10px;
 }
 
-.clickin-footerLineSeperator
+.arabiSky-footerLineSeperator
 {
     height: 21px;
     background: url(../images/footerHorLineSeperator.jpg) repeat-x left center;
     clear: both;
 }
 
-.clickin-footerConnections a
+.arabiSky-footerConnections a
 {
     margin-right: 10px;
     float: left;
@@ -5508,32 +5508,32 @@ h2
 
 a.facebook
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left -129px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left -129px;
 }
 
 a.twitter
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left -157px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left -157px;
 }
 
 a.gplus
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat scroll left -400px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat scroll left -400px;
 }
 
 a.mobile
 {
-    background: url(../images/clickin-sprite.5.png) no-repeat left -79px;
+    background: url(../images/arabiSky-sprite.5.png) no-repeat left -79px;
 }
 
-.clickin-footerSeperator
+.arabiSky-footerSeperator
 {
     border-bottom: 1px solid #c8c8c8;
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
-.clickin-doteedLineSeperator
+.arabiSky-doteedLineSeperator
 {
     border-bottom: 1px dotted #737373;
     padding-bottom: 15px;
@@ -5541,7 +5541,7 @@ a.mobile
     clear: both;
 }
 
-.clickin-footerLinks
+.arabiSky-footerLinks
 {
     color: #494949;
     font-size: 12px;
@@ -5549,7 +5549,7 @@ a.mobile
     padding-top: 10px;
 }
 
-.clickin-footerLinksTop
+.arabiSky-footerLinksTop
 {
     color: #494949;
     font-size: 12px;
@@ -5558,7 +5558,7 @@ a.mobile
     font-weight: 700;
 }
 
-.clickin-copyright
+.arabiSky-copyright
 {
     font-size: 12px;
     color: #494949;
@@ -5566,12 +5566,12 @@ a.mobile
     text-align: center;
 }
 
-.clickin-copyright a
+.arabiSky-copyright a
 {
     color: #494949;
 }
 
-.clickin-replyTextField
+.arabiSky-replyTextField
 {
     float: left;
     width: 88px;
@@ -5581,7 +5581,7 @@ a.mobile
     color: #000;
 }
 
-.clickin-replyTextFieldBox
+.arabiSky-replyTextFieldBox
 {
     float: left;
     padding-bottom: 5px;
@@ -5590,32 +5590,32 @@ a.mobile
     color: #111;
 }
 
-.clickin-replyTextFieldTextarea
+.arabiSky-replyTextFieldTextarea
 {
     padding-bottom: 15px;
 }
 
-.clickin-replyformTextbox
+.arabiSky-replyformTextbox
 {
     font-size: 12px;
     width: 167px;
     padding: 4px;
 }
 
-.clickin-replyformTextboxSecurity
+.arabiSky-replyformTextboxSecurity
 {
     width: 167px;
     padding: 2px;
 }
 
-.clickin-replyformTextboxCaptcha
+.arabiSky-replyformTextboxCaptcha
 {
     border: none;
     width: 80px;
     padding: 4px;
 }
 
-.clickin-captchaImg
+.arabiSky-captchaImg
 {
     float: left;
     margin-right: 5px;
@@ -5624,13 +5624,13 @@ a.mobile
     width: 60px;
 }
 
-.clickin-captchaText
+.arabiSky-captchaText
 {
     float: left;
     width: 90px;
 }
 
-.clickin-replyformTextarea
+.arabiSky-replyformTextarea
 {
     font-size: 12px;
     width: 257px;
@@ -5638,14 +5638,14 @@ a.mobile
     padding: 4px;
 }
 
-.clickin-adImages
+.arabiSky-adImages
 {
     width: 621px;
     margin: 0 auto;
     padding: 0 20px 10px 0;
 }
 
-.clickin-adImg
+.arabiSky-adImg
 {
     width: 400px;
     float: left;
@@ -5653,18 +5653,18 @@ a.mobile
     padding: 2px;
 }
 
-.clickin-adThumbnailsMain
+.arabiSky-adThumbnailsMain
 {
     float: left;
     width: 70px;
 }
 
-.clickin-adThumbnails
+.arabiSky-adThumbnails
 {
     padding-bottom: 14px;
 }
 
-.clickin-adThumbnails a
+.arabiSky-adThumbnails a
 {
     float: left;
     border: 1px solid #9a9a9a;
@@ -5672,7 +5672,7 @@ a.mobile
     padding: 2px;
 }
 
-.clickin-viewPhoneNumberBlock
+.arabiSky-viewPhoneNumberBlock
 {
     float: left;
     height: 35px;
@@ -5680,7 +5680,7 @@ a.mobile
     cursor: pointer;
 }
 
-.clickin-viewPhoneNumberLeftCurve
+.arabiSky-viewPhoneNumberLeftCurve
 {
     float: left;
     width: 37px;
@@ -5688,7 +5688,7 @@ a.mobile
     background: url(../images/viewPhoneLeftCurve.jpg) no-repeat left top;
 }
 
-.clickin-viewPhoneNumber
+.arabiSky-viewPhoneNumber
 {
     float: left;
     height: 33px;
@@ -5702,13 +5702,13 @@ a.mobile
     padding: 0 5px;
 }
 
-.clickin-viewPhoneNumber a, .clickin-verify a
+.arabiSky-viewPhoneNumber a, .arabiSky-verify a
 {
     color: #fff;
     font-size: 14px;
 }
 
-.clickin-viewPhoneNumberRightCurve
+.arabiSky-viewPhoneNumberRightCurve
 {
     float: left;
     width: 7px;
@@ -5716,14 +5716,14 @@ a.mobile
     background: url(../images/viewPhoneRightCurve.jpg) no-repeat left top;
 }
 
-.clickin-verifyBlock
+.arabiSky-verifyBlock
 {
     float: left;
     height: 35px;
     margin-right: 20px;
 }
 
-.clickin-verifyLeftCurve
+.arabiSky-verifyLeftCurve
 {
     float: left;
     width: 42px;
@@ -5731,7 +5731,7 @@ a.mobile
     background: url(../images/verifiedLeftCurve.jpg) no-repeat left top;
 }
 
-.clickin-verify
+.arabiSky-verify
 {
     float: left;
     height: 25px;
@@ -5741,7 +5741,7 @@ a.mobile
     margin-top: 8px;
 }
 
-.clickin-verifyRightCurve
+.arabiSky-verifyRightCurve
 {
     float: left;
     width: 6px;
@@ -5750,20 +5750,20 @@ a.mobile
     margin-top: 8px;
 }
 
-.clickin-storeListingLinks
+.arabiSky-storeListingLinks
 {
     float: left;
     margin-right: 36px;
 }
 
-.clickin-flatListingLinks
+.arabiSky-flatListingLinks
 {
     float: left;
     font-size: 12px;
     padding-top: 5px;
 }
 
-.clickin-connections, .clickin-connectionsText
+.arabiSky-connections, .arabiSky-connectionsText
 {
     float: left;
     padding-right: 20px;
@@ -5779,14 +5779,14 @@ a.closeDiv
     margin-top: 6px;
 }
 
-.clickin-verifyBlockSmall
+.arabiSky-verifyBlockSmall
 {
     float: left;
     height: 23px;
     margin-right: 20px;
 }
 
-.clickin-verifyLeftCurveSmall
+.arabiSky-verifyLeftCurveSmall
 {
     float: left;
     width: 24px;
@@ -5794,7 +5794,7 @@ a.closeDiv
     background: url(../images/verifiedLeftCurveSmall.jpg) no-repeat left top;
 }
 
-.clickin-verifySmall
+.arabiSky-verifySmall
 {
     float: left;
     height: 14px;
@@ -5805,13 +5805,13 @@ a.closeDiv
     font-size: 11px;
 }
 
-.clickin-verifySmall a
+.arabiSky-verifySmall a
 {
     color: #fff;
     padding-right: 5px;
 }
 
-.clickin-verifyRightCurveSmall
+.arabiSky-verifyRightCurveSmall
 {
     float: left;
     width: 6px;
@@ -5820,7 +5820,7 @@ a.closeDiv
     margin-top: 5px;
 }
 
-.clickin-heading
+.arabiSky-heading
 {
     font-size: 18px;
     font-weight: 700;
@@ -5828,7 +5828,7 @@ a.closeDiv
     padding: 20px 0 0;
 }
 
-.clickin-normalText-home
+.arabiSky-normalText-home
 {
     font-size: 12px;
     color: #666;
@@ -5836,20 +5836,20 @@ a.closeDiv
     margin-top: 5px;
 }
 
-.clickin-indexMainBlocks
+.arabiSky-indexMainBlocks
 {
     width: 227px;
     float: left;
     margin-right: 25px;
 }
 
-.clickin-indexInnerBlocks
+.arabiSky-indexInnerBlocks
 {
     clear: both;
     margin-bottom: 15px;
 }
 
-.clickin-indexHeadingLeftCurve
+.arabiSky-indexHeadingLeftCurve
 {
     background: url(../images/headingleftCurve.png) no-repeat left top;
     width: 10px;
@@ -5857,7 +5857,7 @@ a.closeDiv
     float: left;
 }
 
-.clickin-indexHeadingContent
+.arabiSky-indexHeadingContent
 {
     background: url(../images/headingBgStrip.jpg) repeat-x left top;
     width: 207px;
@@ -5869,14 +5869,14 @@ a.closeDiv
     font-weight: 700;
 }
 
-.clickin-indexHeadingContent span
+.arabiSky-indexHeadingContent span
 {
     color: #5c5959;
     font-size: 11px;
     font-weight: 400;
 }
 
-.clickin-indexHeadingRightCurve
+.arabiSky-indexHeadingRightCurve
 {
     background: url(../images/headingRightCurve.png) no-repeat left top;
     width: 10px;
@@ -5884,18 +5884,18 @@ a.closeDiv
     float: left;
 }
 
-.clickin-indexHeadingContent.new
+.arabiSky-indexHeadingContent.new
 {
     width: 163px;
 }
 
-.clickin-indexHeadingRightCurve.new
+.arabiSky-indexHeadingRightCurve.new
 {
     background: url(../images/headingRightCurveNew.jpg) no-repeat left top;
     width: 54px;
 }
 
-.clickin-indexContent
+.arabiSky-indexContent
 {
     border: 1px solid #c5c6c6;
     width: 205px;
@@ -5905,35 +5905,35 @@ a.closeDiv
     padding: 20px 10px 10px;
 }
 
-.clickin-indexContent ul li
+.arabiSky-indexContent ul li
 {
     list-style-image: url(../images/bullet_home.jpg);
     color: #999;
     font-size: 12px;
 }
 
-.clickin-indexContent ul li a
+.arabiSky-indexContent ul li a
 {
     color: #06c;
     font-size: 15px;
     line-height: 20px;
 }
 
-.clickin-indexContent ul li div
+.arabiSky-indexContent ul li div
 {
     border-bottom: 1px solid #C5C6C6;
     margin-bottom: 4px;
     padding-bottom: 4px;
 }
 
-.clickin-indexContent ul li.topBorder
+.arabiSky-indexContent ul li.topBorder
 {
     border-top: 1px solid #C5C6C6;
     margin-top: 5px;
     padding-top: 2px;
 }
 
-.clickin-postResume
+.arabiSky-postResume
 {
     border-top: 1px solid #c5c6c6;
     color: #000;
@@ -5944,7 +5944,7 @@ a.closeDiv
     padding: 8px 0 0;
 }
 
-.clickin-postResume a
+.arabiSky-postResume a
 {
     background: url(../images/postResumeIcon.jpg) no-repeat left center;
     color: #000;
@@ -5953,7 +5953,7 @@ a.closeDiv
     float: left;
 }
 
-.clickin-postResume a span
+.arabiSky-postResume a span
 {
     color: #f7941d;
 }
@@ -6007,34 +6007,34 @@ a.closeDiv
     padding-top: 2px;
 }
 
-#clickin-leftPanelListing
+#arabiSky-leftPanelListing
 {
     width: 300px;
     float: left;
 }
 
-#clickin-rightPanelListing
+#arabiSky-rightPanelListing
 {
     width: 664px;
     float: right;
 }
 
-#clickin-listingPageSearchBlock
+#arabiSky-listingPageSearchBlock
 {
     width: 300px;
     margin-bottom: 20px;
 }
 
-#clickin-listingPageSearchTopCurve
+#arabiSky-listingPageSearchTopCurve
 {
-    background: url(../images/clickin-innerpage-sprite.png) no-repeat left top;
+    background: url(../images/arabiSky-innerpage-sprite.png) no-repeat left top;
     height: 12px;
     margin-left: 5px;
 }
 
-#clickin-listingPageSearchHeading
+#arabiSky-listingPageSearchHeading
 {
-    background: url(../images/clickin-innerpage-sprite.png) no-repeat left -23px;
+    background: url(../images/arabiSky-innerpage-sprite.png) no-repeat left -23px;
     height: 38px;
     color: #fff;
     font-size: 20px;
@@ -6043,7 +6043,7 @@ a.closeDiv
     padding-top: 6px;
 }
 
-#clickin-listingPageSearchContent
+#arabiSky-listingPageSearchContent
 {
     border-left: 1px solid #d9d8da;
     border-right: 1px solid #d9d8da;
@@ -6056,7 +6056,7 @@ a.closeDiv
     padding: 10px 20px;
 }
 
-.clickin-listingTextFieldBold
+.arabiSky-listingTextFieldBold
 {
     width: 90px;
     float: left;
@@ -6066,7 +6066,7 @@ a.closeDiv
     color: #000;
 }
 
-.clickin-listingTextFieldRight
+.arabiSky-listingTextFieldRight
 {
     width: 160px;
     float: right;
@@ -6075,33 +6075,33 @@ a.closeDiv
     color: #000;
 }
 
-.clickin-clear1
+.arabiSky-clear1
 {
     clear: both;
     height: 10px;
 }
 
-.clickin-listingSelectbox
+.arabiSky-listingSelectbox
 {
     width: 160px;
     border: 1px solid #b7bcc1;
     padding: 4px;
 }
 
-.clickin-listingTextbox
+.arabiSky-listingTextbox
 {
     width: 150px;
     border: 1px solid #b7bcc1;
     padding: 4px;
 }
 
-#clickin-listingPageSearchBottomCurve
+#arabiSky-listingPageSearchBottomCurve
 {
     background: #E8E8E8 no-repeat left bottom;
     margin: 8px 0;
 }
 
-.clickin-listingPagealertMail
+.arabiSky-listingPagealertMail
 {
     background: #CCC no-repeat 35px center;
     padding-left: 238px;
@@ -6112,24 +6112,24 @@ a.closeDiv
     font-size: 14px;
 }
 
-.clickin-alertMailContent
+.arabiSky-alertMailContent
 {
     padding: 0 10px 10px;
 }
 
-#clickin-listingPremiumAdBlock
+#arabiSky-listingPremiumAdBlock
 {
     border-bottom: 2px solid #E3E1DE;
 }
 
-.clickin-listingPremiumText
+.arabiSky-listingPremiumText
 {
     background: #EFF0F1;
     margin-bottom: 15px;
     padding: 5px 10px;
 }
 
-.clickin-listingPremiumText span
+.arabiSky-listingPremiumText span
 {
     color: #000;
     font-weight: 700;
@@ -6138,7 +6138,7 @@ a.closeDiv
     background: url(../images/premium_star.png) no-repeat left center;
 }
 
-.clickin-listingpagePosts
+.arabiSky-listingpagePosts
 {
     border-bottom: 1px solid #e3e1de;
     position: relative;
@@ -6146,12 +6146,12 @@ a.closeDiv
     padding: 15px 20px 5px 0;
 }
 
-.clickin-listingpagePosts:hover
+.arabiSky-listingpagePosts:hover
 {
     background: #f0f1f2;
 }
 
-.clickin-listingpagePostsLeft
+.arabiSky-listingpagePostsLeft
 {
     width: 80px;
     float: left;
@@ -6160,19 +6160,19 @@ a.closeDiv
     text-align: center;
 }
 
-.clickin-listingpagePostsLeft img
+.arabiSky-listingpagePostsLeft img
 {
     border: 1px solid #c4c4c4;
     margin-bottom: 5px;
 }
 
-.clickin-listingpagePostsRight
+.arabiSky-listingpagePostsRight
 {
     width: 550px;
     float: left;
 }
 
-.clickin-postsHeading
+.arabiSky-postsHeading
 {
     color: #333;
     font-size: 16px;
@@ -6180,28 +6180,28 @@ a.closeDiv
     padding-bottom: 5px;
 }
 
-.clickin-postsDesc
+.arabiSky-postsDesc
 {
     font-size: 13px;
     color: #333;
     padding-bottom: 5px;
 }
 
-.clickin-postsDesc1
+.arabiSky-postsDesc1
 {
     font-size: 12px;
     color: #6d6c6c;
     padding-bottom: 5px;
 }
 
-.clickin-postsPriceDetails
+.arabiSky-postsPriceDetails
 {
     font-size: 13px;
     color: #140b00;
     padding-bottom: 5px;
 }
 
-.clickin-postsPostedDetails
+.arabiSky-postsPostedDetails
 {
     font-size: 13px;
     color: #140b00;
@@ -6209,20 +6209,20 @@ a.closeDiv
     padding-top: 8px;
 }
 
-.clickin-postsContactBtn
+.arabiSky-postsContactBtn
 {
     margin-top: 5px;
     float: right;
     padding-right: 11px;
 }
 
-.clickin-postsNonPremiumContactBtn
+.arabiSky-postsNonPremiumContactBtn
 {
     margin-left: 544px;
     margin-top: 5px;
 }
 
-.clickin-postPremiumAd
+.arabiSky-postPremiumAd
 {
     font-size: 14px;
     border-bottom: 1px solid #e3e1de;
@@ -6231,7 +6231,7 @@ a.closeDiv
     padding: 10px 0;
 }
 
-.clickin-postedDate
+.arabiSky-postedDate
 {
     background: #f0f1f2;
     border-bottom: 1px solid #e3e1de;
@@ -6240,7 +6240,7 @@ a.closeDiv
     font-size: 12px;
 }
 
-.clickin-navigation
+.arabiSky-navigation
 {
     background: #f0f1f2;
     text-align: right;
@@ -6250,7 +6250,7 @@ a.closeDiv
     padding: 10px;
 }
 
-.clickin-searchByAdsactive
+.arabiSky-searchByAdsactive
 {
     float: left;
     margin-right: 15px;
@@ -6262,7 +6262,7 @@ a.closeDiv
     font-size: 13px;
 }
 
-.clickin-searchByAdsInactive
+.arabiSky-searchByAdsInactive
 {
     float: left;
     margin-right: 15px;
@@ -6271,7 +6271,7 @@ a.closeDiv
     font-size: 13px;
 }
 
-.clickin-offerWantedactive
+.arabiSky-offerWantedactive
 {
     float: left;
     margin-right: 15px;
@@ -6283,7 +6283,7 @@ a.closeDiv
     font-size: 11px;
 }
 
-.clickin-offerWantedInactive
+.arabiSky-offerWantedInactive
 {
     float: left;
     margin-right: 15px;
@@ -6292,7 +6292,7 @@ a.closeDiv
     font-size: 11px;
 }
 
-.clickin-offerWantedPanel
+.arabiSky-offerWantedPanel
 {
     border-bottom: 1px solid #CCC;
     margin-bottom: 10px;
@@ -6300,7 +6300,7 @@ a.closeDiv
     height: 20px;
 }
 
-.clickin-searchByAdsBgStrip a
+.arabiSky-searchByAdsBgStrip a
 {
     color: #333;
     text-decoration: none;
@@ -6347,7 +6347,7 @@ a.closeDiv
     margin-top: -7px;
 }
 
-.clickin-replyTextField1
+.arabiSky-replyTextField1
 {
     color: #000;
     float: left;
@@ -6356,7 +6356,7 @@ a.closeDiv
     width: 105px;
 }
 
-.clickin-replyTextFieldBox1
+.arabiSky-replyTextFieldBox1
 {
     color: #000;
     float: left;
@@ -6365,20 +6365,20 @@ a.closeDiv
     width: 250px;
 }
 
-.clickin-replyformTextbox1
+.arabiSky-replyformTextbox1
 {
     width: 220px;
     padding: 4px;
 }
 
-.clickin-replyformTextboxSecurity1
+.arabiSky-replyformTextboxSecurity1
 {
     background: none repeat scroll 0 0 #F9AE4C;
     width: 220px;
     padding: 0;
 }
 
-.clickin-replyformTextarea1
+.arabiSky-replyformTextarea1
 {
     height: 130px;
     width: 220px;
@@ -6428,7 +6428,7 @@ a.closeDiv
     font-size: 0;
 }
 
-.clickin-noImage
+.arabiSky-noImage
 {
     width: 70px;
     height: 70px;
@@ -6440,13 +6440,13 @@ a.closeDiv
     font: 10px/70px verdana,Arial,Helvetica,sans-serif;
 }
 
-.clickin-error
+.arabiSky-error
 {
     color: red;
     font-size: 12px;
 }
 
-#clickin-listingPageMainSearchBottomCurve
+#arabiSky-listingPageMainSearchBottomCurve
 {
     background: url(../images/listingSearchMainBottomCurve.jpg) no-repeat left bottom;
     height: 9px;
@@ -6455,7 +6455,7 @@ a.closeDiv
     margin-top: -1px;
 }
 
-.clickin-searchedItemTitle
+.arabiSky-searchedItemTitle
 {
     font-size: 14px;
     font-weight: 700;
@@ -6463,7 +6463,7 @@ a.closeDiv
     padding-bottom: 10px;
 }
 
-#clickin-searchedItemList
+#arabiSky-searchedItemList
 {
     clear: both;
     height: auto;
@@ -6471,7 +6471,7 @@ a.closeDiv
     width: 252px;
 }
 
-#clickin-searchedItemList h3
+#arabiSky-searchedItemList h3
 {
     color: #06c;
     font-size: 11px;
@@ -6481,7 +6481,7 @@ a.closeDiv
     padding: 2px;
 }
 
-.clickin-searchedItemListContent
+.arabiSky-searchedItemListContent
 {
     width: 210px;
     float: left;
@@ -6489,7 +6489,7 @@ a.closeDiv
     padding-top: 2px;
 }
 
-.clickin-searchedItemHeader
+.arabiSky-searchedItemHeader
 {
     background: #fff;
     border: 1px solid #bec7c7;
@@ -6510,7 +6510,7 @@ a.closeDiv
     cursor: pointer;
 }
 
-.clickin-searchedItemInnerList
+.arabiSky-searchedItemInnerList
 {
     height: auto;
     background: #fff;
@@ -6520,7 +6520,7 @@ a.closeDiv
     margin-bottom: 3px;
 }
 
-.clickin-searchedItemInnerList ul li
+.arabiSky-searchedItemInnerList ul li
 {
     color: #06C;
     display: block;
@@ -6529,20 +6529,20 @@ a.closeDiv
     padding: 2px;
 }
 
-.clickin-searchedItemInnerList ul li a
+.arabiSky-searchedItemInnerList ul li a
 {
     color: #06C;
     line-height: 20px;
 }
 
-.clickin-plusMinusIcon
+.arabiSky-plusMinusIcon
 {
     position: absolute;
     right: 5px;
     border: none;
 }
 
-.clickin-searchedItemText
+.arabiSky-searchedItemText
 {
     font-size: 14px;
     font-weight: 700;
@@ -6553,13 +6553,13 @@ a.closeDiv
     float: left;
 }
 
-.clickin-searchedItemTextField
+.arabiSky-searchedItemTextField
 {
     float: left;
     padding-bottom: 10px;
 }
 
-.clickin-searchedItemTextbox
+.arabiSky-searchedItemTextbox
 {
     border: 1px solid #b7bcc1;
     width: 55px;
@@ -6568,7 +6568,7 @@ a.closeDiv
     padding: 4px 2px;
 }
 
-.clickin-searchedItemSelectbox
+.arabiSky-searchedItemSelectbox
 {
     border: 1px solid #b7bcc1;
     width: 102px;
@@ -6577,7 +6577,7 @@ a.closeDiv
     padding: 4px 2px;
 }
 
-.clickin-postApplyBtn
+.arabiSky-postApplyBtn
 {
     float: right;
     margin-right: 12px;
@@ -6585,7 +6585,7 @@ a.closeDiv
     cursor: pointer;
 }
 
-.clickin-redBgLeftCurve
+.arabiSky-redBgLeftCurve
 {
     background: url(../images/adsBtnActiveLeftCurve.jpg) no-repeat left center;
     height: 28px;
@@ -6593,7 +6593,7 @@ a.closeDiv
     width: 6px;
 }
 
-.clickin-redBgStrip
+.arabiSky-redBgStrip
 {
     background: url(../images/adsBtnActiveBgStrip.jpg) repeat-x left center;
     height: 28px;
@@ -6606,7 +6606,7 @@ a.closeDiv
     line-height: 28px;
 }
 
-.clickin-redBgRightCurve
+.arabiSky-redBgRightCurve
 {
     background: url(../images/adsBtnActiveRightCurve.jpg) no-repeat left center;
     height: 28px;
@@ -6614,7 +6614,7 @@ a.closeDiv
     width: 34px;
 }
 
-.clickin-ContactLeftCurve
+.arabiSky-ContactLeftCurve
 {
     background: url(../images/contact-left.png) no-repeat left center;
     height: 28px;
@@ -6622,7 +6622,7 @@ a.closeDiv
     width: 6px;
 }
 
-.clickin-ContactBgStrip
+.arabiSky-ContactBgStrip
 {
     background: url(../images/contact-bg.png) repeat-x left center;
     height: 28px;
@@ -6635,7 +6635,7 @@ a.closeDiv
     line-height: 28px;
 }
 
-.clickin-ContactRightCurve
+.arabiSky-ContactRightCurve
 {
     background: url(../images/contact-right.png) no-repeat left center;
     height: 28px;
@@ -6643,13 +6643,13 @@ a.closeDiv
     width: 6px;
 }
 
-.clickin-viewSimilarAdsBlock
+.arabiSky-viewSimilarAdsBlock
 {
     float: right;
     cursor: pointer;
 }
 
-.clickin-viewSimilarAdsHeadingLeftCurve
+.arabiSky-viewSimilarAdsHeadingLeftCurve
 {
     float: left;
     height: 33px;
@@ -6657,7 +6657,7 @@ a.closeDiv
     background: url(../images/viewSimilarAdsLeftCurve.jpg) no-repeat left top;
 }
 
-.clickin-viewSimilarAdsHeadingRightCurve
+.arabiSky-viewSimilarAdsHeadingRightCurve
 {
     float: left;
     height: 33px;
@@ -6665,7 +6665,7 @@ a.closeDiv
     background: url(../images/viewSimilarAdsRightCurve.jpg) no-repeat left top;
 }
 
-.clickin-viewSimilarAdsBlockHeading
+.arabiSky-viewSimilarAdsBlockHeading
 {
     background: url(../images/viewSimilarAdsHeadingBgStrip.jpg) repeat-x left top;
     font-size: 14px;
@@ -6675,7 +6675,7 @@ a.closeDiv
     padding: 0 10px;
 }
 
-.clickin-viewSimilarAdsBlockHeading span
+.arabiSky-viewSimilarAdsBlockHeading span
 {
     color: #fff;
     background: url(../images/viewSimilarAdsArrow.jpg) no-repeat right center;
@@ -6684,7 +6684,7 @@ a.closeDiv
     line-height: 33px;
 }
 
-#clickin-viewSimilarAdsBlockContent
+#arabiSky-viewSimilarAdsBlockContent
 {
     background: #fff;
     border: 0 solid #6d4587;
@@ -6700,7 +6700,7 @@ a.closeDiv
     padding: 10px;
 }
 
-#clickin-viewSimilarAdsBlockContent ul li
+#arabiSky-viewSimilarAdsBlockContent ul li
 {
     color: #06c;
     font-size: 14px;
@@ -6709,7 +6709,7 @@ a.closeDiv
     list-style-image: url(../images/bullet_home.jpg);
 }
 
-.clickin-viewSimilarAdsClosBtn
+.arabiSky-viewSimilarAdsClosBtn
 {
     position: absolute;
     bottom: 0;
@@ -6725,7 +6725,7 @@ a.closeDiv
     margin-right: 5px;
 }
 
-.clickin-breadcrumb ul li
+.arabiSky-breadcrumb ul li
 {
     display: block;
     float: left;
@@ -6772,7 +6772,7 @@ a.closeDiv
     width: 200px;
 }
 
-.clickin-viewSearchBlock
+.arabiSky-viewSearchBlock
 {
     background: #EFF0F1;
     height: 93px;
@@ -6780,13 +6780,13 @@ a.closeDiv
     padding: 10px 0 10px 50px;
 }
 
-.clickin-viewSearchContent
+.arabiSky-viewSearchContent
 {
     float: left;
     margin-right: 20px;
 }
 
-.clickin-listingTextFieldBold.clickin-viewSearchText
+.arabiSky-listingTextFieldBold.arabiSky-viewSearchText
 {
     float: none;
     color: #000;
@@ -6794,7 +6794,7 @@ a.closeDiv
     padding-bottom: 8px;
 }
 
-.clickin-viewSearchText
+.arabiSky-viewSearchText
 {
     float: none;
     color: #000;
@@ -6802,7 +6802,7 @@ a.closeDiv
     padding-bottom: 8px;
 }
 
-.clickin-followUsText
+.arabiSky-followUsText
 {
     float: left;
     margin-right: 5px;
@@ -6824,40 +6824,40 @@ a.closeDiv
     color: #000;
 }
 
-.clickin-searchedItemTextField1
+.arabiSky-searchedItemTextField1
 {
     margin-bottom: 10px;
     font-size: 13px;
     color: #06C;
 }
 
-.clickin-searchedItemTextFieldBlock
+.arabiSky-searchedItemTextFieldBlock
 {
     margin-bottom: 10px;
     background: #fff;
     padding: 10px;
 }
 
-.clickin-searchedItemTextFieldBlock ul
+.arabiSky-searchedItemTextFieldBlock ul
 {
     list-style-type: none;
     font-size: 13px;
     color: #06c;
 }
 
-.clickin-searchedItemTextFieldBlock ul li
+.arabiSky-searchedItemTextFieldBlock ul li
 {
     padding: 3px 0;
 }
 
-.clickin-searchBtn1
+.arabiSky-searchBtn1
 {
     text-align: right;
     clear: both;
     padding: 5px;
 }
 
-.clickin-readmore
+.arabiSky-readmore
 {
     font-size: 13px;
     color: #06C;
@@ -6865,7 +6865,7 @@ a.closeDiv
     padding: 5px 10px;
 }
 
-.clickin-getFreeEmailAlertHeading
+.arabiSky-getFreeEmailAlertHeading
 {
     color: #fff;
     background: url(../images/email_alert_middle.png) repeat-x left top;
@@ -6876,7 +6876,7 @@ a.closeDiv
     padding-top: 4px;
 }
 
-.clickin-socialNetworkBlock
+.arabiSky-socialNetworkBlock
 {
     background: #edeef3;
     border: 1px solid #c6c6c6;
@@ -6884,12 +6884,12 @@ a.closeDiv
     margin-bottom: 20px;
 }
 
-.clickin-socialContent
+.arabiSky-socialContent
 {
     padding: 8px;
 }
 
-.clickin-socialLinks
+.arabiSky-socialLinks
 {
     float: left;
     padding-right: 5px;
@@ -6897,7 +6897,7 @@ a.closeDiv
     cursor: pointer;
 }
 
-.clickin-socialLinksLast
+.arabiSky-socialLinksLast
 {
     float: left;
     cursor: pointer;
@@ -7032,14 +7032,14 @@ a.closeDiv
     font-size: 12px;
 }
 
-.clickin-jobRelatedLinks
+.arabiSky-jobRelatedLinks
 {
     margin-right: 15px;
     float: left;
     position: relative;
 }
 
-.clickin-jobRelatedLinkActiveLeftCurve
+.arabiSky-jobRelatedLinkActiveLeftCurve
 {
     float: left;
     width: 8px;
@@ -7047,7 +7047,7 @@ a.closeDiv
     background: url(../images/jobRelatedBgActiveLeftCurve.jpg) no-repeat left top;
 }
 
-.clickin-jobRelatedLinkActiveText
+.arabiSky-jobRelatedLinkActiveText
 {
     float: left;
     height: 23px;
@@ -7058,7 +7058,7 @@ a.closeDiv
     padding: 5px 0 0;
 }
 
-.clickin-jobRelatedLinkActiveRightCurve
+.arabiSky-jobRelatedLinkActiveRightCurve
 {
     float: left;
     width: 8px;
@@ -7066,7 +7066,7 @@ a.closeDiv
     background: url(../images/jobRelatedBgActiveRightCurve.jpg) no-repeat left top;
 }
 
-.clickin-jobRelatedLinkInActiveLeftCurve
+.arabiSky-jobRelatedLinkInActiveLeftCurve
 {
     float: left;
     width: 8px;
@@ -7074,7 +7074,7 @@ a.closeDiv
     background: url(../images/jobRelatedBgInActiveLeftCurve.jpg) no-repeat left top;
 }
 
-.clickin-jobRelatedLinkInActiveText
+.arabiSky-jobRelatedLinkInActiveText
 {
     float: left;
     height: 23px;
@@ -7085,7 +7085,7 @@ a.closeDiv
     padding: 5px 0 0;
 }
 
-.clickin-jobRelatedLinkInActiveRightCurve
+.arabiSky-jobRelatedLinkInActiveRightCurve
 {
     float: left;
     width: 8px;
@@ -7093,7 +7093,7 @@ a.closeDiv
     background: url(../images/jobRelatedBgInActiveRightCurve.jpg) no-repeat left top;
 }
 
-.clickin-jobRelatedLinkSelectedArrow
+.arabiSky-jobRelatedLinkSelectedArrow
 {
     background: url(../images/jobSelectedArrow.jpg) no-repeat left top;
     width: 10px;
@@ -7103,7 +7103,7 @@ a.closeDiv
     right: 30px;
 }
 
-.clickin-jobRelatedContent
+.arabiSky-jobRelatedContent
 {
     padding-bottom: 10px;
     border-bottom: 1px solid #ccc;
@@ -7111,7 +7111,7 @@ a.closeDiv
     margin: 20px 0;
 }
 
-.clickin-jobRelatedContentTitle
+.arabiSky-jobRelatedContentTitle
 {
     font-size: 16px;
     font-weight: 700;
@@ -7119,13 +7119,13 @@ a.closeDiv
     padding-bottom: 10px;
 }
 
-.clickin-jobRelatedContentLeftBlock
+.arabiSky-jobRelatedContentLeftBlock
 {
     float: left;
     width: 51%;
 }
 
-.clickin-jobRelatedContentLeftBlock ul
+.arabiSky-jobRelatedContentLeftBlock ul
 {
     font-size: 14px;
     color: #000;
@@ -7133,19 +7133,19 @@ a.closeDiv
     padding: 0 0 0 24px;
 }
 
-.clickin-jobRelatedContentLeftBlock ul li
+.arabiSky-jobRelatedContentLeftBlock ul li
 {
     list-style-image: url(../images/jobsbullet.jpg);
     padding: 2px 0;
 }
 
-.clickin-jobRelatedContentRightBlock
+.arabiSky-jobRelatedContentRightBlock
 {
     float: right;
     width: 45%;
 }
 
-.clickin-jobRelatedSelBox
+.arabiSky-jobRelatedSelBox
 {
     border: 1px solid #ccc;
     font-size: 12px;
@@ -7154,21 +7154,21 @@ a.closeDiv
     padding: 4px;
 }
 
-.clickin-jobRelatedTable td
+.arabiSky-jobRelatedTable td
 {
     font-size: 14px;
     color: #000;
     padding: 2px;
 }
 
-.clickin-jobRelatedTable td a
+.arabiSky-jobRelatedTable td a
 {
     color: #06c;
     font-size: 12px;
     text-decoration: none;
 }
 
-.clickin-jobRelatedTextBox
+.arabiSky-jobRelatedTextBox
 {
     border: 1px solid #ccc;
     font-size: 12px;
@@ -7210,7 +7210,7 @@ a.closeDiv
     padding-bottom: 5px;
 }
 
-.clickin-PostBtnLeftCurve
+.arabiSky-PostBtnLeftCurve
 {
     background: url(../images/YellowBtn-left-curve.png) no-repeat left center;
     height: 35px;
@@ -7218,7 +7218,7 @@ a.closeDiv
     width: 15px;
 }
 
-.clickin-PostBtnBgStrip
+.arabiSky-PostBtnBgStrip
 {
     background: url(../images/YellowBtn-bgstrip.png) repeat-x left center;
     height: 35px;
@@ -7231,7 +7231,7 @@ a.closeDiv
     line-height: 35px;
 }
 
-.clickin-PostBtnRightCurve
+.arabiSky-PostBtnRightCurve
 {
     background: url(../images/YellowBtn-right-curve.png) no-repeat left center;
     height: 35px;
@@ -7239,7 +7239,7 @@ a.closeDiv
     width: 15px;
 }
 
-.clickin-GreyBtnLeftCurve
+.arabiSky-GreyBtnLeftCurve
 {
     background: url(../images/GreyBtn-left-curve.png) no-repeat left center;
     height: 35px;
@@ -7247,7 +7247,7 @@ a.closeDiv
     width: 15px;
 }
 
-.clickin-GreyBtnBgStrip
+.arabiSky-GreyBtnBgStrip
 {
     background: url(../images/GreyBtn-bgstrip.png) repeat-x left center;
     height: 35px;
@@ -7260,7 +7260,7 @@ a.closeDiv
     line-height: 35px;
 }
 
-.clickin-GreyBtnRightCurve
+.arabiSky-GreyBtnRightCurve
 {
     background: url(../images/GreyBtn-right-curve.png) no-repeat left center;
     height: 35px;
@@ -7268,7 +7268,7 @@ a.closeDiv
     width: 15px;
 }
 
-#clickin-bottomPanel
+#arabiSky-bottomPanel
 {
     background: #faae4e;
     border: 1px solid #fff;
@@ -7283,7 +7283,7 @@ a.closeDiv
     padding: 15px 0 10px;
 }
 
-#clickin-bottomPanelContent
+#arabiSky-bottomPanelContent
 {
     width: 90%;
     position: relative;
@@ -7291,7 +7291,7 @@ a.closeDiv
     margin: 0 auto;
 }
 
-.clickin-bottomText
+.arabiSky-bottomText
 {
     font-size: 14px;
     color: #000;
@@ -7300,7 +7300,7 @@ a.closeDiv
     margin-right: 20px;
 }
 
-.clickin-blackBtnLeftCurve
+.arabiSky-blackBtnLeftCurve
 {
     width: 10px;
     height: 25px;
@@ -7308,7 +7308,7 @@ a.closeDiv
     background: url(../images/blackBtnLeftCurve.png) no-repeat left top;
 }
 
-.clickin-blackBtn
+.arabiSky-blackBtn
 {
     height: 25px;
     float: left;
@@ -7320,7 +7320,7 @@ a.closeDiv
     padding: 0 5px;
 }
 
-.clickin-blackBtnRightCurve
+.arabiSky-blackBtnRightCurve
 {
     height: 25px;
     width: 10px;
@@ -7328,7 +7328,7 @@ a.closeDiv
     background: url(../images/blackBtnRightCurve.png) no-repeat left top;
 }
 
-.clickin-bottomCloseBtn
+.arabiSky-bottomCloseBtn
 {
     font-size: 14px;
     color: #000;
@@ -7338,18 +7338,18 @@ a.closeDiv
     top: -10px;
 }
 
-#clickin-signInSignUpBlock
+#arabiSky-signInSignUpBlock
 {
     padding: 10px 0;
 }
 
-.clickin-signInSignUpBlockLeft
+.arabiSky-signInSignUpBlockLeft
 {
     float: left;
     margin-right: 90px;
 }
 
-#clickin-signInSignUpBlockInner
+#arabiSky-signInSignUpBlockInner
 {
     background: none repeat scroll 0 0 #EDEDED;
     border-radius: 5px 5px 5px 5px;
@@ -7370,7 +7370,7 @@ a.closeDiv
     cursor: pointer;
 }
 
-#clickin-signInSignUpBlock h2
+#arabiSky-signInSignUpBlock h2
 {
     font-size: 26px;
     font-weight: 400;
@@ -7561,20 +7561,20 @@ input[type="checkbox"]:focus {
 font-weight: bold;
 }
 
-.clickin-benefitLists ul
+.arabiSky-benefitLists ul
 {
     color: #000;
     font-size: 14px;
     padding-left: 30px;
 }
 
-.clickin-benefitLists ul li
+.arabiSky-benefitLists ul li
 {
     list-style-image: url(../images/small_black_tick.jpg);
     padding: 3px;
 }
 
-.clickin-top-category-menu
+.arabiSky-top-category-menu
 {
     background: #333;
     clear: both;
@@ -7641,7 +7641,7 @@ font-weight: bold;
     padding: 0 5px;
 }
 
-.clickin-listingLinks
+.arabiSky-listingLinks
 {
     background: #333;
     height: 32px;
@@ -7652,19 +7652,19 @@ font-weight: bold;
     width: 663px;
 }
 
-.clickin-listingLinks a
+.arabiSky-listingLinks a
 {
     color: #FFF;
     text-decoration: none;
     display: block;
 }
 
-.clickin-listingLinks table
+.arabiSky-listingLinks table
 {
     border-collapse: collapse;
 }
 
-.clickin-listingLinks td
+.arabiSky-listingLinks td
 {
     border-right: 1px solid #999;
     text-align: center;
@@ -7741,7 +7741,7 @@ font-weight: bold;
     background: #fb9c1e;
 }
 
-.clickin-postPrevNext a
+.arabiSky-postPrevNext a
 {
     background: url(../images/next-preBtn.png) no-repeat scroll 0 -59px transparent;
     height: 59px;
@@ -7750,20 +7750,20 @@ font-weight: bold;
     top: 150px;
 }
 
-.clickin-postPrevNext a.prev
+.arabiSky-postPrevNext a.prev
 {
     left: -10px;
     width: 40px;
 }
 
-.clickin-postPrevNext a.next
+.arabiSky-postPrevNext a.next
 {
     background: url(../images/next-preBtn.png) no-repeat scroll -40px -59px transparent;
     right: -12px;
     width: 42px;
 }
 
-.clickin-listingTextbox1
+.arabiSky-listingTextbox1
 {
     border: 1px solid #B7BCC1;
     float: left;
@@ -7772,7 +7772,7 @@ font-weight: bold;
     padding: 4px;
 }
 
-.clickin-listingTextFieldBold1
+.arabiSky-listingTextFieldBold1
 {
     font-size: 14px;
     font-weight: 700;
@@ -7780,12 +7780,12 @@ font-weight: bold;
     color: #000;
 }
 
-.clickin-listingTextFieldRight1
+.arabiSky-listingTextFieldRight1
 {
     padding: 5px 0;
 }
 
-.clickin-searchedItemHeader1
+.arabiSky-searchedItemHeader1
 {
     background: none repeat scroll 0 0 #FFF;
     border-bottom: 1px solid #DEDEDE;
@@ -7796,7 +7796,7 @@ font-weight: bold;
     padding: 3px;
 }
 
-#clickin-socailIcons
+#arabiSky-socailIcons
 {
     background: url(../images/social-icons-bg.png) no-repeat left top;
     width: 43px;
@@ -7809,7 +7809,7 @@ font-weight: bold;
     margin: 0 0 0 -62px;
 }
 
-#clickin-socailIcons a
+#arabiSky-socailIcons a
 {
     width: 21px;
     height: 20px;
@@ -7818,7 +7818,7 @@ font-weight: bold;
     margin: 10px 0;
 }
 
-#clickin-socailIcons-1024
+#arabiSky-socailIcons-1024
 {
     background: url(../images/social-icons-bg1.png) no-repeat left top;
     width: 136px;
@@ -7826,7 +7826,7 @@ font-weight: bold;
     padding-top: 23px;
 }
 
-.clickin-filterSelectedBlock
+.arabiSky-filterSelectedBlock
 {
     border: 1px solid #ccc;
     margin-bottom: 20px;
@@ -7834,7 +7834,7 @@ font-weight: bold;
     padding: 5px 10px;
 }
 
-.clickin-removeAllSelected
+.arabiSky-removeAllSelected
 {
     font-size: 11px;
     color: #06c;
@@ -7843,7 +7843,7 @@ font-weight: bold;
     top: 5px;
 }
 
-.clickin-resultText
+.arabiSky-resultText
 {
     font-size: 12px;
     font-weight: 700;
@@ -7889,12 +7889,12 @@ font-weight: bold;
     color: #fff;
 }
 
-.clickin-searchResultBlock
+.arabiSky-searchResultBlock
 {
     border: 1px solid #ccc;
 }
 
-.clickin-listingSearchResultTitle
+.arabiSky-listingSearchResultTitle
 {
     font-size: 12px;
     color: #000;
@@ -7906,7 +7906,7 @@ font-weight: bold;
     padding: 5px;
 }
 
-.clickin-listingSearchResultContent
+.arabiSky-listingSearchResultContent
 {
     font-size: 12px;
     color: #666;
@@ -7916,26 +7916,26 @@ font-weight: bold;
     padding: 5px;
 }
 
-.clickin-listingSearchResultContent:hover
+.arabiSky-listingSearchResultContent:hover
 {
     background: #F6F6F6;
     cursor: pointer;
 }
 
-.clickin-postTitleText
+.arabiSky-postTitleText
 {
     width: 198px;
     float: left;
 }
 
-.clickin-postThumbImg
+.arabiSky-postThumbImg
 {
     width: 100px;
     float: left;
     margin-top: 2px;
 }
 
-.clickin-postTitle
+.arabiSky-postTitle
 {
     width: 200px;
     float: left;
@@ -7943,7 +7943,7 @@ font-weight: bold;
     vertical-align: middle;
 }
 
-.clickin-postTitle a
+.arabiSky-postTitle a
 {
     color: #06c;
     text-decoration: none;
@@ -7951,7 +7951,7 @@ font-weight: bold;
     font-size: 13px;
 }
 
-.clickin-premiumIcon
+.arabiSky-premiumIcon
 {
     width: 20px;
     float: left;
@@ -7959,13 +7959,13 @@ font-weight: bold;
     margin-top: -2px;
 }
 
-#clickin-leftPanelView
+#arabiSky-leftPanelView
 {
     float: left;
     width: 664px;
 }
 
-.clickin-classHeading
+.arabiSky-classHeading
 {
     font-size: 18px;
     padding-bottom: 5px;
@@ -7973,19 +7973,19 @@ font-weight: bold;
     font-weight: 700;
 }
 
-#myclickin-container
+#myarabiSky-container
 {
     width: 985px;
     margin: 0 auto;
 }
 
-#myclickin-leftPanel
+#myarabiSky-leftPanel
 {
     width: 210px;
     float: left;
 }
 
-h3.myclickin-accorHeader
+h3.myarabiSky-accorHeader
 {
     background: #ececec;
     border: 1px solid #EEE;
@@ -7997,19 +7997,19 @@ h3.myclickin-accorHeader
     padding: 10px;
 }
 
-h3.myclickin-accorHeader.collapsed
+h3.myarabiSky-accorHeader.collapsed
 {
     margin-bottom: 3px;
 }
 
-h3.myclickin-accorHeader .statusicon
+h3.myarabiSky-accorHeader .statusicon
 {
     position: absolute;
     right: 10px;
     top: 13px;
 }
 
-.myclickin-accorContent
+.myarabiSky-accorContent
 {
     background: #fff;
     font-size: 14px;
@@ -8020,7 +8020,7 @@ h3.myclickin-accorHeader .statusicon
     margin-bottom: 3px;
 }
 
-.myclickin-accorContent ul li a
+.myarabiSky-accorContent ul li a
 {
     color: #333;
     border-bottom: 1px solid #eee;
@@ -8028,26 +8028,26 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px;
 }
 
-.myclickin-accorContent ul li a.active
+.myarabiSky-accorContent ul li a.active
 {
     color: #f89a21;
     background: url(../images/rightarrow-orange.png) no-repeat 185px center;
 }
 
-#myclickin-rightPanel
+#myarabiSky-rightPanel
 {
     width: 755px;
     float: right;
 }
 
-#myclickin-rightPanel h1
+#myarabiSky-rightPanel h1
 {
     font-size: 22px;
     color: #000;
     padding-bottom: 10px;
 }
 
-.myclickin-thHeading div
+.myarabiSky-thHeading div
 {
     background: #efefef;
     border: 1px solid #EEE;
@@ -8062,13 +8062,13 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px;
 }
 
-.myclickin-tdRow
+.myarabiSky-tdRow
 {
     clear: both;
     height: 95px;
 }
 
-.myclickin-tdRow .myclickin-cols
+.myarabiSky-tdRow .myarabiSky-cols
 {
     border: 1px solid #EEE;
     margin-right: 10px;
@@ -8080,7 +8080,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px;
 }
 
-.myclickin-tdRow .myclickin-adsTitle h2
+.myarabiSky-tdRow .myarabiSky-adsTitle h2
 {
     font-weight: 700;
     color: #000;
@@ -8088,26 +8088,26 @@ h3.myclickin-accorHeader .statusicon
     padding-bottom: 5px;
 }
 
-.myclickin-convertPremium
+.myarabiSky-convertPremium
 {
     font-weight: 700;
     color: #f89a21;
     padding: 5px 0;
 }
 
-.myclickin-convertPremium a
+.myarabiSky-convertPremium a
 {
     color: #f89a21;
 }
 
-.myclickin-adsActions a
+.myarabiSky-adsActions a
 {
     display: block;
     color: #06c;
     padding: 3px 0;
 }
 
-.myclickin-pagination
+.myarabiSky-pagination
 {
     font-size: 14px;
     color: #000;
@@ -8115,7 +8115,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px 0;
 }
 
-.myclickin-pagination a
+.myarabiSky-pagination a
 {
     color: #777;
     background: #f5f5f5;
@@ -8130,7 +8130,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 5px 10px;
 }
 
-.myclickin-pagination a:hover, .myclickin-pagination a.active
+.myarabiSky-pagination a:hover, .myarabiSky-pagination a.active
 {
     color: #000;
     background: #f8ad4c;
@@ -8140,12 +8140,12 @@ h3.myclickin-accorHeader .statusicon
     box-shadow: inset 0 0 2px 2px #a57332;
 }
 
-.myclickin-pagination span
+.myarabiSky-pagination span
 {
     margin-right: 5px;
 }
 
-.myclickin-pagination span.active
+.myarabiSky-pagination span.active
 {
     color: #000;
     background: #f8ad4c;
@@ -8155,7 +8155,7 @@ h3.myclickin-accorHeader .statusicon
     font-weight: 700;
 }
 
-.myclickin-adsReplies
+.myarabiSky-adsReplies
 {
     margin-bottom: 10px;
     background: #efefef;
@@ -8164,7 +8164,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px;
 }
 
-.myclickin-adsReplies h2
+.myarabiSky-adsReplies h2
 {
     font-weight: 700;
     color: #000;
@@ -8172,14 +8172,14 @@ h3.myclickin-accorHeader .statusicon
     padding-bottom: 5px;
 }
 
-.myclickin-repliesCat
+.myarabiSky-repliesCat
 {
     padding-bottom: 10px;
     font-size: 14px;
     color: #000;
 }
 
-.myclickin-showHide, .myclickin-repliesDelete
+.myarabiSky-showHide, .myarabiSky-repliesDelete
 {
     font-size: 14px;
     color: #000;
@@ -8188,7 +8188,7 @@ h3.myclickin-accorHeader .statusicon
     top: 10px;
 }
 
-.myclickin-repliesContent
+.myarabiSky-repliesContent
 {
     background: #efefef;
     margin-bottom: 3px;
@@ -8197,12 +8197,12 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px;
 }
 
-.myclickin-adsReplies.active a.hideReplies, .myclickin-adsReplies a.showReplies
+.myarabiSky-adsReplies.active a.hideReplies, .myarabiSky-adsReplies a.showReplies
 {
     display: none;
 }
 
-.myclickin-repliesTable th
+.myarabiSky-repliesTable th
 {
     font-size: 14px;
     color: #000;
@@ -8211,14 +8211,14 @@ h3.myclickin-accorHeader .statusicon
     padding: 2px;
 }
 
-.myclickin-repliesTable td
+.myarabiSky-repliesTable td
 {
     font-size: 14px;
     color: #000;
     padding: 2px;
 }
 
-.myclickin-viewAdsTitle
+.myarabiSky-viewAdsTitle
 {
     background: #ececec;
     border: 1px solid #ccc;
@@ -8226,7 +8226,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 14px 10px;
 }
 
-.myclickin-breadcrumb
+.myarabiSky-breadcrumb
 {
     float: left;
     font-size: 14px;
@@ -8234,14 +8234,14 @@ h3.myclickin-accorHeader .statusicon
     width: 400px;
 }
 
-.myclickin-terms
+.myarabiSky-terms
 {
     float: right;
     font-size: 14px;
     font-weight: 700;
 }
 
-.myclickin-terms a
+.myarabiSky-terms a
 {
     background: #d1d0cf;
     color: #000;
@@ -8252,13 +8252,13 @@ h3.myclickin-accorHeader .statusicon
     padding: 6px 10px;
 }
 
-.myclickin-terms a.colorOrange
+.myarabiSky-terms a.colorOrange
 {
     background: #f9ae4c;
     color: #000;
 }
 
-.myclickin-viewAdsContent
+.myarabiSky-viewAdsContent
 {
     background: #fff;
     border: 1px solid #ccc;
@@ -8267,7 +8267,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 20px;
 }
 
-.myclickin-viewAdsSocialSharing
+.myarabiSky-viewAdsSocialSharing
 {
     background: #ececec;
     border: 1px solid #ccc;
@@ -8280,39 +8280,39 @@ h3.myclickin-accorHeader .statusicon
     padding: 4px 10px;
 }
 
-.myclickin-priceText
+.myarabiSky-priceText
 {
     font-weight: 700;
     padding: 10px 0;
 }
 
-.myclickin-paymentText
+.myarabiSky-paymentText
 {
     font-size: 12px;
     color: #000;
     padding: 10px 0;
 }
 
-.myclickin-descBlock
+.myarabiSky-descBlock
 {
     float: left;
     width: 300px;
     padding-bottom: 10px;
 }
 
-.myclickin-premiumPlans
+.myarabiSky-premiumPlans
 {
     border-bottom: 1px solid #ccc;
     padding: 10px 0;
 }
 
-.myclickin-premiumPlans.last
+.myarabiSky-premiumPlans.last
 {
     border-bottom: 0 none;
     padding-bottom: 0;
 }
 
-.myclickin-premiumPlansLeft
+.myarabiSky-premiumPlansLeft
 {
     float: left;
     font-size: 16px;
@@ -8321,18 +8321,18 @@ h3.myclickin-accorHeader .statusicon
     width: 120px;
 }
 
-.myclickin-premiumPlansRight
+.myarabiSky-premiumPlansRight
 {
     margin-left: 120px;
 }
 
-.myclickin-paynowBtn
+.myarabiSky-paynowBtn
 {
     text-align: right;
     padding-bottom: 10px;
 }
 
-.myclickin-paynowBtn a
+.myarabiSky-paynowBtn a
 {
     font-size: 14px;
     font-weight: 700;
@@ -8344,27 +8344,27 @@ h3.myclickin-accorHeader .statusicon
     padding: 6px 10px;
 }
 
-.myclickin-termLinks ul li
+.myarabiSky-termLinks ul li
 {
     font-size: 14px;
     list-style-image: url(../images/bullet.png);
     padding: 3px 0;
 }
 
-.clickin-socailShareText-myclickin
+.arabiSky-socailShareText-myarabiSky
 {
     float: left;
     margin-left: 325px;
     margin-top: 2px;
 }
 
-#clickin-socailIcons-myclickin
+#arabiSky-socailIcons-myarabiSky
 {
     width: 136px;
     float: right;
 }
 
-.myclickin-navigation
+.myarabiSky-navigation
 {
     background: #f0f1f2;
     text-align: right;
@@ -8376,7 +8376,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px;
 }
 
-.myclickin-searchalert
+.myarabiSky-searchalert
 {
     background: none repeat scroll 0 0 #EFEFEF;
     border: 1px solid #EEE;
@@ -8410,14 +8410,14 @@ h3.myclickin-accorHeader .statusicon
     padding: 8px;
 }
 
-.clickin-savePost
+.arabiSky-savePost
 {
     position: absolute;
     top: 40px;
     right: 15px;
 }
 
-.clickin-savePost a
+.arabiSky-savePost a
 {
     background: url(../images/social-icons-sprite.png) no-repeat 0 -80px;
     width: 22px;
@@ -8426,17 +8426,17 @@ h3.myclickin-accorHeader .statusicon
     float: left;
 }
 
-.clickin-savePost a:hover
+.arabiSky-savePost a:hover
 {
     background: url(../images/social-icons-sprite.png) no-repeat 0 -103px;
 }
 
-.clickin-viewPageMain
+.arabiSky-viewPageMain
 {
     margin-bottom: 10px;
 }
 
-.clickin-viewPageInner
+.arabiSky-viewPageInner
 {
     border: 1px solid #ccc;
     position: relative;
@@ -8444,7 +8444,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 20px 10px;
 }
 
-.clickin-viewPageInner h1
+.arabiSky-viewPageInner h1
 {
     font-size: 24px;
     color: #333;
@@ -8452,7 +8452,7 @@ h3.myclickin-accorHeader .statusicon
     font-weight: 700;
 }
 
-.clickin-detailsBlock
+.arabiSky-detailsBlock
 {
     background: none repeat scroll 0 0 #EFF0F1;
     border: 1px solid #DDD;
@@ -8465,13 +8465,13 @@ h3.myclickin-accorHeader .statusicon
     margin: 10px 30px;
 }
 
-.clickin-detailsTable
+.arabiSky-detailsTable
 {
     width: 100%;
     border-collapse: collapse;
 }
 
-.clickin-detailsTable th
+.arabiSky-detailsTable th
 {
     font-size: 12px;
     color: #666;
@@ -8480,14 +8480,14 @@ h3.myclickin-accorHeader .statusicon
     padding: 5px;
 }
 
-.clickin-detailsTable td
+.arabiSky-detailsTable td
 {
     font-size: 14px;
     color: #333;
     padding: 5px;
 }
 
-.clickin-contactSeller
+.arabiSky-contactSeller
 {
     float: left;
     font-size: 15px;
@@ -8497,7 +8497,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 5px;
 }
 
-.clickin-contactSeller a
+.arabiSky-contactSeller a
 {
     background: #F9AE4C;
     -moz-border-radius: 5px;
@@ -8508,7 +8508,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 5px 10px;
 }
 
-.clickin-contactSellerContent
+.arabiSky-contactSellerContent
 {
     background: #F9AE4C;
     width: 280px;
@@ -8530,75 +8530,75 @@ h3.myclickin-accorHeader .statusicon
     left: -15px;
 }
 
-.clickin-viewPageShareLinks
+.arabiSky-viewPageShareLinks
 {
     float: right;
     font-size: 14px;
     padding-top: 10px;
 }
 
-.clickin-viewPageShareLinks ul li
+.arabiSky-viewPageShareLinks ul li
 {
     list-style-type: none;
     float: left;
     margin: 0 5px;
 }
 
-.clickin-viewPageShareLinks a.share
+.arabiSky-viewPageShareLinks a.share
 {
     /*background: url(http://udham-singh-nagar.click.in/images/share.png) no-repeat left center;*/
     padding-left: 20px;
 }
 
-.clickin-viewPageShareLinks a.compare
+.arabiSky-viewPageShareLinks a.compare
 {
     /*background: url(http://udham-singh-nagar.click.in/images/compare.png) no-repeat left center;*/
     padding-left: 20px;
 }
 
-.clickin-viewPageShareLinks a.favourite
+.arabiSky-viewPageShareLinks a.favourite
 {
     /*background: url(http://udham-singh-nagar.click.in/images/favourite.png) no-repeat left center;*/
     padding-left: 20px;
 }
 
-.clickin-viewPageShareLinks a.print
+.arabiSky-viewPageShareLinks a.print
 {
     /*background: url(http://udham-singh-nagar.click.in/images/print.png) no-repeat left center;*/
     padding-left: 20px;
 }
 
-.clickin-viewPage
+.arabiSky-viewPage
 {
     margin-top: 20px;
 }
 
-.clickin-viewPageLeftBlock
+.arabiSky-viewPageLeftBlock
 {
     float: left;
     width: 644px;
     margin-top: -7px;
 }
 
-.clickin-descText
+.arabiSky-descText
 {
     color: #333;
     font-size: 14px;
 }
 
-.clickin-viewPageBlock
+.arabiSky-viewPageBlock
 {
     margin-bottom: 20px;
 }
 
-.clickin-stdFeatures
+.arabiSky-stdFeatures
 {
     float: left;
     margin-right: 5px;
     width: 200px;
 }
 
-.clickin-stdFeatures div
+.arabiSky-stdFeatures div
 {
     font-size: 13px;
     color: #333;
@@ -8606,47 +8606,47 @@ h3.myclickin-accorHeader .statusicon
     font-weight: 700;
 }
 
-.clickin-stdFeatures ul li
+.arabiSky-stdFeatures ul li
 {
     font-size: 13px;
     color: #333;
     padding: 5px 0;
 }
 
-.clickin-relatedBlock
+.arabiSky-relatedBlock
 {
     border: 1px solid #ccc;
     background: #eff0f1;
     padding: 10px;
 }
 
-.clickin-relatedBlockContent
+.arabiSky-relatedBlockContent
 {
     min-height: 70px;
     margin: 5px 0;
 }
 
-.clickin-relatedContentThumb
+.arabiSky-relatedContentThumb
 {
     float: left;
     width: 80px;
 }
 
-.clickin-relatedContentDesc
+.arabiSky-relatedContentDesc
 {
     margin-left: 90px;
     font-size: 12px;
     color: #999;
 }
 
-.clickin-moreRight
+.arabiSky-moreRight
 {
     font-size: 12px;
     color: #06c;
     text-align: right;
 }
 
-.clickin-emailTextbox
+.arabiSky-emailTextbox
 {
     background: #fff;
     font-size: 12px;
@@ -8657,7 +8657,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 6px 5px;
 }
 
-.clickin-submitBtn
+.arabiSky-submitBtn
 {
     cursor: pointer;
     font-size: 14px;
@@ -8666,14 +8666,14 @@ h3.myclickin-accorHeader .statusicon
     padding: 4px 10px;
 }
 
-.clickin-sendEmail
+.arabiSky-sendEmail
 {
     font-size: 16px;
     font-weight: 700;
     padding: 5px 0;
 }
 
-.clickin-agentTitle
+.arabiSky-agentTitle
 {
     color: #666;
     font-size: 24px;
@@ -8681,7 +8681,7 @@ h3.myclickin-accorHeader .statusicon
     padding-left: 5px;
 }
 
-.clickin-agentAddress
+.arabiSky-agentAddress
 {
     color: #666;
     font-size: 14px;
@@ -8707,7 +8707,7 @@ h3.myclickin-accorHeader .statusicon
     height: 1%;
 }
 
-.clickin-lang
+.arabiSky-lang
 {
     background: url(../images/downarrow.png) no-repeat scroll 69px center #EDEDED;
     border: 1px solid #C3C3C3;
@@ -8721,7 +8721,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 5px 8px;
 }
 
-.clickin-langList
+.arabiSky-langList
 {
     -moz-border-bottom-colors: none;
     -moz-border-left-colors: none;
@@ -8740,7 +8740,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 5px;
 }
 
-.clickin-langList ul li a
+.arabiSky-langList ul li a
 {
     color: #000;
     display: block;
@@ -8750,19 +8750,19 @@ h3.myclickin-accorHeader .statusicon
     padding: 0;
 }
 
-.clickin-loginEmail
+.arabiSky-loginEmail
 {
     float: left;
     padding-top: 5px;
 }
 
-#clickin-homeSearchBlock
+#arabiSky-homeSearchBlock
 {
     background: #f89a21;
     text-align: center;
 }
 
-#clickin-homeSearchBlock h1
+#arabiSky-homeSearchBlock h1
 {
     font-size: 26px;
     padding-bottom: 5px;
@@ -8770,13 +8770,13 @@ h3.myclickin-accorHeader .statusicon
     text-align: center;
 }
 
-.clickin-homebottomBlock
+.arabiSky-homebottomBlock
 {
     padding-top: 10px;
     font-size: 12px;
 }
 
-.clickin-homeTextbox
+.arabiSky-homeTextbox
 {
     color: #000;
     font-size: 13px;
@@ -8785,7 +8785,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 5px;
 }
 
-.clickin-homeSelectbox
+.arabiSky-homeSelectbox
 {
     color: #000;
     font-size: 13px;
@@ -8794,7 +8794,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 5px;
 }
 
-.clickin-homeSubmitBtn
+.arabiSky-homeSubmitBtn
 {
     background: #000;
     color: #fff;
@@ -8806,7 +8806,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 4px 10px;
 }
 
-.clickin-promoJob
+.arabiSky-promoJob
 {
     border: 1px solid #a3a1a2;
     background: #ebeff0;
@@ -8817,20 +8817,20 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px;
 }
 
-.clickin-promoJobTitle
+.arabiSky-promoJobTitle
 {
     font-size: 14px;
     color: #06c;
     padding-bottom: 5px;
 }
 
-.clickin-promoJobDesc
+.arabiSky-promoJobDesc
 {
     font-size: 12px;
     color: #333;
 }
 
-.clickin-postInfo
+.arabiSky-postInfo
 {
     border: 1px solid #d9d8da;
     background: #eff0f1;
@@ -8844,7 +8844,7 @@ h3.myclickin-accorHeader .statusicon
     padding: 10px;
 }
 
-.clickin-adDetailsLeft
+.arabiSky-adDetailsLeft
 {
     color: #000;
     float: left;
@@ -8853,7 +8853,7 @@ h3.myclickin-accorHeader .statusicon
     width: 350px;
 }
 
-.clickin-adDetailsRight
+.arabiSky-adDetailsRight
 {
     color: #000;
     float: left;
@@ -8870,18 +8870,18 @@ h3.myclickin-accorHeader .statusicon
     padding: 8px 0 5px 30px;
 }
 
-.clickin-mobileNum
+.arabiSky-mobileNum
 {
     margin-right: 40px;
     background: url(../images/viewMobileNumberIcon.png) no-repeat 0 0;
 }
 
-.clickin-landlineNum
+.arabiSky-landlineNum
 {
     background: url(../images/viewPhoneNumberIcon.png) no-repeat 0 center;
 }
 
-a:visited, .clickin-redBgStrip a:hover
+a:visited, .arabiSky-redBgStrip a:hover
 {
     text-decoration: none;
 }
@@ -8906,7 +8906,7 @@ a:visited, .clickin-redBgStrip a:hover
     clear: both;
 }
 
-.premiumClassText ul, .premiumClassTextLast ul, .stayConnected ul, #categoryTextDesc ul, .clickin-cityContent ul, .clickin-relatedAdsContent ul, .myclickin-termLinks ul
+.premiumClassText ul, .premiumClassTextLast ul, .stayConnected ul, #categoryTextDesc ul, .arabiSky-cityContent ul, .arabiSky-relatedAdsContent ul, .myarabiSky-termLinks ul
 {
     padding-left: 15px;
 }
@@ -8916,7 +8916,7 @@ a:visited, .clickin-redBgStrip a:hover
     padding-bottom: 5px;
 }
 
-.stayConnected a, .replieTextNames a, .chatText a, .contactCloseBox a, a.clickin-jobRelatedLinksText, .clickin-bottomCloseBtn a
+.stayConnected a, .replieTextNames a, .chatText a, .contactCloseBox a, a.arabiSky-jobRelatedLinksText, .arabiSky-bottomCloseBtn a
 {
     color: #000;
     text-decoration: none;
@@ -8963,7 +8963,7 @@ a:visited, .clickin-redBgStrip a:hover
     padding-right: 10px;
 }
 
-.linksMainInner li, .myclickin-accorContent ul li
+.linksMainInner li, .myarabiSky-accorContent ul li
 {
     list-style-type: none;
 }
@@ -8975,7 +8975,7 @@ a:visited, .clickin-redBgStrip a:hover
     text-decoration: none;
 }
 
-#sidebarRightOther, #categoryImg, .clickin-diffLanguages, .fr, .expand
+#sidebarRightOther, #categoryImg, .arabiSky-diffLanguages, .fr, .expand
 {
     float: right;
 }
@@ -8993,7 +8993,7 @@ a:visited, .clickin-redBgStrip a:hover
     color: #039;
 }
 
-#categoryMainTextDesc, .loginTextField, .clickin-ads
+#categoryMainTextDesc, .loginTextField, .arabiSky-ads
 {
     padding-bottom: 20px;
 }
@@ -9026,7 +9026,7 @@ a:visited, .clickin-redBgStrip a:hover
     font: 12px Arial,Helvetica,sans-serif;
 }
 
-.cityLinks ul, .clickin-searchCategoriesContent ul, .clickin-citySelectorContent ul
+.cityLinks ul, .arabiSky-searchCategoriesContent ul, .arabiSky-citySelectorContent ul
 {
     padding-left: 5px;
 }
@@ -9042,17 +9042,17 @@ a:visited, .clickin-redBgStrip a:hover
     color: red;
 }
 
-.posts, .myclickin-normalText, .google-ads
+.posts, .myarabiSky-normalText, .google-ads
 {
     padding-bottom: 10px;
 }
 
-.getMailSmallText, .adsRelatedLinks, #previewMain, .clickin-searchedItemInnerList ul, .bx-caption, .clickin-homeTextfield
+.getMailSmallText, .adsRelatedLinks, #previewMain, .arabiSky-searchedItemInnerList ul, .bx-caption, .arabiSky-homeTextfield
 {
     font-size: 12px;
 }
 
-#mobileVerifiedHeading a, .applyGreenBgContent a, .contactBlueBgContent a, .contactBrownBgContent a, .applyJobGreenBgContent a, .storeJobBrownBgContent a, #searchRightPostAddFreeTab a, .premiumBtnBgStrip a, .clickin-blackBtn a
+#mobileVerifiedHeading a, .applyGreenBgContent a, .contactBlueBgContent a, .contactBrownBgContent a, .applyJobGreenBgContent a, .storeJobBrownBgContent a, #searchRightPostAddFreeTab a, .premiumBtnBgStrip a, .arabiSky-blackBtn a
 {
     color: #fff;
     text-decoration: none;
@@ -9076,12 +9076,12 @@ a:visited, .clickin-redBgStrip a:hover
     color: #039;
 }
 
-.paging:alink, .paging:visited, .hintText span, .orange, .clickin-postsPriceDetails span, .myclickin-tdRow .myclickin-adsTitle h2 a
+.paging:alink, .paging:visited, .hintText span, .orange, .arabiSky-postsPriceDetails span, .myarabiSky-tdRow .myarabiSky-adsTitle h2 a
 {
     color: #000;
 }
 
-#rightSideBar ul, #rightSideBarSmall ul, #rightSideBar1 ul, .adsRelatedLinks ul, .whatNextMain ul, .featuresList ul, .helpCenterBlock ul, .clickin-adDetails ul, .clickin-indexContent ul, #clickin-viewSimilarAdsBlockContent ul, .viewSimilarClassifiedsContent ul, .clickin-stdFeatures ul
+#rightSideBar ul, #rightSideBarSmall ul, #rightSideBar1 ul, .adsRelatedLinks ul, .whatNextMain ul, .featuresList ul, .helpCenterBlock ul, .arabiSky-adDetails ul, .arabiSky-indexContent ul, #arabiSky-viewSimilarAdsBlockContent ul, .viewSimilarClassifiedsContent ul, .arabiSky-stdFeatures ul
 {
     padding-right: 20px;
     direction: rtl;
@@ -9100,12 +9100,12 @@ a:visited, .clickin-redBgStrip a:hover
     padding-bottom: 8px;
 }
 
-.prevTextRight, .replieTextNames, .clickin-menuLinks span, .clickin-searchBtn, .fl, #clickin-jobRelatedBlock, .clickin-bottomContactBtn, .clickin-benefitLists
+.prevTextRight, .replieTextNames, .arabiSky-menuLinks span, .arabiSky-searchBtn, .fl, #arabiSky-jobRelatedBlock, .arabiSky-bottomContactBtn, .arabiSky-benefitLists
 {
     float: left;
 }
 
-.freeText, .myclickin-normalTextBold
+.freeText, .myarabiSky-normalTextBold
 {
     font-weight: 700;
     padding-bottom: 10px;
@@ -9130,7 +9130,7 @@ a:visited, .clickin-redBgStrip a:hover
     text-decoration: underline;
 }
 
-#communityDiscussionMost, .clickin-clear, .clear
+#communityDiscussionMost, .arabiSky-clear, .clear
 {
     clear: both;
 }
@@ -9187,7 +9187,7 @@ a:visited, .clickin-redBgStrip a:hover
     float: left;
 }
 
-.clickin-searchform-selectBox, .clickin-searchform-textBox
+.arabiSky-searchform-selectBox, .arabiSky-searchform-textBox
 {
     border: 1px solid #c6bad5;
     color: #666;
@@ -9212,7 +9212,7 @@ a:visited, .clickin-redBgStrip a:hover
     padding-top: 5px;
 }
 
-.needHelpNumbText a, .clickin-listingpagePostsLeft a, .clickin-postsHeading a, .clickin-postPremiumAd a, .clickin-linkColor
+.needHelpNumbText a, .arabiSky-listingpagePostsLeft a, .arabiSky-postsHeading a, .arabiSky-postPremiumAd a, .arabiSky-linkColor
 {
     color: #06C;
 }
@@ -9225,41 +9225,41 @@ a:visited, .clickin-redBgStrip a:hover
     padding-bottom: 5px;
 }
 
-.activationNoteBlock a, .clickin-removeAllSelected a, .clickin-postThumbImg a, .clickin-viewPageShareLinks ul li a, .clickin-relatedContentDesc a, .clickin-moreRight a
+.activationNoteBlock a, .arabiSky-removeAllSelected a, .arabiSky-postThumbImg a, .arabiSky-viewPageShareLinks ul li a, .arabiSky-relatedContentDesc a, .arabiSky-moreRight a
 {
     color: #06c;
     text-decoration: none;
 }
 
-header, footer, section, nav, figure, .top-navigation ul li.hover .subnav, .myclickin-adsReplies.active .myclickin-repliesContent, .myclickin-adsReplies a.hideReplies, .myclickin-adsReplies.active a.showReplies, html[xmlns] .clearfix
+header, footer, section, nav, figure, .top-navigation ul li.hover .subnav, .myarabiSky-adsReplies.active .myarabiSky-repliesContent, .myarabiSky-adsReplies a.hideReplies, .myarabiSky-adsReplies.active a.showReplies, html[xmlns] .clearfix
 {
     display: block;
 }
 
-#clickin-wrapper, #clickin-footerMain
+#arabiSky-wrapper, #arabiSky-footerMain
 {
     width: 100%;
     clear: both;
 }
 
-.clickin-menuLinksOuter, #clickin-mainsearchBlock
+.arabiSky-menuLinksOuter, #arabiSky-mainsearchBlock
 {
     float: right;
     width: 773px;
 }
 
-.clickin-topLinks a span, .dashboardAlertsText span
+.arabiSky-topLinks a span, .dashboardAlertsText span
 {
     color: #000;
     font-weight: 700;
 }
 
-.clickin-breadcrumb a, .clickin-relatedAdsContent ul li a, .clickin-footerContent a, .clickin-footerContent1 a, #clickin-searchedItemList h3 a, .signupTextBold a, .myclickin-showHide a, .myclickin-repliesDelete a, .clickin-promoJobTitle a
+.arabiSky-breadcrumb a, .arabiSky-relatedAdsContent ul li a, .arabiSky-footerContent a, .arabiSky-footerContent1 a, #arabiSky-searchedItemList h3 a, .signupTextBold a, .myarabiSky-showHide a, .myarabiSky-repliesDelete a, .arabiSky-promoJobTitle a
 {
     color: #06c;
 }
 
-.clickin-replyBoxPremiumTopLeft, .clickin-replyBoxPremiumBottomLeft
+.arabiSky-replyBoxPremiumTopLeft, .arabiSky-replyBoxPremiumBottomLeft
 {
     float: left;
     width: 315px;
@@ -9268,7 +9268,7 @@ header, footer, section, nav, figure, .top-navigation ul li.hover .subnav, .mycl
     font-size: 0;
 }
 
-.clickin-replyBoxNonPremiumTopLeft, .clickin-replyBoxNonPremiumBottomLeft
+.arabiSky-replyBoxNonPremiumTopLeft, .arabiSky-replyBoxNonPremiumBottomLeft
 {
     float: left;
     width: 315px;
@@ -9277,7 +9277,7 @@ header, footer, section, nav, figure, .top-navigation ul li.hover .subnav, .mycl
     font-size: 0;
 }
 
-.clickin-sendresponseLeftCurve, .clickin-getFreeEmailAlertLeftCurve
+.arabiSky-sendresponseLeftCurve, .arabiSky-getFreeEmailAlertLeftCurve
 {
     float: left;
     height: 30px;
@@ -9285,7 +9285,7 @@ header, footer, section, nav, figure, .top-navigation ul li.hover .subnav, .mycl
     background: url(../images/email_alert_leftCurve.png) no-repeat left top;
 }
 
-.clickin-sendresponseRightCurve, .clickin-getFreeEmailAlertRightCurve
+.arabiSky-sendresponseRightCurve, .arabiSky-getFreeEmailAlertRightCurve
 {
     float: left;
     height: 30px;
@@ -9293,19 +9293,19 @@ header, footer, section, nav, figure, .top-navigation ul li.hover .subnav, .mycl
     background: url(../images/email_alert_rightCurve.png) no-repeat left top;
 }
 
-.clickin-footerLinks a, .clickin-footerLinksTop a
+.arabiSky-footerLinks a, .arabiSky-footerLinksTop a
 {
     color: #494949;
     padding: 0 8px;
 }
 
-.clickin-storeListingLinks a, .clickin-flatListingLinks a, #clickin-viewSimilarAdsBlockContent ul li a
+.arabiSky-storeListingLinks a, .arabiSky-flatListingLinks a, #arabiSky-viewSimilarAdsBlockContent ul li a
 {
     color: #06c;
     font-size: 12px;
 }
 
-.clickin-indexMainBlocks.last, .myclickin-thHeading div.last, .myclickin-tdRow div.last
+.arabiSky-indexMainBlocks.last, .myarabiSky-thHeading div.last, .myarabiSky-tdRow div.last
 {
     margin-right: 0;
 }
@@ -9323,32 +9323,32 @@ p, .top-navigation ul
     text-decoration: none;
 }
 
-.clickin-postsDesc a, .myclickin-paymentText a
+.arabiSky-postsDesc a, .myarabiSky-paymentText a
 {
     color: #06c;
     font-weight: 700;
 }
 
-.clickin-navigation a, .myclickin-navigation a
+.arabiSky-navigation a, .myarabiSky-navigation a
 {
     color: #606264;
     margin: 0 5px;
     padding: 2px 3px;
 }
 
-.clickin-navigation a.active, .myclickin-navigation a.active
+.arabiSky-navigation a.active, .myarabiSky-navigation a.active
 {
     background: #606264;
     font-weight: 700;
     color: #fff;
 }
 
-.clickin-redBgStrip a, .clickin-ContactBgStrip a, .clickin-PostBtnBgStrip a
+.arabiSky-redBgStrip a, .arabiSky-ContactBgStrip a, .arabiSky-PostBtnBgStrip a
 {
     color: #fff;
 }
 
-.clickin-breadcrumb li .categoriesList a, .clickin-breadcrumb li .cityList a
+.arabiSky-breadcrumb li .categoriesList a, .arabiSky-breadcrumb li .cityList a
 {
     color: #06c;
     display: block;
@@ -9359,47 +9359,47 @@ p, .top-navigation ul
     padding-bottom: 4px;
 }
 
-.top-navigation ul li.nav-item.hover a, .clickin-listingLinks a:hover, .clickin-listingLinks td:hover
+.top-navigation ul li.nav-item.hover a, .arabiSky-listingLinks a:hover, .arabiSky-listingLinks td:hover
 {
     background: #626262;
 }
 
-.bx-wrapper .bx-prev:hover, .clickin-postPrevNext a.prev:hover
+.bx-wrapper .bx-prev:hover, .arabiSky-postPrevNext a.prev:hover
 {
     background: url(../images/next-preBtn.png) no-repeat scroll 0 0 transparent;
 }
 
-.bx-wrapper .bx-next:hover, .clickin-postPrevNext a.next:hover
+.bx-wrapper .bx-next:hover, .arabiSky-postPrevNext a.next:hover
 {
     background: url(../images/next-preBtn.png) no-repeat scroll -40px 0 transparent;
 }
 
-.clickin-searchedItemHeader1:hover, .myclickin-adsReplies.active
+.arabiSky-searchedItemHeader1:hover, .myarabiSky-adsReplies.active
 {
     background: #fff;
 }
 
-#clickin-socailIcons a.facebook, #clickin-socailIcons-1024 a.facebook, #clickin-socailIcons-myclickin a.facebook
+#arabiSky-socailIcons a.facebook, #arabiSky-socailIcons-1024 a.facebook, #arabiSky-socailIcons-myarabiSky a.facebook
 {
     background: url(../images/social-icons-sprite.png) no-repeat 0 0;
 }
 
-#clickin-socailIcons a.twitter, #clickin-socailIcons-1024 a.twitter, #clickin-socailIcons-myclickin a.twitter
+#arabiSky-socailIcons a.twitter, #arabiSky-socailIcons-1024 a.twitter, #arabiSky-socailIcons-myarabiSky a.twitter
 {
     background: url(../images/social-icons-sprite.png) no-repeat 0 -20px;
 }
 
-#clickin-socailIcons a.gplus, #clickin-socailIcons-1024 a.gplus, #clickin-socailIcons-myclickin a.gplus
+#arabiSky-socailIcons a.gplus, #arabiSky-socailIcons-1024 a.gplus, #arabiSky-socailIcons-myarabiSky a.gplus
 {
     background: url(../images/social-icons-sprite.png) no-repeat 0 -40px;
 }
 
-#clickin-socailIcons a.mail, #clickin-socailIcons-1024 a.mail, #clickin-socailIcons-myclickin a.mail
+#arabiSky-socailIcons a.mail, #arabiSky-socailIcons-1024 a.mail, #arabiSky-socailIcons-myarabiSky a.mail
 {
     background: url(../social-icons-sprite.png) no-repeat 0 -60px;
 }
 
-#clickin-socailIcons-1024 a, #clickin-socailIcons-myclickin a
+#arabiSky-socailIcons-1024 a, #arabiSky-socailIcons-myarabiSky a
 {
     width: 21px;
     height: 20px;
@@ -9408,40 +9408,40 @@ p, .top-navigation ul
     margin: 0 5px;
 }
 
-.clickin-postThumbImgTitleText, .clickin-postPriceTitleText, .clickin-postKmsDrivenTitleText, .clickin-postUpdatedDateTitleText, .clickin-postPrice, .clickin-postKmsDriven, .clickin-postUpdatedDate
+.arabiSky-postThumbImgTitleText, .arabiSky-postPriceTitleText, .arabiSky-postKmsDrivenTitleText, .arabiSky-postUpdatedDateTitleText, .arabiSky-postPrice, .arabiSky-postKmsDriven, .arabiSky-postUpdatedDate
 {
     width: 100px;
     float: left;
 }
 
-.clickin-postYearTitleText, .clickin-postYear
+.arabiSky-postYearTitleText, .arabiSky-postYear
 {
     width: 52px;
     float: left;
 }
 
-#clickin-rightPanelView, .clickin-viewPageRightBlock
+#arabiSky-rightPanelView, .arabiSky-viewPageRightBlock
 {
     float: right;
     width: 300px;
 }
 
-.myclickin-thHeading div.myclickin-adsTitle, .myclickin-tdRow .myclickin-adsTitle
+.myarabiSky-thHeading div.myarabiSky-adsTitle, .myarabiSky-tdRow .myarabiSky-adsTitle
 {
     width: 320px;
 }
 
-.myclickin-thHeading div.myclickin-adsStatus, .myclickin-tdRow .myclickin-adsStatus
+.myarabiSky-thHeading div.myarabiSky-adsStatus, .myarabiSky-tdRow .myarabiSky-adsStatus
 {
     width: 140px;
 }
 
-.myclickin-tdRow .myclickin-adsValidityDate, .myclickin-tdRow .myclickin-adsActions
+.myarabiSky-tdRow .myarabiSky-adsValidityDate, .myarabiSky-tdRow .myarabiSky-adsActions
 {
     width: 95px;
 }
 
-.myClickinDelete, .myClickinButton
+.myarabiSkyDelete, .myarabiSkyButton
 {
     font-size: 15px;
     font-weight: 700;
@@ -9489,4 +9489,94 @@ p, .top-navigation ul
             border: 0px;
             cursor: pointer;
             font-weight: bold;
+        }
+        .bx-wrapper .bx-prev{left:-10px;background:url(/images/next-preBtn.png) no-repeat scroll 0 -59px transparent}.bx-wrapper .bx-prev:hover{background:url("/images/next-preBtn.png") no-repeat scroll 0 0 transparent}.bx-wrapper .bx-next{right:-12px;background:url(/images/next-preBtn.png) no-repeat scroll -40px -59px transparent}.bx-wrapper .bx-next:hover{background:url("/images/next-preBtn.png") no-repeat scroll -40px 0px transparent}.bx-wrapper .bx-pager{text-align:center;font-size: .85em;font-family:Arial;font-weight:bold;color:#666;position:absolute;top:-15px;right:20px}.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item{display:inline-block;*zoom:1;*display:inline}.bx-wrapper .bx-pager.bx-default-pager
+a{background:#dbdbdb;text-indent:-9999px;display:block;width:10px;height:10px;margin:0
+5px;outline:0;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px}
+
+ #nav
+        {
+            position: relative;
+            width: 620px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        
+        ul#navigation
+        {
+            margin: 0px auto;
+            position: relative;
+            float: left;
+        }
+        
+        ul#navigation li
+        {
+            display: inline;
+            font-size: 12px;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            float: left;
+            position: relative;
+        }
+        ul#navigation li:hover > ul
+        {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        ul#navigation ul, ul#navigation ul li ul
+        {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            visibility: hidden;
+            position: absolute;
+            z-index: 99999;
+            width: 180px;
+            background: #f8f8f8;
+            box-shadow: 1px 1px 3px #ccc;
+            opacity: 0;
+            -webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+            -moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+            -o-transition: opacity 0.2s linear, visibility 0.2s linear;
+            transition: opacity 0.2s linear, visibility 0.2s linear;
+        }
+        
+        ul#navigation ul
+        {
+            top: 27px;
+            left: -59px;
+            border: 1px solid #ccc;
+        }
+        
+        
+        ul#navigation ul li
+        {
+            clear: both;
+            width: 100%;
+            border: 0 none;
+            border-bottom: 1px solid #c9c9c9;
+        }
+        
+        
+        ul#navigation ul li:hover
+        {
+            background-color: #fff;
+        }
+        
+        ul#navigation ul li a
+        {
+            background: none;
+            padding: 7px 15px;
+            color: #616161;
+            text-shadow: 1px 1px 0px #fff;
+            text-decoration: none;
+            display: inline-block;
+            border: 0 none;
+            float: left;
+            clear: both;
+            width: 150px;
         }

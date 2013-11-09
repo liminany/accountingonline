@@ -650,7 +650,7 @@
 			return rez;
 		},
 
-		// Unbind the keyboard / clicking actions
+		// Unbind the keyboard / arabiSkyg actions
 		unbindEvents: function () {
 			if (F.wrap && isQuery(F.wrap)) {
 				F.wrap.unbind('.fb');

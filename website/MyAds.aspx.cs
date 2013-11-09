@@ -80,5 +80,46 @@ public partial class MyAds : System.Web.UI.Page
             return "null";
         }
     }
+
+    protected string GenerateURL(object Title, object strId)
+    {
+        string strTitle = Title.ToString();
+
+        //#region Generate SEO Friendly URL based on Title
+
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
+        }
+        strTitle = strTitle.Replace(" ", "-");
+
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = "ViewAds/" + strId + "/" + strTitle;
+
+        return strTitle;
+    }
+
+
     #endregion
 }

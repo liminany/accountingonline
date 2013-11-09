@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
+﻿<%@ Page Title="سوق سماء العرب | خصائص حسابي" MetaDescription="سوق سماء العرب | ArabiSky.com | خصائص حسابي" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="AccountSettings.aspx.cs" Inherits="AccountSettings" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -60,7 +60,7 @@
                     </tr>
                     <tr>
                         <td style="width: 140px; padding-bottom: 5px;">
-                            عدد الإعلانات المستعلمة :
+                            عدد الإعلانات المستعملة :
                         </td>
                         <td>
                             <input type="text" runat="server" id="txtUserAdsCount" validationgroup="p1" style="width: 250px;"
@@ -92,7 +92,7 @@
                                     البلد :
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="ddlCountryName" runat="server" CssClass="clickin-homeSelectbox"
+                                    <asp:DropDownList ID="ddlCountryName" runat="server" CssClass="arabiSky-homeSelectbox"
                                         Style="width: 264px;" AutoPostBack="true" OnSelectedIndexChanged="ddlCountryName_SelectedIndexChanged">
                                     </asp:DropDownList>
                                 </td>
@@ -105,7 +105,7 @@
                                     المدينة :
                                 </td>
                                 <td>
-                                    <asp:DropDownList ID="ddlCityName" runat="server" CssClass="clickin-homeSelectbox"
+                                    <asp:DropDownList ID="ddlCityName" runat="server" CssClass="arabiSky-homeSelectbox"
                                         Style="width: 264px;">
                                     </asp:DropDownList>
                                 </td>
@@ -205,4 +205,14 @@
             </td>
         </tr>
     </table>
+    <div style="clear: both; height: 10px;">
+        </div>
+        <div style="text-align: center;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ArabiSky_Default_Top -->
+            <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
+        </div>
 </asp:Content>

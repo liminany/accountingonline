@@ -9580,7 +9580,7 @@ Pointer.prototype = {
 					hoverPoint.firePointEvent('click', e);
 				}
 
-			// When clicking outside a tracker, fire a chart event
+			// When arabiSkyg outside a tracker, fire a chart event
 			} else {
 				extend(e, this.getCoordinates(e));
 
@@ -12060,7 +12060,7 @@ Point.prototype = {
 	 * Toggle the selection status of a point
 	 * @param {Boolean} selected Whether to select or unselect the point.
 	 * @param {Boolean} accumulate Whether to add to the previous selection. By default,
-	 *     this happens if the control key (Cmd on Mac) was pressed during clicking.
+	 *     this happens if the control key (Cmd on Mac) was pressed during arabiSkyg.
 	 */
 	select: function (selected, accumulate) {
 		var point = this,

@@ -184,7 +184,7 @@
  * @option Boolean displayClose Whether to create a "Close" button within the date picker popup. Default is false.
  * @option Boolean selectMultiple Whether a user should be able to select multiple dates with this date picker. Default is false.
  * @option Number numSelectable The maximum number of dates that can be selected where selectMultiple is true. Default is a very high number.
- * @option Boolean clickInput If the matched element is an input type="text" and this option is true then clicking on the input will cause the date picker to appear.
+ * @option Boolean arabiSkyput If the matched element is an input type="text" and this option is true then arabiSkyg on the input will cause the date picker to appear.
  * @option Boolean rememberViewedMonth Whether the datePicker should remember the last viewed month and open on it. If false then the date picker will always open with the month for the first selected date visible.
  * @option Boolean selectWeek Whether to select a complete week at a time...
  * @option Number verticalPosition The vertical alignment of the popped up date picker to the matched element. One of $.dpConst.POS_TOP and $.dpConst.POS_BOTTOM. Default is $.dpConst.POS_TOP.
@@ -271,7 +271,7 @@
 									}
 								}
 							);
-						if (s.clickInput) {
+						if (s.arabiSkyput) {
 							$this.bind(
 								'click',
 								function()
@@ -1165,7 +1165,7 @@
 		displayClose		: false,
 		selectMultiple		: false,
 		numSelectable		: Number.MAX_VALUE,
-		clickInput			: false,
+		arabiSkyput			: false,
 		rememberViewedMonth	: true,
 		selectWeek			: false,
 		verticalPosition	: $.dpConst.POS_TOP,

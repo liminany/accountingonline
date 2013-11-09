@@ -43,6 +43,8 @@ public partial class ViewAds : System.Web.UI.Page
                     {
                         sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='Category?CatID=" + rows["SubCatID"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
                         spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
+                        Page.Title = "سوق سماء العرب - " + rows["AdsTitle"].ToString();
+                        Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
                         sp_Price.InnerHtml = string.Format("السعر {0} {1}", rows["AdsPrice"].ToString(), GetCurrancyTags());
                         liCity.InnerHtml = "المدينة : " + rows["CityName"].ToString();
                         liCountry.InnerHtml = "البلد : " + rows["CountryName"].ToString();
@@ -117,14 +119,15 @@ public partial class ViewAds : System.Web.UI.Page
                     }
                     else
                     {
-                        if (string.IsNullOrEmpty(hfUserID.Value) || hfAdsUserIDOwner.Value != hfUserID.Value)
-                        {
-                            Response.Redirect("/", false);
-                        }
-                        else
-                        {
-                            btnReactivateAds.Visible = true;
-                        }
+                        btnReactivateAds.Visible = true;
+                        //if (string.IsNullOrEmpty(hfUserID.Value) || hfAdsUserIDOwner.Value != hfUserID.Value)
+                        //{
+                        //    Response.Redirect("/", false);
+                        //}
+                        //else
+                        //{
+                        //    btnReactivateAds.Visible = true;
+                        //}
                     }
 
                     #endregion
@@ -235,8 +238,8 @@ public partial class ViewAds : System.Web.UI.Page
             if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
             {
                 DBAdsManager objDBAdsManager = new DBAdsManager();
-                DateTime updateDateTime = Convert.ToDateTime(hfUpdateDateTime.Value);
-                DateTime newUpdateDateTime = updateDateTime.AddDays(6);
+                //DateTime updateDateTime = Convert.ToDateTime(hfUpdateDateTime.Value);
+                DateTime newUpdateDateTime = DateTime.Now.AddDays(6);
                 int nReturnValue = objDBAdsManager.ReActivateAds(Convert.ToInt32(hfUserID.Value), Convert.ToInt32(Request.QueryString["AdsID"].ToString()), newUpdateDateTime);
                 if (nReturnValue == 1)
                 {
@@ -378,6 +381,6 @@ public partial class ViewAds : System.Web.UI.Page
             return "null";
         }
     }
-    #endregion 
+    #endregion
 
 }

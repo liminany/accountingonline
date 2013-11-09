@@ -15,15 +15,15 @@
                 <td>
                     <div style="width: 100%; height: auto;">
                         <div>
-                            <div class="clickin-indexHeadingLeftCurve">
+                            <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
-                            <div class="clickin-indexHeadingContent" style="width: 97%;">
+                            <div class="arabiSky-indexHeadingContent" style="width: 97%;">
                                 <div style="float: right;">
                                     <span style="color: #111111; font-size: 20px;" runat="server" id="sp_SearchTitle">
                                     </span>
                                 </div>
                             </div>
-                            <div class="clickin-indexHeadingRightCurve">
+                            <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                         </div>
                         <div style="clear: both;">
@@ -97,8 +97,9 @@
                                             بحثك - <span id="sp_SearchWords" runat="server" style="font-weight: bold;"></span>
                                             - لم يطابق أي وثائق.<br />
                                             <br />
-                                            الاقتراحات:<br /><br />
-                                            <ul style="margin-right:30px;">
+                                            الاقتراحات:<br />
+                                            <br />
+                                            <ul style="margin-right: 30px;">
                                                 <li>تأكد من كتابة الكلمات بشكل صحيح. </li>
                                                 <li>محاولة استخدام كلمات مختلفة </li>
                                                 <li>استخدم كلمات عامة </li>
@@ -110,6 +111,14 @@
                         </div>
                     </div>
                     <div style="clear: both; height: 10px;">
+                    </div>
+                    <div style="text-align: center;">
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- ArabiSky_Default_Top -->
+                        <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                            data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+                        <script>                            (adsbygoogle = window.adsbygoogle || []).push({});</script>
+                        <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
                     </div>
                 </td>
             </tr>

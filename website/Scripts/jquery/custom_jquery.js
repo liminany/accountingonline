@@ -62,7 +62,7 @@ $(document).ready(function() {
 
 
 
-// 4 - CLOSE OPEN SLIDERS BY CLICKING ELSEWHERE ON PAGE -------------------------------------------------------------------------
+// 4 - CLOSE OPEN SLIDERS BY arabiSkyG ELSEWHERE ON PAGE -------------------------------------------------------------------------
 
 $(document).bind("click", function (e) {
     if (e.target.id != $(".showhide-account").attr("class")) $(".account-content").slideUp();

@@ -72,6 +72,48 @@ namespace DAL
             }
         }
 
+        public int EditAds(AdsManager objAdsManager)
+        {
+            int retValue = 0;
+            try
+            {  
+                DBParameter param1 = new DBParameter("@userID", objAdsManager.UserID);
+                DBParameter param2 = new DBParameter("@catID", objAdsManager.CatID);
+                DBParameter param3 = new DBParameter("@subCatID", objAdsManager.SubCatID);
+                DBParameter param4 = new DBParameter("@countryID", objAdsManager.CountryID);
+                DBParameter param5 = new DBParameter("@cityID", objAdsManager.CityID);
+                DBParameter param6 = new DBParameter("@adsPrice", objAdsManager.AdsPrice);
+                DBParameter param7 = new DBParameter("@adsTitle", objAdsManager.AdsTitle);
+                DBParameter param8 = new DBParameter("@adsDescription", objAdsManager.AdsDescription);
+                DBParameter param9 = new DBParameter("@adsImages", objAdsManager.AdsImages);
+                DBParameter param10 = new DBParameter("@adsYoutubeURL", objAdsManager.AdsYouTubeURL);
+                DBParameter param11 = new DBParameter("@adsID", objAdsManager.AdsID);
+                DBParameter returnValue = new DBParameter("@LastAdsID", 0, DbType.Int32, ParameterDirection.ReturnValue);
+                DBParameterCollection paramCollection = new DBParameterCollection();
+                paramCollection.Add(param1);
+                paramCollection.Add(param2);
+                paramCollection.Add(param3);
+                paramCollection.Add(param4);
+                paramCollection.Add(param5);
+                paramCollection.Add(param6);
+                paramCollection.Add(param7);
+                paramCollection.Add(param8);
+                paramCollection.Add(param9);
+                paramCollection.Add(param10);
+                paramCollection.Add(param11);
+                paramCollection.Add(returnValue);  
+                retValue = _dbHelper.ExecuteNonQuery("sp_EditAds", paramCollection, CommandType.StoredProcedure);
+                return retValue;
+
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("DAL:::DBUserMessages:::EditAds:::" + ex.Message);
+                return 0;
+                throw;
+            }
+        }
+
         public DataSet GetAllPenddingAds()
         {
             try

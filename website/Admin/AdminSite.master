@@ -92,7 +92,7 @@
     <asp:UpdateProgress ID="updateProgress1" runat="server" DisplayAfter="0">
         <ProgressTemplate>
             <div style="position: absolute; left: 700px; top: 398px">
-                <img runat="server" id="imgLoader" alt="Loading...." src="~/img/ajax-loader.gif" />
+                <img runat="server" id="imgLoader" src="~/img/ajax-loader.gif" alt="ArabiSky.com" />
             </div>
         </ProgressTemplate>
     </asp:UpdateProgress>
@@ -103,7 +103,7 @@
             <!-- start logo -->
             <div id="logo" style="margin: 1px 0 0 15px !important;">
                 <a href="">
-                    <img src="../images/ArabiSkyLogo.png" style="height: 90px; width: 98px;" alt="livekora.net" /></a>
+                    <img src="../images/ArabiSkyLogo.png" style="height: 90px; width: 98px;" alt="ArabiSky.com" /></a>
             </div>
             <!-- end logo -->
             <div class="clear">
@@ -122,7 +122,7 @@
                 <div class="nav-divider">
                     &nbsp;</div>
                 <a href="logout" id="logout">
-                    <img src="../img/shared/nav/nav_logout.gif" width="64" height="14" alt="" /></a>
+                    <img src="../img/shared/nav/nav_logout.gif" width="64" height="14" alt="ArabiSky.com" /></a>
                 <div class="clear">
                     &nbsp;</div>
                 <!--  start account-content -->
@@ -189,7 +189,7 @@
                         </td>
                         <td class="yellow-right">
                             <a class="close-yellow">
-                                <img src="../img/table/icon_close_yellow.gif" alt="" /></a>
+                                <img src="../img/table/icon_close_yellow.gif" alt="ArabiSky.com" /></a>
                         </td>
                     </tr>
                 </table>
@@ -204,7 +204,7 @@
                         </td>
                         <td class="red-right">
                             <a class="close-red">
-                                <img src="../img/table/icon_close_red.gif" alt="" /></a>
+                                <img src="../img/table/icon_close_red.gif" alt="ArabiSky.com" /></a>
                         </td>
                     </tr>
                 </table>
@@ -219,7 +219,7 @@
                         </td>
                         <td class="blue-right">
                             <a class="close-blue">
-                                <img src="../img/table/icon_close_blue.gif" alt="" /></a>
+                                <img src="../img/table/icon_close_blue.gif" alt="ArabiSky.com" /></a>
                         </td>
                     </tr>
                 </table>
@@ -233,7 +233,7 @@
                         </td>
                         <td class="green-right">
                             <a class="close-green">
-                                <img src="../img/table/icon_close_green.gif" alt="" /></a>
+                                <img src="../img/table/icon_close_green.gif" alt="ArabiSky.com" /></a>
                         </td>
                     </tr>
                 </table>
@@ -243,7 +243,7 @@
                 <tbody>
                     <tr>
                         <th rowspan="3" class="sized">
-                            <img src="../img/shared/side_shadowleft.jpg" width="20" height="300" alt="">
+                            <img src="../img/shared/side_shadowleft.jpg" width="20" height="300" alt="ArabiSky.com">
                         </th>
                         <th class="topleft">
                         </th>
@@ -253,7 +253,7 @@
                         <th class="topright">
                         </th>
                         <th rowspan="3" class="sized">
-                            <img src="../img/shared/side_shadowright.jpg" width="20" height="300" alt="">
+                            <img src="../img/shared/side_shadowright.jpg" width="20" height="300" alt="ArabiSky.com">
                         </th>
                     </tr>
                     <tr>

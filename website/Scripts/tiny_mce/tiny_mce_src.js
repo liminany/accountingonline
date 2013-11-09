@@ -10351,7 +10351,7 @@ window.tinymce.dom.Sizzle = Sizzle;
 				tinymce.removeUnload(self.destroy);
 		},
 
-		// IE has an issue where you can't select/move the caret by clicking outside the body if the document is in standards mode
+		// IE has an issue where you can't select/move the caret by arabiSkyg outside the body if the document is in standards mode
 		_fixIESelection : function() {
 			var dom = this.dom, doc = dom.doc, body = doc.body, started, startRng, htmlElm;
 

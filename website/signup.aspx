@@ -1,5 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
-    CodeFile="signup.aspx.cs" Inherits="signup" %>
+﻿<%@ Page Title="موقع سماء العرب - تسجيل مستخدم جديد" MetaDescription="موقع سماء العرب - تسجيل مستخدم جديد - ArabiSky.com"
+    Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true" CodeFile="signup.aspx.cs"
+    Inherits="signup" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -17,8 +18,8 @@
         <tr>
             <td align="center">
                 <div>
-                    <div id="clickin-signInSignUpBlockInner">
-                        <div id="clickin-signUpBlock">
+                    <div id="arabiSky-signInSignUpBlockInner">
+                        <div id="arabiSky-signUpBlock">
                             <h2>
                                 تسجيل حساب جديد في سماء العرب
                             </h2>
@@ -65,6 +66,21 @@
                         <h1>
                             هل لديك حساب مسبقا <a href="login">تسجيل دخول من هنا</a></h1>
                     </div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:10px;"></td>
+        </tr>
+        <tr>
+            <td>
+                <div style="text-align: center;">
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <!-- ArabiSky_Default_Top -->
+                    <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                        data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+                    <script>                        (adsbygoogle = window.adsbygoogle || []).push({});</script>
+                    <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
                 </div>
             </td>
         </tr>

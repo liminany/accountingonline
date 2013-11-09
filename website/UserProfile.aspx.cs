@@ -49,6 +49,8 @@ public partial class UserProfile : System.Web.UI.Page
                         }
                         aEmailAddress.InnerHtml = objEntityRegUsers.UserEmailAddress;
                         sp_UserFullName.InnerHtml = objEntityRegUsers.UserFullName;
+                        Page.Title = "موقع سماء العرب - " + objEntityRegUsers.UserFullName;
+                        Page.Title = "موقع سماء العرب - ArabiSky.com - " + objEntityRegUsers.UserFullName;
                         spCreateDate.InnerHtml = objEntityRegUsers.CreateDateTime.ToShortDateString();
 
                         DBAdsManager objDBAdsManager = new DBAdsManager();
