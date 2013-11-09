@@ -21,7 +21,8 @@ public partial class UserProfile : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
-                    if (Request.Url.AbsoluteUri.IndexOf("UserID") >= 0)
+                    string sQueryStringAdsID = Request.QueryString["UserID"];
+                    if (!string.IsNullOrEmpty(sQueryStringAdsID))
                     {
                         #region GetMainUserID
                         if (FormsFunction.GetCookieData().Length != 0)

@@ -18,7 +18,8 @@ public partial class mail : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
-                    if (Request.Url.AbsoluteUri.IndexOf("messageID") >= 0)
+                    string sQueryStringAdsID = Request.QueryString["messageID"];
+                    if (!string.IsNullOrEmpty(sQueryStringAdsID))
                     {
                         int nMessageID = int.Parse(Request.QueryString["messageID"].ToString());
                         if (FormsFunction.GetCookieData().Length != 0)

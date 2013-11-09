@@ -22,7 +22,8 @@ public partial class Category : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                if (Request.Url.AbsoluteUri.IndexOf("CatID") >= 0)
+                string sQueryStringAdsID = Request.QueryString["CatID"];
+                if (!string.IsNullOrEmpty(sQueryStringAdsID))
                 {
                     DBAdsManager objDBAdsManager = new DBAdsManager();
                     DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()));

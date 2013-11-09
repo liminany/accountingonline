@@ -30,10 +30,8 @@ public partial class AccountSettings : System.Web.UI.Page
                         EntityRegUsers objEntityRegUsers = new EntityRegUsers();
                         objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(arrUserCookieInfo[0].ToString()));
                         hfUserID.Value = objEntityRegUsers.UserID.ToString();
-                        if (objEntityRegUsers.UserFullName.Contains("UserID "))
-                            txtUserFullName.Value = string.Empty;
-                        else
-                            txtUserFullName.Value = objEntityRegUsers.UserFullName;
+
+                        txtUserFullName.Value = objEntityRegUsers.UserFullName;
                         txtUserEmailAddress.Value = objEntityRegUsers.UserEmailAddress;
                         txtUserAdsQuta.Value = objEntityRegUsers.UserCountAds.ToString();
                         txtUserAdsCount.Value = objEntityRegUsers.CountAdsUsed.ToString();
@@ -63,9 +61,11 @@ public partial class AccountSettings : System.Web.UI.Page
                         {
                             txtUserFullName.Value = objEntityRegUsers.UserFullName;
                         }
+                        txtUserFullName.Value = objEntityRegUsers.UserFullName;
                         txtUserEmailAddress.Value = objEntityRegUsers.UserEmailAddress;
                         txtUserAdsQuta.Value = objEntityRegUsers.UserCountAds.ToString();
-                        txtUserMobilePhoneNumber.Value = objEntityRegUsers.UserMobileNumber;
+                        txtUserAdsCount.Value = objEntityRegUsers.CountAdsUsed.ToString();
+
                         if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
                         {
                             imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";

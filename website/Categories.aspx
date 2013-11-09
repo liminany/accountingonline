@@ -25,7 +25,7 @@
         <div style="clear: both;">
         </div>
         <div>
-            <div style="border: 1px solid #ccc; height: 320px; width: 973px; margin-right: 10px;
+            <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
                 text-align: center;">
                 <table class="tbMainAds" width="100%" cellpadding="0" cellspacing="0">
                     <asp:Repeater runat="server" ID="rptSlimlerAds">

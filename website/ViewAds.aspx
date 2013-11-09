@@ -45,7 +45,7 @@
                     staffid: "991234"
                 }
             });
-        });
+        }); 
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -88,8 +88,7 @@
         <div>
             <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
                 text-align: center;">
-                <div id="div_ViewAds" style="float: right; margin-top: 20px;
-                    width: 100%;">
+                <div id="div_ViewAds" style="float: right; margin-top: 20px; width: 100%;">
                     <div style="float: left;">
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tbody>
@@ -192,7 +191,7 @@
                                 <span class="accorText">أكتب تعليق لصحاب الإعلان </span>
                             </h3>
                         </div>
-                        <div style="margin-right: 30px; float: right;" onclick="funSendEMail('message')">
+                        <div style="margin-right: 30px; float: right;" id="div_SendPrivateMessage" runat="server" onclick="funSendEMail('message')">
                             <h3 class="accorRightHeader" id="H1" style="width: 215px;">
                                 <span class="rightIcons">
                                     <img src="/images/sendMailIcon.png" alt="ArabiSky.com"></span> <span class="accorText">

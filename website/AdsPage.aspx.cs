@@ -52,7 +52,9 @@ public partial class AdsPage : System.Web.UI.Page
                         hfUserID.Value = objEntityRegUsers.UserID.ToString();
                     }
 
-                    if (Request.Url.AbsoluteUri.IndexOf("AdsID") != 30)
+
+                    string sQueryStringAdsID = Request.QueryString["AdsID"];
+                    if (string.IsNullOrEmpty(sQueryStringAdsID))
                     {
                         spPageTitle.InnerHtml = "إضافة إعلان جديد";
                         Page.Title = "سوق سماء العرب | إضافة إعلان جديد";
@@ -66,10 +68,9 @@ public partial class AdsPage : System.Web.UI.Page
                             trUserMessage.Style.Add("color", "#fff");
                             trUserMessage.Style.Add("height", "30px");
                             spUserMessages.InnerHtml = "<img style='width: 30px;' alt='arabiSky.com' src='images/Warning.png' />&nbsp;<span style='position: relative; bottom: 7px;'>لقد تجاوزت عدد الإعلانات المسموح لك بإستعمالها</span></a>";
-
                         }
                         #endregion
-                    }
+                    } 
                     else
                     {
                         spPageTitle.InnerHtml = "تعديل إعلان";
@@ -127,7 +128,8 @@ public partial class AdsPage : System.Web.UI.Page
     {
         try
         {
-            if (Request.Url.AbsoluteUri.IndexOf("AdsID") != 30)
+            string sQueryStringAdsID = Request.QueryString["AdsID"];
+            if (string.IsNullOrEmpty(sQueryStringAdsID))
             {
                 DBAdsManager objDBAdsManager = new DBAdsManager();
                 AdsManager objAdsManager = new AdsManager();
@@ -153,7 +155,6 @@ public partial class AdsPage : System.Web.UI.Page
                 SearchEngineOptimization objSearchEngineOptimization = new SearchEngineOptimization();
 
                 objSearchEngineOptimization.SiteMapGenerater(string.Format("http://www.arabisky.com/ViewAds?AdsID={0}", nReturnValue), DateTime.Now.ToString(), "daily", "0.69");
-                //objSearchEngineOptimization.DoRSSGenerater(nReturnValue.ToString(), objAdsManager.AdsTitle, objAdsManager.AdsDescription, DateTime.Now.ToString());
 
                 trUserMessage.Style.Add("display", "");
                 if (nReturnValue != 0)
@@ -191,14 +192,20 @@ public partial class AdsPage : System.Web.UI.Page
 
                 if (UploadAdsImages() != "" || UploadAdsImages() != "false")
                 {
-                    objAdsManager.AdsImages = hfEditImageAds.Value.Substring(0, hfEditImageAds.Value.Length - 1);
-                    objAdsManager.AdsImages = objAdsManager.AdsImages + "|" + UploadAdsImages();
-                    if (objAdsManager.AdsImages[objAdsManager.AdsImages.Length - 1] == '|')
+                    if (string.IsNullOrEmpty(hfEditImageAds.Value))
                     {
-                        objAdsManager.AdsImages = objAdsManager.AdsImages.Substring(0, objAdsManager.AdsImages.Length - 1);
+                        objAdsManager.AdsImages = UploadAdsImages();
+                    }
+                    else
+                    {
+                        objAdsManager.AdsImages = hfEditImageAds.Value.Substring(0, hfEditImageAds.Value.Length - 1);
+                        objAdsManager.AdsImages = objAdsManager.AdsImages + "|" + UploadAdsImages();
+                        if (objAdsManager.AdsImages[objAdsManager.AdsImages.Length - 1] == '|')
+                        {
+                            objAdsManager.AdsImages = objAdsManager.AdsImages.Substring(0, objAdsManager.AdsImages.Length - 1);
+                        }
                     }
                 }
-
 
                 objAdsManager.AdsYouTubeURL = txtYouTubeURL.Value;
                 int nReturnValue = objDBAdsManager.EditAds(objAdsManager);
