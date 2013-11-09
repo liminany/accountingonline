@@ -48,7 +48,7 @@ public partial class _Default : System.Web.UI.Page
     protected void ddlCountryName_SelectedIndexChanged(object sender, EventArgs e)
     {
         try
-        {
+        { 
             ManageCity objManageCity = new ManageCity();
             EntiryCity objEntiryCity = new EntiryCity();
             objEntiryCity.Action = 6;
@@ -73,7 +73,7 @@ public partial class _Default : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            _logger.Error("masterpage:::lbtnRefreshGVMaster_Click:::" + ex.Message);
+            _logger.Error("_Default:::lbtnRefreshGVDownSearch_Click:::" + ex.Message);
         }
     }
     #endregion

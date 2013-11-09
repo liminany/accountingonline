@@ -4,15 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DAL;
-using Entity;
 using NLog;
+using DAL;
 using System.Data;
 
-public partial class Category : System.Web.UI.Page
+public partial class Categories : System.Web.UI.Page
 {
     #region variables
-    private static Logger _logger = LogManager.GetCurrentClassLogger(); 
+    private static Logger _logger = LogManager.GetCurrentClassLogger();
     #endregion
 
     #region Pageload
@@ -25,10 +24,10 @@ public partial class Category : System.Web.UI.Page
                 if (Request.Url.AbsoluteUri.IndexOf("CatID") >= 0)
                 {
                     DBAdsManager objDBAdsManager = new DBAdsManager();
-                    DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()));
+                    DataSet objDataSet = objDBAdsManager.GetAdsMainCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()), GetCountryCode());
                     if (objDataSet.Tables[0].Rows.Count > 0)
                     {
-                        string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
+                        string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString();
                         CatName.InnerHtml = pageTitle;
                         Page.Title = " سوق سماء العرب | " + pageTitle;
                         Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
@@ -45,7 +44,7 @@ public partial class Category : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            _logger.Error("Category:::Page_Load:::" + ex.Message);
+            _logger.Error("Categories:::Page_Load:::" + ex.Message);
         }
     }
     #endregion
@@ -68,6 +67,25 @@ public partial class Category : System.Web.UI.Page
         catch (Exception)
         {
             return "null";
+        }
+    }
+    private int GetCountryCode()
+    {
+        try
+        {
+            string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
+            if (!string.IsNullOrEmpty(arabiSkyCountry[0]))
+            {
+                return Convert.ToInt16(arabiSkyCountry[0]);
+            }
+            else
+            {
+                return 12;
+            }
+        }
+        catch (Exception)
+        {
+            return 12;
         }
     }
     #endregion

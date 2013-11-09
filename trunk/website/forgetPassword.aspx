@@ -82,6 +82,9 @@
             </td>
         </tr>
         <tr>
+            <td style="height:15px;"></td>
+        </tr>
+        <tr>
             <td style="text-align: center;">
                 <div style="text-align: center;">
                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

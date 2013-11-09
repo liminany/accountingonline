@@ -204,7 +204,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::ManageCity:::GetAllCity:::" + ex.Message);
+                _logger.Error("DAL:::ManageCity:::GetAllCityByCountryID:::" + ex.Message);
                 throw;
             }
         }

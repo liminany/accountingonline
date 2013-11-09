@@ -66,7 +66,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DBUserMessages:::SendNewMessageForUser:::" + ex.Message);
+                _logger.Error("DAL:::DBAdsManager:::InsertNewAds:::" + ex.Message);
                 return 0;
                 throw;
             }
@@ -108,7 +108,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DBUserMessages:::EditAds:::" + ex.Message);
+                _logger.Error("DAL:::DBAdsManager:::EditAds:::" + ex.Message);
                 return 0;
                 throw;
             }
@@ -123,7 +123,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DBUserMessages:::GetAllPenddingAds:::" + ex.Message);
+                _logger.Error("DAL:::DBAdsManager:::GetAllPenddingAds:::" + ex.Message);
                 throw;
             }
         }
@@ -137,7 +137,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::DBUserMessages:::GetAllApprovedAds:::" + ex.Message);
+                _logger.Error("DAL:::DBAdsManager:::GetAllApprovedAds:::" + ex.Message);
                 throw;
             }
         }
@@ -235,7 +235,27 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                _logger.Error("DAL:::GetAdsCategoiresByCatID:::GetSimlirAdsTen:::" + ex.Message);
+                _logger.Error("DAL:::DBAdsManager:::GetAdsCategoiresByCatID:::" + ex.Message);
+                throw;
+            }
+        }
+
+        public DataSet GetAdsMainCategoiresByCatID(int nCat, int countryID)
+        {
+            try
+            {
+                DBParameter param1 = new DBParameter("@adsCat", nCat);
+                DBParameter param2 = new DBParameter("@countryID", countryID);
+
+                DBParameterCollection paramCollection = new DBParameterCollection();
+                paramCollection.Add(param1);
+                paramCollection.Add(param2);
+                DataSet dsReturnAllUser = _dbHelper.ExecuteDataSet("sp_GetMainAdsCategoiresByCatID", paramCollection, CommandType.StoredProcedure);
+                return dsReturnAllUser;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("DAL:::DBAdsManager:::GetAdsMainCategoiresByCatID:::" + ex.Message);
                 throw;
             }
         }

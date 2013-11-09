@@ -27,10 +27,23 @@
     </asp:ContentPlaceHolder>
 </head>
 <body style="direction: rtl;">
-    <div id="fb-root"></div>
+    <div id="fb-root">
+    </div>
     <form id="form1" runat="server">
     <asp:ScriptManager runat="server" ID="smMainPage" ScriptMode="Release" EnablePageMethods="true">
     </asp:ScriptManager>
+    <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="1">
+        <ProgressTemplate>
+            <div id="Background">
+            </div>
+            <div id="Progress">
+                <img src="images/search_loader.gif" style="vertical-align: middle; margin-top: 9px;"
+                    alt="ArabiSky.com" />
+                <span style="position: relative; top: 7px; font-weight: bold; font-size: 19px;">الرجاء
+                    الإنتظار</span>
+            </div>
+        </ProgressTemplate>
+    </asp:UpdateProgress>
     <div id="wrapper">
         <div id="arabiSky-wrapper">
             <div id="arabiSky-topMenuMain">
@@ -245,6 +258,24 @@
             Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnRefreshGVMaster_Click">
         </asp:Button>
         <script>            (function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-43880128-1", "arabisky.com"); ga("send", "pageview")</script>
+        <!-- AddThis Smart Layers BEGIN -->
+        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527e293742041da6"></script>
+        <script type="text/javascript">
+            addthis.layers({
+                'theme': 'transparent',
+                'share': {
+                    'position': 'right',
+                    'numPreferredServices': 5
+                },
+                'whatsnext': {},
+                'recommended': {
+                    'title': 'ننصحكم بتصفح'
+                }
+
+            });
+        </script>
+        <!-- AddThis Smart Layers END -->
     </form>
 </body>
 </html>
