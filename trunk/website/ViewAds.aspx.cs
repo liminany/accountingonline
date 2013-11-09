@@ -7,6 +7,7 @@ public partial class ViewAds : System.Web.UI.Page
 {
     #region variables
     private static Logger _logger = LogManager.GetCurrentClassLogger();
+     EntityRegUsers objEntityRegUsers = new EntityRegUsers();
     #endregion
 
     #region Events
@@ -16,24 +17,29 @@ public partial class ViewAds : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+                string sQueryStringAdsID = Request.QueryString["AdsID"];
+                if (!string.IsNullOrEmpty(sQueryStringAdsID))
                 {
-                    if (FormsFunction.GetCookieData().Length != 0)
+                    if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                     {
-                        UserAuthentication objUserAuthentication = new UserAuthentication();
-                        string[] arrUserCookieInfo = FormsFunction.GetCookieData();
-                        hfUserID.Value = arrUserCookieInfo[0].ToString();
+                        if (FormsFunction.GetCookieData().Length != 0)
+                        {
+                            string[] arrUserCookieInfo = FormsFunction.GetCookieData();
+                            hfUserID.Value = arrUserCookieInfo[0].ToString();
+                        }
+                        else
+                        {
+                            objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
+                            hfUserID.Value = objEntityRegUsers.UserID.ToString();
+                        }
+                        div_SendPrivateMessage.Style.Add("display", "");
                     }
                     else
                     {
-                        UserAuthentication objUserAuthentication = new UserAuthentication();
-                        EntityRegUsers objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
-                        if (objEntityRegUsers != null)
-                        {
-                            objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(objEntityRegUsers.UserID);
-                            hfUserID.Value = objEntityRegUsers.UserID.ToString();
-                        }
+                        div_SendPrivateMessage.Style.Add("display", "none");
                     }
+
+                     
 
                     DBAdsManager objDBAdsManager = new DBAdsManager();
                     int nSubCatID = 0;
@@ -45,7 +51,7 @@ public partial class ViewAds : System.Web.UI.Page
                         spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
                         Page.Title = "سوق سماء العرب - " + rows["AdsTitle"].ToString();
                         Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
-                        
+
                         if (Convert.ToInt32(rows["AdsPrice"].ToString()) > 0)
                         {
                             sp_Price.InnerHtml = string.Format("السعر {0} {1}", rows["AdsPrice"].ToString(), GetCurrancyTags());
@@ -221,7 +227,8 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+            string sQueryStringAdsID = Request.QueryString["AdsID"];
+            if (!string.IsNullOrEmpty(sQueryStringAdsID))
             {
                 DBAdsManager objDBAdsManager = new DBAdsManager();
                 int nReturnValue = objDBAdsManager.DeleteAdsAndRejected(int.Parse(Request.QueryString["AdsID"].ToString()));
@@ -244,7 +251,9 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+
+            string sQueryStringAdsID = Request.QueryString["AdsID"];
+            if (!string.IsNullOrEmpty(sQueryStringAdsID))
             {
                 DBAdsManager objDBAdsManager = new DBAdsManager();
                 //DateTime updateDateTime = Convert.ToDateTime(hfUpdateDateTime.Value);
@@ -271,7 +280,8 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+            string sQueryStringAdsID = Request.QueryString["AdsID"];
+            if (!string.IsNullOrEmpty(sQueryStringAdsID))
             {
                 Response.Redirect("AdsPage?AdsID=" + Request.QueryString["AdsID"].ToString(), false);
             }
@@ -344,7 +354,7 @@ public partial class ViewAds : System.Web.UI.Page
         }
         catch (Exception)
         {
-        
+
         }
     }
     protected string RunVedio(string VedioURL)
