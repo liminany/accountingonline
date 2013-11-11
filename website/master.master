@@ -254,6 +254,14 @@
                     </div>
             </footer>
         </div>
+        <div style="margin-right: 10px; margin-left: 10px; border-top: 4px solid #ff9900;
+            border-left: 1px solid #ccc; border-right: 1px solid #ccc; background-color: #f1f3f2;
+            height: 35px; width: 300px; position: fixed; right: 0px; bottom: 0px;" id="div_EmailNotofication" runat="server">
+            <%--<a href="" style="margin: 10px;">X</a>--%>
+            <div style="margin: 0 auto; width: 100%; text-align: center;padding-top: 10px;">
+                لديك  <span id="spMessageCountNotification" runat="server">0</span> رسائل جديدة <a href="mail">انقر هنا للدخول</a>
+            </div>
+        </div>
         <asp:Button ID="lbtnRefreshGVMaster" CssClass="ClassHideDiv" runat="server" Text=""
             Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnRefreshGVMaster_Click">
         </asp:Button>
