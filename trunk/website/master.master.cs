@@ -40,36 +40,31 @@ public partial class master : System.Web.UI.MasterPage
         {
             if (!IsPostBack)
             {
-                int nUserID = 0;
-                if (FormsFunction.GetCookieData().Length != 0)
+                if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
-                    string[] arrCookieData = FormsFunction.GetCookieData();
-                    objEntityRegUsers.UserID = Convert.ToInt32(arrCookieData[0].ToString());
-                    nUserID = objEntityRegUsers.UserID;
-                    objEntityRegUsers.UserEmailAddress = arrCookieData[1].ToString();
-                    objEntityRegUsers.UserPassword = arrCookieData[2].ToString();
-                    if (arrCookieData.Length == 4)
+                    if (FormsFunction.GetCookieData().Length != 0)
                     {
-                        objEntityRegUsers.UserFullName = arrCookieData[3].ToString();
+                        string[] arrCookieData = FormsFunction.GetCookieData();
+                        objEntityRegUsers.UserID = Convert.ToInt32(arrCookieData[0].ToString());
+                        objEntityRegUsers.UserEmailAddress = arrCookieData[1].ToString();
+                        objEntityRegUsers.UserPassword = arrCookieData[2].ToString();
+                        if (arrCookieData.Length == 4)
+                        {
+                            objEntityRegUsers.UserFullName = arrCookieData[3].ToString();
+                        }
+                        else
+                        {
+                            objEntityRegUsers.UserFullName = "UserID :" + objEntityRegUsers.UserID;
+                        }
+                        tr_DefaultUser.Style.Add("display", "none");
+                        tr_RegisterUser.Style.Add("display", "");
+                        sp_UserTitle.InnerHtml = objEntityRegUsers.UserFullName;
                     }
                     else
-                    {
-                        objEntityRegUsers.UserFullName = "UserID :" + objEntityRegUsers.UserID;
-                    }
-                    sp_UserTitle.InnerHtml = objEntityRegUsers.UserFullName;
-                    tr_DefaultUser.Style.Add("display", "none");
-                    tr_RegisterUser.Style.Add("display", "");
-                    DBUserMessages objDBUserMessages = new DBUserMessages();
-                    spMessageCounter.InnerHtml = string.Format("&nbsp;لديك {0} رسائل&nbsp;", objDBUserMessages.GetEmailUnReaded(nUserID));
-                }
-                else
-                {
-                    if ((Session["UserInfo"] != null) || (!(Convert.ToString(Session["UserInfo"]) == "")))
                     {
                         objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
                         tr_DefaultUser.Style.Add("display", "none");
                         tr_RegisterUser.Style.Add("display", "");
-
                         if (string.IsNullOrEmpty(objEntityRegUsers.UserFullName))
                         {
                             objEntityRegUsers.UserFullName = "UserID :" + objEntityRegUsers.UserID;
@@ -78,16 +73,26 @@ public partial class master : System.Web.UI.MasterPage
                         {
                             objEntityRegUsers.UserFullName = objEntityRegUsers.UserFullName;
                         }
-                        nUserID = objEntityRegUsers.UserID;
                         sp_UserTitle.InnerHtml = objEntityRegUsers.UserFullName;
-                        DBUserMessages objDBUserMessages = new DBUserMessages();
-                        spMessageCounter.InnerHtml = string.Format("&nbsp;لديك {0} رسائل&nbsp;", objDBUserMessages.GetEmailUnReaded(nUserID));
+                    }
+                    DBUserMessages objDBUserMessages = new DBUserMessages();
+                    int nMessageCountUnread = objDBUserMessages.GetEmailUnReaded(objEntityRegUsers.UserID);
+                    spMessageCounter.InnerHtml = string.Format("&nbsp;لديك {0} رسائل&nbsp;", nMessageCountUnread);
+                    if (nMessageCountUnread > 0)
+                    {
+                        spMessageCountNotification.InnerHtml = nMessageCountUnread.ToString();
+                        div_EmailNotofication.Style.Add("display", "");
                     }
                     else
                     {
-                        tr_DefaultUser.Style.Add("display", "");
-                        tr_RegisterUser.Style.Add("display", "none");
+                        div_EmailNotofication.Style.Add("display", "none");
                     }
+                }
+                else
+                {
+                    tr_DefaultUser.Style.Add("display", "");
+                    tr_RegisterUser.Style.Add("display", "none");
+                    div_EmailNotofication.Style.Add("display", "none");
                 }
             }
         }
@@ -103,9 +108,7 @@ public partial class master : System.Web.UI.MasterPage
     {
         try
         {
-            string sSelectedSubCat = home_search_cat_id.Value;
-            string sTextSearch = txtMasterSearch.Value;
-            Response.Redirect(string.Format("Search?Type=custom&subID={0}&text={1}", sSelectedSubCat, sTextSearch), false);
+            Response.Redirect(string.Format("Search?Type=custom&subID={0}&text={1}", home_search_cat_id.Value, txtMasterSearch.Value.Trim()), false);
         }
         catch (Exception ex)
         {

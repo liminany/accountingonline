@@ -15,10 +15,11 @@
                       ['الخدمات', parseInt(array[1])],
                       ['وظائف شاغرة', parseInt(array[2])],
                       ['للإيجار', parseInt(array[3])],
-                      ['الباحثين عن عمل', parseInt(array[4])]
+                      ['الباحثين عن عمل', parseInt(array[4])],
+                      ['مطلوب شراء', parseInt(array[5])]
                     ]);
             var options = {
-                title: 'My Daily Activities'
+                title: 'عدد الإعلانات لكل قسم'
             };
             var chart = new google.visualization.PieChart(document.getElementById('piechart'));
             chart.draw(data, options);

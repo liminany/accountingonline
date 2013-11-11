@@ -365,7 +365,7 @@
                             <td>
                                 <div class="arabiSky-postClassifieds" style="margin-right: 10px; border-radius: 0px;
                                     float: right;">
-                                    <a href="Search?Type=SearchLast" style="display: block; width: 100%; height: 100%;">
+                                    <a href="Search?Type=Newest" style="display: block; width: 100%; height: 100%;">
                                         تابع مشاهدة اخر الإعلانات</a>
                                 </div>
                                 <div style="float: left;">
@@ -471,8 +471,7 @@
                             <td>
                                 <div class="arabiSky-postClassifieds" style="margin-right: 10px; border-radius: 0px;
                                     float: right;">
-                                    <a href="Search?Type=Newest" style="display: block; width: 100%; height: 100%;">تابع
-                                        أكثر الإعلانات مشاهدة</a>
+                                    <a href="Search?Type=SearchLast" style="display: block; width: 100%; height: 100%;">تابع أكثر الإعلانات مشاهدة</a>
                                 </div>
                                 <div style="float: left;">
                                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

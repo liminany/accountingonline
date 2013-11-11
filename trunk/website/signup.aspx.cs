@@ -24,7 +24,7 @@ public partial class signup : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length == 0 || string.IsNullOrEmpty(Session["UserInfo"].ToString()))
                 {
-                    email.Focus();
+                    txtUserFullName.Focus();
                 }
                 else
                 {

@@ -349,7 +349,7 @@ public partial class ViewAds : System.Web.UI.Page
             string[] images = imagesURL.Split('|');
             for (int i = 0; i < images.Length; i++)
             {
-                ulVidewImages.InnerHtml = ulVidewImages.InnerHtml + "<li style='position: initial;'><img style='width:640px;height:377px;' src='" + images[i].Replace("~", "..") + "' /></li>";
+                ulVidewImages.InnerHtml = ulVidewImages.InnerHtml + "<li style='position: initial;'><img style='width:100%;height:377px;' src='" + images[i].Replace("~", "..") + "' /></li>";
             }
         }
         catch (Exception)
