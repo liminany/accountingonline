@@ -155,7 +155,7 @@
                             <asp:DropDownList ID="ddlCityName" runat="server" CssClass="arabiSky-homeSelectbox"
                                 Style="width: 250px;">
                             </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCategoryName"
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="ddlCityName"
                                 ValidationGroup="AddAds" ErrorMessage="الرجاء إختيار المدينة" InitialValue="-2"></asp:RequiredFieldValidator>
                         </td>
                     </tr>

@@ -27,6 +27,8 @@ public partial class Search : System.Web.UI.Page
                 {
                     string sSearchType = Request.QueryString["Type"].ToString();
                     string sSearchText = string.Empty;
+                    string sBrand_1 = string.Empty;
+                    string sBrand_2 = string.Empty;
                     int nSearchID = 0;
                     int nSearchSubCat = 0;
                     int nCountryCode = 0;
@@ -50,8 +52,18 @@ public partial class Search : System.Web.UI.Page
                             nCountryCode = int.Parse(Request.QueryString["CountryCode"].ToString());
                             nCityID = int.Parse(Request.QueryString["CityID"].ToString());
                             nSearchSubCat = int.Parse(Request.QueryString["SubCat"].ToString());
+                            Page.Title = "موقع سماء العرب | " + sSearchText;
                             Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
                             nSearchID = 4;
+                            break;
+                        case "Brand":
+                            nSearchSubCat = 7;
+                            sBrand_1 = Request.QueryString["Brand1"].ToString();
+                            sBrand_2 = Request.QueryString["Brand2"].ToString();
+                            sp_SearchTitle.InnerHtml = " بحث " + sBrand_1 + " -  " + sBrand_2;
+                            Page.Title = "موقع سماء العرب | " + sBrand_1 + "-" + sBrand_2;
+                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sBrand_1 + " - " + sBrand_2; ;
+                            nSearchID = 5;
                             break;
                         default:
                             sp_SearchTitle.InnerHtml = Request.QueryString["text"].ToString();
@@ -70,7 +82,7 @@ public partial class Search : System.Web.UI.Page
 
                     DBAdsManager obDBAdsManager = new DBAdsManager();
                     string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
-                    DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(Convert.ToInt16(arabiSkyCountry[0]), nSearchID, sSearchText, nSearchSubCat, nCityID);
+                    DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(Convert.ToInt16(arabiSkyCountry[0]), nSearchID, sSearchText, nSearchSubCat, nCityID, sBrand_1, sBrand_2);
                     if (objDataSetSearch.Tables[0].Rows.Count <= 0)
                     {
                         trMainAds.Style.Add("display", "none");
