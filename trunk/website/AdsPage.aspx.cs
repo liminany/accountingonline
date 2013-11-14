@@ -168,7 +168,7 @@ public partial class AdsPage : System.Web.UI.Page
                     sTextTitleAds = sTextTitleAds.Replace("أ", "ا");
                     sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                     sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
-                    objAdsManager.AdsTitle = sTextTitleAds;
+                    objAdsManager.AdsTitle = sTextTitleAds.ToLower();
                     objAdsManager.AdsDescription = editor.Value;
                     objAdsManager.AdsUpdateCreateDate = DateTime.Now.AddDays(nExpireDateCounte);
 
@@ -220,7 +220,12 @@ public partial class AdsPage : System.Web.UI.Page
                 objAdsManager.CountryID = Convert.ToInt32(hfCountryID.Value);
                 objAdsManager.CityID = Convert.ToInt32(ddlCityName.SelectedValue);
                 objAdsManager.AdsPrice = Convert.ToDouble(txtPrice.Value);
-                objAdsManager.AdsTitle = txtAdsTitle.Value;
+                string sTextTitleAds = txtAdsTitle.Value.Replace("ة", "ه");
+                sTextTitleAds = sTextTitleAds.Replace("أ", "ا");
+                sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
+                sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
+                objAdsManager.AdsTitle = sTextTitleAds.ToLower();
+                objAdsManager.AdsDescription = editor.Value;
                 objAdsManager.AdsDescription = editor.Value;
                 //objAdsManager.AdsUpdateCreateDate = DateTime.Now.AddDays(nExpireDateCounte);
 

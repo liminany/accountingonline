@@ -294,7 +294,7 @@ namespace DAL
             }
         }
 
-        public DataSet ArabiSkySearch(int countryID, int nSearchID, string sSearchText, int nSubCatID, int nCityID)
+        public DataSet ArabiSkySearch(int countryID, int nSearchID, string sSearchText, int nSubCatID, int nCityID, string sBrand1, string sBrand2)
         {
             try
             {
@@ -304,12 +304,17 @@ namespace DAL
                 DBParameter param4 = new DBParameter("@subCatID", nSubCatID);
                 DBParameter param5 = new DBParameter("@cityID", nCityID);
 
+                DBParameter param6 = new DBParameter("@brand_1", sBrand1);
+                DBParameter param7 = new DBParameter("@brand_2", sBrand2);
+
                 DBParameterCollection paramCollection = new DBParameterCollection();
                 paramCollection.Add(param1);
                 paramCollection.Add(param2);
                 paramCollection.Add(param3);
                 paramCollection.Add(param4);
                 paramCollection.Add(param5);
+                paramCollection.Add(param6);
+                paramCollection.Add(param7);
                 DataSet dsReturnAllUser = _dbHelper.ExecuteDataSet("sp_ArabiSkySearch", paramCollection, CommandType.StoredProcedure);
                 return dsReturnAllUser;
             }
