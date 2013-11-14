@@ -1,13 +1,26 @@
 ﻿<%@ Application Language="C#" %>
+<%@ Import Namespace="System.Web.Routing" %>
 <script RunAt="server">    
+
+
+    void RegisterRoute(System.Web.Routing.RouteCollection routes)
+    {
+        //routes.MapPageRoute("ViewAds", "Ads/{AdsID}/{title}", "~/ViewAds.aspx");
+       
+        //routes.MapPageRoute("article-category", "{catTitle}/News/{articleID}/{title}", "~/Article.aspx");
+        //routes.MapPageRoute("category", "{catID}/{title}", "~/CategoryArticles.aspx");
+    }
+    
+    
+    
     protected void Application_BeginRequest(object sender, EventArgs e)
     {
-
+        
     }
 
     void Application_Start(object sender, EventArgs e)
     {
-
+        //RegisterRoute(RouteTable.Routes);
     }
 
     void Application_End(object sender, EventArgs e)

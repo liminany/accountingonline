@@ -107,7 +107,7 @@
                         <div id="arabiSky-logo" style="height: 90px;">
                             <a href="/">
                                 <img src="images/ArabiSkyLogo.png" alt="ArabiSky.com"
-                                    border="0" style="width: 170px;height:100px;position: relative; bottom: 40px;right: 55px;" /></a>
+                                    border="0" style="height:135px;position: relative; bottom: 51px;right: 55px;" /></a>
                             <!-- searchBottom starts here -->
                             <div class="arabiSky-searchBottom">
                                 <div class="arabiSky-cityContent slidingDiv" id="cityContent" style="display: none;

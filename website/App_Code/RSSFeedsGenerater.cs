@@ -19,7 +19,6 @@ public class SearchEngineOptimization
     {
         try
         {
-            //ManageArticls objManageArticls = new ManageArticls();
             HttpContext.Current.Response.ContentEncoding = System.Text.Encoding.UTF8;
             HttpContext.Current.Response.ContentType = "text/xml";
             xtwFeed = new XmlTextWriter(HttpContext.Current.Server.MapPath("~/Settings_App/ArabiSkyRSS.xml"), Encoding.UTF8);
@@ -36,6 +35,7 @@ public class SearchEngineOptimization
             xtwFeed.WriteElementString("description", sAdsDescription);
             xtwFeed.WriteElementString("link", string.Format("http://arabisky.com/ViewAds?AdsID={0}", sAdsID));             
             xtwFeed.WriteElementString("pubDate", sCreateDate);
+
             xtwFeed.WriteEndElement();
             xtwFeed.WriteEndElement();
             xtwFeed.WriteEndElement();
