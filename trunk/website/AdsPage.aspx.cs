@@ -91,7 +91,7 @@ public partial class AdsPage : System.Web.UI.Page
                             ddlCategoryName.SelectedIndex = -1;
                             ddlCityName.SelectedIndex = -1;
                             ddlSubCategoryName.SelectedIndex = -1;
-                            editor.Value = string.Empty;
+                            editor1.Value = string.Empty;
                             txtAdsTitle.Focus();
                         }
                         DBAdsManager objDBAdsManager = new DBAdsManager();
@@ -110,7 +110,7 @@ public partial class AdsPage : System.Web.UI.Page
                                 sp_CountryName.InnerHtml = rows["CountryName"].ToString();
                                 ddlCityName.SelectedValue = rows["CityID"].ToString();
                                 txtPrice.Value = rows["AdsPrice"].ToString();
-                                editor.Value = rows["AdsDescription"].ToString();
+                                editor1.Value = rows["AdsDescription"].ToString();
                                 txtYouTubeURL.Value = rows["AdsYoutubeURL"].ToString();
                                 ViewAdsImage(rows["AdsImages"].ToString());
                             }
@@ -169,7 +169,7 @@ public partial class AdsPage : System.Web.UI.Page
                     sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                     sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                     objAdsManager.AdsTitle = sTextTitleAds.ToLower();
-                    objAdsManager.AdsDescription = editor.Value;
+                    objAdsManager.AdsDescription = editor1.Value;
                     objAdsManager.AdsUpdateCreateDate = DateTime.Now.AddDays(nExpireDateCounte);
 
 
@@ -199,7 +199,7 @@ public partial class AdsPage : System.Web.UI.Page
                         ddlCategoryName.SelectedIndex = -1;
                         ddlCityName.SelectedIndex = -1;
                         ddlSubCategoryName.SelectedIndex = -1;
-                        editor.Value = string.Empty;
+                        editor1.Value = string.Empty;
                         txtAdsTitle.Focus();
                     }
                     else
@@ -225,8 +225,7 @@ public partial class AdsPage : System.Web.UI.Page
                 sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                 sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                 objAdsManager.AdsTitle = sTextTitleAds.ToLower();
-                objAdsManager.AdsDescription = editor.Value;
-                objAdsManager.AdsDescription = editor.Value;
+                objAdsManager.AdsDescription = editor1.Value; 
                 //objAdsManager.AdsUpdateCreateDate = DateTime.Now.AddDays(nExpireDateCounte);
 
 

@@ -56,6 +56,11 @@
                             </div>
                         </div>
                     </div>
+                    <div style="height:10px;clear:both;"></div>
+                    <div style="font-size:17px;font-weight:bold;">
+                     <a href="signup">مستخدم جديد</a> | <a href="login">تسجيل دخول</a>
+                    </div>
+                    <div style="height:10px;clear:both;"></div>
                     <div style="text-align: center;">
                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                         <!-- ArabiSky_Default_Top -->

@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using NLog;
-using DAL;
-using Entity;
 
 public partial class Brand : System.Web.UI.Page
 {
@@ -16,7 +10,7 @@ public partial class Brand : System.Web.UI.Page
     //EntityRegUsers objEntityRegUsers = new EntityRegUsers();
     #endregion
 
-
+    #region Pageload
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -33,4 +27,5 @@ public partial class Brand : System.Web.UI.Page
             _logger.Error("Brand:::Page_Load:::" + ex.Message);
         }
     }
+    #endregion
 }

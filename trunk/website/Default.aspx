@@ -42,6 +42,7 @@
             }
         }
     </script>
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:UpdatePanel ID="upDefaultPage" runat="server" UpdateMode="Conditional">
@@ -54,11 +55,8 @@
                                 سماء العرب للإعلانات المبوبة</h1>
                             <h2 style="font-size: 13px; font-weight: lighter; padding-bottom: 0px;">
                                 إعلانات مبوبة مجانية للعقارات، وظائف، والسيارات</h2>
-                            <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Farabisky&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=567816839920626"
-                                scrolling="no" frameborder="0" style="border: none; overflow: hidden; height: 21px;
-                                width: 135px; padding-top: 13px;" allowtransparency="true"></iframe>
                         </div>
-                        <div style="float: left;z-index:1000">
+                        <div style="float: left; z-index: 1000">
                             <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                             <!-- ArabiSky_Default_Top -->
                             <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
@@ -69,77 +67,102 @@
                     </div>
                     <div style="clear: both; height: 10px;">
                     </div>
-                    <div id="arabiSky-homeSearchBlock">
-                        <div align="center">
-                            <div class="arabiSky-homeTextfield" id="div_SecondSearch" runat="server" style="height: 40px;
-                                padding-top: 11px;">
-                                <table cellpadding="0" cellspacing="0" border="0">
-                                    <tr>
-                                        <td>
-                                            <asp:DropDownList ID="ddlCountryName" runat="server" CssClass="arabiSky-homeSelectbox"
-                                                Style="width: 250px;" AutoPostBack="true" OnSelectedIndexChanged="ddlCountryName_SelectedIndexChanged">
-                                            </asp:DropDownList>
-                                        </td>
-                                        <td>
-                                            <asp:DropDownList ID="ddlCityName" runat="server" CssClass="arabiSky-homeSelectbox"
-                                                Style="width: 250px;">
-                                            </asp:DropDownList>
-                                        </td>
-                                        <td>
-                                            <select name="home_search_cat_id_Default" id="home_search_cat_id_Default" runat="server"
-                                                style="width: 200px;" class="arabiSky-homeSelectbox">
-                                                <option value="-2">إختر القسم</option>
-                                                <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                    font-weight: bold;">للبيع</option>
-                                                <option value="6">&nbsp;&nbsp;العقارات و الإسكان</option>
-                                                <option value="7">&nbsp;&nbsp;السيارات و المركبات</option>
-                                                <option value="8">&nbsp;&nbsp;الكهربائيات و الإلكترونيات</option>
-                                                <option value="9">&nbsp;&nbsp;الأثاث و المفروشات</option>
-                                                <option value="10">&nbsp;&nbsp;أرقام هواتف مميزة</option>
-                                                <option value="11">&nbsp;&nbsp;أشياء أخرى</option>
-                                                <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                    font-weight: bold;">الخدمات</option>
-                                                <option value="12">&nbsp;&nbsp;دروس و دورات تدريبية</option>
-                                                <option value="13">&nbsp;&nbsp;الكومبيوتر و الإنترنت</option>
-                                                <option value="14">&nbsp;&nbsp;بناء و مقاولات</option>
-                                                <option value="15">&nbsp;&nbsp;خدمات كهربائية</option>
-                                                <option value="16">&nbsp;&nbsp;السفر و السياحة</option>
-                                                <option value="17">&nbsp;&nbsp;خدمات طبية</option>
-                                                <option value="18">&nbsp;&nbsp;تجهيز الأطعمة و الحفلات</option>
-                                                <option value="19">&nbsp;&nbsp;إصلاح و صيانة السيارات</option>
-                                                <option value="20">&nbsp;&nbsp;خدمات قانونية</option>
-                                                <option value="21">&nbsp;&nbsp;خدمات أخرى</option>
-                                                <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                    font-weight: bold;">وظائف شاغرة</option>
-                                                <option value="22">&nbsp;&nbsp;إدارة / سكرتارية</option>
-                                                <option value="23">&nbsp;&nbsp;تسويق / مبيعات</option>
-                                                <option value="24">&nbsp;&nbsp;تدريس / تدريب</option>
-                                                <option value="25">&nbsp;&nbsp;كمبيوتر / تقنية المعلومات</option>
-                                                <option value="26">&nbsp;&nbsp;محاسبة / مالية</option>
-                                                <option value="27">&nbsp;&nbsp;طب / تمريض</option>
-                                                <option value="28">&nbsp;&nbsp;هندسة</option>
-                                                <option value="29">&nbsp;&nbsp;أشغال أخرى</option>
-                                                <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                    font-weight: bold;">للإيجار</option>
-                                                <option value="30">&nbsp;&nbsp;العقارات و الإسكان</option>
-                                                <option value="31">&nbsp;&nbsp;السيارات و المركبات</option>
-                                                <option value="32">&nbsp;&nbsp;أشياء أخرى</option>
-                                                <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                    font-weight: bold;">الباحثين عن عمل</option>
-                                                <option value="33">&nbsp;&nbsp;الباحثين عن عمل</option>
-                                            </select>
-                                            <span id="locality_list"></span>
-                                        </td>
-                                        <td align="center">
-                                            <img src="../images/search1.png" onclick="javascript:return MakeDownSearch();" style="padding-right: 5px;
-                                                padding-bottom: 10px; height: 30px;" alt="ArabiSky.com">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="arabiSky-clear">
+                    <div style="width: 100%">
+                        <div id="arabiSky-homeSearchBlock" style="float: right; width: 70%; height: 40px;
+                            padding-top: 10px;">
+                            <div align="center">
+                                <div class="arabiSky-homeTextfield" id="div_SecondSearch" runat="server" style="height: 40px;
+                                    text-align: right; padding-right: 10px;">
+                                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                        <tr>
+                                            <td style="width: 20%" align="right">
+                                                <asp:DropDownList ID="ddlCountryName" runat="server" CssClass="arabiSky-homeSelectbox"
+                                                    Style="width: 190px;" AutoPostBack="true" OnSelectedIndexChanged="ddlCountryName_SelectedIndexChanged">
+                                                </asp:DropDownList>
+                                            </td>
+                                            <td style="width: 10px;">
+                                            </td>
+                                            <td style="width: 16%" align="right">
+                                                <asp:DropDownList ID="ddlCityName" runat="server" CssClass="arabiSky-homeSelectbox"
+                                                    Style="width: 150px;">
+                                                </asp:DropDownList>
+                                            </td>
+                                            <td style="width: 10px;">
+                                            </td>
+                                            <td align="right" style="width: 10%;">
+                                                <select name="home_search_cat_id_Default" id="home_search_cat_id_Default" runat="server"
+                                                    style="width: 190px;" class="arabiSky-homeSelectbox">
+                                                    <option value="-2">إختر القسم</option>
+                                                    <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                        font-weight: bold;">للبيع</option>
+                                                    <option value="6">&nbsp;&nbsp;العقارات و الإسكان</option>
+                                                    <option value="7">&nbsp;&nbsp;السيارات و المركبات</option>
+                                                    <option value="8">&nbsp;&nbsp;الكهربائيات و الإلكترونيات</option>
+                                                    <option value="9">&nbsp;&nbsp;الأثاث و المفروشات</option>
+                                                    <option value="10">&nbsp;&nbsp;أرقام هواتف مميزة</option>
+                                                    <option value="11">&nbsp;&nbsp;أشياء أخرى</option>
+                                                    <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                        font-weight: bold;">الخدمات</option>
+                                                    <option value="12">&nbsp;&nbsp;دروس و دورات تدريبية</option>
+                                                    <option value="13">&nbsp;&nbsp;الكومبيوتر و الإنترنت</option>
+                                                    <option value="14">&nbsp;&nbsp;بناء و مقاولات</option>
+                                                    <option value="15">&nbsp;&nbsp;خدمات كهربائية</option>
+                                                    <option value="16">&nbsp;&nbsp;السفر و السياحة</option>
+                                                    <option value="17">&nbsp;&nbsp;خدمات طبية</option>
+                                                    <option value="18">&nbsp;&nbsp;تجهيز الأطعمة و الحفلات</option>
+                                                    <option value="19">&nbsp;&nbsp;إصلاح و صيانة السيارات</option>
+                                                    <option value="20">&nbsp;&nbsp;خدمات قانونية</option>
+                                                    <option value="21">&nbsp;&nbsp;خدمات أخرى</option>
+                                                    <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                        font-weight: bold;">وظائف شاغرة</option>
+                                                    <option value="22">&nbsp;&nbsp;إدارة / سكرتارية</option>
+                                                    <option value="23">&nbsp;&nbsp;تسويق / مبيعات</option>
+                                                    <option value="24">&nbsp;&nbsp;تدريس / تدريب</option>
+                                                    <option value="25">&nbsp;&nbsp;كمبيوتر / تقنية المعلومات</option>
+                                                    <option value="26">&nbsp;&nbsp;محاسبة / مالية</option>
+                                                    <option value="27">&nbsp;&nbsp;طب / تمريض</option>
+                                                    <option value="28">&nbsp;&nbsp;هندسة</option>
+                                                    <option value="29">&nbsp;&nbsp;أشغال أخرى</option>
+                                                    <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                        font-weight: bold;">للإيجار</option>
+                                                    <option value="30">&nbsp;&nbsp;العقارات و الإسكان</option>
+                                                    <option value="31">&nbsp;&nbsp;السيارات و المركبات</option>
+                                                    <option value="32">&nbsp;&nbsp;أشياء أخرى</option>
+                                                    <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                        font-weight: bold;">الباحثين عن عمل</option>
+                                                    <option value="33">&nbsp;&nbsp;الباحثين عن عمل</option>
+                                                </select>
+                                                <span id="locality_list"></span>
+                                            </td>
+                                            <td align="right">
+                                                <img src="../images/search1.png" onclick="javascript:return MakeDownSearch();" style="padding-right: 5px;
+                                                    padding-bottom: 10px; height: 30px;" alt="ArabiSky.com">
+                                            </td>
+                                            <td style="width: 10px;">
+                                            </td>
+                                            <td align="center">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
                             </div>
                         </div>
+                        <div style="width: 30%; float: left; height: 50px;font-size:15px;">
+                            <div class="arabiSky-postClassifieds MetroButton" style="float: left; background-color: #ededed;border-bottom:1px solid #ccc;
+                                border-radius: 0px; width: 120px; margin-left: 0px; border-top: 2px solid #f89a21;
+                                height: 38px;">
+                                <a href="AdvanceSearch" style="display: block; width: 100%; height: 100%;text-decoration:none;">بحث متقدم</a>
+                            </div>
+                            <div style="float: left; width: 5px;">
+                                &nbsp;</div>
+                            <div class="arabiSky-postClassifieds MetroButton" style="float: left; background-color: #ededed;border-bottom:1px solid #ccc;
+                                border-radius: 0px; width: 120px; margin-left: 0px; border-top: 2px solid #f89a21;
+                                height: 38px;">
+                                <a href="Brand" style="display: block; width: 100%; height: 100%;text-decoration:none;">بحث بواسطة نوع السيارة</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arabiSky-clear">
                     </div>
                     <div style="height: 20px;">
                     </div>
@@ -204,8 +227,7 @@
                                     <li><a href="Category?CatID=29" title="أشغال أخرى">أشغال أخرى</a></li>
                                 </ul>
                             </div>
-                            <!-- closing arabiSky-indexContent
-    -->
+                            <!-- closing arabiSky-indexContent -->
                         </div>
                     </div>
                     <div class="arabiSky-indexMainBlocks">
@@ -240,7 +262,8 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories?CatID=1" title="للبيع" style="color: #111111; font-size: 20px;">للبيع</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=1" title="للبيع" style="color: #111111; font-size: 20px;">
+                                    للبيع</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
@@ -318,7 +341,8 @@
                                                         <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                                             cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'>
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -336,7 +360,8 @@
                                                         <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                                             cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'>
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -365,8 +390,8 @@
                             <td>
                                 <div class="arabiSky-postClassifieds" style="margin-right: 10px; border-radius: 0px;
                                     float: right;">
-                                    <a href="Search?Type=Newest" style="display: block; width: 100%; height: 100%;">
-                                        تابع مشاهدة اخر الإعلانات</a>
+                                    <a href="Search?Type=Newest" style="display: block; width: 100%; height: 100%;">تابع
+                                        مشاهدة اخر الإعلانات</a>
                                 </div>
                                 <div style="float: left;">
                                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -424,7 +449,8 @@
                                                         <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                                             cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'>
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -442,7 +468,8 @@
                                                         <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                                             cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'>
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -471,7 +498,8 @@
                             <td>
                                 <div class="arabiSky-postClassifieds" style="margin-right: 10px; border-radius: 0px;
                                     float: right;">
-                                    <a href="Search?Type=SearchLast" style="display: block; width: 100%; height: 100%;">تابع أكثر الإعلانات مشاهدة</a>
+                                    <a href="Search?Type=SearchLast" style="display: block; width: 100%; height: 100%;">
+                                        تابع أكثر الإعلانات مشاهدة</a>
                                 </div>
                                 <div style="float: left;">
                                     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

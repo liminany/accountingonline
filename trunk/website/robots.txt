@@ -1,0 +1,15 @@
+﻿# Robots.txt file for http://arabisky.com/
+#
+
+User-Agent: *
+Disallow: /admin
+Disallow: /fonts
+Disallow: /img
+Disallow: /logs
+Disallow: /Scripts
+Disallow: /Service
+Disallow: /ArabiSkyImages
+Disallow: /images
+Disallow: /UserEmail
+
+Sitemap: http://arabisky.com/sitemap/sitemap.xml
