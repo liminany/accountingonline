@@ -2,12 +2,14 @@
 using DAL;
 using Entity;
 using NLog;
+using System.Web;
 
 public partial class ViewAds : System.Web.UI.Page
 {
     #region variables
     private static Logger _logger = LogManager.GetCurrentClassLogger();
-     EntityRegUsers objEntityRegUsers = new EntityRegUsers();
+    EntityRegUsers objEntityRegUsers = new EntityRegUsers();
+    public string url = string.Empty;
     #endregion
 
     #region Events
@@ -15,6 +17,7 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
+            url = HttpContext.Current.Request.Url.AbsoluteUri;
             if (!IsPostBack)
             {
                 string sQueryStringAdsID = Request.QueryString["AdsID"];
@@ -32,14 +35,14 @@ public partial class ViewAds : System.Web.UI.Page
                             objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
                             hfUserID.Value = objEntityRegUsers.UserID.ToString();
                         }
-                        div_SendPrivateMessage.Style.Add("display", "");
+                        //div_SendPrivateMessage.Style.Add("display", "");
                     }
                     else
                     {
-                        div_SendPrivateMessage.Style.Add("display", "none");
+                        //div_SendPrivateMessage.Style.Add("display", "none");
                     }
 
-                     
+
 
                     DBAdsManager objDBAdsManager = new DBAdsManager();
                     int nSubCatID = 0;
@@ -74,13 +77,15 @@ public partial class ViewAds : System.Web.UI.Page
                         hfAdsUserIDOwner.Value = rows["UserID"].ToString();
                         if (hfAdsUserIDOwner.Value == hfUserID.Value)
                         {
+                            div_SendPrivateMessage.Style.Add("display", "none");
                             UserControls.Style.Add("display", "");
-                            div_ContactUser.Style.Add("display", "none");
+                            //div_ContactUser.Style.Add("display", "none");
                             div_ContactSpace.Style.Add("display", "");
                         }
                         else
                         {
-                            div_ContactUser.Style.Add("display", "");
+                            div_SendPrivateMessage.Style.Add("display", "");
+                            //div_ContactUser.Style.Add("display", "");
                             UserControls.Style.Add("display", "none");
                             div_ContactSpace.Style.Add("display", "none");
                         }
@@ -149,7 +154,7 @@ public partial class ViewAds : System.Web.UI.Page
                 }
                 else
                 {
-                    Response.Redirect("Login", false);
+                    Response.Redirect("~/Login", false);
                 }
             }
         }
@@ -398,6 +403,43 @@ public partial class ViewAds : System.Web.UI.Page
         {
             return "null";
         }
+    }
+    protected string GenerateURL(object Title, object strId)
+    {
+        string strTitle = Title.ToString();
+
+        //#region Generate SEO Friendly URL based on Title
+
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
+        }
+        strTitle = strTitle.Replace(" ", "-");
+
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = "ViewAds/" + strId + "/" + strTitle;
+        return strTitle;
     }
     #endregion
 

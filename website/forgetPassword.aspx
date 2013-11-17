@@ -48,6 +48,11 @@
                             </div>
                         </div>
                     </div>
+                    <div style="height:10px;clear:both;"></div>
+                    <div style="font-size: 17px; font-weight: bold;">
+                        <a href="signup">مستخدم جديد</a> | <a href="login">تسجيل دخول</a>
+                    </div>
+                    <div style="height:10px;clear:both;"></div>
                 </div>
             </td>
         </tr>
@@ -82,7 +87,8 @@
             </td>
         </tr>
         <tr>
-            <td style="height:15px;"></td>
+            <td style="height: 15px;">
+            </td>
         </tr>
         <tr>
             <td style="text-align: center;">

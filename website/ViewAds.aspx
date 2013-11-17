@@ -8,43 +8,10 @@
                 mode: 'fade',
                 captions: true
             });
-
-            tinyMCE.init({
-                // General options
-                mode: "textareas",
-                theme: "advanced",
-                plugins: "autolink,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave,visualblocks",
-                // Theme options
-                theme_advanced_buttons1: "bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
-                theme_advanced_buttons3: "tablecontrols,|,hr,removeformat,visualaid,|,sub,sup,|,charmap,emotions,iespell,media,advhr,|,print,|,ltr,rtl,|,fullscreen",
-                theme_advanced_buttons4: "insertlayer,moveforward,movebackward,absolute,|,styleprops,|,cite,abbr,acronym,del,ins,attribs,|,visualchars,nonbreaking,template,pagebreak,restoredraft,visualblocks",
-                theme_advanced_toolbar_location: "top",
-                theme_advanced_toolbar_align: "left",
-                theme_advanced_statusbar_location: "bottom",
-                theme_advanced_resizing: false,
-                // Example content CSS (should be your site CSS)
-                content_css: "css/content.css",
-                // Drop lists for link/image/media/template dialogs
-                template_external_list_url: "lists/template_list.js",
-                external_link_list_url: "lists/link_list.js",
-                external_image_list_url: "lists/image_list.js",
-                media_external_list_url: "lists/media_list.js",
-                // Style formats
-                style_formats: [
-			{ title: 'Bold text', inline: 'b' },
-			{ title: 'Red text', inline: 'span', styles: { color: '#ff0000'} },
-			{ title: 'Red header', block: 'h1', styles: { color: '#ff0000'} },
-			{ title: 'Example 1', inline: 'span', classes: 'example1' },
-			{ title: 'Example 2', inline: 'span', classes: 'example2' },
-			{ title: 'Table styles' },
-			{ title: 'Table row 1', selector: 'tr', classes: 'tablerow1' }
-		],
-                // Replace values for the template plugin
-                template_replace_values: {
-                    username: "Some User",
-                    staffid: "991234"
-                }
-            });
+            CKEDITOR.replace('ctl00_ContentPlaceHolder1_editor1',
+	        {
+	            language: 'ar'
+	        });
         }); 
     </script>
 </asp:Content>
@@ -56,13 +23,13 @@
         <div id="sitemap" runat="server" style="height: 30px; float: right;">
         </div>
         <div id="UserControls" runat="server" style="float: left; position: relative; bottom: 5px;">
-            <asp:Button runat="server" Text="تعديل الإعلان" ID="btnEditAds" Width="150" CssClass="arabiSky-postClassifieds"
-                Style="border: 0px; cursor: pointer;" OnClick="btnEditAds_Click" />
+            <asp:Button runat="server" Text="تعديل الإعلان" ID="btnEditAds" Width="150"  
+                Style="border: 0px; cursor: pointer;width: 180px;background: #ededed;border-top:2px solid #f9ae4c;border-radius: 0px;margin-left: 5px;height: 29px;padding: 5px;font-size: 15px !important;" OnClick="btnEditAds_Click" />
             <asp:Button runat="server" Text="حذف الإعلان" ID="btnDeleteAds" Width="150" OnClientClick="javascript:return funAdsManage('1');"
-                CssClass="arabiSky-postClassifieds" Style="border: 0px; cursor: pointer;" OnClick="btnDeleteAds_Click" />
+                Style="border: 0px; cursor: pointer;width: 180px;background: #ededed;border-top:2px solid #f9ae4c;border-radius: 0px;margin-left: 5px;height: 29px;padding: 5px;font-size: 15px !important;" OnClick="btnDeleteAds_Click" />
             <asp:Button runat="server" Text="إعادة نشر الإعلان" ID="btnReactivateAds" Width="150"
-                OnClientClick="javascript:return funAdsManage('0');" CssClass="arabiSky-postClassifieds"
-                Style="border: 0px; cursor: pointer;" OnClick="btnReactivateAds_Click" />
+                OnClientClick="javascript:return funAdsManage('0');"
+                Style="border: 0px; cursor: pointer;width: 180px;background: #ededed;border-top:2px solid #f9ae4c; border-radius: 0px;margin-left: 5px;height: 29px;padding: 5px;font-size: 15px !important;" OnClick="btnReactivateAds_Click" />
         </div>
     </div>
     <div style="clear: both; height: 1px;">
@@ -191,7 +158,8 @@
                                 <span class="accorText">أكتب تعليق لصحاب الإعلان </span>
                             </h3>
                         </div>
-                        <div style="margin-right: 30px; float: right;" id="div_SendPrivateMessage" runat="server" onclick="funSendEMail('message')">
+                        <div style="margin-right: 30px; float: right;" id="div_SendPrivateMessage" runat="server"
+                            onclick="funSendEMail('message')">
                             <h3 class="accorRightHeader" id="H1" style="width: 215px;">
                                 <span class="rightIcons">
                                     <img src="/images/sendMailIcon.png" alt="ArabiSky.com"></span> <span class="accorText">
@@ -211,7 +179,7 @@
                     </div>
                     <div style="height: 20px; clear: both">
                     </div>
-                    <div style="display: none;" id="td_SendEmail">
+                    <div style="display: none;padding-right:30px;" id="td_SendEmail">
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td>
@@ -228,8 +196,8 @@
                                     نص الرسالة :
                                 </td>
                                 <td colspan="2" align="right">
-                                    <textarea runat="server" validationgroup="SendMessage" id="editor" name="elm1" rows="5"
-                                        cols="80" style="width: 80%">
+                                    <textarea runat="server" validationgroup="SendMessage"   id="editor" name="elm1" rows="5"
+                                        cols="80" style="width: 700px">
 			                            </textarea>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="SendMessage"
                                         ControlToValidate="editor" ErrorMessage="الرجاء إدخال نص الرسالة"></asp:RequiredFieldValidator>
@@ -261,39 +229,12 @@
                         <table width="90%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="right" style="padding-right: 20px;">
-                                    <div id="disqus_thread">
-                                    </div>
-                                    <script type="text/javascript">
-                                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                                        var disqus_shortname = 'arabisky'; // required: replace example with your forum shortname
-
-                                        /* * * DON'T EDIT BELOW THIS LINE * * */
-                                        (function () {
-                                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                                        })();
-                                    </script>
-                                    <noscript>
-                                        Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments
-                                            powered by Disqus.</a></noscript>
-                                    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">
-                                        Disqus</span></a>
-                                    <script type="text/javascript">
-                                        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-                                        var disqus_shortname = 'arabisky'; // required: replace example with your forum shortname
-
-                                        /* * * DON'T EDIT BELOW THIS LINE * * */
-                                        (function () {
-                                            var s = document.createElement('script'); s.async = true;
-                                            s.type = 'text/javascript';
-                                            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-                                            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-                                        } ());
-                                    </script>
+                                    <fb:comments numposts="30" width="900" class="fb-comments" data-href='<%= url %>'> </fb:comments>
                                 </td>
                             </tr>
                         </table>
+                    </div>
+                    <div style="height: 20px; clear: both;">
                     </div>
                 </div>
             </div>
@@ -342,7 +283,8 @@
                             <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'>
+                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 15%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -360,7 +302,8 @@
                             <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'>
+                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 15%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>

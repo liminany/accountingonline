@@ -33,6 +33,9 @@ public partial class Search : System.Web.UI.Page
                     int nSearchSubCat = 0;
                     int nCountryCode = 0;
                     int nCityID = 0;
+                    int nCatID = 0;
+                    int nPriceForm = 0;
+                    int nPriceTo = 0;
                     switch (sSearchType)
                     {
                         case "SearchLast":
@@ -57,13 +60,27 @@ public partial class Search : System.Web.UI.Page
                             nSearchID = 4;
                             break;
                         case "Brand":
-                            nSearchSubCat = 7;
                             sBrand_1 = Request.QueryString["Brand1"].ToString();
                             sBrand_2 = Request.QueryString["Brand2"].ToString();
                             sp_SearchTitle.InnerHtml = " بحث " + sBrand_1 + " -  " + sBrand_2;
+                            nSearchSubCat = int.Parse(Request.QueryString["subID"].ToString());
                             Page.Title = "موقع سماء العرب | " + sBrand_1 + "-" + sBrand_2;
-                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sBrand_1 + " - " + sBrand_2; ;
+                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sBrand_1 + " - " + sBrand_2;
                             nSearchID = 5;
+                            break;
+                        case "AdvanceSearch":
+                            sSearchText = Request.QueryString["TextSearch"].ToString();
+                            nCountryCode = Convert.ToInt32(Request.QueryString["Country"].ToString());
+                            nCityID = Convert.ToInt32(Request.QueryString["City"].ToString());
+                            nCatID = Convert.ToInt32(Request.QueryString["Cat"].ToString());
+                            nSearchSubCat = Convert.ToInt32(Request.QueryString["SubCat"].ToString());
+                            nPriceForm = Convert.ToInt32(Request.QueryString["PriceForm"].ToString() == string.Empty ? "0" : Request.QueryString["PriceForm"].ToString());
+                            nPriceTo = Convert.ToInt32(Request.QueryString["PriceTo"].ToString() == string.Empty ? "0" : Request.QueryString["PriceTo"].ToString());
+
+                            sp_SearchTitle.InnerHtml = " بحث " + " - " + sSearchText;
+                            Page.Title = "موقع سماء العرب | " + " - " + sSearchText;
+                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + " - " + sSearchText;
+                            nSearchID = 6;
                             break;
                         default:
                             sp_SearchTitle.InnerHtml = Request.QueryString["text"].ToString();
@@ -82,7 +99,7 @@ public partial class Search : System.Web.UI.Page
 
                     DBAdsManager obDBAdsManager = new DBAdsManager();
                     string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
-                    DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(Convert.ToInt16(arabiSkyCountry[0]), nSearchID, sSearchText, nSearchSubCat, nCityID, sBrand_1, sBrand_2);
+                    DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(Convert.ToInt16(arabiSkyCountry[0]), nSearchID, sSearchText.Replace(" ", "-"), nSearchSubCat, nCityID, sBrand_1.Replace(" ", "-"), sBrand_2.Replace(" ", "-"), nCatID, nPriceForm, nPriceTo);
                     if (objDataSetSearch.Tables[0].Rows.Count <= 0)
                     {
                         trMainAds.Style.Add("display", "none");

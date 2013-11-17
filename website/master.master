@@ -10,25 +10,38 @@
            .ForceRelease()
            .Render("~/Styles/combined_#.css")
     %>
-    <script type="text/javascript">
-        function MakeSearch() {
-            var SearchType = document.getElementById("ctl00_home_search_cat_id").value;
-            var SearchText = document.getElementById("ctl00_txtMasterSearch").value;
-            if (SearchType == "-1" || SearchType == "0" || SearchText == "") {
-                alert("الرجاء إختيار القسم المناسب و الشيء الذي ترغب البحث عنة");
-                return false;
-            }
-            else {
-                $("#" + '<%= lbtnRefreshGVMaster.ClientID %>').trigger('click');
-            }
+    <style type="text/css">
+        .arabiSky-postClassifieds MetroButton
+        {
+            width: 180px;
+            background: #f9ae4c;
+            border-radius: 5px;
+            margin-left: 5px;
+            height: 29px;
+            padding: 5px;
+            font-size: 25px !important;
         }
-    </script>
+        .arabiSky-postClassifieds:hover
+        {
+            border-top: 2px solid #00629e !important;
+            font-size: 25px !important;
+            background-color: #ecedef !important;
+        }
+    </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body style="direction: rtl;">
-    <div id="fb-root">
-    </div>
+<div id="fb-root"></div>
+    <script>
+     (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=172727259569815";
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+    </script>
     <form id="form1" runat="server">
     <asp:ScriptManager runat="server" ID="smMainPage" ScriptMode="Release" EnablePageMethods="true">
     </asp:ScriptManager>
@@ -37,8 +50,8 @@
             <div id="Background">
             </div>
             <div id="Progress">
-                <img src="images/search_loader.gif" style="vertical-align: middle; margin-top: 9px;"
-                    alt="ArabiSky.com" />
+                <img src="~/images/search_loader.gif" runat="server" style="vertical-align: middle;
+                    margin-top: 9px;" alt="ArabiSky.com" />
                 <span style="position: relative; top: 7px; font-weight: bold; font-size: 19px;">الرجاء
                     الإنتظار</span>
             </div>
@@ -63,24 +76,20 @@
                                     <td align="right">
                                         <ul id="navigation">
                                             <li><a href="/" style="font-weight: 17px;"><span id="sp_UserTitle" runat="server"></span>
-                                                <img src="images/ArabiSky_Down.png" style="position: relative; top: 3px; border: 0px;"
-                                                    width="16" height="16" align="top" alt="arabisky.com" /></a>
+                                                <img src="~/images/ArabiSky_Down.png" runat="server" style="position: relative; top: 3px;
+                                                    border: 0px;" width="16" height="16" align="top" alt="arabisky.com" /></a>
                                                 <ul style="position: absolute; right: 0px;">
-                                                    <%--                                                    <li><a href="Inbox">
-                                                        <img src="images/ArabiSky_mail.png" align="top" alt="arabisky.com" />
-                                                        رسائل خاصة</a></li>
-                                                    <li><a href="Favorite">
-                                                        <img src="images/ArabiSky_bookmarks.png" align="top" alt="arabisky.com" />
-                                                        إعلاناتي المفضلة</a></li>--%>
                                                     <li><a href="MyAds">
-                                                        <img src="images/ArabiSky_Ads.png" style="border: 0px;" align="top" alt="arabisky.com" />
+                                                        <img src="~/images/ArabiSky_Ads.png" runat="server" style="border: 0px;" align="top"
+                                                            alt="arabisky.com" />
                                                         إعلاناتي الخاصة </a></li>
                                                     <li><a href="AccountSettings">
-                                                        <img src="images/ArabiSky_PersonalSettings.png" style="border: 0px;" align="top"
-                                                            alt="arabisky.com" />
+                                                        <img src="~/images/ArabiSky_PersonalSettings.png" runat="server" style="border: 0px;"
+                                                            align="top" alt="arabisky.com" />
                                                         بياناتي الشخصية</a></li>
                                                     <li><a href="logout">
-                                                        <img src="images/ArabiSky_LogOut.png" align="top" style="border: 0px;" alt="arabisky.com" />
+                                                        <img src="~/images/ArabiSky_LogOut.png" runat="server" align="top" style="border: 0px;"
+                                                            alt="arabisky.com" />
                                                         خروج </a></li>
                                                 </ul>
                                             </li>
@@ -88,8 +97,8 @@
                                     </td>
                                     <td>
                                         <a href="Inbox">
-                                            <img src="images/ArabiSky_mail.png" align="top" alt="arabisky.com" style="border: 0px;" /><span
-                                                id="spMessageCounter" runat="server"></span></a>
+                                            <img src="~/images/ArabiSky_mail.png" runat="server" align="top" alt="arabisky.com"
+                                                style="border: 0px;" /><span id="spMessageCounter" runat="server"></span></a>
                                     </td>
                                 </tr>
                             </table>
@@ -106,38 +115,8 @@
                     <div id="arabiSky-header" style="z-index:0">
                         <div id="arabiSky-logo" style="height: 90px;">
                             <a href="/">
-                                <img src="images/ArabiSkyLogo.png" alt="ArabiSky.com"
+                                <img src="~/images/ArabiSkyLogo.png" runat="server" alt="ArabiSky.com"
                                     border="0" style="height:135px;position: relative; bottom: 51px;right: 55px;" /></a>
-                            <!-- searchBottom starts here -->
-                            <div class="arabiSky-searchBottom">
-                                <div class="arabiSky-cityContent slidingDiv" id="cityContent" style="display: none;
-                                    height: 300px; overflow: auto;">
-                                    <a onclick="cityShowHide('cityContent',1);closeCityBlock('ac_city_name_div');" class="show_hide closeDiv"
-                                        style="cursor: pointer;">X</a>
-                                    <div class="arabiSky-clear">
-                                    </div>
-                                    <div class="selCityBox" style="width: 75%">
-                                        <input type="text" class="selectCityTextBox" style="width: 95%; margin-left: 15px;
-                                            margin-bottom: 10px; border-color: #9B9999;" id="city_name" name="city_name"
-                                            value="Type your city name" autocomplete="off" onkeypress="return disableEnterKey(event);"
-                                            onfocus="checkText(this.form,1);" onkeyup="javascript:eventobj.show_options(event);"
-                                            onblur="javascript:eventobj.hide_options();checkText(this.form,2);" />
-                                    </div>
-                                    <div class="arabiSky-clear">
-                                    </div>
-                                    <ul style="list-style: none;">
-                                        <li style="padding-left: 1px;" id="header_city_-1" onmouseover="selectLi(this,'#E8E8E8');"
-                                            onmouseout="unSelectLi(this);"><a href="http://www.click.in/" onclick="return clearCookie( 'click.in' );">
-                                                All Cities</a></li>
-                                    </ul>
-                                    <ul style="list-style: none;" id="cityListBlock">
-                                        <li>
-                                            <img src="../images/search_loader.gif" alt="ArabiSky.com" /></li>
-                                    </ul>
-                                    <input type="hidden" name="location" id="location" value="udham-singh-nagar">
-                                </div>
-                            </div>
-                            <!-- searchBottom ends here -->
                         </div>
                         <div id="arabiSky-mainsearchBlock">
                             <div class="arabiSky-topLinks">
@@ -197,14 +176,16 @@
                                  </div>
                                 </div>
                                 <div style="padding-top: 5px;">
-                                    <img src="../images/search1.png" alt="ArabiSky.com" onclick="javascript:return MakeSearch();" style="padding-right: 5px;padding-top: 2px;" />
+                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearch();" style="padding-right: 5px;padding-top: 2px;" />
                                 </div>
                                 <div class="arabiSky-clear">
                                 </div>                                
                             </div>
                             <!-- searchBlock ends here -->
-                            <div class="arabiSky-postClassifieds">
-                                <a href="AdsPage" style="display:block;width:100%;height:100%;">اضف إعلانك الان</a>
+                            <div class="arabiSky-postClassifieds MetroButton" style="background-color: #f89a21;border-bottom:1px solid #ccc;
+                                border-radius: 0px; width: 170px; margin-left: 0px; border-top: 2px solid red;
+                                height: 30px;">
+                                <a href="AdsPage" style="display:block;width:100%;height:100%;text-decoration:none;color: #333;font-size: 17px;">اضف إعلانك الان</a>
                             </div>
                         </div>
                         <div class="arabiSky-clear">
@@ -216,18 +197,27 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-            <script src="Scripts/tiny_mce/tiny_mce.js" type="text/javascript"></script>
-            <script src="js/ArabiSkyJSTools.js" type="text/javascript"></script>
-            <script src="Scripts/jquery.bxslider.js" type="text/javascript"></script>
-            <script src="Scripts/jquery.multifile.js" type="text/javascript"></script>
-            <%-- <%= SquishIt.Framework.Bundle.JavaScript()
-                    .Add("~/js/ArabiSkyJSTools.js")
-                    .Add("~/Scripts/jquery.MultiFile.js")
-                    .Add("~/Scripts/tiny_mce/tiny_mce.js")
-                    .Add("~/Scripts/jquery.bxslider.js")
+            <script src="Scripts/ckeditor/ckeditor.js" type="text/javascript"></script>
+            <%= SquishIt.Framework.Bundle.JavaScript()
+               .Add("~/js/ArabiSkyJSTools.js")
+               .Add("~/Scripts/jquery.bxslider.js")
+               .Add("~/Scripts/jquery.multifile.js")
                .ForceRelease()
                .Render("~/Scripts/combined_#.js")
-            %>--%>
+            %>
+            <script type="text/javascript">
+                function MakeSearch() {
+                    var SearchType = document.getElementById("ctl00_home_search_cat_id").value;
+                    var SearchText = document.getElementById("ctl00_txtMasterSearch").value;
+                    if (SearchType == "-1" || SearchType == "0" || SearchText == "") {
+                        alert("الرجاء إختيار القسم المناسب و الشيء الذي ترغب البحث عنة");
+                        return false;
+                    }
+                    else {
+                        $("#" + '<%= lbtnRefreshGVMaster.ClientID %>').trigger('click');
+                    }
+                }
+            </script>
             <footer>
                 <div style="text-align:center;">
                     <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Farabisky&amp;width=440&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=172727259569815" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:440px; height:80px;" allowTransparency="true"></iframe>
@@ -240,11 +230,11 @@
                             <%-- | <a href='https://www.facebook.com/arabisky'
                                 target="_blank">نسخة الموبايل</a>--%> | <a href='https://www.facebook.com/arabisky'
                                     target="_blank">
-                                    <img src="../images/facebook_footer.png" alt="ArabiSky.com"></a>
+                                    <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
                             | <a href='https://www.facebook.com/arabisky' target="_blank">
-                                <img src="../images/twitter_footer.png" alt="ArabiSky.com"></a>
+                                <img src="~/images/twitter_footer.png" alt="ArabiSky.com" runat="server"></a>
                             | <a href='https://www.facebook.com/arabisky' target="_blank">
-                                <img src="../images/gplus_footer.png" alt="ArabiSky.com"></a>
+                                <img src="~/images/gplus_footer.png" alt="ArabiSky.com" runat="server"></a>
                         </div>
                         <div class="arabiSky-footerSeperator">
                         </div>
@@ -256,10 +246,12 @@
         </div>
         <div style="margin-right: 10px; margin-left: 10px; border-top: 4px solid #ff9900;
             border-left: 1px solid #ccc; border-right: 1px solid #ccc; background-color: #f1f3f2;
-            height: 35px; width: 300px; position: fixed; right: 0px; bottom: 0px;" id="div_EmailNotofication" runat="server">
+            height: 35px; width: 300px; position: fixed; right: 0px; bottom: 0px;" id="div_EmailNotofication"
+            runat="server">
             <%--<a href="" style="margin: 10px;">X</a>--%>
-            <div style="margin: 0 auto; width: 100%; text-align: center;padding-top: 10px;">
-                لديك  <span id="spMessageCountNotification" runat="server">0</span> رسائل جديدة <a href="mail">انقر هنا للدخول</a>
+            <div style="margin: 0 auto; width: 100%; text-align: center; padding-top: 10px;">
+                لديك <span id="spMessageCountNotification" runat="server">0</span> رسائل جديدة <a
+                    href="mail">انقر هنا للدخول</a>
             </div>
         </div>
         <asp:Button ID="lbtnRefreshGVMaster" CssClass="ClassHideDiv" runat="server" Text=""
@@ -284,6 +276,7 @@
             });
         </script>
         <!-- AddThis Smart Layers END -->
+        
     </form>
 </body>
 </html>
