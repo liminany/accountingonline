@@ -22,13 +22,13 @@ public partial class signup : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                if (FormsFunction.GetCookieData().Length == 0 || string.IsNullOrEmpty(Session["UserInfo"].ToString()))
+                if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
-                    txtUserFullName.Focus();
+                   Response.Redirect("Default", false);
                 }
                 else
                 {
-                    Response.Redirect("Default", false);
+                    txtUserFullName.Focus();
                 }
             }
         }
@@ -87,14 +87,9 @@ public partial class signup : System.Web.UI.Page
     {
         try
         {
-            WebClient objWebClient = new WebClient();
-            //string sCountryStr = objWebClient.DownloadString("http://api.hostip.info/country.php");
-            XmlDocument objXmlDocument = new XmlDocument();
-            objXmlDocument.LoadXml(objWebClient.DownloadString("http://ip-json.rhcloud.com/xml"));
-            XmlNode node = objXmlDocument.DocumentElement.SelectSingleNode("/Response/country_code");
-            if (!string.IsNullOrEmpty(node.InnerText))
+            if (!string.IsNullOrEmpty(FormsFunction.GetCountryName()))
             {
-                switch (node.InnerText)
+                switch (FormsFunction.GetCountryName())
                 {
                     case "JO":
                         return 12;
@@ -113,7 +108,7 @@ public partial class signup : System.Web.UI.Page
                     case "ISR":
                         return 15;
                     default:
-                        return 12;
+                        return 14;
                 }
             }
             else

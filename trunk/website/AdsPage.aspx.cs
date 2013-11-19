@@ -277,18 +277,14 @@ public partial class AdsPage : System.Web.UI.Page
     #endregion
 
     #region Methods
+
     private int GetCountry()
     {
         try
         {
-            WebClient objWebClient = new WebClient();
-            //string sCountryStr = objWebClient.DownloadString("http://api.hostip.info/country.php");
-            XmlDocument objXmlDocument = new XmlDocument();
-            objXmlDocument.LoadXml(objWebClient.DownloadString("http://ip-json.rhcloud.com/xml"));
-            XmlNode node = objXmlDocument.DocumentElement.SelectSingleNode("/Response/country_code");
-            if (!string.IsNullOrEmpty(node.InnerText))
+            if (!string.IsNullOrEmpty(FormsFunction.GetCountryName()))
             {
-                switch (node.InnerText)
+                switch (FormsFunction.GetCountryName())
                 {
                     case "JO":
                         sp_CountryName.InnerHtml = "الممكلة الاردنية الهاشمية";
@@ -323,9 +319,9 @@ public partial class AdsPage : System.Web.UI.Page
                         spCurrany.InnerHtml = "شيكل";
                         return 15;
                     default:
-                        sp_CountryName.InnerHtml = "الممكلة الاردنية الهاشمية";
-                        spCurrany.InnerHtml = "دينار أردني";
-                        return 12;
+                        sp_CountryName.InnerHtml = "المملكة العربية السعودية";
+                        spCurrany.InnerHtml = "ريال سعودي";
+                        return 14;
                 }
             }
             else

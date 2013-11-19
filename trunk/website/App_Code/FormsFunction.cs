@@ -4,10 +4,11 @@ using System.IO;
 using System.Net;
 using System.Net.Mail;
 using System.Web;
+using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
 using Entity;
-using NLog;
+using NLog; 
 using System.Collections;
 
 /// <summary>
@@ -292,6 +293,41 @@ public class FormsFunction
         }
     }
 
+    public static string GetCountryName()
+    {
+        try
+        {
+            ////string sCountryStr = objWebClient.DownloadString("http://api.hostip.info/country.php");
+            //XmlDocument objXmlDocument = new XmlDocument();
+            //objXmlDocument.LoadXml(objWebClient.DownloadString("http://api.hostip.info/get_html.php?ip=86.108.52.57"));
+            //XmlNode node = objXmlDocument.DocumentElement.SelectSingleNode("/Response/CountryCode");
+            string userHost = HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+            if (String.IsNullOrEmpty(userHost) || String.Compare(userHost, "unknown", true) == 0)
+            {
+                WebClient objWebClient = new WebClient();
+                string s = objWebClient.DownloadString("http://api.hostip.info/get_html.php?ip=" + HttpContext.Current.Request.UserHostAddress);
+                if (s == "Unknown Country?")
+                {
+                    return "SA";
+                }
+                else
+                {
+                    return s.Split(new char[] { '(', ')' })[1];
+                }
+            }
+            else
+            {
+                return "SA";
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("FormsFunction:::GetCountryName:::" + ex.Message);
+            return "SA";
+        }
+    }
+
+
     #region Path Cookie
     public static void SetCookieValue(string UserID, string UserFullName, string EmailAddress, string Password)
     {
@@ -344,13 +380,13 @@ public class FormsFunction
     {
         try
         {
-            if (HttpContext.Current.Request.Cookies["ArabiSkyCountry"] != null)
+            if (HttpContext.Current.Request.Cookies["ArabiSkyCountry2013"] != null)
             {
-                HttpContext.Current.Request.Cookies["ArabiSkyCountry"].Expires = DateTime.Now.AddDays(-1);
+                HttpContext.Current.Request.Cookies["ArabiSkyCountry2013"].Expires = DateTime.Now.AddDays(-1);
             }
-            HttpCookie cookie = new HttpCookie("ArabiSkyCookie");
+            HttpCookie cookie = new HttpCookie("ArabiSkyCountry2013");
             cookie.Expires = DateTime.Now.AddDays(60);
-            cookie.Name = "ArabiSkyCountry";
+            cookie.Name = "ArabiSkyCountry2013";
 
             if (sCountryID != 0)
             {
@@ -362,11 +398,11 @@ public class FormsFunction
             }
 
             HttpContext.Current.Response.Cookies.Add(cookie);
-            HttpContext.Current.Request.Cookies["ArabiSkyCountry"].Expires = DateTime.Now.AddDays(60);
+            HttpContext.Current.Request.Cookies["ArabiSkyCountry2013"].Expires = DateTime.Now.AddDays(60);
         }
         catch (Exception)
         {
-            HttpContext.Current.Response.Cookies["ArabiSkyCountry"].Expires = DateTime.Now.AddDays(-1);
+            HttpContext.Current.Response.Cookies["ArabiSkyCountry2013"].Expires = DateTime.Now.AddDays(-1);
         }
     }
     public static string[] GetCookieValueCountryInfo()
@@ -374,8 +410,8 @@ public class FormsFunction
         string[] arrCookieInfo = new string[] { };
         try
         {
-            if (HttpContext.Current.Request.Cookies["ArabiSkyCountry"] != null && !string.IsNullOrEmpty(HttpContext.Current.Request.Cookies["ArabiSkyCountry"].Value))
-                return EncryptionMethods.Encryption.Decrypt(HttpContext.Current.Request.Cookies["ArabiSkyCountry"].Value).Split('|');
+            if (HttpContext.Current.Request.Cookies["ArabiSkyCountry2013"] != null && !string.IsNullOrEmpty(HttpContext.Current.Request.Cookies["ArabiSkyCountry2013"].Value))
+                return EncryptionMethods.Encryption.Decrypt(HttpContext.Current.Request.Cookies["ArabiSkyCountry2013"].Value).Split('|');
             else
                 return arrCookieInfo;
         }

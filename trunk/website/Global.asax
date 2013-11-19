@@ -4,9 +4,8 @@
 
 
     void RegisterRoute(System.Web.Routing.RouteCollection routes)
-    {
+    {     
         //routes.MapPageRoute("ViewAds", "Ads/{AdsID}/{title}", "~/ViewAds.aspx");
-       
         //routes.MapPageRoute("article-category", "{catTitle}/News/{articleID}/{title}", "~/Article.aspx");
         //routes.MapPageRoute("category", "{catID}/{title}", "~/CategoryArticles.aspx");
     }
@@ -48,47 +47,35 @@
         {
             try
             {
-                System.Net.WebClient objWebClient = new System.Net.WebClient();
-                //string sCountryStr = objWebClient.DownloadString("http://api.hostip.info/country.php");
-                System.Xml.XmlDocument objXmlDocument = new System.Xml.XmlDocument();
-                objXmlDocument.LoadXml(objWebClient.DownloadString("http://ip-json.rhcloud.com/xml"));
-                System.Xml.XmlNode node = objXmlDocument.DocumentElement.SelectSingleNode("/Response/country_code");
-                if (!string.IsNullOrEmpty(node.InnerText))
+                switch (FormsFunction.GetCountryName())
                 {
-                    switch (node.InnerText)
-                    {
-                        case "JO":
-                            FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
-                            break;
-                        case "JOR":
-                            FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
-                            break;
-                        case "SA":
-                            FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
-                            break;
-                        case "SAU":
-                            FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
-                            break;
-                        case "PS":
-                            FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
-                            break;
-                        case "PSE":
-                            FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
-                            break;
-                        case "IL":
-                            FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
-                            break;
-                        case "ISR":
-                            FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
-                            break;
-                        default:
-                            FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
-                            break;
-                    }
-                }
-                else
-                {
-                    FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+                    case "JO":
+                        FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+                        break;
+                    case "JOR":
+                        FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+                        break;
+                    case "SA":
+                        FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+                        break;
+                    case "SAU":
+                        FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+                        break;
+                    case "PS":
+                        FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+                        break;
+                    case "PSE":
+                        FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+                        break;
+                    case "IL":
+                        FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+                        break;
+                    case "ISR":
+                        FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+                        break;
+                    default:
+                        FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+                        break;
                 }
             }
             catch (Exception)

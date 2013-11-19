@@ -71,12 +71,11 @@ public partial class Search : System.Web.UI.Page
                         case "AdvanceSearch":
                             sSearchText = Request.QueryString["TextSearch"].ToString();
                             nCountryCode = Convert.ToInt32(Request.QueryString["Country"].ToString());
-                            nCityID = Convert.ToInt32(Request.QueryString["City"].ToString());
-                            nCatID = Convert.ToInt32(Request.QueryString["Cat"].ToString());
-                            nSearchSubCat = Convert.ToInt32(Request.QueryString["SubCat"].ToString());
+                            nCityID = Convert.ToInt32(Request.QueryString["City"].ToString() == string.Empty ? "-2" : Request.QueryString["City"].ToString());
+                            nCatID = Convert.ToInt32(Request.QueryString["Cat"].ToString() == string.Empty ? "-2" : Request.QueryString["Cat"].ToString());
+                            nSearchSubCat = Convert.ToInt32(Request.QueryString["SubCat"].ToString() == string.Empty ? "-2" : Request.QueryString["SubCat"].ToString());
                             nPriceForm = Convert.ToInt32(Request.QueryString["PriceForm"].ToString() == string.Empty ? "0" : Request.QueryString["PriceForm"].ToString());
-                            nPriceTo = Convert.ToInt32(Request.QueryString["PriceTo"].ToString() == string.Empty ? "0" : Request.QueryString["PriceTo"].ToString());
-
+                            nPriceTo = Convert.ToInt32(Request.QueryString["PriceTo"].ToString() == string.Empty ? "100000" : Request.QueryString["PriceTo"].ToString());
                             sp_SearchTitle.InnerHtml = " بحث " + " - " + sSearchText;
                             Page.Title = "موقع سماء العرب | " + " - " + sSearchText;
                             Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + " - " + sSearchText;
@@ -99,7 +98,7 @@ public partial class Search : System.Web.UI.Page
 
                     DBAdsManager obDBAdsManager = new DBAdsManager();
                     string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
-                    DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(Convert.ToInt16(arabiSkyCountry[0]), nSearchID, sSearchText.Replace(" ", "-"), nSearchSubCat, nCityID, sBrand_1.Replace(" ", "-"), sBrand_2.Replace(" ", "-"), nCatID, nPriceForm, nPriceTo);
+                    DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(Convert.ToInt16(arabiSkyCountry[0]), nSearchID, sSearchText , nSearchSubCat, nCityID, sBrand_1, sBrand_2, nCatID, nPriceForm, nPriceTo);
                     if (objDataSetSearch.Tables[0].Rows.Count <= 0)
                     {
                         trMainAds.Style.Add("display", "none");

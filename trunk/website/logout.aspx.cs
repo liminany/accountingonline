@@ -25,17 +25,34 @@ public partial class logout : System.Web.UI.Page
         {
             Session["UserInfo"] = null;
             Session.Remove("UserInfo");
-            System.Web.HttpCookie cookie = new System.Web.HttpCookie("ArabiSkyCookie");
-            cookie.Expires = DateTime.Now.AddDays(-1);
-            cookie.Name = "ArabiSkyCookie";
-            cookie.Value = null;
-            Response.Cookies.Add(cookie);
+            RemoveCookie("ArabiSkyCookie");
+            RemoveCookie("ArabiSkyCountry2013 ");
             Session.Abandon();
             Response.Redirect("Login", false);
         }
         catch (Exception ex)
         {
             _logger.Error("logout:::Page_Load:::" + ex.Message);
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="cookieName"></param>
+    private void RemoveCookie(string cookieName)
+    {
+        try
+        {
+            System.Web.HttpCookie cookie = new System.Web.HttpCookie(cookieName);
+            cookie.Expires = DateTime.Now.AddDays(-1);
+            cookie.Name = cookieName;
+            cookie.Value = null;
+            Response.Cookies.Add(cookie);
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("logout:::RemoveCookie:::" + ex.Message);
         }
     }
 
