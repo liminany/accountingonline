@@ -315,7 +315,7 @@ public partial class ViewAds : System.Web.UI.Page
                     case 15:
                         return "شيكل";
                     default:
-                        return "دينار أردني";
+                        return "ريال سعودي";
                 }
             }
             else

@@ -22,6 +22,12 @@ public partial class login : System.Web.UI.Page
                 }
                 else
                 {
+                    System.Web.HttpCookie cookie = new System.Web.HttpCookie("ArabiSkyCountry2013");
+                    cookie.Expires = DateTime.Now.AddDays(-1);
+                    cookie.Name = "ArabiSkyCountry2013";
+                    cookie.Value = null;
+                    Response.Cookies.Add(cookie);
+                    SetCookieCountry();
                     email.Focus();
                 }
             }
@@ -73,5 +79,56 @@ public partial class login : System.Web.UI.Page
     #endregion
 
     #region PageMethods
+    private void SetCookieCountry()
+    {
+        //Code that runs when a new session is started
+        if (FormsFunction.GetCookieData().Length == 0)
+        {
+            try
+            {
+                if (!string.IsNullOrEmpty(FormsFunction.GetCountryName()))
+                {
+                    switch (FormsFunction.GetCountryName())
+                    {
+                        case "JO":
+                            FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+                            break;
+                        case "JOR":
+                            FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+                            break;
+                        case "SA":
+                            FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+                            break;
+                        case "SAU":
+                            FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+                            break;
+                        case "PS":
+                            FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+                            break;
+                        case "PSE":
+                            FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+                            break;
+                        case "IL":
+                            FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+                            break;
+                        case "ISR":
+                            FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+                            break;
+                        default:
+                            FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+                            break;
+                    }
+                }
+                else
+                {
+                    FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+                }
+            }
+            catch (Exception)
+            {
+                FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+            }
+        }
+    }
     #endregion
 }

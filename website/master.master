@@ -32,9 +32,10 @@
     </asp:ContentPlaceHolder>
 </head>
 <body style="direction: rtl;">
-<div id="fb-root"></div>
+    <div id="fb-root">
+    </div>
     <script>
-     (function (d, s, id) {
+        (function (d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
@@ -111,81 +112,81 @@
                 </div>
             </div>
             <header>
-                <div id="arabiSky-headerMain" > 
-                    <div id="arabiSky-header" style="z-index:0">
+                <div id="arabiSky-headerMain">
+                    <div id="arabiSky-header" style="z-index: 0">
                         <div id="arabiSky-logo" style="height: 90px;">
                             <a href="/">
-                                <img src="~/images/ArabiSkyLogo.png" runat="server" alt="ArabiSky.com"
-                                    border="0" style="height:135px;position: relative; bottom: 51px;right: 55px;" /></a>
+                                <img src="~/images/ArabiSkyLogo.png" runat="server" alt="ArabiSky.com" border="0"
+                                    style="height: 135px; position: relative; bottom: 51px; right: 55px;" /></a>
                         </div>
                         <div id="arabiSky-mainsearchBlock">
                             <div class="arabiSky-topLinks">
                             </div>
                             <!-- searchBlock Starts here -->
-                            <div class="arabiSky-searchBlock" style="width: 550px;padding-top: 5px;">
+                            <div class="arabiSky-searchBlock" style="width: 550px; padding-top: 5px;">
                                 <!-- searchLeftCurve Starts here -->
                                 <div class="arabiSky-searchLeftCurve">
                                     <div class="arabiSky-searchbox">
-                                        <input type="text" placeholder="ما الذي تبحث عنه"  id="txtMasterSearch" runat="server"/>
+                                        <input type="text" placeholder="ما الذي تبحث عنه" id="txtMasterSearch" runat="server" />
                                     </div>
-                                 <div style="padding-right:10px;">
-                                    <select name="home_search_cat_id" id="home_search_cat_id" runat="server" style="width:200px;" class="arabiSky-homeSelectbox">
-                                        <option value="-1">إختر القسم</option>
-                                        <option value="0" disabled="disabled" style="color: #000;background-color:#ededed; font-weight: bold;">للبيع</option>
-                                        <option value="6">&nbsp;&nbsp;العقارات و الإسكان</option>
-                                        <option value="7">&nbsp;&nbsp;السيارات و المركبات</option>
-                                        <option value="8">&nbsp;&nbsp;الكهربائيات و الإلكترونيات</option>
-                                        <option value="9">&nbsp;&nbsp;الأثاث و المفروشات</option>
-                                        <option value="10">&nbsp;&nbsp;أرقام هواتف مميزة</option>
-                                        <option value="11">&nbsp;&nbsp;أشياء أخرى</option>
-
-                                        <option value="0" disabled="disabled" style="color: #000;background-color:#ededed; font-weight: bold;">الخدمات</option>
-                                        <option value="12">&nbsp;&nbsp;دروس و دورات تدريبية</option>
-                                        <option value="13">&nbsp;&nbsp;الكومبيوتر و الإنترنت</option>
-                                        <option value="14">&nbsp;&nbsp;بناء و مقاولات</option>
-                                        <option value="15">&nbsp;&nbsp;خدمات كهربائية</option>
-                                        <option value="16">&nbsp;&nbsp;السفر و السياحة</option>
-                                        <option value="17">&nbsp;&nbsp;خدمات طبية</option>
-                                        <option value="18">&nbsp;&nbsp;تجهيز الأطعمة و الحفلات</option>
-                                        <option value="19">&nbsp;&nbsp;إصلاح و صيانة السيارات</option>
-                                        <option value="20">&nbsp;&nbsp;خدمات قانونية</option>
-                                        <option value="21">&nbsp;&nbsp;خدمات أخرى</option>
-
-
-                                        <option value="0" disabled="disabled" style="color: #000;background-color:#ededed; font-weight: bold;">وظائف شاغرة</option>
-                                        <option value="22">&nbsp;&nbsp;إدارة / سكرتارية</option>
-                                        <option value="23">&nbsp;&nbsp;تسويق / مبيعات</option>
-                                        <option value="24">&nbsp;&nbsp;تدريس / تدريب</option>
-                                        <option value="25">&nbsp;&nbsp;كمبيوتر / تقنية المعلومات</option>
-                                        <option value="26">&nbsp;&nbsp;محاسبة / مالية</option>
-                                        <option value="27">&nbsp;&nbsp;طب / تمريض</option>
-                                        <option value="28">&nbsp;&nbsp;هندسة</option>
-                                        <option value="29">&nbsp;&nbsp;أشغال أخرى</option>
-
-
-                                        <option value="0" disabled="disabled" style="color: #000;background-color:#ededed; font-weight: bold;"> للإيجار</option>
-                                        <option value="30">&nbsp;&nbsp;العقارات و الإسكان</option>
-                                        <option value="31">&nbsp;&nbsp;السيارات و المركبات</option>
-                                        <option value="32">&nbsp;&nbsp;أشياء أخرى</option>
-
-                                        <option value="0" disabled="disabled" style="color: #000;background-color:#ededed; font-weight: bold;">الباحثين عن عمل</option>
-                                        <option value="33">&nbsp;&nbsp;الباحثين عن عمل</option> 
-
-
-                                    </select>
-                                 </div>
+                                    <div style="padding-right: 10px;">
+                                        <select name="home_search_cat_id" id="home_search_cat_id" runat="server" style="width: 200px;"
+                                            class="arabiSky-homeSelectbox">
+                                            <option value="-1">إختر القسم</option>
+                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                font-weight: bold;">للبيع</option>
+                                            <option value="6">&nbsp;&nbsp;العقارات و الإسكان</option>
+                                            <option value="7">&nbsp;&nbsp;السيارات و المركبات</option>
+                                            <option value="8">&nbsp;&nbsp;الكهربائيات و الإلكترونيات</option>
+                                            <option value="9">&nbsp;&nbsp;الأثاث و المفروشات</option>
+                                            <option value="10">&nbsp;&nbsp;أرقام هواتف مميزة</option>
+                                            <option value="11">&nbsp;&nbsp;أشياء أخرى</option>
+                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                font-weight: bold;">الخدمات</option>
+                                            <option value="12">&nbsp;&nbsp;دروس و دورات تدريبية</option>
+                                            <option value="13">&nbsp;&nbsp;الكومبيوتر و الإنترنت</option>
+                                            <option value="14">&nbsp;&nbsp;بناء و مقاولات</option>
+                                            <option value="15">&nbsp;&nbsp;خدمات كهربائية</option>
+                                            <option value="16">&nbsp;&nbsp;السفر و السياحة</option>
+                                            <option value="17">&nbsp;&nbsp;خدمات طبية</option>
+                                            <option value="18">&nbsp;&nbsp;تجهيز الأطعمة و الحفلات</option>
+                                            <option value="19">&nbsp;&nbsp;إصلاح و صيانة السيارات</option>
+                                            <option value="20">&nbsp;&nbsp;خدمات قانونية</option>
+                                            <option value="21">&nbsp;&nbsp;خدمات أخرى</option>
+                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                font-weight: bold;">وظائف شاغرة</option>
+                                            <option value="22">&nbsp;&nbsp;إدارة / سكرتارية</option>
+                                            <option value="23">&nbsp;&nbsp;تسويق / مبيعات</option>
+                                            <option value="24">&nbsp;&nbsp;تدريس / تدريب</option>
+                                            <option value="25">&nbsp;&nbsp;كمبيوتر / تقنية المعلومات</option>
+                                            <option value="26">&nbsp;&nbsp;محاسبة / مالية</option>
+                                            <option value="27">&nbsp;&nbsp;طب / تمريض</option>
+                                            <option value="28">&nbsp;&nbsp;هندسة</option>
+                                            <option value="29">&nbsp;&nbsp;أشغال أخرى</option>
+                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                font-weight: bold;">للإيجار</option>
+                                            <option value="30">&nbsp;&nbsp;العقارات و الإسكان</option>
+                                            <option value="31">&nbsp;&nbsp;السيارات و المركبات</option>
+                                            <option value="32">&nbsp;&nbsp;أشياء أخرى</option>
+                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
+                                                font-weight: bold;">الباحثين عن عمل</option>
+                                            <option value="33">&nbsp;&nbsp;الباحثين عن عمل</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div style="padding-top: 5px;">
-                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearch();" style="padding-right: 5px;padding-top: 2px;" />
+                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearch();"
+                                        style="padding-right: 5px; padding-top: 2px;" />
                                 </div>
                                 <div class="arabiSky-clear">
-                                </div>                                
+                                </div>
                             </div>
                             <!-- searchBlock ends here -->
-                            <div class="arabiSky-postClassifieds MetroButton" style="background-color: #f89a21;border-bottom:1px solid #ccc;
-                                border-radius: 0px; width: 170px; margin-left: 0px; border-top: 2px solid red;
-                                height: 30px;">
-                                <a href="AdsPage" style="display:block;width:100%;height:100%;text-decoration:none;color: #333;font-size: 17px;">اضف إعلانك الان</a>
+                            <div class="arabiSky-postClassifieds MetroButton" style="background-color: #f89a21;
+                                border-bottom: 1px solid #ccc; border-radius: 0px; width: 170px; margin-left: 0px;
+                                border-top: 2px solid red; height: 30px;">
+                                <a href="AdsPage" style="display: block; width: 100%; height: 100%; text-decoration: none;
+                                    color: #333; font-size: 17px;">اضف إعلانك الان</a>
                             </div>
                         </div>
                         <div class="arabiSky-clear">
@@ -219,29 +220,32 @@
                 }
             </script>
             <footer>
-                <div style="text-align:center;">
-                    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Farabisky&amp;width=440&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=172727259569815" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:440px; height:80px;" allowTransparency="true"></iframe>
+                <div style="text-align: center;">
+                    <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Farabisky&amp;width=440&amp;layout=standard&amp;action=like&amp;show_faces=true&amp;share=true&amp;height=80&amp;appId=172727259569815"
+                        scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 440px;
+                        height: 80px;" allowtransparency="true"></iframe>
                 </div>
-                 <div id="arabiSky-footerMain">
-                        <div class="arabiSky-footerSeperator">
-                        </div>
-                        <div class="arabiSky-footerLinksTop">
-                            <a href='#' target="_blank">تواصل معنا</a> | <a href="#">مساعدة</a>
-                            <%-- | <a href='https://www.facebook.com/arabisky'
-                                target="_blank">نسخة الموبايل</a>--%> | <a href='https://www.facebook.com/arabisky'
-                                    target="_blank">
-                                    <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
-                            | <a href='https://www.facebook.com/arabisky' target="_blank">
-                                <img src="~/images/twitter_footer.png" alt="ArabiSky.com" runat="server"></a>
-                            | <a href='https://www.facebook.com/arabisky' target="_blank">
-                                <img src="~/images/gplus_footer.png" alt="ArabiSky.com" runat="server"></a>
-                        </div>
-                        <div class="arabiSky-footerSeperator">
-                        </div>
-                        <div class="arabiSky-copyright">
-                            &copy; جميع الحقوق محفوظة  <b><a href='http://arabisky.com/' target="_blank">لسوق سماء العرب للإعلانات المبوبة</a>
-                        </div>
+                <div id="arabiSky-footerMain">
+                    <div class="arabiSky-footerSeperator">
                     </div>
+                    <div class="arabiSky-footerLinksTop">
+                        <a href='#' target="_blank">تواصل معنا</a> | <a href="#">مساعدة</a>
+                        <%-- | <a href='https://www.facebook.com/arabisky'
+                                target="_blank">نسخة الموبايل</a>--%>
+                        | <a href='https://www.facebook.com/arabisky' target="_blank">
+                            <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
+                        | <a href='https://www.facebook.com/arabisky' target="_blank">
+                            <img src="~/images/twitter_footer.png" alt="ArabiSky.com" runat="server"></a>
+                        | <a href='https://www.facebook.com/arabisky' target="_blank">
+                            <img src="~/images/gplus_footer.png" alt="ArabiSky.com" runat="server"></a>
+                    </div>
+                    <div class="arabiSky-footerSeperator">
+                    </div>
+                    <div class="arabiSky-copyright">
+                        &copy; جميع الحقوق محفوظة <b><a href='http://arabisky.com/' target="_blank">لسوق سماء
+                            العرب للإعلانات المبوبة</a>
+                    </div>
+                </div>
             </footer>
         </div>
         <div style="margin-right: 10px; margin-left: 10px; border-top: 4px solid #ff9900;
@@ -276,7 +280,7 @@
             });
         </script>
         <!-- AddThis Smart Layers END -->
-        
+    </div>
     </form>
 </body>
 </html>

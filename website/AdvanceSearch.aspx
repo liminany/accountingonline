@@ -93,7 +93,7 @@
                                             </td>
                                             <td>
                                                 <asp:DropDownList ID="ddlSubCategoryName" runat="server" CssClass="arabiSky-homeSelectbox"
-                                                    Style="width: 250px;">
+                                                    Style="width: 250px;"> 
                                                 </asp:DropDownList>
                                             </td>
                                         </tr>
