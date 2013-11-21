@@ -21,9 +21,7 @@ public partial class Search : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-
-                string sQueryStringAdsID = Request.QueryString["Type"];
-                if (!string.IsNullOrEmpty(sQueryStringAdsID))
+                if (!string.IsNullOrEmpty(Request.QueryString["Type"]))
                 {
                     string sSearchType = Request.QueryString["Type"].ToString();
                     string sSearchText = string.Empty;
@@ -97,8 +95,7 @@ public partial class Search : System.Web.UI.Page
                     sSearchText = sSearchText.Replace("إ", "ا");
 
                     DBAdsManager obDBAdsManager = new DBAdsManager();
-                    string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
-                    DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(Convert.ToInt16(arabiSkyCountry[0]), nSearchID, sSearchText , nSearchSubCat, nCityID, sBrand_1, sBrand_2, nCatID, nPriceForm, nPriceTo);
+                    DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(FormsFunction.GetCookieValueCountryInfo(), nSearchID, sSearchText, nSearchSubCat, nCityID, sBrand_1, sBrand_2, nCatID, nPriceForm, nPriceTo);
                     if (objDataSetSearch.Tables[0].Rows.Count <= 0)
                     {
                         trMainAds.Style.Add("display", "none");

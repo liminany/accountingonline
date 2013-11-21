@@ -115,5 +115,16 @@ public partial class master : System.Web.UI.MasterPage
             _logger.Error("masterpage:::lbtnRefreshGVMaster_Click:::" + ex.Message);
         }
     }
+    protected void lbtnCountry_Click(object sender, EventArgs e)
+    {
+        try
+        {
+          //  string a = hfCountry.Value;
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("masterpage:::lbtnCountry_Click:::" + ex.Message);
+        }
+    } 
     #endregion
 }

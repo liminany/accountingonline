@@ -5,6 +5,44 @@
 <html xmlns:fb="http://ogp.me/ns/fb#">
 <head runat="server">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="js/Fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    <link href="js/Fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <script src="js/ArabiSkyCookie.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#fancybox-overlay").unbind();
+            $("a.fancybox").fancybox({
+                "hideOnOverlayClick": false, // prevents closing clicking OUTSIE fancybox
+                "hideOnContentClick": false, // prevents closing clicking INSIDE fancybox
+                "enableEscapeButton": false  // prevents closing pressing ESCAPE key
+            });
+
+
+            if (!CheckCookiesExists("ArabiSkyCheckCountry")) {
+                $("a.fancybox").trigger('click');
+            }
+        });
+
+        function funChooseCountry(countryCode) {
+            switch (countryCode) {
+                case "12":
+                    createCookie("ArabiSkyCheckCountry", "12", 1000);
+                    window.location.reload(true);
+                    break;
+                case "14":
+                    createCookie("ArabiSkyCheckCountry", "14", 1000);
+                    window.location.reload(true);
+                    break;
+                case "15":
+                    createCookie("ArabiSkyCheckCountry", "15", 1000);
+                    window.location.reload(true);
+                    break;
+                default:
+                    $("a.fancybox").trigger('click');
+                    break;
+            }
+        }
+    </script>
     <%= SquishIt.Framework.Bundle.Css()
            .Add("~/css/style1.1371718285.css")
            .ForceRelease()
@@ -69,8 +107,10 @@
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr id="tr_DefaultUser" runat="server" style="display: ;">
                                     <td colspan="2">
-                                        <a id="A1" runat="server" href="~/signup">مستخدم جديد</a> <a id="A2" runat="server"
-                                            href="login">تسجيل دخول</a>
+                                        <a href="#inline1" class="fancybox">
+                                            <img id="Img2" src="~/images/world_map_earth.png" runat="server" align="top" alt="arabisky.com"
+                                                style="border: 0px; width: 25px; height: 24px;" />تغير البلد</a><a id="A1" runat="server"
+                                                    href="~/signup">مستخدم جديد</a> <a id="A2" runat="server" href="login">تسجيل دخول</a>
                                     </td>
                                 </tr>
                                 <tr id="tr_RegisterUser" runat="server" style="display: none;">
@@ -100,6 +140,11 @@
                                         <a href="Inbox">
                                             <img src="~/images/ArabiSky_mail.png" runat="server" align="top" alt="arabisky.com"
                                                 style="border: 0px;" /><span id="spMessageCounter" runat="server"></span></a>
+                                    </td>
+                                    <td>
+                                        <a href="#inline1" class="fancybox">
+                                            <img id="Img1" src="~/images/world_map_earth.png" runat="server" align="top" alt="arabisky.com"
+                                                style="border: 0px; width: 25px; height: 24px;" />تغير البلد</a>
                                     </td>
                                 </tr>
                             </table>
@@ -261,6 +306,9 @@
         <asp:Button ID="lbtnRefreshGVMaster" CssClass="ClassHideDiv" runat="server" Text=""
             Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnRefreshGVMaster_Click">
         </asp:Button>
+        <asp:Button ID="lbtnCountry" CssClass="ClassHideDiv" runat="server" Text="" Height="0px"
+            Width="0px" Style="visibility: hidden" OnClick="lbtnCountry_Click"></asp:Button>
+        <a class="fancybox" href="#inline1" title="ArabiSky.com | سوق سماء العرب"></a>
         <script>            (function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-43880128-1", "arabisky.com"); ga("send", "pageview")</script>
         <!-- AddThis Smart Layers BEGIN -->
         <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
@@ -279,6 +327,43 @@
 
             });
         </script>
+        <div id="inline1" style="width: 400px; display: none;">
+            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                    <td style="height: 150px; font-size: 25px; font-weight: bold;" align="center">
+                        الرجاء إختيار علمك دولتك
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td align="center">
+                                    <img src="images/Jordan.png" onclick="funChooseCountry('12')" style="cursor: pointer;"
+                                        alt="ArabiSky - علم الاردن" title="ArabiSky - علم الاردن" />
+                                </td>
+                                <td style="width: 100px;">
+                                </td>
+                                <td align="center">
+                                    <img src="images/Palestine.png" onclick="funChooseCountry('15')" style="cursor: pointer;"
+                                        alt="ArabiSky - علم فلسطين" title="ArabiSky - علم فلسطين" />
+                                </td>
+                                <td style="width: 100px;">
+                                </td>
+                                <td align="center">
+                                    <img src="images/Saudi_Arabia.png" onclick="funChooseCountry('14')" style="cursor: pointer;"
+                                        alt="ArabiSky - علم السعودية" title="ArabiSky - علم السعودية" />
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="height: 30px;">
+                    </td>
+                </tr>
+            </table>
+        </div>
         <!-- AddThis Smart Layers END -->
     </div>
     </form>
