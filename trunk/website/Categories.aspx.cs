@@ -74,15 +74,7 @@ public partial class Categories : System.Web.UI.Page
     {
         try
         {
-            string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
-            if (!string.IsNullOrEmpty(arabiSkyCountry[0]))
-            {
-                return Convert.ToInt16(arabiSkyCountry[0]);
-            }
-            else
-            {
-                return 12;
-            }
+            return FormsFunction.GetCookieValueCountryInfo();
         }
         catch (Exception)
         {

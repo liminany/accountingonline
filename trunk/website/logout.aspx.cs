@@ -26,7 +26,7 @@ public partial class logout : System.Web.UI.Page
             Session["UserInfo"] = null;
             Session.Remove("UserInfo");
             RemoveCookie("ArabiSkyCookie");
-            RemoveCookie("ArabiSkyCountry2013 ");
+            //RemoveCookie("ArabiSkyCheckCountry");
             Session.Abandon();
             Response.Redirect("Login", false);
         }

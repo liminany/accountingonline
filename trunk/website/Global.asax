@@ -34,55 +34,55 @@
 
     }
 
-    static public string GetCountry()
-    {
-        return new System.Net.WebClient().DownloadString("http://api.hostip.info/country.php");
-    }
+    //static public string GetCountry()
+    //{
+    //    return new System.Net.WebClient().DownloadString("http://api.hostip.info/country.php");
+    //}
 
 
     void Session_Start(object sender, EventArgs e)
     {
-        //Code that runs when a new session is started
-        if (FormsFunction.GetCookieData().Length == 0)
-        {
-            try
-            {
-                switch (FormsFunction.GetCountryName())
-                {
-                    case "JO":
-                        FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
-                        break;
-                    case "JOR":
-                        FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
-                        break;
-                    case "SA":
-                        FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
-                        break;
-                    case "SAU":
-                        FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
-                        break;
-                    case "PS":
-                        FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
-                        break;
-                    case "PSE":
-                        FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
-                        break;
-                    case "IL":
-                        FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
-                        break;
-                    case "ISR":
-                        FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
-                        break;
-                    default:
-                        FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
-                        break;
-                }
-            }
-            catch (Exception)
-            {
-                FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
-            }
-        }
+        ////Code that runs when a new session is started
+        //if (FormsFunction.GetCookieData().Length == 0)
+        //{
+        //    try
+        //    {
+        //        switch (FormsFunction.GetCountryName())
+        //        {
+        //            case "JO":
+        //                FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+        //                break;
+        //            case "JOR":
+        //                FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+        //                break;
+        //            case "SA":
+        //                FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+        //                break;
+        //            case "SAU":
+        //                FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+        //                break;
+        //            case "PS":
+        //                FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+        //                break;
+        //            case "PSE":
+        //                FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+        //                break;
+        //            case "IL":
+        //                FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+        //                break;
+        //            case "ISR":
+        //                FormsFunction.SetCookieValueCountryInfo(15, "الاراضي الفلسطينية");
+        //                break;
+        //            default:
+        //                FormsFunction.SetCookieValueCountryInfo(14, "المملكة العربية السعودية");
+        //                break;
+        //        }
+        //    }
+        //    catch (Exception)
+        //    {
+        //        FormsFunction.SetCookieValueCountryInfo(12, "المملكة الاردنية الهاشمية");
+        //    }
+        //}
     }
 
     void Session_End(object sender, EventArgs e)

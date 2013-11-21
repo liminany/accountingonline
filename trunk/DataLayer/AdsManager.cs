@@ -223,13 +223,15 @@ namespace DAL
             }
         }
 
-        public DataSet GetAdsCategoiresByCatID(int nSubCat)
+        public DataSet GetAdsCategoiresByCatID(int nSubCat,int nCountryID)
         {
             try
             {
                 DBParameter param1 = new DBParameter("@adsSubCat", nSubCat);
+                DBParameter param2 = new DBParameter("@countryID", nCountryID);
                 DBParameterCollection paramCollection = new DBParameterCollection();
                 paramCollection.Add(param1);
+                paramCollection.Add(param2);
                 DataSet dsReturnAllUser = _dbHelper.ExecuteDataSet("sp_GetAdsCategoiresByCatID", paramCollection, CommandType.StoredProcedure);
                 return dsReturnAllUser;
             }

@@ -245,9 +245,9 @@ public class RssManager : IDisposable
             var node = objHtmlDocument.DocumentNode.SelectNodes("//img[@alt='" + imageTitle + "']")[0].Attributes["src"].Value;
             System.Drawing.Image image = DownloadImageFromUrl(node);
             string rootPath = System.Web.HttpContext.Current.Server.MapPath("~/ArticalsImage/Full/");
-            string fileName = System.IO.Path.Combine(rootPath, "livekora_" + Guid.NewGuid().ToString() + ".jpg");
+            string fileName = System.IO.Path.Combine(rootPath, "ArabiSky_" + Guid.NewGuid().ToString() + ".jpg");
             image.Save(fileName);
-            return "../ArticalsImage/Full/livekora_" + Guid.NewGuid().ToString() + ".jpg";
+            return "../ArticalsImage/Full/ArabiSky_" + Guid.NewGuid().ToString() + ".jpg";
         }
         catch (Exception ex)
         {

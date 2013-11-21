@@ -22,11 +22,10 @@ public partial class Category : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                string sQueryStringAdsID = Request.QueryString["CatID"];
-                if (!string.IsNullOrEmpty(sQueryStringAdsID))
+                if (!string.IsNullOrEmpty(Request.QueryString["CatID"]))
                 {
                     DBAdsManager objDBAdsManager = new DBAdsManager();
-                    DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()));
+                    DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()),FormsFunction.GetCookieValueCountryInfo());
                     if (objDataSet.Tables[0].Rows.Count > 0)
                     {
                         string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();

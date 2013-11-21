@@ -87,34 +87,7 @@ public partial class signup : System.Web.UI.Page
     {
         try
         {
-            if (!string.IsNullOrEmpty(FormsFunction.GetCountryName()))
-            {
-                switch (FormsFunction.GetCountryName())
-                {
-                    case "JO":
-                        return 12;
-                    case "JOR":
-                        return 12;
-                    case "SA":
-                        return 14;
-                    case "SAU":
-                        return 14;
-                    case "PS":
-                        return 15;
-                    case "PSE":
-                        return 15;
-                    case "IL":
-                        return 15;
-                    case "ISR":
-                        return 15;
-                    default:
-                        return 14;
-                }
-            }
-            else
-            {
-                return 12;
-            }
+            return FormsFunction.GetCookieValueCountryInfo();
         }
         catch (Exception)
         {

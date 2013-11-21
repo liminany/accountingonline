@@ -303,44 +303,28 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
-            if (!string.IsNullOrEmpty(arabiSkyCountry[0]))
+            switch (FormsFunction.GetCookieValueCountryInfo())
             {
-                switch (Convert.ToInt16(arabiSkyCountry[0]))
-                {
-                    case 12:
-                        return "دينار أردني";
-                    case 14:
-                        return "ريال سعودي";
-                    case 15:
-                        return "شيكل";
-                    default:
-                        return "ريال سعودي";
-                }
-            }
-            else
-            {
-                return "دينار أردني";
+                case 12:
+                    return "دينار أردني";
+                case 14:
+                    return "ريال سعودي";
+                case 15:
+                    return "شيكل";
+                default:
+                    return "غير معروف";
             }
         }
         catch (Exception)
         {
-            return "دينار أردني";
+            return "غير معروف";
         }
     }
     private int GetCountryCode()
     {
         try
         {
-            string[] arabiSkyCountry = FormsFunction.GetCookieValueCountryInfo();
-            if (!string.IsNullOrEmpty(arabiSkyCountry[0]))
-            {
-                return Convert.ToInt16(arabiSkyCountry[0]);
-            }
-            else
-            {
-                return 12;
-            }
+            return FormsFunction.GetCookieValueCountryInfo();
         }
         catch (Exception)
         {

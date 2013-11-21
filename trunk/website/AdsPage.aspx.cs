@@ -282,60 +282,27 @@ public partial class AdsPage : System.Web.UI.Page
     {
         try
         {
-            if (!string.IsNullOrEmpty(FormsFunction.GetCountryName()))
+            switch (FormsFunction.GetCookieValueCountryInfo())
             {
-                switch (FormsFunction.GetCountryName())
-                {
-                    case "JO":
-                        sp_CountryName.InnerHtml = "الممكلة الاردنية الهاشمية";
-                        spCurrany.InnerHtml = "دينار أردني";
-                        return 12;
-                    case "JOR":
-                        sp_CountryName.InnerHtml = "الممكلة الاردنية الهاشمية";
-                        spCurrany.InnerHtml = "دينار أردني";
-                        return 12;
-                    case "SA":
-                        sp_CountryName.InnerHtml = "المملكة العربية السعودية";
-                        spCurrany.InnerHtml = "ريال سعودي";
-                        return 14;
-                    case "SAU":
-                        sp_CountryName.InnerHtml = "المملكة العربية السعودية";
-                        spCurrany.InnerHtml = "ريال سعودي";
-                        return 14;
-                    case "PS":
-                        sp_CountryName.InnerHtml = "فلسطين";
-                        spCurrany.InnerHtml = "شيكل";
-                        return 15;
-                    case "PSE":
-                        sp_CountryName.InnerHtml = "فلسطين";
-                        spCurrany.InnerHtml = "شيكل";
-                        return 15;
-                    case "IL":
-                        sp_CountryName.InnerHtml = "إسرائيل";
-                        spCurrany.InnerHtml = "شيكل";
-                        return 15;
-                    case "ISR":
-                        sp_CountryName.InnerHtml = "إسرائيل";
-                        spCurrany.InnerHtml = "شيكل";
-                        return 15;
-                    default:
-                        sp_CountryName.InnerHtml = "المملكة العربية السعودية";
-                        spCurrany.InnerHtml = "ريال سعودي";
-                        return 14;
-                }
-            }
-            else
-            {
-                sp_CountryName.InnerHtml = "الممكلة الاردنية الهاشمية";
-                spCurrany.InnerHtml = "دينار أردني";
-                return 12;
+                case 12:
+                    sp_CountryName.InnerHtml = "الممكلة الاردنية الهاشمية";
+                    spCurrany.InnerHtml = "دينار أردني";
+                    return 12;
+                case 14:
+                    sp_CountryName.InnerHtml = "المملكة العربية السعودية";
+                    spCurrany.InnerHtml = "ريال سعودي";
+                    return 14;
+                case 15:
+                    sp_CountryName.InnerHtml = "فلسطين";
+                    spCurrany.InnerHtml = "شيكل";
+                    return 15;
+                default:
+                    return 0;
             }
         }
         catch (Exception)
         {
-            sp_CountryName.InnerHtml = "الممكلة الاردنية الهاشمية";
-            spCurrany.InnerHtml = "دينار أردني";
-            return 12;
+            return 0;
         }
     }
     private string UploadAdsImages()
