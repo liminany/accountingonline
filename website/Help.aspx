@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
+﻿<%@ Page Title="سوق سماء العرب | مساعدة و شروط الإستخدام" MetaDescription="سوق سماء العرب | ArabiSky.com | مساعدة على كيفية إستخدام سوق سماء العرب و شروط الإستخدام" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="Help.aspx.cs" Inherits="Help" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
