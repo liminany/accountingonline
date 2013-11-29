@@ -215,6 +215,8 @@ public class FormsFunction
         }
     }
 
+
+
     /// <summary>
     /// Send Email Address For A User from our system
     /// </summary>
@@ -222,7 +224,7 @@ public class FormsFunction
     /// <param name="sEmailBody">set Email Body "string value"</param>
     /// <param name="sEmailSubject">set email Subject "string value"</param>
     /// <returns>return Success if send sucessfully otherwise return Execption</returns>
-    public static int SendEmailService(string sToEmailAddress, string sEmailBody, string sEmailSubject)
+    public static int SendEmailServiceByArabiSkyInfo(string sToEmailAddress, string sEmailBody, string sEmailSubject)
     {
         try
         {
@@ -239,23 +241,56 @@ public class FormsFunction
             message.IsBodyHtml = true;
             message.BodyEncoding = System.Text.UTF8Encoding.UTF8;
             message.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
-
             smtpClient.Send(message);
             return 1;
         }
         catch (Exception ex)
         {
-            _logger.Error("FormsFunction:::SendEmailService:::" + ex.Message);
+            _logger.Error("FormsFunction:::SendEmailServiceByArabiSkyInfo:::" + ex.Message);
+            return SendEmailServiceByGmailCom(sToEmailAddress, sEmailBody, sEmailSubject);
+        }
+    }
+
+    /// <summary>
+    /// Send Email Address For A User from our system
+    /// </summary>
+    /// <param name="sToEmailAddress">set Email Address to send the user "string value"</param>
+    /// <param name="sEmailBody">set Email Body "string value"</param>
+    /// <param name="sEmailSubject">set email Subject "string value"</param>
+    /// <returns>return Success if send sucessfully otherwise return Execption</returns>
+    private static int SendEmailServiceByGmailCom(string sToEmailAddress, string sEmailBody, string sEmailSubject)
+    {
+        try
+        {
+            MailMessage mail = new MailMessage();
+            mail.Subject = sEmailSubject;
+            mail.From = new MailAddress("khodrog@gmail.com");
+            mail.To.Add("khodrog@gmail.com");
+            mail.Body = sEmailBody;
+            mail.IsBodyHtml = true;
+
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.EnableSsl = true;
+            NetworkCredential netCre = new NetworkCredential("khodrog@gmail.com", "osm_kho_219700");
+            smtp.Credentials = netCre;
+            smtp.Timeout = 10000;
+            smtp.Send(mail);
+            return 1;
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("FormsFunction:::SendEmailServiceByGmailCom:::" + ex.Message);
             return -1;
         }
     }
+
 
     /// <summary>
     /// 
     /// </summary>
     /// <param name="nEmailTempleteID"></param>
     /// <returns></returns>
-    public static SendEMail SendAndGetEmailTemplete(int nEmailTempleteID, string sEmailAddress, string sPassword)
+    public static SendEMail SendAndGetEmailTempleteByArabiSkyInfo(int nEmailTempleteID, string sEmailAddress, string sPassword)
     {
         try
         {
@@ -270,7 +305,7 @@ public class FormsFunction
                     }
                     sEmailText = sEmailText.Replace("#UserEmailAddress#", sEmailAddress);
                     sEmailText = sEmailText.Replace("#UserPassword#", sPassword);
-                    SendEmailService(sEmailAddress, sEmailText, "موقع سماء العرب | تفعيل الحساب");
+                    SendEmailServiceByArabiSkyInfo(sEmailAddress, sEmailText, "موقع سماء العرب | تفعيل الحساب");
                     return SendEMail.Success;
                 case 1:
                     //Send Email forget Password
@@ -280,7 +315,7 @@ public class FormsFunction
                     }
                     sEmailText = sEmailText.Replace("#UserEmailAddress#", sEmailAddress);
                     sEmailText = sEmailText.Replace("#UserPassword#", sPassword);
-                    SendEmailService(sEmailAddress, sEmailText, "موقع سماء العرب | تفعيل الحساب");
+                    SendEmailServiceByArabiSkyInfo(sEmailAddress, sEmailText, "موقع سماء العرب | تفعيل الحساب");
                     return SendEMail.Success;
                 default:
                     return SendEMail.Error;
@@ -292,6 +327,42 @@ public class FormsFunction
             return SendEMail.Execption;
         }
     }
+
+    /// <summary>
+    /// Send User Message to Support Team
+    /// </summary>
+    /// <param name="sUserFullName"></param>
+    /// <param name="sUserEmailAddress"></param>
+    /// <param name="sUserMessage"></param>
+    /// <returns></returns>
+    public static SendEMail SendEmailForSupportByArabiSkyInfo(string sUserFullName, string sUserEmailAddress, string sUserMessage)
+    {
+        try
+        {
+            string sEmailText = string.Format("UserFullName: {0}<br />UserEmail Address: {1}<br />User Message: {2}<br />", sUserFullName,sUserEmailAddress,sUserMessage);
+            int nReturnValue = SendEmailServiceByArabiSkyInfo("khodrog@gmail.com", sEmailText, "موقع سماء العرب | رسالة للدعم الفني");
+            if (nReturnValue == 1)
+            {
+                return SendEMail.Success;
+            }
+            else
+            {
+                return SendEMail.Error;
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("FormsFunction:::SendEmailForSupport:::" + ex.Message);
+            return SendEMail.Execption;
+        }
+    }
+ 
+
+
+
+
+
+
 
     #region Path Cookie
     public static void SetCookieValue(string UserID, string UserFullName, string EmailAddress, string Password)
@@ -346,7 +417,7 @@ public class FormsFunction
             if (HttpContext.Current.Request.Cookies["ArabiSkyCheckCountry"] != null)
                 return Convert.ToInt16(HttpContext.Current.Request.Cookies["ArabiSkyCheckCountry"].Value);
             else
-                return 12;
+                return 0;
         }
         catch (Exception ex)
         {

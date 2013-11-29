@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <meta name="description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل" />
     <meta name="keywords" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة , الخدمات , وظائف شاغرة , الباحثين عن عمل" />
-    <meta name="title" content="ArabiSky  - سوق سماء العرب | وظائف | إعلانات | بيع و شراء" />
+    <meta name="title" content="ArabiSky  -  سوق سماء العرب | وظائف | إعلانات | بيع و شراء | سيارات و مركبات" />
     <title>ArabiSky - سوق سماء العرب | وظائف | إعلانات | بيع و شراء</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -298,7 +298,17 @@
                 </div>
                 <div style="width: 100%; height: auto;">
                     <table width="100%" cellpadding="0" cellspacing="0">
-                        <tr>
+						<tr>
+							<td style="text-align: center;">
+								<a href="http://livekora.net/" target="_blank">
+									<img src="http://livekora.net/Livekora_Ads/livekora.jpg" style="border: 0px;" alt="ArabiSky-Livekora" title="احدث و اخر اخبار كرة القدم">
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td style="height:5px;"></td>
+						</tr>
+					   <tr>
                             <td>
                                 <div style="width: 100%; height: auto;">
                                     <div>

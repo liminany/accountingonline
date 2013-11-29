@@ -5,8 +5,8 @@
 <html xmlns:fb="http://ogp.me/ns/fb#">
 <head runat="server">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-    <script src="js/Fancybox/jquery.fancybox.js" type="text/javascript"></script>
     <link href="js/Fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
+    <script src="js/Fancybox/jquery.fancybox.js" type="text/javascript"></script>
     <script src="js/ArabiSkyCookie.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -16,13 +16,10 @@
                 "hideOnContentClick": false, // prevents closing clicking INSIDE fancybox
                 "enableEscapeButton": false  // prevents closing pressing ESCAPE key
             });
-
-
             if (!CheckCookiesExists("ArabiSkyCheckCountry")) {
                 $("a.fancybox").trigger('click');
             }
         });
-
         function funChooseCountry(countryCode) {
             switch (countryCode) {
                 case "12":
@@ -107,10 +104,11 @@
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr id="tr_DefaultUser" runat="server" style="display: ;">
                                     <td colspan="2">
-                                        <a href="#inline1" class="fancybox">
-                                            <img id="Img2" src="~/images/world_map_earth.png" runat="server" align="top" alt="arabisky.com"
-                                                style="border: 0px; width: 25px; height: 24px;" />تغير البلد</a><a id="A1" runat="server"
-                                                    href="~/signup">مستخدم جديد</a> <a id="A2" runat="server" href="login">تسجيل دخول</a>
+                                            <a href="#inline1" class="fancybox">
+                                                <img id="ImgCountryFlagWithoutlogin"  src="~/images/world_map_earth.png" runat="server" align="top" alt="arabisky.com" style="border: 0px; width: 25px; height: 24px;" /><span id="alinkCountryNameWithoutLogin" style="padding-right: 3px;" runat="server"></span>
+                                            </a>
+                                            <a id="A1" runat="server" href="~/signup">مستخدم جديد</a> 
+                                            <a id="A2" runat="server" href="login">تسجيل دخول</a>
                                     </td>
                                 </tr>
                                 <tr id="tr_RegisterUser" runat="server" style="display: none;">
@@ -142,9 +140,11 @@
                                                 style="border: 0px;" /><span id="spMessageCounter" runat="server"></span></a>
                                     </td>
                                     <td>
-                                        <a href="#inline1" class="fancybox">
-                                            <img id="Img1" src="~/images/world_map_earth.png" runat="server" align="top" alt="arabisky.com"
-                                                style="border: 0px; width: 25px; height: 24px;" />تغير البلد</a>
+                                        <div style="background: none repeat scroll 0 0 #ededed;border: 1px solid #c3c3c3; color: #000; line-height: 25px; margin-left: 10px; font-weight: 700; float: left; text-decoration: none; padding: 0 8px;cursor:pointer;"> 
+                                            <a href="#inline1" class="fancybox" style="border: 0px;margin-right: 3px;" id="alinkCountryName" runat="server"></a>
+                                            &nbsp;<img id="ImgCountryFlag" src="" runat="server" align="top"
+                                                alt="arabisky.com" style="border: 0px; width: 25px; height: 24px;" />
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
@@ -274,7 +274,7 @@
                     <div class="arabiSky-footerSeperator">
                     </div>
                     <div class="arabiSky-footerLinksTop">
-                        <a href='#' target="_blank">تواصل معنا</a> | <a href="#">مساعدة</a>
+                        <a href="ContactUs">تواصل معنا</a> | <a href="Help">مساعدة</a>
                         <%-- | <a href='https://www.facebook.com/arabisky'
                                 target="_blank">نسخة الموبايل</a>--%>
                         | <a href='https://www.facebook.com/arabisky' target="_blank">
@@ -312,7 +312,7 @@
         <script>            (function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-43880128-1", "arabisky.com"); ga("send", "pageview")</script>
         <!-- AddThis Smart Layers BEGIN -->
         <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527e293742041da6"></script>
+        <%--        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527e293742041da6"></script>
         <script type="text/javascript">
             addthis.layers({
                 'theme': 'transparent',
@@ -327,6 +327,7 @@
 
             });
         </script>
+        <!-- AddThis Smart Layers END -->--%>
         <div id="inline1" style="width: 400px; display: none;">
             <table border="0" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
@@ -364,7 +365,6 @@
                 </tr>
             </table>
         </div>
-        <!-- AddThis Smart Layers END -->
     </div>
     </form>
 </body>

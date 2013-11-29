@@ -3,11 +3,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
+        
         $(document).ready(function () {
-            $('.bxslider').bxSlider({
-                mode: 'fade',
-                captions: true
-            });
+             $(".fancybox").fancybox({
+                openEffect: 'none',
+                closeEffect: 'none',
+                'closeBtn' : true,
+                closeOnEscape: true// disable escape event on dialog
+            }); 
             CKEDITOR.replace('ctl00_ContentPlaceHolder1_editor1',
 	        {
 	            language: 'ar'
@@ -19,6 +22,7 @@
     <asp:HiddenField runat="server" ID="hfAdsUserIDOwner" Value="0" />
     <asp:HiddenField runat="server" ID="hfUserID" Value="0" />
     <asp:HiddenField runat="server" ID="hfUpdateDateTime" Value="0" />
+    <asp:HiddenField runat="server" ID="hfImages" Value="0" />
     <div style="width: 100%;">
         <div id="sitemap" runat="server" style="height: 30px; float: right;">
         </div>
@@ -56,7 +60,7 @@
             <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
                 text-align: center;">
                 <div id="div_ViewAds" style="float: right; margin-top: 20px; width: 100%;">
-                    <div style="float: left;">
+                    <div style="float: left;display:none;">
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tbody>
                                 <tr style="height: 100px;">
@@ -133,18 +137,16 @@
                 </div>
                 <div style="height: 10px; clear: both">
                 </div>
-                <div style="display: none;" id="div_Slider" runat="server">
-                    <div class="arabiSky-adImages">
-                        <div style="vertical-align: middle;">
-                            <div class="bx-wrapper">
-                                <div class="slider">
-                                    <ul class="bxslider" id="ulVidewImages" runat="server">
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                 <div style="clear: both; height: 30px; border-bottom: 1px solid #ccc;">
                 </div>
+                <div id="div_Image" runat="server" style="float: right; margin-right: 30px; color: #111111; font-size: 17px;
+                    padding-top: 10px; font-weight: bolder;">
+                   صور الإعلان
+                </div>
+                <div style="clear:both;height:20px;"></div>
+                <div style="display: none;margin:10px;text-align:center;width:100%;padding-right: 10px;" id="div_Slider" runat="server">
+                   
+                </div> 
                 <div id="div_ContactSpace" runat="server" style="clear: both; height: 20px;">
                 </div>
                 <div id="div_ContactUser" runat="server">
