@@ -94,6 +94,39 @@ public partial class master : System.Web.UI.MasterPage
                     tr_RegisterUser.Style.Add("display", "none");
                     div_EmailNotofication.Style.Add("display", "none");
                 }
+
+
+                switch (FormsFunction.GetCookieValueCountryInfo())
+                {
+                    case 12:
+                        ImgCountryFlag.Src = "images/imgJordan_small.png";
+                        ImgCountryFlag.Alt = "المملكة الأردنية الهاشمية";
+                        alinkCountryName.InnerHtml = "المملكة الأردنية الهاشمية";
+                        alinkCountryNameWithoutLogin.InnerHtml = "المملكة الأردنية الهاشمية";
+                        ImgCountryFlagWithoutlogin.Src = "images/imgJordan_small.png";
+                        break;
+                    case 14:
+                        ImgCountryFlag.Src = "images/imgSaudi_small.png";
+                        ImgCountryFlag.Alt = "المملكة العربية السعودية";
+                        alinkCountryName.InnerHtml = "المملكة العربية السعودية";
+                        alinkCountryNameWithoutLogin.InnerHtml = "المملكة العربية السعودية";
+                        ImgCountryFlagWithoutlogin.Src = "images/imgSaudi_small.png";
+                        break;
+                    case 15:
+                        ImgCountryFlag.Src = "images/imgPalestine_small.png";
+                        ImgCountryFlag.Alt = "فلسطين";
+                        alinkCountryName.InnerHtml = "فلسطين";
+                        alinkCountryNameWithoutLogin.InnerHtml = "فلسطين";
+                        ImgCountryFlagWithoutlogin.Src = "images/imgPalestine_small.png";
+                        break;
+                    default:
+                        ImgCountryFlag.Src = "images/world_map_earth.png";
+                        ImgCountryFlag.Alt = "إختر البلد";
+                        alinkCountryName.InnerHtml = "إختر البلد";
+                        alinkCountryNameWithoutLogin.InnerHtml = "إختر البلد";
+                        ImgCountryFlagWithoutlogin.Src = "images/world_map_earth.png";
+                        break;
+                }
             }
         }
         catch (Exception ex)
@@ -119,12 +152,12 @@ public partial class master : System.Web.UI.MasterPage
     {
         try
         {
-          //  string a = hfCountry.Value;
+            //  string a = hfCountry.Value;
         }
         catch (Exception ex)
         {
             _logger.Error("masterpage:::lbtnCountry_Click:::" + ex.Message);
         }
-    } 
+    }
     #endregion
 }

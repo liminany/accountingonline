@@ -102,11 +102,13 @@ public partial class ViewAds : System.Web.UI.Page
                         if (!string.IsNullOrEmpty(rows["AdsImages"].ToString()))
                         {
                             div_Slider.Style.Add("display", "");
+                            div_Image.Style.Add("display", "");
                             ViewAdsImage(rows["AdsImages"].ToString());
                         }
                         else
                         {
                             div_Slider.Style.Add("display", "none");
+                            div_Image.Style.Add("display", "none");
                         }
                         rptSlimlerAds.DataSource = objDBAdsManager.GetSimlirAdsTen(nSubCatID, GetCountryCode());
                         rptSlimlerAds.DataBind();
@@ -331,6 +333,8 @@ public partial class ViewAds : System.Web.UI.Page
             return 12;
         }
     }
+
+     
     private void ViewAdsImage(string imagesURL)
     {
         try
@@ -338,7 +342,7 @@ public partial class ViewAds : System.Web.UI.Page
             string[] images = imagesURL.Split('|');
             for (int i = 0; i < images.Length; i++)
             {
-                ulVidewImages.InnerHtml = ulVidewImages.InnerHtml + "<li style='position: initial;'><img style='width:100%;height:377px;' src='" + images[i].Replace("~", "..") + "' /></li>";
+                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='cursor:pointer;border:2px solid #333;height:120px;width:120px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + images[i].Replace("~", "..") + "'><img style='max-width: 120px;max-height: 120px;width:120px;height:120px;' src='" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
             }
         }
         catch (Exception)

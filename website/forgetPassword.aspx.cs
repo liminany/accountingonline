@@ -47,7 +47,7 @@ public partial class forgetPassword : System.Web.UI.Page
             trForgetPasswordUseMessage.Style.Add("display", "");
             if (objEntityRegUsers.UserEmailAddress == email.Value)
             {
-                SendEMail objSendEMail = FormsFunction.SendAndGetEmailTemplete(1, objEntityRegUsers.UserEmailAddress, EncryptionMethods.Encryption.Decrypt(objEntityRegUsers.UserPassword));
+                SendEMail objSendEMail = FormsFunction.SendAndGetEmailTempleteByArabiSkyInfo(1, objEntityRegUsers.UserEmailAddress, EncryptionMethods.Encryption.Decrypt(objEntityRegUsers.UserPassword));
                 if (objSendEMail == SendEMail.Success)
                 {
                     div_UserMessageTitle.InnerHtml = "لقد تم إرسال كلمة السر إلى رقم بريدك الإلكتروني.";
