@@ -24,16 +24,17 @@ public partial class MyAds : System.Web.UI.Page
                     if (FormsFunction.GetCookieData().Length != 0)
                     {
                         string[] arrUserCookieInfo = FormsFunction.GetCookieData();
-                        objEntityRegUsers.UserID = Convert.ToInt32(arrUserCookieInfo[0].ToString());
+                        hfUserID.Value = arrUserCookieInfo[0].ToString();
                     }
                     else
                     {
                         objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
+                        hfUserID.Value = objEntityRegUsers.UserID.ToString();
                     }
-                    objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(objEntityRegUsers.UserID);
+                    objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfUserID.Value));
                     sp_PageTitle.InnerHtml = string.Format("إعلاناتي الخاصة - عدد الإعلانات المتبقية لك : {0} إعلانات", (objEntityRegUsers.UserCountAds - objEntityRegUsers.CountAdsUsed).ToString());
                     DBAdsManager objDBAdsManager = new DBAdsManager();
-                    DataSet dsMyAds = objDBAdsManager.GetAllMyAdsByUserID(objEntityRegUsers.UserID);
+                    DataSet dsMyAds = objDBAdsManager.GetAllMyAdsByUserID(Convert.ToInt32(hfUserID.Value));
                     if (dsMyAds.Tables[0].Rows.Count > 0)
                     {
                         div_AdsTable.Style.Add("display", "");
@@ -81,15 +82,11 @@ public partial class MyAds : System.Web.UI.Page
         }
     }
 
-    protected string GenerateURL(object Title, object strId)
+    protected string GenerateURL(object strId, object Title)
     {
         string strTitle = Title.ToString();
-
-        //#region Generate SEO Friendly URL based on Title
-
         strTitle = strTitle.Trim();
         strTitle = strTitle.Trim('-');
-
         strTitle = strTitle.ToLower();
         char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
         strTitle = strTitle.Replace("c#", "C-Sharp");
@@ -105,7 +102,6 @@ public partial class MyAds : System.Web.UI.Page
             }
         }
         strTitle = strTitle.Replace(" ", "-");
-
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Replace("---", "-");
         strTitle = strTitle.Replace("----", "-");
@@ -115,8 +111,7 @@ public partial class MyAds : System.Web.UI.Page
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Trim();
         strTitle = strTitle.Trim('-');
-        strTitle = "ViewAds/" + strId + "/" + strTitle;
-
+        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
         return strTitle;
     }
 

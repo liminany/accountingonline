@@ -18,11 +18,6 @@ public partial class AdvanceSearch : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                spPageTitle.InnerHtml = "بحث متقدم";
-                Page.Title = "سوق سماء العرب | بحث متقدم";
-                Page.MetaDescription = "سوق سماء العرب | ArabiSky.com | بحث متقدم";
-
-
                 ManageCountry objDALManageCountry = new ManageCountry();
                 EntiryCountry objEntiryCountry = new EntiryCountry();
                 ManageCategory objManageCategory = new ManageCategory();
@@ -78,6 +73,41 @@ public partial class AdvanceSearch : System.Web.UI.Page
         {
             _logger.Error("AdvanceSearch:::ddlCategoryName_SelectedIndexChanged:::" + ex.Message);
         }
+    }
+    #endregion
+
+    #region Methods
+    protected string GenerateURL(object strId, object Title)
+    {
+        string strTitle = Title.ToString();
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
+        }
+        strTitle = strTitle.Replace(" ", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
+        return strTitle;
     }
     #endregion
 

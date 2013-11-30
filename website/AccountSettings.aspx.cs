@@ -18,11 +18,6 @@ public partial class AccountSettings : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
-                    //ManageCountry objDALManageCountry = new ManageCountry();
-                    //EntiryCountry objEntiryCountry = new EntiryCountry();
-                    //UserAuthentication objUserAuthentication = new UserAuthentication();
-                    //objEntiryCountry.Action = 6;
-                    //FormsFunction.BindDDL(ref ddlCountryName, objDALManageCountry.GetAllCountry(objEntiryCountry), "CountryName", "CountryID", "إختر البلد");
                     if (FormsFunction.GetCookieData().Length != 0)
                     {
                         UserAuthentication objUserAuthentication = new UserAuthentication();
@@ -51,7 +46,8 @@ public partial class AccountSettings : System.Web.UI.Page
                     {
                         UserAuthentication objUserAuthentication = new UserAuthentication();
                         EntityRegUsers objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
-                        objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(objEntityRegUsers.UserID);
+                        hfUserID.Value = objEntityRegUsers.UserID.ToString();
+                        objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfUserID.Value));
                         hfUserID.Value = objEntityRegUsers.UserID.ToString();
                         if (objEntityRegUsers.UserFullName.Contains("UserID "))
                         {
@@ -147,23 +143,6 @@ public partial class AccountSettings : System.Web.UI.Page
             _logger.Error("AccountSettings:::btnChangePassword_Click:::" + ex.Message);
         }
     }
-    //protected void ddlCountryName_SelectedIndexChanged(object sender, EventArgs e)
-    //{
-    //    try
-    //    {
-    //        ManageCity objManageCity = new ManageCity();
-    //        EntiryCity objEntiryCity = new EntiryCity();
-    //        objEntiryCity.Action = 6;
-    //        objEntiryCity.CityStatus = 1;
-    //        objEntiryCity.CityName = string.Empty;
-    //        objEntiryCity.Country_FK_ID = int.Parse(ddlCountryName.SelectedValue);
-    //        FormsFunction.BindDDL(ref ddlCityName, objManageCity.GetAllCityByCountryID(objEntiryCity), "CityName", "CityID", "إختر المدينة");
-    //    }
-    //    catch (Exception ex)
-    //    {
-    //        _logger.Error("_Default:::ddlCountryName_SelectedIndexChanged:::" + ex.Message);
-    //    }
-    //}
     #endregion
 
     #region Methods

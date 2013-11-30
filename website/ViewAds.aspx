@@ -3,7 +3,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
-        
         $(document).ready(function () {
              $(".fancybox").fancybox({
                 openEffect: 'none',
@@ -171,13 +170,6 @@
                         <div id="div_UserMessage" runat="server" style="margin-right: 30px; float: right;
                             font-weight: bold; font-size: 15px; margin-top: 7px;">
                         </div>
-                        <%--<div style="margin-right: 30px; float: right;" onclick="funSendEMail('message')">
-                        <h3 class="accorRightHeader" id="H2" style="width: 215px;">
-                            <span class="rightIcons">
-                                <img src="/images/imgStar.png" style="position: relative;bottom: 5px;" alt="ArabiSky.com"></span> 
-                                <span class="accorText">أضف الى اعلاناتي المفضلة</span>
-                        </h3>
-                    </div>--%>
                     </div>
                     <div style="height: 20px; clear: both">
                     </div>
@@ -285,8 +277,7 @@
                             <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'>
-                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 15%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -304,8 +295,7 @@
                             <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'>
-                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 15%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -330,7 +320,6 @@
                 <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
                     data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
                 <script>                    (adsbygoogle = window.adsbygoogle || []).push({});</script>
-                <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
             </div>
         </div>
     </div>

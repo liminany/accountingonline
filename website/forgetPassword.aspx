@@ -1,4 +1,4 @@
-﻿<%@ Page Title="سوق سماء العرب | إستعادة كلمة المرور" Language="C#" MasterPageFile="~/master.master"
+﻿<%@ Page Title="سوق سماء العرب | إستعادة كلمة المرور" MetaDescription="ArabiSky | سوق سماء العرب | إسترجاع كلمة المرور الخاصة بالمستخدم" Language="C#" MasterPageFile="~/master.master"
     AutoEventWireup="true" CodeFile="forgetPassword.aspx.cs" Inherits="forgetPassword" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">

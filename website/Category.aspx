@@ -51,7 +51,7 @@
                             <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 15%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -69,7 +69,7 @@
                             <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 15%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -94,8 +94,7 @@
             <!-- ArabiSky_Default_Top -->
             <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
                 data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
-            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
-            <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
+            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script> 
         </div>
     </div>
 </asp:Content>

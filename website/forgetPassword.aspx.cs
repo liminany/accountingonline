@@ -18,7 +18,7 @@ public partial class forgetPassword : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
-                    Response.Redirect("Default", false);
+                    Response.Redirect("/", false);
                 }
                 else
                 {

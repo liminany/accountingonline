@@ -20,15 +20,6 @@ public partial class login : System.Web.UI.Page
                 {
                     Response.Redirect("/", false);
                 }
-                else
-                {
-                    //System.Web.HttpCookie cookie = new System.Web.HttpCookie("ArabiSkyCheckCountry");
-                    //cookie.Expires = DateTime.Now.AddDays(-1);
-                    //cookie.Name = "ArabiSkyCheckCountry";
-                    //cookie.Value = null;
-                    //Response.Cookies.Add(cookie);
-                    //email.Focus();
-                }
             }
         }
         catch (Exception ex)

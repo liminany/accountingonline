@@ -91,7 +91,6 @@
                             <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
                                 data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
                             <script>                                (adsbygoogle = window.adsbygoogle || []).push({});</script>
-                            <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
                         </div>
                     </td>
                 </tr>
