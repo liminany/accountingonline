@@ -28,6 +28,7 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:HiddenField ID="hfUserID" runat="server" Value="0" />
     <div style="height: 30px; float: right;">
         <a href='/'>سوق سماء العرب </a>» رسائلي
     </div>
