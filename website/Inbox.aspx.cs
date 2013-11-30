@@ -18,42 +18,41 @@ public partial class Inbox : System.Web.UI.Page
     {
         try
         {
-            if (!IsPostBack)
+            if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
             {
-                if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
+                if (FormsFunction.GetCookieData().Length != 0)
                 {
-                    if (FormsFunction.GetCookieData().Length != 0)
-                    {
-                        UserAuthentication objUserAuthentication = new UserAuthentication();
-                        string[] arrUserCookieInfo = FormsFunction.GetCookieData();
-                        objEntityRegUsers = new EntityRegUsers();
-                        objEntityRegUsers.UserID = Convert.ToInt32(arrUserCookieInfo[0].ToString());
-                    }
-                    else
-                    {
-                        UserAuthentication objUserAuthentication = new UserAuthentication();
-                        objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
-                    }
-
-                    DataSet dsPrivateEmail = objDBUserMessages.GetAllUserEmailByUserID(objEntityRegUsers.UserID);
-                    if (dsPrivateEmail.Tables[0].Rows.Count > 0)
-                    {
-                        div_EmailTable.Style.Add("display", "");
-                        div_EmptyEmailTable.Style.Add("display", "none");
-                        rptMyEmail.DataSource = dsPrivateEmail;
-                        rptMyEmail.DataBind();
-                    }
-                    else
-                    {
-                        div_EmailTable.Style.Add("display", "none");
-                        div_EmptyEmailTable.Style.Add("display", "");
-                    }
+                    UserAuthentication objUserAuthentication = new UserAuthentication();
+                    string[] arrUserCookieInfo = FormsFunction.GetCookieData();
+                    objEntityRegUsers = new EntityRegUsers();
+                    hfUserID.Value = arrUserCookieInfo[0].ToString();
                 }
                 else
                 {
-                    Response.Redirect("login", false);
+                    UserAuthentication objUserAuthentication = new UserAuthentication();
+                    objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
+                    hfUserID.Value = objEntityRegUsers.UserID.ToString();
+                }
+
+                DataSet dsPrivateEmail = objDBUserMessages.GetAllUserEmailByUserID(Convert.ToInt32(hfUserID.Value));
+                if (dsPrivateEmail.Tables[0].Rows.Count > 0)
+                {
+                    div_EmailTable.Style.Add("display", "");
+                    div_EmptyEmailTable.Style.Add("display", "none");
+                    rptMyEmail.DataSource = dsPrivateEmail;
+                    rptMyEmail.DataBind();
+                }
+                else
+                {
+                    div_EmailTable.Style.Add("display", "none");
+                    div_EmptyEmailTable.Style.Add("display", "");
                 }
             }
+            else
+            {
+                Response.Redirect("login", false);
+            }
+
         }
         catch (Exception ex)
         {
@@ -67,7 +66,7 @@ public partial class Inbox : System.Web.UI.Page
     {
         try
         {
-            rptMyEmail.DataSource = objDBUserMessages.GetAllUserEmailByUserID(objEntityRegUsers.UserID);
+            rptMyEmail.DataSource = objDBUserMessages.GetAllUserEmailByUserID(Convert.ToInt32(hfUserID.Value));
             rptMyEmail.DataBind();
         }
         catch (Exception ex)
