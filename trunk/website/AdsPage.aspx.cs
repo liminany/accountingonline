@@ -1,8 +1,6 @@
 ﻿using System;
 using System.IO;
-using System.Net;
 using System.Web;
-using System.Xml;
 using DAL;
 using Entity;
 using Entity.City;
@@ -14,7 +12,7 @@ public partial class AdsPage : System.Web.UI.Page
     private static Logger _logger = LogManager.GetCurrentClassLogger();
     UserAuthentication objUserAuthentication = new UserAuthentication();
     EntityRegUsers objEntityRegUsers = new EntityRegUsers();
-    int nExpireDateCounte = 6;
+    int nExpireDateCounte = 8;
     int nMaxImageUpload = 6;
     #endregion
 
@@ -28,15 +26,13 @@ public partial class AdsPage : System.Web.UI.Page
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
                     #region Fill DropDown List
-                    hfCountryID.Value = GetCountry().ToString();
-                    int countryCode = Convert.ToInt32(hfCountryID.Value);
                     ManageCity objManageCity = new ManageCity();
                     EntiryCity objEntiryCity = new EntiryCity();
                     ManageCategory objManageCategory = new ManageCategory();
                     objEntiryCity.Action = 6;
                     objEntiryCity.CityStatus = 1;
                     objEntiryCity.CityName = string.Empty;
-                    objEntiryCity.Country_FK_ID = countryCode;
+                    objEntiryCity.Country_FK_ID = GetCountry();
                     FormsFunction.BindDDL(ref ddlCityName, objManageCity.GetAllCityByCountryID(objEntiryCity), "CityName", "CityID", "إختر المدينة");
                     FormsFunction.BindDDL(ref ddlCategoryName, objManageCategory.GetAllCategory(), "CatName", "Cat_ID", "إختر القسم");
                     #endregion
@@ -57,8 +53,7 @@ public partial class AdsPage : System.Web.UI.Page
                     if (string.IsNullOrEmpty(sQueryStringAdsID))
                     {
                         spPageTitle.InnerHtml = "إضافة إعلان جديد";
-                        Page.Title = "سوق سماء العرب | إضافة إعلان جديد";
-                        Page.MetaDescription = "سوق سماء العرب | ArabiSky.com | إضافة إعلان جديد";
+
                         #region Ads Exceded
                         objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfUserID.Value));
                         if (objEntityRegUsers.CountAdsUsed >= objEntityRegUsers.UserCountAds)
@@ -161,7 +156,7 @@ public partial class AdsPage : System.Web.UI.Page
                     objAdsManager.UserID = Convert.ToInt32(hfUserID.Value);
                     objAdsManager.CatID = Convert.ToInt32(ddlCategoryName.SelectedValue);
                     objAdsManager.SubCatID = Convert.ToInt32(ddlSubCategoryName.SelectedValue);
-                    objAdsManager.CountryID = Convert.ToInt32(hfCountryID.Value);
+                    objAdsManager.CountryID = GetCountry();
                     objAdsManager.CityID = Convert.ToInt32(ddlCityName.SelectedValue);
                     objAdsManager.AdsPrice = (!string.IsNullOrEmpty(txtPrice.Value)) ? Convert.ToDouble(txtPrice.Value) : 0;
                     string sTextTitleAds = txtAdsTitle.Value.Replace("ة", "ه");
@@ -217,7 +212,7 @@ public partial class AdsPage : System.Web.UI.Page
                 objAdsManager.UserID = Convert.ToInt32(hfUserID.Value);
                 objAdsManager.CatID = Convert.ToInt32(ddlCategoryName.SelectedValue);
                 objAdsManager.SubCatID = Convert.ToInt32(ddlSubCategoryName.SelectedValue);
-                objAdsManager.CountryID = Convert.ToInt32(hfCountryID.Value);
+                objAdsManager.CountryID = GetCountry();
                 objAdsManager.CityID = Convert.ToInt32(ddlCityName.SelectedValue);
                 objAdsManager.AdsPrice = Convert.ToDouble(txtPrice.Value);
                 string sTextTitleAds = txtAdsTitle.Value.Replace("ة", "ه");
@@ -226,8 +221,6 @@ public partial class AdsPage : System.Web.UI.Page
                 sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                 objAdsManager.AdsTitle = sTextTitleAds.ToLower();
                 objAdsManager.AdsDescription = editor1.Value; 
-                //objAdsManager.AdsUpdateCreateDate = DateTime.Now.AddDays(nExpireDateCounte);
-
 
                 if (string.IsNullOrEmpty(hfEditImageAds.Value))
                 {

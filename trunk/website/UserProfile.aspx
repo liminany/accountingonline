@@ -42,9 +42,7 @@
                                 data-ad-client="ca-pub-7196218955155134" data-ad-slot="3574583608"></ins>
                             <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-                            <%-- <a id="spUserFullName" class="fancybox" href="#inline1" style="font-weight: bold;
-                                text-decoration: underline">إرسال رسالة</a>--%>
+                            </script> 
                         </td>
                     </tr>
                     <tr>
@@ -149,7 +147,7 @@
                                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                                         cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
-                                                            <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                         </td>
                                                         <td style="width: 15%" align="center">
                                                             <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -167,7 +165,7 @@
                                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                                         cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
-                                                            <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                         </td>
                                                         <td style="width: 15%" align="center">
                                                             <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>

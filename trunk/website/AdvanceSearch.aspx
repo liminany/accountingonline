@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
+﻿<%@ Page Title="سوق سماء العرب | بحث متقدم" Language="C#" MetaDescription="سوق سماء العرب | ArabiSky.com | بحث متقدم" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="AdvanceSearch.aspx.cs" Inherits="AdvanceSearch" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -7,7 +7,7 @@
     <asp:UpdatePanel runat="server" UpdateMode="Conditional">
         <ContentTemplate>
             <div style="height: 30px; float: right;">
-                <a href='/'>سوق سماء العرب </a>» <span id="spPageTitle" runat="server"></span>
+                <a href='/'>سوق سماء العرب </a>» <span>بحث متقدم</span>
             </div>
             <div style="clear: both;">
             </div>
@@ -131,9 +131,7 @@
                                         data-ad-client="ca-pub-7196218955155134" data-ad-slot="3574583608"></ins>
                                     <script>
                                         (adsbygoogle = window.adsbygoogle || []).push({});
-                                    </script>
-                                    <%-- <a id="spUserFullName" class="fancybox" href="#inline1" style="font-weight: bold;
-                                text-decoration: underline">إرسال رسالة</a>--%>
+                                    </script> 
                                 </td>
                             </tr>
                         </table>
@@ -146,7 +144,6 @@
                         <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
                             data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
                         <script>                            (adsbygoogle = window.adsbygoogle || []).push({});</script>
-                        <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
                     </div>
                 </div>
             </div>

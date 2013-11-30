@@ -53,7 +53,6 @@ public partial class UserProfile : System.Web.UI.Page
                         Page.Title = "موقع سماء العرب - " + objEntityRegUsers.UserFullName;
                         Page.Title = "موقع سماء العرب - ArabiSky.com - " + objEntityRegUsers.UserFullName;
                         spCreateDate.InnerHtml = objEntityRegUsers.CreateDateTime.ToShortDateString();
-
                         DBAdsManager objDBAdsManager = new DBAdsManager();
                         rptUserAds.DataSource = objDBAdsManager.GetUserProfileAds(int.Parse(Request.QueryString["UserID"].ToString()));
                         rptUserAds.DataBind();
@@ -104,6 +103,38 @@ public partial class UserProfile : System.Web.UI.Page
         {
             return "null";
         }
+    }
+    protected string GenerateURL(object strId, object Title)
+    {
+        string strTitle = Title.ToString();
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
+        }
+        strTitle = strTitle.Replace(" ", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
+        return strTitle;
     }
     #endregion
     #region WebMethods

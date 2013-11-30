@@ -19,28 +19,24 @@ public partial class Categories : System.Web.UI.Page
     {
         try
         {
-            if (!IsPostBack)
+            if (!string.IsNullOrEmpty(Request.QueryString["CatID"]))
             {
-                string sQueryStringAdsID = Request.QueryString["CatID"];
-                if (!string.IsNullOrEmpty(sQueryStringAdsID))
+                DBAdsManager objDBAdsManager = new DBAdsManager();
+                DataSet objDataSet = objDBAdsManager.GetAdsMainCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()), FormsFunction.GetCookieValueCountryInfo());
+                if (objDataSet.Tables[0].Rows.Count > 0)
                 {
-                    DBAdsManager objDBAdsManager = new DBAdsManager();
-                    DataSet objDataSet = objDBAdsManager.GetAdsMainCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()), GetCountryCode());
-                    if (objDataSet.Tables[0].Rows.Count > 0)
-                    {
-                        string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString();
-                        CatName.InnerHtml = pageTitle;
-                        Page.Title = " سوق سماء العرب | " + pageTitle;
-                        Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
-                        sp_PageTitle.InnerHtml = pageTitle;
-                        rptSlimlerAds.DataSource = objDataSet;
-                        rptSlimlerAds.DataBind();
-                    }
+                    string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString();
+                    CatName.InnerHtml = pageTitle;
+                    Page.Title = " سوق سماء العرب | " + pageTitle;
+                    Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
+                    sp_PageTitle.InnerHtml = pageTitle;
+                    rptSlimlerAds.DataSource = objDataSet;
+                    rptSlimlerAds.DataBind();
                 }
-                else
-                {
-                    Response.Redirect("default", false);
-                }
+            }
+            else
+            {
+                Response.Redirect("/", false);
             }
         }
         catch (Exception ex)
@@ -70,16 +66,38 @@ public partial class Categories : System.Web.UI.Page
             return "null";
         }
     }
-    private int GetCountryCode()
+
+    protected string GenerateURL(object strId, object Title)
     {
-        try
+        string strTitle = Title.ToString();
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
         {
-            return FormsFunction.GetCookieValueCountryInfo();
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
         }
-        catch (Exception)
-        {
-            return 12;
-        }
+        strTitle = strTitle.Replace(" ", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
+        return strTitle;
     }
     #endregion
 }

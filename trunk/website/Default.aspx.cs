@@ -25,19 +25,11 @@ public partial class _Default : System.Web.UI.Page
                 UserAuthentication objUserAuthentication = new UserAuthentication();
                 objEntiryCountry.Action = 6;
                 FormsFunction.BindDDL(ref ddlCountryName, objDALManageCountry.GetAllCountry(objEntiryCountry), "CountryName", "CountryID", "إختر البلد");
-
                 DBAdsManager obDBAdsManager = new DBAdsManager();
-
-
                 rptlatstAdsAdded.DataSource = obDBAdsManager.GetDashbaordAds(FormsFunction.GetCookieValueCountryInfo()).Tables[0];
                 rptlatstAdsAdded.DataBind();
-
-
-
                 rptMostViewd.DataSource = obDBAdsManager.GetDashbaordAds(FormsFunction.GetCookieValueCountryInfo()).Tables[1];
-                rptMostViewd.DataBind();
-
-                //div_SecondSearch.Style.Add("height", "70px");
+                rptMostViewd.DataBind(); 
             }
         }
         catch (Exception ex)
@@ -101,6 +93,37 @@ public partial class _Default : System.Web.UI.Page
             return "null";
         }
     }
-    
+    protected string GenerateURL(object strId, object Title)
+    {
+        string strTitle = Title.ToString();
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
+        }
+        strTitle = strTitle.Replace(" ", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
+        return strTitle;
+    }
     #endregion
 }

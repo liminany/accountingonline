@@ -1,4 +1,4 @@
-﻿<%@ Page Title="سوق سماء العرب | رسائلي الخاصة" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
+﻿<%@ Page Title="سوق سماء العرب | رسائلي الخاصة" MetaDescription="ArabiSky | سوق سماء العرب | إستطلاع رسائلي الخاصة من المستخدمين" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="Inbox.aspx.cs" Inherits="Inbox" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">

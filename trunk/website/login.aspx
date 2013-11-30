@@ -1,4 +1,4 @@
-﻿<%@ Page Title="سوق سماء العرب | تسجيل الدخول" Language="C#" MasterPageFile="~/master.master"
+﻿<%@ Page Title="سوق سماء العرب | تسجيل الدخول" MetaDescription="ArabiSky | سوق سماء العرب | تسجيل الدخول حسابي الخاص في موقع سوق سماء العرب" Language="C#" MasterPageFile="~/master.master"
     AutoEventWireup="true" CodeFile="login.aspx.cs" Inherits="login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">

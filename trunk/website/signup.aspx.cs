@@ -24,7 +24,7 @@ public partial class signup : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
-                   Response.Redirect("Default", false);
+                    Response.Redirect("/", false);
                 }
                 else
                 {
@@ -55,7 +55,7 @@ public partial class signup : System.Web.UI.Page
             objEntityRegUsers.UserFacebookID = string.Empty;
             objEntityRegUsers.UserMobileNumber = string.Empty;
             objEntityRegUsers.UserPassword = EncryptionMethods.Encryption.Encrypt(password.Value);
-            objEntityRegUsers.UserCountry = GetCountry();
+            objEntityRegUsers.UserCountry = FormsFunction.GetCookieValueCountryInfo();
             objEntityRegUsers = objUserAuthentication.RegisterNewUserFromClient(objEntityRegUsers);
             if (objEntityRegUsers.UserID < 0)
             {
@@ -83,17 +83,6 @@ public partial class signup : System.Web.UI.Page
     #endregion
 
     #region Methods
-    static public int GetCountry()
-    {
-        try
-        {
-            return FormsFunction.GetCookieValueCountryInfo();
-        }
-        catch (Exception)
-        {
-            return 12;
-        }
-    }
     #endregion
 
     #region PageMethods

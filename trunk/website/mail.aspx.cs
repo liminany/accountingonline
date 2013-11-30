@@ -18,10 +18,8 @@ public partial class mail : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
-                    string sQueryStringAdsID = Request.QueryString["messageID"];
-                    if (!string.IsNullOrEmpty(sQueryStringAdsID))
+                    if (!string.IsNullOrEmpty(Request.QueryString["messageID"]))
                     {
-                        int nMessageID = int.Parse(Request.QueryString["messageID"].ToString());
                         if (FormsFunction.GetCookieData().Length != 0)
                         {
                             UserAuthentication objUserAuthentication = new UserAuthentication();
@@ -37,7 +35,7 @@ public partial class mail : System.Web.UI.Page
                         }
                         DBUserMessages objDBUserMessages = new DBUserMessages();
                         objDBUserMessages.ReadEmailAndChangeFlag(Request.QueryString["messageID"].ToString());
-                        foreach (System.Data.DataRow rowItemMessage in objDBUserMessages.ReadEmail(nMessageID, Convert.ToInt32(hfUserID.Value)).Tables[0].Rows)
+                        foreach (System.Data.DataRow rowItemMessage in objDBUserMessages.ReadEmail(Convert.ToInt32(Request.QueryString["messageID"].ToString()), Convert.ToInt32(hfUserID.Value)).Tables[0].Rows)
                         {
                             ahrefUserProfile.HRef = "UserProfile?UserID=" + rowItemMessage["UserID"].ToString();
                             Page.Title = rowItemMessage["MessageTitle"].ToString() + "- ArabiSky.com";
@@ -85,11 +83,7 @@ public partial class mail : System.Web.UI.Page
             objUserMessages.MessageSendUsers = Convert.ToInt32(hfUserID.Value);
             objUserMessages.MessageTitle = txtMessageTitle.Value;
             objUserMessages.MessageBody = editor.Value;
-            int nRetuenValue = objDBUserMessages.SendNewMessageForUser(objUserMessages);
-            if (nRetuenValue == 1)
-            {
-
-            }
+            objDBUserMessages.SendNewMessageForUser(objUserMessages);
         }
         catch (Exception ex)
         {

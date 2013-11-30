@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
+﻿<%@ Page Title="سوق سماء العرب | إضافة إعلان جديد" Language="C#" MetaDescription="سوق سماء العرب | ArabiSky.com | إضافة إعلان جديد" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="AdsPage.aspx.cs" Inherits="AdsPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
@@ -25,7 +25,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfUserID" Value="0" />
-    <asp:HiddenField runat="server" ID="hfCountryID" Value="0" />
     <asp:HiddenField runat="server" ID="hfEditImageAds" Value="0" />
     <div style="height: 30px; float: right;">
         <a href='/'>سوق سماء العرب </a>» <span id="spPageTitle" runat="server"></span>
@@ -98,7 +97,7 @@
                                                 <asp:DropDownList ID="ddlSubCategoryName" runat="server" CssClass="arabiSky-homeSelectbox"
                                                     Style="width: 250px;">
                                                 </asp:DropDownList>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlCategoryName"
+                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ddlSubCategoryName"
                                                     ValidationGroup="AddAds" ErrorMessage="الرجاء إختيار القسم الفرعي" InitialValue="-2"></asp:RequiredFieldValidator>
                                             </td>
                                         </tr>

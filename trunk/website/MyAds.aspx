@@ -4,6 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:HiddenField runat="server" ID="hfUserID" Value="" />
     <div style="height: 30px; float: right;">
         <a href='/'>سوق سماء العرب </a>» إعلاناتي
     </div>
@@ -53,7 +54,7 @@
                             <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 55%; padding-right: 30px;">
-                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 10%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "AdsHit")%>
@@ -74,7 +75,7 @@
                             <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 55%; padding-right: 30px;">
-                                    <a href='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 10%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "AdsHit")%>
