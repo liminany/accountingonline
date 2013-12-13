@@ -8,6 +8,9 @@
     <link href="js/Fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
     <script src="js/Fancybox/jquery.fancybox.js" type="text/javascript"></script>
     <script src="js/ArabiSkyCookie.js" type="text/javascript"></script>
+
+    <script src="http://cssglobe.com/lab/tooltip/03/main.js" type="text/javascript"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
             $("#fancybox-overlay").unbind();
@@ -34,11 +37,20 @@
                     createCookie("ArabiSkyCheckCountry", "15", 1000);
                     window.location.reload(true);
                     break;
+				case "16":
+                    createCookie("ArabiSkyCheckCountry", "16", 1000);
+                    window.location.reload(true);
+                    break;
+				case "17":
+                    createCookie("ArabiSkyCheckCountry", "17", 1000);
+                    window.location.reload(true);
+                    break;
                 default:
                     $("a.fancybox").trigger('click');
                     break;
             }
-        }
+        } 
+
     </script>
     <%= SquishIt.Framework.Bundle.Css()
            .Add("~/css/style1.1371718285.css")
@@ -46,6 +58,14 @@
            .Render("~/Styles/combined_#.css")
     %>
     <style type="text/css">
+         #screenshot{
+	        position:absolute;
+	        border:1px solid #ccc;
+	        background:#333;
+	        padding:5px;
+	        display:none;
+	        color:#fff;
+	        }
         .arabiSky-postClassifieds MetroButton
         {
             width: 180px;
@@ -255,7 +275,7 @@
                 function MakeSearch() {
                     var SearchType = document.getElementById("ctl00_home_search_cat_id").value;
                     var SearchText = document.getElementById("ctl00_txtMasterSearch").value;
-                    if (SearchType == "-1" || SearchType == "0" || SearchText == "") {
+                    if (SearchType == "-1" || SearchType == "0") {
                         alert("الرجاء إختيار القسم المناسب و الشيء الذي ترغب البحث عنة");
                         return false;
                     }
@@ -279,9 +299,9 @@
                                 target="_blank">نسخة الموبايل</a>--%>
                         | <a href='https://www.facebook.com/arabisky' target="_blank">
                             <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
-                        | <a href='https://www.facebook.com/arabisky' target="_blank">
+                        | <a href='https://twitter.com/arabisky' target="_blank">
                             <img src="~/images/twitter_footer.png" alt="ArabiSky.com" runat="server"></a>
-                        | <a href='https://www.facebook.com/arabisky' target="_blank">
+                        | <a href='https://plus.google.com/u/4/112541149871591985208' target="_blank">
                             <img src="~/images/gplus_footer.png" alt="ArabiSky.com" runat="server"></a>
                     </div>
                     <div class="arabiSky-footerSeperator">
@@ -310,25 +330,7 @@
             Width="0px" Style="visibility: hidden" OnClick="lbtnCountry_Click"></asp:Button>
         <a class="fancybox" href="#inline1" title="ArabiSky.com | سوق سماء العرب"></a>
         <script>            (function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-43880128-1", "arabisky.com"); ga("send", "pageview")</script>
-        <!-- AddThis Smart Layers BEGIN -->
-        <!-- Go to http://www.addthis.com/get/smart-layers to customize -->
-        <%--        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-527e293742041da6"></script>
-        <script type="text/javascript">
-            addthis.layers({
-                'theme': 'transparent',
-                'share': {
-                    'position': 'right',
-                    'numPreferredServices': 5
-                },
-                'whatsnext': {},
-                'recommended': {
-                    'title': 'ننصحكم بتصفح'
-                }
-
-            });
-        </script>
-        <!-- AddThis Smart Layers END -->--%>
-        <div id="inline1" style="width: 400px; display: none;">
+        <div id="inline1" style="width: 700px; display: none;">
             <table border="0" width="100%" cellpadding="0" cellspacing="0">
                 <tr>
                     <td style="height: 150px; font-size: 25px; font-weight: bold;" align="center">
@@ -343,17 +345,29 @@
                                     <img src="images/Jordan.png" onclick="funChooseCountry('12')" style="cursor: pointer;"
                                         alt="ArabiSky - علم الاردن" title="ArabiSky - علم الاردن" />
                                 </td>
-                                <td style="width: 100px;">
+                                <td style="width: 50px;">
                                 </td>
                                 <td align="center">
                                     <img src="images/Palestine.png" onclick="funChooseCountry('15')" style="cursor: pointer;"
                                         alt="ArabiSky - علم فلسطين" title="ArabiSky - علم فلسطين" />
                                 </td>
-                                <td style="width: 100px;">
+                                <td style="width: 50px;">
                                 </td>
                                 <td align="center">
                                     <img src="images/Saudi_Arabia.png" onclick="funChooseCountry('14')" style="cursor: pointer;"
                                         alt="ArabiSky - علم السعودية" title="ArabiSky - علم السعودية" />
+                                </td>
+								<td style="width: 50px;">
+                                </td>
+                                <td align="center">
+                                    <img src="images/img_libya.png" width="160px" onclick="funChooseCountry('16')" style="cursor: pointer;"
+                                       alt="ArabiSky - علم ليبيا" title="ArabiSky - علم ليبيا" />
+                                </td>
+								<td style="width: 50px;">
+                                </td>
+                                <td align="center">
+                                    <img src="images/imgEgypt.png" width="120px" onclick="funChooseCountry('17')" style="cursor: pointer;"
+                                       alt="ArabiSky - علم مصر" title="ArabiSky - علم مصر" />
                                 </td>
                             </tr>
                         </table>
@@ -366,6 +380,6 @@
             </table>
         </div>
     </div>
-    </form>
+    </form> 
 </body>
 </html>

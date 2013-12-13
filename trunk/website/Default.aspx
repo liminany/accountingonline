@@ -3,9 +3,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <meta name="description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل" />
-    <meta name="keywords" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة , الخدمات , وظائف شاغرة , الباحثين عن عمل" />
+    <meta name="keywords" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة , الخدمات , وظائف شاغرة , الباحثين عن عمل,سوق سماء العرب,كل ما تحتاجة في الأردن,جوردان ماركت,إعلانات تجارية,إعلانات مبوبة,أضف إعلان,إعلان,الأردن,عمان,السلط,جرش,إربد,معان,الزرقاء,مادبا,العقبة,المفرق,الكرك,كهربائيات,إلكترونيات,أثاث بيتي,أثاث مكتبي,سلع مستعملة,سياحة وسفر,خدمات,عقارات,شقق,منازل,بيوت,أراضي,عناية صحية وجمالية,مركبات,سيارات,ملابس,للإيجار,للبيع,كمبيوتر,لابتوب,خلوي,نقليات,سياحة,فنادق,شاليهات,ألعاب,فيديو,طابعات,ماكنات تصوير,ثلاجات,غسالات,أفران,غرف نوم, غرف سفرة,غرف جلوس,كراسي,فرشات,صالونات" />
     <meta name="title" content="ArabiSky  -  سوق سماء العرب | وظائف | إعلانات | بيع و شراء | سيارات و مركبات" />
     <title>ArabiSky - سوق سماء العرب | وظائف | إعلانات | بيع و شراء</title>
+    <meta http-equiv="content-language" content="ar" />
+    <meta name="author" content="arabisky.com" />
+    <meta name="contact" content="info@arabisky.com" />
+    <meta name="copyright" content="Copyright (c)2013. All Rights Reserved." />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta itemprop="name" content="ArabiSky" />
@@ -42,7 +46,6 @@
             }
         }
     </script>
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:UpdatePanel ID="upDefaultPage" runat="server" UpdateMode="Conditional">
@@ -146,18 +149,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="width: 30%; float: left; height: 50px;font-size:15px;">
-                            <div class="arabiSky-postClassifieds MetroButton" style="float: left; background-color: #ededed;border-bottom:1px solid #ccc;
-                                border-radius: 0px; width: 120px; margin-left: 0px; border-top: 2px solid #f89a21;
-                                height: 38px;">
-                                <a href="AdvanceSearch" style="display: block; width: 100%; height: 100%;text-decoration:none;">بحث متقدم</a>
+                        <div style="width: 30%; float: left; height: 50px; font-size: 15px;">
+                            <div class="arabiSky-postClassifieds MetroButton" style="float: left; background-color: #ededed;
+                                border-bottom: 1px solid #ccc; border-radius: 0px; width: 120px; margin-left: 0px;
+                                border-top: 2px solid #f89a21; height: 38px;">
+                                <a href="AdvanceSearch" style="display: block; width: 100%; height: 100%; text-decoration: none;">
+                                    بحث متقدم</a>
                             </div>
                             <div style="float: left; width: 5px;">
                                 &nbsp;</div>
-                            <div class="arabiSky-postClassifieds MetroButton" style="float: left; background-color: #ededed;border-bottom:1px solid #ccc;
-                                border-radius: 0px; width: 120px; margin-left: 0px; border-top: 2px solid #f89a21;
-                                height: 38px;">
-                                <a href="Brand" style="display: block; width: 100%; height: 100%;text-decoration:none;">بحث بواسطة نوع السيارة</a>
+                            <div class="arabiSky-postClassifieds MetroButton" style="float: left; background-color: #ededed;
+                                border-bottom: 1px solid #ccc; border-radius: 0px; width: 120px; margin-left: 0px;
+                                border-top: 2px solid #f89a21; height: 38px;">
+                                <a href="Brand" style="display: block; width: 100%; height: 100%; text-decoration: none;">
+                                    بحث بواسطة نوع السيارة</a>
                             </div>
                         </div>
                     </div>
@@ -166,18 +171,41 @@
                     <div style="height: 20px;">
                     </div>
                     <div class="arabiSky-indexMainBlocks">
-                        <div class="arabiSky-indexInnerBlocks">
+                        <%--<div class="arabiSky-indexInnerBlocks">
                             <div class="arabiSky-Title">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories?CatID=4&Title=للإيجار" title="للإيجار" style="color: #111111; font-size: 20px;">للإيجار</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=4&Title=للإيجار" title="للإيجار" style="color: #111111;
+                                    font-size: 20px;">للإيجار</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent" style="height: 100px;">
                                 <ul>
-                                    <li><a href="Category?CatID=30&Title=العقارات-الإسكان" title="العقارات و الإسكان">العقارات و الإسكان </a> </li>
-                                    <li><a href="Category?CatID=31&Title=السيارات-المركبات" title="السيارات و المركبات">السيارات و المركبات</a></li>
+                                    <li><a href="Category?CatID=30&Title=العقارات-الإسكان" title="العقارات و الإسكان">العقارات
+                                        و الإسكان </a></li>
+                                    <li><a href="Category?CatID=31&Title=السيارات-المركبات" title="السيارات و المركبات">
+                                        السيارات و المركبات</a></li>
+                                    <li><a href="Category?CatID=32&Title=أشياء أخرى" title="أشياء أخرى">أشياء أخرى</a></li>
+                                </ul>
+                            </div>
+                            <!-- closing arabiSky-indexContent -->
+                        </div>--%>
+                        <div class="arabiSky-indexInnerBlocks">
+                            <div class="arabiSky-indexHeadingLeftCurve">
+                            </div>
+                            <div class="arabiSky-indexHeadingContent">
+                                <a href="Categories?CatID=4&Title=للإيجار" title="للإيجار" style="color: #111111;
+                                    font-size: 20px;">للإيجار</a>&nbsp;<span></span>
+                            </div>
+                            <div class="arabiSky-indexHeadingRightCurve">
+                            </div>
+                            <div class="arabiSky-indexContent" style="height: 100px;">
+                                <ul>
+                                    <li><a href="Category?CatID=30&Title=العقارات-الإسكان" title="العقارات و الإسكان">العقارات
+                                        و الإسكان </a></li>
+                                    <li><a href="Category?CatID=31&Title=السيارات-المركبات" title="السيارات و المركبات">
+                                        السيارات و المركبات(مراكز الفحص)</a></li>
                                     <li><a href="Category?CatID=32&Title=أشياء أخرى" title="أشياء أخرى">أشياء أخرى</a></li>
                                 </ul>
                             </div>
@@ -187,13 +215,15 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories?CatID=5&Title=الباحثين عن عمل" title="الباحثين عن عمل" style="color: #111111; font-size: 20px;">الباحثين عن عمل</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=5&Title=الباحثين عن عمل" title="الباحثين عن عمل" style="color: #111111;
+                                    font-size: 20px;">الباحثين عن عمل</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent" style="height: 40px;">
                                 <ul>
-                                    <li><a href="Category?CatID=33&Title=الباحثين عن عمل" title="الباحثين عن عمل">الباحثين عن عمل </a></li>
+                                    <li><a href="Category?CatID=33&Title=الباحثين عن عمل" title="الباحثين عن عمل">الباحثين
+                                        عن عمل </a></li>
                                 </ul>
                             </div>
                             <!-- closing arabiSky-indexContent -->
@@ -204,20 +234,23 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories?CatID=3&Title=وظائف شاغرة" title="وظائف شاغرة" style="color: #111111; font-size: 20px;">
-                                    وظائف شاغرة</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=3&Title=وظائف شاغرة" title="وظائف شاغرة" style="color: #111111;
+                                    font-size: 20px;">وظائف شاغرة</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <!-- arabiSky-indexContent starts -->
                             <div class="arabiSky-indexContent" style="height: 230px;">
                                 <ul>
-                                    <li><a href="Category?CatID=22&Title=إدارة / سكرتارية" title="إدارة / سكرتارية">إدارة / سكرتارية</a></li>
-                                    <li><a href="Category?CatID=23&Title=تسويق / مبيعات" title="تسويق / مبيعات">تسويق / مبيعات </a></li>
+                                    <li><a href="Category?CatID=22&Title=إدارة / سكرتارية" title="إدارة / سكرتارية">إدارة
+                                        / سكرتارية</a></li>
+                                    <li><a href="Category?CatID=23&Title=تسويق / مبيعات" title="تسويق / مبيعات">تسويق /
+                                        مبيعات </a></li>
                                     <li><a href="Category?CatID=24&Title=تدريس / تدريب" title="تدريس / تدريب">تدريس / تدريب</a></li>
-                                    <li><a href="Category?CatID=25&Title=كمبيوتر / تقنية المعلومات" title="كمبيوتر / تقنية المعلومات">كمبيوتر / تقنية المعلومات
-                                    </a></li>
-                                    <li><a href="Category?CatID=26&Title=محاسبة / مالية" title="محاسبة / مالية">محاسبة / مالية</a></li>
+                                    <li><a href="Category?CatID=25&Title=كمبيوتر / تقنية المعلومات" title="كمبيوتر / تقنية المعلومات">
+                                        كمبيوتر / تقنية المعلومات </a></li>
+                                    <li><a href="Category?CatID=26&Title=محاسبة / مالية" title="محاسبة / مالية">محاسبة /
+                                        مالية</a></li>
                                     <li><a href="Category?CatID=27&Title=طب / تمريض" title="طب / تمريض">طب / تمريض</a></li>
                                     <li><a href="Category?CatID=28&Title=هندسة" title="هندسة">هندسة </a></li>
                                     <li><a href="Category?CatID=29&Title=أشغال أخرى" title="أشغال أخرى">أشغال أخرى</a></li>
@@ -231,23 +264,29 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories?CatID=2&Title=الخدمات" title="الخدمات" style="color: #111111; font-size: 20px;">
-                                    الخدمات</a>&nbsp;<span></span>
+                                <a href="Categories?CatID=2&Title=الخدمات" title="الخدمات" style="color: #111111;
+                                    font-size: 20px;">الخدمات</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent" style="height: 230px;">
                                 <ul>
-                                    <li><a href="Category?CatID=12&Title=دروس-دورات تدريبية" title="دروس و دورات تدريبية">دروس و دورات تدريبية</a></li>
-                                    <li><a href="Category?CatID=13&Title=الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت">الكومبيوتر و الإنترنت</a></li>
+                                    <li><a href="Category?CatID=12&Title=دروس-دورات تدريبية" title="دروس و دورات تدريبية">
+                                        دروس و دورات تدريبية</a></li>
+                                    <li><a href="Category?CatID=13&Title=الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت">
+                                        الكومبيوتر و الإنترنت</a></li>
                                     <li><a href="Category?CatID=14&Title=بناء-مقاولات" title="بناء و مقاولات">بناء و مقاولات</a></li>
                                     <li><a href="Category?CatID=15&Title=خدمات كهربائية" title="خدمات كهربائية">خدمات كهربائية</a></li>
-                                    <li><a href="Category?CatID=16&Title=السفر-السياحة" title="السفر و السياحة">السفر و السياحة</a></li>
-                                    <li><a href="Category?CatID=17&Title=خدمات طبية" title="خدمات طبية">خدمات طبية </a></li>
-                                    <li><a href="Category?CatID=18&Title=تجهيز الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات">تجهيز الأطعمة و الحفلات
+                                    <li><a href="Category?CatID=16&Title=السفر-السياحة" title="السفر و السياحة">السفر و
+                                        السياحة</a></li>
+                                    <li><a href="Category?CatID=17&Title=خدمات طبية" title="خدمات طبية">خدمات طبية </a>
+                                    </li>
+                                    <li><a href="Category?CatID=18&Title=تجهيز الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات">
+                                        تجهيز الأطعمة و الحفلات </a></li>
+                                    <li><a href="Category?CatID=19&Title=إصلاح-صيانة السيارات" title="إصلاح و صيانة السيارات">
+                                        إصلاح و صيانة السيارات</a></li>
+                                    <li><a href="Category?CatID=20&Title=خدمات قانونية" title="خدمات قانونية">خدمات قانونية
                                     </a></li>
-                                    <li><a href="Category?CatID=19&Title=إصلاح-صيانة السيارات" title="إصلاح و صيانة السيارات">إصلاح و صيانة السيارات</a></li>
-                                    <li><a href="Category?CatID=20&Title=خدمات قانونية" title="خدمات قانونية">خدمات قانونية </a></li>
                                     <li><a href="Category?CatID=21&Title=خدمات أخرى" title="خدمات أخرى">خدمات أخرى</a></li>
                                 </ul>
                             </div>
@@ -265,11 +304,16 @@
                             </div>
                             <div class="arabiSky-indexContent" style="height: 120px;">
                                 <ul>
-                                    <li><a href="Category?CatID=6&Title=العقارات-الإسكان" title="العقارات و الإسكان">العقارات و الإسكان</a></li>
-                                    <li><a href="Category?CatID=7&Title=السيارات-المركبات" title="السيارات و المركبات">السيارات و المركبات</a></li>
-                                    <li><a href="Category?CatID=8&Title=الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات">الكهربائيات و الإلكترونيات</a></li>
-                                    <li><a href="Category?CatID=9&Title=الأثاث-المفروشات" title="الأثاث و المفروشات">الأثاث و المفروشات</a></li>
-                                    <li><a href="Category?CatID=10&Title=أرقام هواتف مميزة" title="أرقام هواتف مميزة">أرقام هواتف مميزة</a></li>
+                                    <li><a href="Category?CatID=6&Title=العقارات-الإسكان" title="العقارات و الإسكان">العقارات
+                                        و الإسكان</a></li>
+                                    <li><a href="Category?CatID=7&Title=السيارات-المركبات" title="السيارات و المركبات">السيارات
+                                        و المركبات</a></li>
+                                    <li><a href="Category?CatID=8&Title=الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات">
+                                        الكهربائيات و الإلكترونيات</a></li>
+                                    <li><a href="Category?CatID=9&Title=الأثاث-المفروشات" title="الأثاث و المفروشات">الأثاث
+                                        و المفروشات</a></li>
+                                    <li><a href="Category?CatID=10&Title=أرقام هواتف مميزة" title="أرقام هواتف مميزة">أرقام
+                                        هواتف مميزة</a></li>
                                     <li><a href="Category?CatID=11&Title=أشياء أخرى" title="أشياء أخرى">أشياء أخرى</a></li>
                                 </ul>
                             </div>
@@ -294,17 +338,62 @@
                 </div>
                 <div style="width: 100%; height: auto;">
                     <table width="100%" cellpadding="0" cellspacing="0">
-						<tr>
-							<td style="text-align: center;">
-								<a href="http://livekora.net/" target="_blank">
-									<img src="http://livekora.net/Livekora_Ads/livekora.jpg" style="border: 0px;" alt="ArabiSky-Livekora" title="احدث و اخر اخبار كرة القدم">
-								</a>
-							</td>
-						</tr>
-						<tr>
-							<td style="height:5px;"></td>
-						</tr>
-					   <tr>
+                        <tr>
+                            <td colspan="3">
+                                <div style="width: 100%; height: auto;">
+                                    <div>
+                                        <div class="arabiSky-indexHeadingLeftCurve" style="width: 1%;">
+                                        </div>
+                                        <div class="arabiSky-indexHeadingContent" style="width: 98%;">
+                                            <div style="float: right;">
+                                                <span style="color: #111111; font-size: 20px;">أدوات الموقع</span>
+                                            </div>
+                                        </div>
+                                        <div class="arabiSky-indexHeadingRightCurve" style="width: 1%;">
+                                        </div>
+                                    </div>
+                                    <div style="clear: both;">
+                                    </div>
+                                    <div>
+                                        <div style="border: 1px solid #ccc; height: auto; text-align: center; height: 70px;
+                                            padding-right: 20px;">
+                                            <table border="0" width="100%" cellpadding="0" cellspacing="0">
+                                                <tr>
+                                                    <td colspan="3" style="height: 10px;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="right" style="width: 300px;">
+                                                        <img src="images/carLogo.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
+                                                        <a href="GalleryList?Tag=RC" style="position: relative; bottom: 10px; font-weight: bold;">
+                                                            &nbsp;&nbsp;تأجير سيارات&nbsp;&nbsp;</a>
+                                                    </td>
+                                                    <td align="right" style="width: 300px;">
+                                                        <img src="images/CarGrey.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
+                                                        <a href="GalleryList?Tag=GC" style="position: relative; bottom: 10px; font-weight: bold;">
+                                                            &nbsp;&nbsp; معارض سيارات &nbsp;&nbsp;</a>
+                                                    </td>
+                                                    <td align="right" style="width: 300px;">
+                                                        <img src="images/carCheck.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
+                                                        <a href="GalleryList?Tag=CC" style="position: relative; bottom: 10px; font-weight: bold;">
+                                                            &nbsp;&nbsp; مراكز الفحص &nbsp;&nbsp;</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3" style="height: 10px;">
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 5px;">
+                            </td>
+                        </tr>
+                        <tr>
                             <td>
                                 <div style="width: 100%; height: auto;">
                                     <div>
@@ -347,7 +436,8 @@
                                                         <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                                             cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                               <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -356,8 +446,13 @@
                                                                 <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                                             </td>
                                                             <td align="center" style="padding-left: 20px; width: 10%">
-                                                                <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                    width="50" height="50" alt="ArabiSky.com" />
+                                                                <p>
+                                                                    <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                        <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                            width="50" height="50" alt="ArabiSky.com" />
+                                                                    </a>
+                                                                </p>
                                                             </td>
                                                         </tr>
                                                     </ItemTemplate>
@@ -365,7 +460,8 @@
                                                         <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                                             cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -373,9 +469,14 @@
                                                             <td align="center" style="width: 10%; font-size: 13px;">
                                                                 <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                                             </td>
-                                                            <td align="center" style="padding-left: 20px; width: 10%">
-                                                                <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                    width="50" height="50" alt="ArabiSky.com" />
+                                                            <td align="center" style="padding-left: 20px; width: 10%;">
+                                                                <p>
+                                                                    <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                        <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                            width="50" height="50" alt="ArabiSky.com" />
+                                                                    </a>
+                                                                </p>
                                                             </td>
                                                         </tr>
                                                     </AlternatingItemTemplate>
@@ -453,7 +554,8 @@
                                                         <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                                             cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                               <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -462,8 +564,13 @@
                                                                 <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                                             </td>
                                                             <td align="center" style="padding-left: 20px; width: 10%">
-                                                                <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                    width="50" height="50" alt="ArabiSky.com" />
+                                                                <p>
+                                                                    <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                        <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                            width="50" height="50" alt="ArabiSky.com" />
+                                                                    </a>
+                                                                </p>
                                                             </td>
                                                         </tr>
                                                     </ItemTemplate>
@@ -471,7 +578,8 @@
                                                         <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                                             cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                               <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -480,8 +588,13 @@
                                                                 <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                                             </td>
                                                             <td align="center" style="padding-left: 20px; width: 10%">
-                                                                <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                    width="50" height="50" alt="ArabiSky.com" />
+                                                                <p>
+                                                                    <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                        <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                            width="50" height="50" alt="ArabiSky.com" />
+                                                                    </a>
+                                                                </p>
                                                             </td>
                                                         </tr>
                                                     </AlternatingItemTemplate>

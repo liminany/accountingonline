@@ -119,6 +119,20 @@ public partial class master : System.Web.UI.MasterPage
                         alinkCountryNameWithoutLogin.InnerHtml = "فلسطين";
                         ImgCountryFlagWithoutlogin.Src = "images/imgPalestine_small.png";
                         break;
+					case 16:
+                        ImgCountryFlag.Src = "images/img_Libya_flat.png";
+                        ImgCountryFlag.Alt = "ليبيا";
+                        alinkCountryName.InnerHtml = "ليبيا";
+                        alinkCountryNameWithoutLogin.InnerHtml = "ليبيا";
+                        ImgCountryFlagWithoutlogin.Src = "images/img_Libya_flat.png";
+                        break;
+					case 17:
+                        ImgCountryFlag.Src = "images/img_Egypt-Flag.png";
+                        ImgCountryFlag.Alt = "مصر";
+                        alinkCountryName.InnerHtml = "مصر";
+                        alinkCountryNameWithoutLogin.InnerHtml = "مصر";
+                        ImgCountryFlagWithoutlogin.Src = "images/img_Egypt-Flag.png";
+                        break;
                     default:
                         ImgCountryFlag.Src = "images/world_map_earth.png";
                         ImgCountryFlag.Alt = "إختر البلد";

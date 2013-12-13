@@ -1,5 +1,6 @@
-﻿<%@ Page Title="موقع سماء العرب | إعلاناتي" MetaDescription="موقع سماء العرب | إعلاناتي - ArabiSky.com" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
-    CodeFile="MyAds.aspx.cs" Inherits="MyAds" %>
+﻿<%@ Page Title="موقع سماء العرب | إعلاناتي" MetaDescription="موقع سماء العرب | إعلاناتي - ArabiSky.com"
+    Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true" CodeFile="MyAds.aspx.cs"
+    Inherits="MyAds" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -26,7 +27,8 @@
         <div style="clear: both;">
         </div>
         <div>
-            <div id="div_AdsTable" runat="server" style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px; text-align: center;">
+            <div id="div_AdsTable" runat="server" style="border: 1px solid #ccc; height: auto;
+                width: 973px; margin-right: 10px; text-align: center;">
                 <table class="tbMainAds" width="100%" cellpadding="0" cellspacing="0">
                     <asp:Repeater runat="server" ID="rptSlimlerAds">
                         <HeaderTemplate>
@@ -54,7 +56,8 @@
                             <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 55%; padding-right: 30px;">
-                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 10%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "AdsHit")%>
@@ -66,8 +69,13 @@
                                     <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                 </td>
                                 <td align="center" style="padding-left: 20px; width: 10%">
-                                    <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                        width="50" height="50" alt="ArabiSky.com" />
+                                    <p>
+                                        <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                            title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                width="50" height="50" alt="ArabiSky.com" />
+                                        </a>
+                                    </p>
                                 </td>
                             </tr>
                         </ItemTemplate>
@@ -75,7 +83,8 @@
                             <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 55%; padding-right: 30px;">
-                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 10%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "AdsHit")%>
@@ -87,15 +96,22 @@
                                     <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                 </td>
                                 <td align="center" style="padding-left: 20px; width: 10%">
-                                    <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                        width="50" height="50" alt="ArabiSky.com" />
+                                    <p>
+                                        <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                            title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                width="50" height="50" alt="ArabiSky.com" />
+                                        </a>
+                                    </p>
                                 </td>
                             </tr>
                         </AlternatingItemTemplate>
                     </asp:Repeater>
                 </table>
             </div>
-            <div style="text-align:center;border:1px solid #ccc;margin-right: 10px;height: 45px;padding-top: 30px;font-weight:bold;font-size:20px;" id="div_EmptyAdsTable" runat="server">
+            <div style="text-align: center; border: 1px solid #ccc; margin-right: 10px; height: 45px;
+                padding-top: 30px; font-weight: bold; font-size: 20px;" id="div_EmptyAdsTable"
+                runat="server">
                 لايوجد لديك إعلانات مضافة - لإضافة إعلان جديد <a href="AdsPage">انقر هنا</a>
             </div>
         </div>

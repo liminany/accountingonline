@@ -2,6 +2,7 @@
 using DAL;
 using Entity;
 using NLog;
+using System.Net;
 
 public partial class AccountSettings : System.Web.UI.Page
 {
@@ -30,16 +31,22 @@ public partial class AccountSettings : System.Web.UI.Page
                         txtUserEmailAddress.Value = objEntityRegUsers.UserEmailAddress;
                         txtUserAdsQuta.Value = objEntityRegUsers.UserCountAds.ToString();
                         txtUserAdsCount.Value = objEntityRegUsers.CountAdsUsed.ToString();
-
-
                         txtUserMobilePhoneNumber.Value = objEntityRegUsers.UserMobileNumber;
-                        if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
+
+                        if (!string.IsNullOrEmpty(objEntityRegUsers.UserFacebookID))
                         {
-                            imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                            imgUserProfile.Src = string.Format("https://graph.facebook.com/{0}/picture", objEntityRegUsers.UserFacebookID);
                         }
                         else
                         {
-                            imgUserProfile.Src = objEntityRegUsers.UserImage;
+                            if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
+                            {
+                                imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                            }
+                            else
+                            {
+                                imgUserProfile.Src = objEntityRegUsers.UserImage;
+                            }
                         }
                     }
                     else
@@ -62,13 +69,20 @@ public partial class AccountSettings : System.Web.UI.Page
                         txtUserAdsQuta.Value = objEntityRegUsers.UserCountAds.ToString();
                         txtUserAdsCount.Value = objEntityRegUsers.CountAdsUsed.ToString();
 
-                        if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
+                        if (!string.IsNullOrEmpty(objEntityRegUsers.UserFacebookID))
                         {
-                            imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                            imgUserProfile.Src = string.Format("https://graph.facebook.com/{0}/picture", objEntityRegUsers.UserFacebookID);
                         }
                         else
                         {
-                            imgUserProfile.Src = objEntityRegUsers.UserImage;
+                            if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
+                            {
+                                imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                            }
+                            else
+                            {
+                                imgUserProfile.Src = objEntityRegUsers.UserImage;
+                            }
                         }
                     }
                 }
@@ -146,5 +160,25 @@ public partial class AccountSettings : System.Web.UI.Page
     #endregion
 
     #region Methods
+    public string GetPictureUrl(string faceBookId)
+    {
+        WebResponse response = null;
+        string pictureUrl = string.Empty;
+        try
+        {
+            WebRequest request = WebRequest.Create(string.Format("https://graph.facebook.com/{0}/picture", faceBookId));
+            response = request.GetResponse();
+            pictureUrl = response.ResponseUri.ToString();
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("AccountSettings:::GetPictureUrl:::" + ex.Message);
+        }
+        finally
+        {
+            if (response != null) response.Close();
+        }
+        return pictureUrl;
+    }
     #endregion
 }

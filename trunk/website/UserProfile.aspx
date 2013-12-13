@@ -42,7 +42,7 @@
                                 data-ad-client="ca-pub-7196218955155134" data-ad-slot="3574583608"></ins>
                             <script>
                                 (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script> 
+                            </script>
                         </td>
                     </tr>
                     <tr>
@@ -147,7 +147,8 @@
                                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                                         cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
-                                                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                         </td>
                                                         <td style="width: 15%" align="center">
                                                             <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -156,8 +157,13 @@
                                                             <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                                         </td>
                                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                width="50" height="50" alt="ArabiSky.com" />
+                                                            <p>
+                                                                <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                    title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                    <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        width="50" height="50" alt="ArabiSky.com" />
+                                                                </a>
+                                                            </p>
                                                         </td>
                                                     </tr>
                                                 </ItemTemplate>
@@ -165,7 +171,8 @@
                                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                                         cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
-                                                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                                         </td>
                                                         <td style="width: 15%" align="center">
                                                             <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -174,8 +181,13 @@
                                                             <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                                         </td>
                                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                width="50" height="50" alt="ArabiSky.com" />
+                                                            <p>
+                                                                <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                    title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                    <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        width="50" height="50" alt="ArabiSky.com" />
+                                                                </a>
+                                                            </p>
                                                         </td>
                                                     </tr>
                                                 </AlternatingItemTemplate>

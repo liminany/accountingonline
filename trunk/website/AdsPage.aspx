@@ -179,7 +179,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="3">
-                                        <asp:FileUpload ID="file_upload" class="multi" runat="server" accept="png|jpg" maxlength="6" />
+                                        <asp:FileUpload ID="file_upload" class="multi" runat="server" accept="png|jpg|jpeg" maxlength="6" />
                                         <asp:Label ID="lblMessage" runat="server" />
                                     </td>
                                 </tr>

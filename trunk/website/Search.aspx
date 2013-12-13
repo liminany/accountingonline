@@ -66,8 +66,13 @@
                                                             <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                                         </td>
                                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                width="50" height="50" />
+                                                           <p>
+                                                                    <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                        <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                            width="50" height="50" alt="ArabiSky.com" />
+                                                                    </a>
+                                                                </p>
                                                         </td>
                                                     </tr>
                                                 </ItemTemplate>
@@ -84,8 +89,13 @@
                                                             <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                                         </td>
                                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                width="50" height="50" />
+                                                           <p>
+                                                                    <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                        <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                            width="50" height="50" alt="ArabiSky.com" />
+                                                                    </a>
+                                                                </p>
                                                         </td>
                                                     </tr>
                                                 </AlternatingItemTemplate>
