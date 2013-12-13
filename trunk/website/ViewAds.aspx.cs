@@ -50,7 +50,7 @@ public partial class ViewAds : System.Web.UI.Page
                     Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
 
                     txtMessageTitle.Text = "Re : " + rows["AdsTitle"].ToString();
-                    editor.Value = string.Format("هذا الاعلان بخصوص الإعلان {0}", url);
+                    //editor.Value = string.Format("هذا الاعلان بخصوص الإعلان {0}", url);
 
                     if (Convert.ToInt32(rows["AdsPrice"].ToString()) > 0)
                     {
@@ -108,17 +108,17 @@ public partial class ViewAds : System.Web.UI.Page
                     rptSlimlerAds.DataBind();
 
                     #region UserProfile
-                    sp_UserFullName.InnerHtml = rows["User_FullName"].ToString();
-                    aEmailAddress.InnerHtml = rows["User_EmailAddress"].ToString();
-                    ahrefUserProfile.HRef = "UserProfile?UserID=" + rows["UserID"].ToString();
-                    if (string.IsNullOrEmpty(rows["User_Image"].ToString()))
-                    {
-                        imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
-                    }
-                    else
-                    {
-                        imgUserProfile.Src = rows["User_Image"].ToString();
-                    }
+                    //sp_UserFullName.InnerHtml = rows["User_FullName"].ToString();
+                    //aEmailAddress.InnerHtml = rows["User_EmailAddress"].ToString();
+                    //ahrefUserProfile.HRef = "UserProfile?UserID=" + rows["UserID"].ToString();
+                    //if (string.IsNullOrEmpty(rows["User_Image"].ToString()))
+                    //{
+                    //    imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                    //}
+                    //else
+                    //{
+                    //    imgUserProfile.Src = rows["User_Image"].ToString();
+                    //}
                     #endregion
                 }
 
@@ -269,6 +269,24 @@ public partial class ViewAds : System.Web.UI.Page
     #endregion
 
     #region Methods
+    protected string SplitArticlsTitle(string sArticlsTitle)
+    {
+        try
+        {
+            if (sArticlsTitle.Length > 55)
+            {
+                return sArticlsTitle.Substring(0, 54) + "...";
+            }
+            else
+            {
+                return sArticlsTitle;
+            }
+        }
+        catch (Exception)
+        {
+            return "Unknown";
+        }
+    }
     private string GetCurrancyTags()
     {
         try

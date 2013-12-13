@@ -205,7 +205,7 @@
                                     <li><a href="Category?CatID=30&Title=العقارات-الإسكان" title="العقارات و الإسكان">العقارات
                                         و الإسكان </a></li>
                                     <li><a href="Category?CatID=31&Title=السيارات-المركبات" title="السيارات و المركبات">
-                                        السيارات و المركبات(مراكز الفحص)</a></li>
+                                        السيارات و المركبات</a></li>
                                     <li><a href="Category?CatID=32&Title=أشياء أخرى" title="أشياء أخرى">أشياء أخرى</a></li>
                                 </ul>
                             </div>
@@ -338,7 +338,7 @@
                 </div>
                 <div style="width: 100%; height: auto;">
                     <table width="100%" cellpadding="0" cellspacing="0">
-                        <tr>
+                        <tr id="ArabiSkyTools" runat="server">
                             <td colspan="3">
                                 <div style="width: 100%; height: auto;">
                                     <div>

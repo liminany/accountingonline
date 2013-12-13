@@ -4,8 +4,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div style="height: 30px; float: right;">
-        <a href='/'>سوق سماء العرب </a>»&nbsp;<span id="sp_PageTitle" runat="server"></span>
+    <div style="height: 100px;">
+        <div style="float: right;">
+            <a href='/'>سوق سماء العرب </a>»&nbsp;<span id="sp_PageTitle" runat="server"></span>
+        </div>
+        <div style="float: left;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ArabiSky_Default_Top -->
+            <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
     </div>
     <div style="clear: both;">
     </div>
@@ -18,7 +27,7 @@
                         </div>
                         <div class="arabiSky-indexHeadingContent" style="width: 98%;">
                             <div style="float: right;">
-                                <span style="color: #111111; font-size: 20px;"> مكاتب تاجير سيارات</span>
+                                <span style="color: #111111; font-size: 20px;">مكاتب تاجير سيارات</span>
                             </div>
                         </div>
                         <div class="arabiSky-indexHeadingRightCurve" style="width: 1%;">
@@ -136,7 +145,7 @@
                         </div>
                         <div class="arabiSky-indexHeadingContent" style="width: 98%;">
                             <div style="float: right;">
-                                <span style="color: #111111; font-size: 20px;"> معارض سيارات</span>
+                                <span style="color: #111111; font-size: 20px;">معارض سيارات</span>
                             </div>
                         </div>
                         <div class="arabiSky-indexHeadingRightCurve" style="width: 1%;">
@@ -366,7 +375,9 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            065663635<br />0795545610<br />5690536
+                                            065663635<br />
+                                            0795545610<br />
+                                            5690536
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -381,7 +392,8 @@
                                             الاردن - عمان - الوحدات
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0795041323<br />0795041323
+                                            0795041323<br />
+                                            0795041323
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -396,7 +408,8 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0795212654<br />0788543902
+                                            0795212654<br />
+                                            0788543902
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -426,7 +439,9 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            4636689<br />0795108123<br />4741367
+                                            4636689<br />
+                                            0795108123<br />
+                                            4741367
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -441,7 +456,8 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0799040415<br />0799040415
+                                            0799040415<br />
+                                            0799040415
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -456,7 +472,9 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            5544371<br />0795000884<br />5544301
+                                            5544371<br />
+                                            0795000884<br />
+                                            5544301
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -471,7 +489,8 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0788118233<br />0795367400
+                                            0788118233<br />
+                                            0795367400
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -486,7 +505,9 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0795136094<br />0795136094<br />4167777
+                                            0795136094<br />
+                                            0795136094<br />
+                                            4167777
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -501,7 +522,9 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            5672126<br />0795007404<br />5691315
+                                            5672126<br />
+                                            0795007404<br />
+                                            5691315
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -516,7 +539,9 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            06515799<br />0795663548<br />06515889
+                                            06515799<br />
+                                            0795663548<br />
+                                            06515889
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -531,12 +556,13 @@
                                             الاردن - الزرقاء
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            024563114<br />0785625786
+                                            024563114<br />
+                                            0785625786
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
-                                    </tr> 
+                                    </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                         cursor: pointer;">
                                         <td align="right" style="width: 65%; padding-right: 30px;">
@@ -546,7 +572,8 @@
                                             الاردن - الزرقاء
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                           0795280676<br />0788547033
+                                            0795280676<br />
+                                            0788547033
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -561,7 +588,8 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0796888013<br />0796888013
+                                            0796888013<br />
+                                            0796888013
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -576,7 +604,9 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0795332876<br />0795332876<br />064165124
+                                            0795332876<br />
+                                            0795332876<br />
+                                            064165124
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -591,7 +621,8 @@
                                             الاردن - الزرقاء
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0799105752<br />0799977262
+                                            0799105752<br />
+                                            0799977262
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -606,7 +637,8 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0788897971<br />0788897971
+                                            0788897971<br />
+                                            0788897971
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -618,10 +650,11 @@
                                             <a href="javascript:void(0)">معرض عمر العزام لتجارة السيارات</a>
                                         </td>
                                         <td style="width: 15%" align="center">
-                                           الاردن - الزرقاء - المنطقة الحره
+                                            الاردن - الزرقاء - المنطقة الحره
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0785007070<br />0776387872
+                                            0785007070<br />
+                                            0776387872
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -636,7 +669,8 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            0799419454<br />0795677556
+                                            0799419454<br />
+                                            0795677556
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -651,7 +685,8 @@
                                             الاردن - الزرقاء
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            58138811<br />0786701175
+                                            58138811<br />
+                                            0786701175
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -666,7 +701,9 @@
                                             الاردن - عمان
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            065152051<br />0796975900<br />065150525
+                                            065152051<br />
+                                            0796975900<br />
+                                            065150525
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -681,7 +718,9 @@
                                             الاردن - الزرقاء
                                         </td>
                                         <td align="center" style="width: 10%; font-size: 13px;">
-                                            065162638<br />0799898928<br />065162638
+                                            065162638<br />
+                                            0799898928<br />
+                                            065162638
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
                                             <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
@@ -692,6 +731,18 @@
                         </div>
                     </div>
                 </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="height:10px;"></td>
+        </tr>
+        <tr>
+            <td align="center">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ArabiSky_Default_Top -->
+                <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                    data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+                <script>                    (adsbygoogle = window.adsbygoogle || []).push({});</script>
             </td>
         </tr>
     </table>

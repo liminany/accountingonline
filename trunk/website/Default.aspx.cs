@@ -29,8 +29,13 @@ public partial class _Default : System.Web.UI.Page
                 rptlatstAdsAdded.DataSource = obDBAdsManager.GetDashbaordAds(FormsFunction.GetCookieValueCountryInfo()).Tables[0];
                 rptlatstAdsAdded.DataBind();
                 rptMostViewd.DataSource = obDBAdsManager.GetDashbaordAds(FormsFunction.GetCookieValueCountryInfo()).Tables[1];
-                rptMostViewd.DataBind(); 
+                rptMostViewd.DataBind();
             }
+            if (FormsFunction.GetCookieValueCountryInfo() != 12)
+                ArabiSkyTools.Style.Add("display", "none");
+            else
+                ArabiSkyTools.Style.Add("display", "");
+
         }
         catch (Exception ex)
         {

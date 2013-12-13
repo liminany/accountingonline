@@ -16,6 +16,33 @@
 	        });
         }); 
     </script>
+    <style type="text/css">
+        .rows
+        {
+            width: 100%;
+            height: 50px;
+            background-color: #ededed;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+            text-align: right;
+        }
+        .rows:hover
+        {
+            width: 100%;
+            height: 50px;
+            background-color: #fcfcfc;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+            text-align: right;
+        }
+        .rows a
+        {
+            position: relative;
+            top: 17px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
     <meta property="og:image" content="<%= facebookImage %>" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -65,8 +92,17 @@
             <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
                 text-align: center;">
                 <div id="div_ViewAds" style="float: right; margin-top: 20px; width: 100%;">
-                    <div style="float: left; display: none;">
-                        <table border="0" cellpadding="0" cellspacing="0">
+                    <div style="float: left; display: ;">
+                        <div style="float: right; padding-left: 15px;">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- ArabiSky_SqureAds -->
+                            <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px"
+                                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3574583608"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                        <%--<table border="0" cellpadding="0" cellspacing="0">
                             <tbody>
                                 <tr style="height: 100px;">
                                     <td align="right" style="width: 80px;">
@@ -108,7 +144,7 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table>--%>
                     </div>
                     <div class="arabiSky-adDetails" style="float: right; width: 50%">
                         <ul style="font-size: 15px; font-weight: bolder;">
@@ -122,15 +158,49 @@
                 </div>
                 <div style="clear: both; height: 30px; border-bottom: 1px solid #ccc;">
                 </div>
-                <div id="div1" style="float: right; margin-right: 30px; color: #111111; font-size: 17px;
-                    padding-top: 10px; font-weight: bolder;">
-                    تفاصيل الإعلان
+                <div style="width: 100%">
                 </div>
-                <div style="clear: both; height: 20px;">
+                <div style="width: 59%; float: right;">
+                    <div id="div1" style="float: right; margin-right: 30px; color: #111111; font-size: 17px;
+                        padding-top: 10px; font-weight: bolder;">
+                        تفاصيل الإعلان
+                    </div>
+                    <div style="clear: both; height: 20px;">
+                    </div>
+                    <div>
+                        <div style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%;
+                            float: right; height: auto; word-wrap: break-word; padding-left: 10px;" id="div_AdsDescription"
+                            runat="server">
+                        </div>
+                    </div>
+                    <div style="clear: both; height: 20px;">
+                    </div>
+                    <div style="width: 100%">
+                        <div style="float: right; margin-right: 30px;">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- ArabiSky_SqureAds -->
+                            <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px"
+                                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3574583608"></ins>
+                            <script>
+                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                    </div>
                 </div>
-                <div style="text-align: right; margin-right: 30px; margin-left: 30px; width: 900px;
-                    height: auto; word-wrap: break-word; padding-left: 10px;" id="div_AdsDescription"
-                    runat="server">
+                <div style="border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; width: 40%;
+                    float: left; vertical-align: top; border-bottom: 0px;">
+                    <div class="rows" style="background-color: #ccc; color: #333;">
+                        <a style="color: #333; text-decoration: none;">إعلانات متشابهة </a>
+                    </div>
+                    <asp:Repeater runat="server" ID="rptSlimlerAds">
+                        <ItemTemplate>
+                            <div class="rows">
+                                <a title="<%# DataBinder.Eval(Container.DataItem, "AdsTitle") %>" href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                    <%# SplitArticlsTitle(DataBinder.Eval(Container.DataItem, "AdsTitle").ToString()) %>
+                                </a>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </div>
                 <div style="clear: both; height: 20px;">
                 </div>
@@ -170,8 +240,6 @@
                 <div style="text-align: center;" id="div_YouTube" runat="server">
                     <div id="div_YouTubeURL" runat="server">
                     </div>
-                </div>
-                <div style="height: 20px; clear: both">
                 </div>
                 <div style="height: 10px; clear: both">
                 </div>
@@ -278,7 +346,7 @@
     <div style="height: 20px; clear: both;">
     </div>
     <div style="width: 100%; height: auto;">
-        <div>
+        <%--<div>
             <div class="arabiSky-indexHeadingLeftCurve">
             </div>
             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
@@ -288,11 +356,11 @@
             </div>
             <div class="arabiSky-indexHeadingRightCurve">
             </div>
-        </div>
-        <div style="clear: both;">
-        </div>
+        </div>--%>
+        <%--        <div style="clear: both;">
+        </div>--%>
         <div>
-            <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
+            <%--            <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
                 text-align: center;">
                 <table class="tbMainAds" width="100%" cellpadding="0" cellspacing="0">
                     <asp:Repeater runat="server" ID="rptSlimlerAds">
@@ -366,7 +434,7 @@
                 </table>
             </div>
             <div style="clear: both; height: 10px;">
-            </div>
+            </div>--%>
             <div style="text-align: center;">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- ArabiSky_Default_Top -->

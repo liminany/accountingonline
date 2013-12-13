@@ -36,9 +36,11 @@ public partial class AccountSettings : System.Web.UI.Page
                         if (!string.IsNullOrEmpty(objEntityRegUsers.UserFacebookID))
                         {
                             imgUserProfile.Src = string.Format("https://graph.facebook.com/{0}/picture", objEntityRegUsers.UserFacebookID);
+                            upFileUserProfile.Enabled = false;
                         }
                         else
                         {
+                            upFileUserProfile.Enabled = true;
                             if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
                             {
                                 imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
@@ -72,9 +74,11 @@ public partial class AccountSettings : System.Web.UI.Page
                         if (!string.IsNullOrEmpty(objEntityRegUsers.UserFacebookID))
                         {
                             imgUserProfile.Src = string.Format("https://graph.facebook.com/{0}/picture", objEntityRegUsers.UserFacebookID);
+                            upFileUserProfile.Enabled = false;
                         }
                         else
                         {
+                            upFileUserProfile.Enabled = true;
                             if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
                             {
                                 imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
