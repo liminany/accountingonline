@@ -79,7 +79,7 @@
                                 <asp:FileUpload ID="upFileUserProfile" runat="server" />
                             </div>
                             <div style="width: 50%; float: left">
-                                <img id="imgUserProfile" runat="server" src="images/ArabiSkyUnknowUser.png" width="50"
+                                <img id="imgUserProfile" runat="server" src="" width="50"
                                     height="50" alt="ArabiSky.com" />
                             </div>
                         </td>

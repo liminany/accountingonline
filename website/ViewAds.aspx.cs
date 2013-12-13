@@ -11,6 +11,8 @@ public partial class ViewAds : System.Web.UI.Page
     private static Logger _logger = LogManager.GetCurrentClassLogger();
     private EntityRegUsers objEntityRegUsers = new EntityRegUsers();
     public string url = string.Empty;
+    public string facebookImage = "http://arabisky.com/images/ArabiSkyLogo.png";
+
     private int nRequiredUpdateAdsPeroid = 8;
     private DBAdsManager objDBAdsManager = new DBAdsManager();
     #endregion
@@ -295,7 +297,16 @@ public partial class ViewAds : System.Web.UI.Page
             string[] images = imagesURL.Split('|');
             for (int i = 0; i < images.Length; i++)
             {
-                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='cursor:pointer;border:2px solid #333;height:120px;width:120px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + images[i].Replace("~", "..") + "'><img style='max-width: 120px;max-height: 120px;width:120px;height:120px;' src='" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
+               div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='cursor:pointer;border:2px solid #333;height:120px;width:120px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + images[i].Replace("~", "..") + "'><img style='max-width: 120px;max-height: 120px;width:120px;height:120px;' src='" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
+            }
+
+            if (string.IsNullOrEmpty(images[0].ToString()))
+            {
+                facebookImage = "http://arabisky.com/images/ArabiSkyLogo.png";
+            }
+            else
+            {
+                facebookImage = images[0].Replace("~", "http://arabisky.com");
             }
         }
         catch (Exception)

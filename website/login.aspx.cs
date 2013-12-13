@@ -16,9 +16,26 @@ public partial class login : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
+                if (Request.QueryString["EID"] != null)
                 {
-                    Response.Redirect("/", false);
+                    switch (Request.QueryString["EID"].ToString())
+                    {
+                        case "1002":
+                            div_UserMessage.InnerHtml = "كلمة المرور خطأ الرجاء المحاولة مرة اخرى";
+                            break;
+                        case "1003":
+                            div_UserMessage.InnerHtml = "الحساب موقوف حاليا الرجاء مراجعة إدراة الموقع&nbsp;<a href='mailto:info@arabisky.com'>info@arabisky.com</a>";
+                            break;
+                        default:
+                            break;
+                    }
+                }
+                else
+                {
+                    if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
+                    {
+                        Response.Redirect("/", false);
+                    }
                 }
             }
         }
@@ -36,6 +53,7 @@ public partial class login : System.Web.UI.Page
         {
             EntityRegUsers objEntityRegUsers = new EntityRegUsers();
             UserAuthentication objUserAuthentication = new UserAuthentication();
+            div_UserMessage.InnerHtml = string.Empty;
             objEntityRegUsers.UserEmailAddress = email.Value;
             objEntityRegUsers.UserPassword = EncryptionMethods.Encryption.Encrypt(password.Value);
             objEntityRegUsers = objUserAuthentication.ClientLoginUser(objEntityRegUsers);

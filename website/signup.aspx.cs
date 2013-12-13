@@ -22,13 +22,23 @@ public partial class signup : System.Web.UI.Page
         {
             if (!IsPostBack)
             {
-                if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
+                if (Request.QueryString["EID"] != null)
                 {
-                    Response.Redirect("/", false);
+                    switch (Request.QueryString["EID"].ToString())
+                    {
+                        case "1001":
+                            div_UserMessage.InnerHtml = "كلمة المرور خطأ الرجاء المحاولة مرة اخرى";
+                            break; 
+                        default:
+                            break;
+                    }
                 }
                 else
                 {
-                    txtUserFullName.Focus();
+                    if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
+                    {
+                        Response.Redirect("/", false);
+                    }
                 }
             }
         }

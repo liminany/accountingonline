@@ -40,14 +40,24 @@ public partial class UserProfile : System.Web.UI.Page
 
                         hfUserProfileID.Value = objEntityRegUsers.UserID.ToString();
                         objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(Request.QueryString["UserID"].ToString()));
-                        if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
+                       
+                        if (!string.IsNullOrEmpty(objEntityRegUsers.UserFacebookID))
                         {
-                            imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                            imgUserProfile.Src = string.Format("https://graph.facebook.com/{0}/picture?type=large", objEntityRegUsers.UserFacebookID);
                         }
                         else
                         {
-                            imgUserProfile.Src = objEntityRegUsers.UserImage;
+                            if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
+                            {
+                                imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                            }
+                            else
+                            {
+                                imgUserProfile.Src = objEntityRegUsers.UserImage;
+                            }
                         }
+
+
                         aEmailAddress.InnerHtml = objEntityRegUsers.UserEmailAddress;
                         sp_UserFullName.InnerHtml = objEntityRegUsers.UserFullName;
                         Page.Title = "موقع سماء العرب - " + objEntityRegUsers.UserFullName;

@@ -4,18 +4,19 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
         $(document).ready(function () {
-             $(".fancybox").fancybox({
+            $(".fancybox").fancybox({
                 openEffect: 'none',
                 closeEffect: 'none',
-                'closeBtn' : true,
+                'closeBtn': true,
                 closeOnEscape: true// disable escape event on dialog
-            }); 
+            });
             CKEDITOR.replace('ctl00_ContentPlaceHolder1_editor1',
 	        {
 	            language: 'ar'
 	        });
         }); 
     </script>
+    <meta property="og:image" content="<%= facebookImage %>" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfAdsUserIDOwner" Value="0" />
@@ -26,13 +27,18 @@
         <div id="sitemap" runat="server" style="height: 30px; float: right;">
         </div>
         <div id="UserControls" runat="server" style="float: left; position: relative; bottom: 5px;">
-            <asp:Button runat="server" Text="تعديل الإعلان" ID="btnEditAds" Width="150"  
-                Style="border: 0px; cursor: pointer;width: 180px;background: #ededed;border-top:2px solid #f9ae4c;border-radius: 0px;margin-left: 5px;height: 29px;padding: 5px;font-size: 15px !important;" OnClick="btnEditAds_Click" />
+            <asp:Button runat="server" Text="تعديل الإعلان" ID="btnEditAds" Width="150" Style="border: 0px;
+                cursor: pointer; width: 180px; background: #ededed; border-top: 2px solid #f9ae4c;
+                border-radius: 0px; margin-left: 5px; height: 29px; padding: 5px; font-size: 15px !important;"
+                OnClick="btnEditAds_Click" />
             <asp:Button runat="server" Text="حذف الإعلان" ID="btnDeleteAds" Width="150" OnClientClick="javascript:return funAdsManage('1');"
-                Style="border: 0px; cursor: pointer;width: 180px;background: #ededed;border-top:2px solid #f9ae4c;border-radius: 0px;margin-left: 5px;height: 29px;padding: 5px;font-size: 15px !important;" OnClick="btnDeleteAds_Click" />
+                Style="border: 0px; cursor: pointer; width: 180px; background: #ededed; border-top: 2px solid #f9ae4c;
+                border-radius: 0px; margin-left: 5px; height: 29px; padding: 5px; font-size: 15px !important;"
+                OnClick="btnDeleteAds_Click" />
             <asp:Button runat="server" Text="إعادة نشر الإعلان" ID="btnReactivateAds" Width="150"
-                OnClientClick="javascript:return funAdsManage('0');"
-                Style="border: 0px; cursor: pointer;width: 180px;background: #ededed;border-top:2px solid #f9ae4c; border-radius: 0px;margin-left: 5px;height: 29px;padding: 5px;font-size: 15px !important;" OnClick="btnReactivateAds_Click" />
+                OnClientClick="javascript:return funAdsManage('0');" Style="border: 0px; cursor: pointer;
+                width: 180px; background: #ededed; border-top: 2px solid #f9ae4c; border-radius: 0px;
+                margin-left: 5px; height: 29px; padding: 5px; font-size: 15px !important;" OnClick="btnReactivateAds_Click" />
         </div>
     </div>
     <div style="clear: both; height: 1px;">
@@ -59,7 +65,7 @@
             <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
                 text-align: center;">
                 <div id="div_ViewAds" style="float: right; margin-top: 20px; width: 100%;">
-                    <div style="float: left;display:none;">
+                    <div style="float: left; display: none;">
                         <table border="0" cellpadding="0" cellspacing="0">
                             <tbody>
                                 <tr style="height: 100px;">
@@ -126,7 +132,40 @@
                     height: auto; word-wrap: break-word; padding-left: 10px;" id="div_AdsDescription"
                     runat="server">
                 </div>
-                <div style="height: 20px; clear: both">
+                <div style="clear: both; height: 20px;">
+                </div>
+                <div style="text-align: right; margin-right: 30px; margin-left: 30px; width: 900px;
+                    height: auto; word-wrap: break-word; padding-left: 10px;">
+                    <div id="fb-root">
+                    </div>
+                    <script>                        (function (d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=172727259569815";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        } (document, 'script', 'facebook-jssdk'));</script>
+                    <fb:like href="<%= url %>" layout="button_count" action="like" show_faces="true"
+                        share="true">
+                    </fb:like>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-via="arabisky">
+                        Tweet</a>
+                    <script>                        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } } (document, 'script', 'twitter-wjs');</script>
+                    <!-- Place this tag where you want the share button to render. -->
+                    <div class="g-plus" data-action="share" data-annotation="none">
+                    </div>
+                    <!-- Place this tag after the last share tag. -->
+                    <script type="text/javascript">
+                        window.___gcfg = { lang: 'ar' };
+
+                        (function () {
+                            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                            po.src = 'https://apis.google.com/js/platform.js';
+                            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                        })();
+                    </script>
+                </div>
+                <div style="height: 10px; clear: both">
                 </div>
                 <div style="text-align: center;" id="div_YouTube" runat="server">
                     <div id="div_YouTubeURL" runat="server">
@@ -136,16 +175,17 @@
                 </div>
                 <div style="height: 10px; clear: both">
                 </div>
-                 <div style="clear: both; height: 30px; border-bottom: 1px solid #ccc;">
+                <div style="clear: both; height: 30px; border-bottom: 1px solid #ccc;">
                 </div>
-                <div id="div_Image" runat="server" style="float: right; margin-right: 30px; color: #111111; font-size: 17px;
-                    padding-top: 10px; font-weight: bolder;">
-                   صور الإعلان
+                <div id="div_Image" runat="server" style="float: right; margin-right: 30px; color: #111111;
+                    font-size: 17px; padding-top: 10px; font-weight: bolder;">
+                    صور الإعلان
                 </div>
-                <div style="clear:both;height:20px;"></div>
-                <div style="display: none;margin:10px;text-align:center;width:100%;padding-right: 10px;" id="div_Slider" runat="server">
-                   
-                </div> 
+                <div style="clear: both; height: 20px;">
+                </div>
+                <div style="display: none; margin: 10px; text-align: center; width: 100%; padding-right: 10px;"
+                    id="div_Slider" runat="server">
+                </div>
                 <div id="div_ContactSpace" runat="server" style="clear: both; height: 20px;">
                 </div>
                 <div id="div_ContactUser" runat="server">
@@ -173,7 +213,7 @@
                     </div>
                     <div style="height: 20px; clear: both">
                     </div>
-                    <div style="display: none;padding-right:30px;" id="td_SendEmail">
+                    <div style="display: none; padding-right: 30px;" id="td_SendEmail">
                         <table width="100%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td>
@@ -190,7 +230,7 @@
                                     نص الرسالة :
                                 </td>
                                 <td colspan="2" align="right">
-                                    <textarea runat="server" validationgroup="SendMessage"   id="editor" name="elm1" rows="5"
+                                    <textarea runat="server" validationgroup="SendMessage" id="editor" name="elm1" rows="5"
                                         cols="80" style="width: 700px">
 			                            </textarea>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ValidationGroup="SendMessage"
@@ -223,7 +263,8 @@
                         <table width="90%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="right" style="padding-right: 20px;">
-                                    <fb:comments numposts="30" width="900" class="fb-comments" data-href='<%= url %>'> </fb:comments>
+                                    <fb:comments numposts="30" width="900" class="fb-comments" data-href='<%= url %>'>
+                                    </fb:comments>
                                 </td>
                             </tr>
                         </table>
@@ -277,7 +318,8 @@
                             <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 15%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -286,8 +328,13 @@
                                     <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                 </td>
                                 <td align="center" style="padding-left: 20px; width: 10%">
-                                    <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                        width="50" height="50" alt="ArabiSky.com" />
+                                    <p>
+                                        <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                            title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                width="50" height="50" alt="ArabiSky.com" />
+                                        </a>
+                                    </p>
                                 </td>
                             </tr>
                         </ItemTemplate>
@@ -295,7 +342,8 @@
                             <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
                                 cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                 <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
                                 </td>
                                 <td style="width: 15%" align="center">
                                     <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -304,8 +352,13 @@
                                     <%# DataBinder.Eval(Container.DataItem, "CityName")%>
                                 </td>
                                 <td align="center" style="padding-left: 20px; width: 10%">
-                                    <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                        width="50" height="50" alt="ArabiSky.com" />
+                                    <p>
+                                        <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                            title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                width="50" height="50" alt="ArabiSky.com" />
+                                        </a>
+                                    </p>
                                 </td>
                             </tr>
                         </AlternatingItemTemplate>

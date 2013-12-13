@@ -289,6 +289,14 @@ public partial class AdsPage : System.Web.UI.Page
                     sp_CountryName.InnerHtml = "فلسطين";
                     spCurrany.InnerHtml = "شيكل";
                     return 15;
+				case 16:
+                    sp_CountryName.InnerHtml = "ليبيا";
+                    spCurrany.InnerHtml = "دينار";
+                    return 16;
+				case 17:
+                    sp_CountryName.InnerHtml = "مصر";
+                    spCurrany.InnerHtml = "جنيه";
+                    return 17;
                 default:
                     return 0;
             }
