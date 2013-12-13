@@ -211,7 +211,7 @@ namespace DAL
                     objRegUsers.UserFullName = reader["User_FullName"].ToString();
                     objRegUsers.UserEmailAddress = reader["User_EmailAddress"].ToString();
                     objRegUsers.UserPassword = reader["User_Password"].ToString();
-                    //objRegUsers.UserFacebookID = reader["User_FacebookID"].ToString();
+                    objRegUsers.UserFacebookID = reader["User_FacebookID"].ToString();
                     //objRegUsers.UserStatus = int.Parse(reader["User_Status"].ToString());
                     //objRegUsers.UserType = int.Parse(reader["User_UserType"].ToString());
                     //objRegUsers.UserCountAds = int.Parse(reader["User_CountAds"].ToString());

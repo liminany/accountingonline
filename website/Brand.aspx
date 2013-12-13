@@ -1,11 +1,21 @@
-﻿<%@ Page Title="سوق سماء العرب | انواع سيارات" MetaDescription="سوق سماء العرب | ArabiSky.com | انواع سيارات" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
-    CodeFile="Brand.aspx.cs" Inherits="Brand" %>
+﻿<%@ Page Title="سوق سماء العرب | انواع سيارات" MetaDescription="سوق سماء العرب | ArabiSky.com | انواع سيارات"
+    Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true" CodeFile="Brand.aspx.cs"
+    Inherits="Brand" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div style="height: 30px; float: right;">
-        <a href='/'>سوق سماء العرب </a>» <span>انواع سيارات</span>
+    <div style="height: 100px;">
+        <div style="float: right; width: 238px;">
+            <a href='/'>سوق سماء العرب </a>»&nbsp;<span>انواع سيارات</span>
+        </div>
+        <div style="float: left;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ArabiSky_Default_Top -->
+            <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
     </div>
     <div style="clear: both;">
     </div>
@@ -294,10 +304,18 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 50px;" align="center">
-                        </td>
+                        <td colspan="5" style="height:15px;"></td>
                     </tr>
                 </table>
+            </div>
+            <div style="clear: both; height: 10px;">
+            </div>
+            <div style="text-align: center;">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- ArabiSky_Default_Top -->
+                <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                    data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+                <script>                    (adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
         </div>
     </div>

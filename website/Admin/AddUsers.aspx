@@ -96,8 +96,8 @@
                                             <asp:ListItem Text="80" Value="80"></asp:ListItem>
                                             <asp:ListItem Text="90" Value="90"></asp:ListItem>
                                             <asp:ListItem Text="100" Value="100"></asp:ListItem>
-                                            <asp:ListItem Text="1000" Value="1000"></asp:ListItem>
-                                            <asp:ListItem Text="2000" Value="2000"></asp:ListItem>
+                                            <asp:ListItem Text="100" Value="1000"></asp:ListItem>
+                                            <asp:ListItem Text="100" Value="2000"></asp:ListItem>
                                         </asp:DropDownList>
                                     </td>
                                     <td>

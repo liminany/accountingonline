@@ -5,8 +5,17 @@
     <meta property="og:image" content='http://arabisky.com/images/ArabiSkyLogo.png' />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div style="height: 30px; float: right;">
-        <a href='/'>سوق سماء العرب </a>»&nbsp;<span id="sp_PageTitle" runat="server"></span>
+    <div style="height: 100px;">
+        <div style="float: right;width: 238px;">
+            <a href='/'>سوق سماء العرب </a>»&nbsp;<span id="sp_PageTitle" runat="server"></span>
+        </div>
+        <div style="float: left;">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- ArabiSky_Default_Top -->
+            <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
+                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
+            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
+        </div>
     </div>
     <div style="clear: both;">
     </div>
