@@ -79,6 +79,24 @@ public partial class _Default : System.Web.UI.Page
     #endregion
 
     #region Methods
+    protected string SplitArticlsTitle(string sArticlsText)
+    {
+        try
+        {
+            if (sArticlsText.Length > 55)
+            {
+                return sArticlsText.Substring(0, 54) + "...";
+            }
+            else
+            {
+                return sArticlsText.Replace("<p><br>", "");
+            }
+        }
+        catch (Exception)
+        {
+            return "Unknown";
+        }
+    }
     protected string CheckImage(string sImageURL)
     {
         try
