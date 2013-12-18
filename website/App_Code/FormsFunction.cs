@@ -315,7 +315,7 @@ public class FormsFunction
                     }
                     sEmailText = sEmailText.Replace("#UserEmailAddress#", sEmailAddress);
                     sEmailText = sEmailText.Replace("#UserPassword#", sPassword);
-                    SendEmailServiceByArabiSkyInfo(sEmailAddress, sEmailText, "موقع سماء العرب | تفعيل الحساب");
+                    SendEmailServiceByLivekoraInfo(sEmailAddress, sEmailText, "موقع سماء العرب | إستعادة كلمة المرور");
                     return SendEMail.Success;
                 default:
                     return SendEMail.Error;

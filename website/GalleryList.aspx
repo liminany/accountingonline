@@ -2,6 +2,23 @@
     CodeFile="GalleryList.aspx.cs" Inherits="GalleryList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+<style type="text/css">
+        .thumb
+        {
+            padding: 3px;
+            background-color: #fff;
+            border: solid 1px #ccc;
+            box-shadow: 0 0 3px rgba(30, 30, 30, 0.2);
+        }
+        .tr_AdsRows td
+        {
+            border-bottom: 1px solid #ccc;
+        }
+        .tr_AdsRows:hover
+        {
+            background-color: #e0f4ff !important;
+        } 
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="height: 100px;">
