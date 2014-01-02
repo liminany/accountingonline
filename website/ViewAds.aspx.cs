@@ -27,6 +27,7 @@ public partial class ViewAds : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
+                    div_SendPrivateMessage.Style.Add("display", "");
                     if (FormsFunction.GetCookieData().Length != 0)
                     {
                         string[] arrUserCookieInfo = FormsFunction.GetCookieData();
@@ -37,6 +38,10 @@ public partial class ViewAds : System.Web.UI.Page
                         objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
                         hfUserID.Value = objEntityRegUsers.UserID.ToString();
                     }
+                }
+                else
+                {
+                    div_SendPrivateMessage.Style.Add("display", "none");
                 }
 
                 int nSubCatID = 0;
@@ -83,6 +88,17 @@ public partial class ViewAds : System.Web.UI.Page
                         UserControls.Style.Add("display", "none");
                         div_ContactSpace.Style.Add("display", "none");
                     }
+
+                    if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
+                    {
+                        div_SendPrivateMessage.Style.Add("display", "");
+                    }
+                    else
+                    {
+                        div_SendPrivateMessage.Style.Add("display", "none");
+                    }
+
+
                     if (!string.IsNullOrEmpty(rows["AdsYoutubeURL"].ToString()))
                     {
                         div_YouTube.Style.Add("display", "");
@@ -315,7 +331,7 @@ public partial class ViewAds : System.Web.UI.Page
             string[] images = imagesURL.Split('|');
             for (int i = 0; i < images.Length; i++)
             {
-               div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='cursor:pointer;border:2px solid #333;height:120px;width:120px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + images[i].Replace("~", "..") + "'><img style='max-width: 120px;max-height: 120px;width:120px;height:120px;' src='" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
+                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='cursor:pointer;border:2px solid #333;height:120px;width:120px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + images[i].Replace("~", "..") + "'><img style='max-width: 120px;max-height: 120px;width:120px;height:120px;' src='" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
             }
 
             if (string.IsNullOrEmpty(images[0].ToString()))

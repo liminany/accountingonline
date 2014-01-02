@@ -1,5 +1,6 @@
-﻿<%@ Page Title="سوق سماء العرب | إضافة إعلان جديد" Language="C#" MetaDescription="سوق سماء العرب | ArabiSky.com | إضافة إعلان جديد" MasterPageFile="~/master.master" AutoEventWireup="true"
-    CodeFile="AdsPage.aspx.cs" Inherits="AdsPage" %>
+﻿<%@ Page Title="سوق سماء العرب | إضافة إعلان جديد" Language="C#" MetaDescription="سوق سماء العرب | ArabiSky.com | إضافة إعلان جديد"
+    MasterPageFile="~/master.master" AutoEventWireup="true" CodeFile="AdsPage.aspx.cs"
+    Inherits="AdsPage" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
@@ -20,7 +21,7 @@
                 imageNew = imageNew + $(this).attr("src").replace("../", "~/") + "|";
             });
             $("#ctl00_ContentPlaceHolder1_hfEditImageAds").val(imageNew);
-        }
+        } 
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -70,7 +71,6 @@
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtAdsTitle"
                                 ValidationGroup="AddAds" ErrorMessage="الرجاء إدخال عنوان الإعلان"></asp:RequiredFieldValidator>
                         </td>
-                        <td>
                     </tr>
                     <tr>
                         <td colspan="3">
@@ -179,7 +179,8 @@
                                 </tr>
                                 <tr>
                                     <td colspan="3">
-                                        <asp:FileUpload ID="file_upload" class="multi" runat="server" accept="png|jpg|jpeg" maxlength="6" />
+                                        <asp:FileUpload ID="file_upload" class="multi" runat="server" accept="png|jpg|jpeg"
+                                            maxlength="6" />
                                         <asp:Label ID="lblMessage" runat="server" />
                                     </td>
                                 </tr>

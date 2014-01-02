@@ -20,7 +20,29 @@ namespace Entity
         private int _nCountryAddress = 0;
         private int _nCityAddress = 0;
         private string _sUserImage = string.Empty;
-        private DateTime _dtCreateDateTime = new DateTime();
+        private DateTime _dtCreateDateTime = new DateTime(); 
+        private int _nIntrestedCat = 0;
+        private int _nIntrestedSubCat = 0;
+        private int _nSyncEmail = 0;
+
+
+        public int SyncEmail
+        {
+            set { _nSyncEmail = value; }
+            get { return _nSyncEmail; }
+        }
+
+        public int IntrestedSubCat
+        {
+            set { _nIntrestedSubCat = value; }
+            get { return _nIntrestedSubCat; }
+        }
+
+        public int IntrestedCat
+        {
+            set { _nIntrestedCat = value; }
+            get { return _nIntrestedCat; }
+        }
 
         public int UserID
         {
