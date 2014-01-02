@@ -173,6 +173,12 @@ namespace DAL
                     objEntityRegUsers.UserMobileNumber = reader["User_MobileNumber"].ToString();
                     objEntityRegUsers.UserCountry = int.Parse(reader["User_Country"].ToString());
                     objEntityRegUsers.UserCityAddress = int.Parse(reader["User_City"].ToString());
+
+                    objEntityRegUsers.IntrestedCat = string.IsNullOrEmpty(reader["User_IntrestedCat"].ToString()) ? 0 : int.Parse(reader["User_IntrestedCat"].ToString());
+                    objEntityRegUsers.IntrestedSubCat = string.IsNullOrEmpty(reader["User_IntrestedSubCat"].ToString()) ? 0 : int.Parse(reader["User_IntrestedSubCat"].ToString());
+                    objEntityRegUsers.SyncEmail = string.IsNullOrEmpty(reader["User_SyncEmail"].ToString()) ? 0 : int.Parse(reader["User_SyncEmail"].ToString());   
+
+
                     objEntityRegUsers.UserImage = reader["User_Image"].ToString();
                     objEntityRegUsers.CreateDateTime = Convert.ToDateTime(reader["User_CreateDate"].ToString());
                 }
@@ -438,6 +444,45 @@ namespace DAL
                 return 0;
             }
         }
+
+
+ 
+        public int EditUserSoftwareManager(EntityRegUsers objUsers)
+        {
+            IDbCommand command = null;
+            object retValue = null;
+
+            try
+            {
+
+                DBParameter param1 = new DBParameter("@userID", objUsers.UserID);
+                DBParameter param2 = new DBParameter("@intrestedCat", objUsers.IntrestedCat);
+                DBParameter param3 = new DBParameter("@intrestedSubCat", objUsers.IntrestedSubCat);
+                DBParameter param4 = new DBParameter("@syncEmail", objUsers.SyncEmail);
+                DBParameter outParam = new DBParameter("@returnValue", 0, DbType.Int16, ParameterDirection.Output);
+
+
+                DBParameterCollection paramCollection = new DBParameterCollection();
+                paramCollection.Add(param1);
+                paramCollection.Add(param2);
+                paramCollection.Add(param3);
+                paramCollection.Add(param4);
+
+                paramCollection.Add(outParam);
+
+
+                command = _dbHelper.GetCommand("sp_EditUserSoftwareSettings", paramCollection, CommandType.StoredProcedure);
+                command.ExecuteNonQuery();
+                retValue = _dbHelper.GetParameterValue("@returnValue", command);
+                return Convert.ToInt16(retValue);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("DAL:::UserAuthentication:::EditUserSoftwareManager:::" + ex.Message);
+                return 0;
+            }
+        }
+
 
         /// <summary>
         /// Edit a new User

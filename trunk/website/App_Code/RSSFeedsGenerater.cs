@@ -27,7 +27,7 @@ public class SearchEngineOptimization
             xtwFeed.WriteAttributeString("version", "2.0");
             xtwFeed.WriteStartElement("channel");
             xtwFeed.WriteElementString("title", "ArabiSky.com classified (سوق سماء العرب)");
-            xtwFeed.WriteElementString("link", "http://ArabiSky.com");
+            xtwFeed.WriteElementString("link", "http://livekora.net");
             xtwFeed.WriteElementString("description", "سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل");
             xtwFeed.WriteElementString("copyright", "© 2013 Arabisky.com");
             xtwFeed.WriteStartElement("item");

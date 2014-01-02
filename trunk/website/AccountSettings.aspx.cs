@@ -3,6 +3,7 @@ using DAL;
 using Entity;
 using NLog;
 using System.Net;
+using Entity.City;
 
 public partial class AccountSettings : System.Web.UI.Page
 {
@@ -19,6 +20,18 @@ public partial class AccountSettings : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
+                    #region Fill DropDown List
+                    ManageCity objManageCity = new ManageCity();
+                    EntiryCity objEntiryCity = new EntiryCity();
+                    ManageCategory objManageCategory = new ManageCategory();
+                    ManageSubCategory objManageSubCategory = new ManageSubCategory();
+                    objEntiryCity.Action = 6;
+                    objEntiryCity.CityStatus = 1;
+                    objEntiryCity.CityName = string.Empty;
+                    objEntiryCity.Country_FK_ID = GetCountry();
+                    FormsFunction.BindDDL(ref ddlCategoryName, objManageCategory.GetAllCategory(), "CatName", "Cat_ID", "إختر القسم");
+                    #endregion
+
                     if (FormsFunction.GetCookieData().Length != 0)
                     {
                         UserAuthentication objUserAuthentication = new UserAuthentication();
@@ -37,9 +50,15 @@ public partial class AccountSettings : System.Web.UI.Page
                         {
                             imgUserProfile.Src = string.Format("https://graph.facebook.com/{0}/picture", objEntityRegUsers.UserFacebookID);
                             upFileUserProfile.Enabled = false;
+                            td_PasswordUserMessage.InnerHtml = "لا تستطيع تعديل كلمة المرور";
+                            txtUserFullName.Disabled = true;
+                            txtPassword.Disabled = true;
+                            txtConfirmPassword.Disabled = true;
+                            btnChangePassword.Enabled = false;
                         }
                         else
                         {
+                            td_PasswordUserMessage.InnerHtml = string.Empty;
                             upFileUserProfile.Enabled = true;
                             if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
                             {
@@ -50,6 +69,7 @@ public partial class AccountSettings : System.Web.UI.Page
                                 imgUserProfile.Src = objEntityRegUsers.UserImage;
                             }
                         }
+                        txtUserMobilePhoneNumber.Value = objEntityRegUsers.UserMobileNumber;
                     }
                     else
                     {
@@ -75,9 +95,15 @@ public partial class AccountSettings : System.Web.UI.Page
                         {
                             imgUserProfile.Src = string.Format("https://graph.facebook.com/{0}/picture", objEntityRegUsers.UserFacebookID);
                             upFileUserProfile.Enabled = false;
+                            td_PasswordUserMessage.InnerHtml = "لا تستطيع تعديل كلمة المرور";
+                            txtUserFullName.Disabled = true;
+                            txtPassword.Disabled = true;
+                            txtConfirmPassword.Disabled = true;
+                            btnChangePassword.Enabled = false;
                         }
                         else
                         {
+                            td_PasswordUserMessage.InnerHtml = string.Empty;
                             upFileUserProfile.Enabled = true;
                             if (string.IsNullOrEmpty(objEntityRegUsers.UserImage))
                             {
@@ -88,6 +114,19 @@ public partial class AccountSettings : System.Web.UI.Page
                                 imgUserProfile.Src = objEntityRegUsers.UserImage;
                             }
                         }
+                        txtUserMobilePhoneNumber.Value = objEntityRegUsers.UserMobileNumber;
+                        ddlCategoryName.SelectedValue = objEntityRegUsers.IntrestedCat.ToString();
+                        FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(objEntityRegUsers.IntrestedCat), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
+                        ddlSubCategoryName.SelectedValue = objEntityRegUsers.IntrestedSubCat.ToString();
+                        if (int.Parse(objEntityRegUsers.SyncEmail.ToString()) == 0)
+                        {
+                            rbtnNo.Checked = true;
+                        }
+                        else
+                        {
+                            rbtnYes.Checked = true;
+                        }
+
                     }
                 }
                 else
@@ -161,9 +200,91 @@ public partial class AccountSettings : System.Web.UI.Page
             _logger.Error("AccountSettings:::btnChangePassword_Click:::" + ex.Message);
         }
     }
+
+    protected void btnSendMessage_Click(object sender, EventArgs e)
+    {
+        try
+        {
+            EntityRegUsers objEntityRegUsers = new EntityRegUsers();
+            UserAuthentication objUserAuthentication = new UserAuthentication();
+
+            objEntityRegUsers.UserID = Convert.ToInt32(hfUserID.Value);
+            objEntityRegUsers.IntrestedCat = int.Parse(ddlCategoryName.SelectedValue);
+            objEntityRegUsers.IntrestedSubCat = int.Parse(ddlSubCategoryName.SelectedValue);
+            if (rbtnYes.Checked)
+            {
+                objEntityRegUsers.SyncEmail = 1;
+            }
+            else
+            {
+                objEntityRegUsers.SyncEmail = 0;
+            }
+            int nReturnValue = objUserAuthentication.EditUserSoftwareManager(objEntityRegUsers);
+            if (nReturnValue == 1)
+            {
+                tr_UserMessage_2.InnerHtml = "تم تعديل البيانات بنجاح";
+            }
+            else
+            {
+                tr_UserMessage_2.InnerHtml = "هناك خطأ في تعديل البيانات الرجاء المحاولة فيما بعد";
+            }
+
+        }
+        catch (Exception ex)
+        {
+            tr_UserMessage_2.InnerHtml = "هناك خطأ في تعديل بياناتك الرجاء المحاولة فيما بعد";
+            _logger.Error("AccountSettings:::btnSendMessage_Click:::" + ex.Message);
+        }
+    }
+
+
+    protected void ddlCategoryName_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        try
+        {
+            ManageSubCategory objManageSubCategory = new ManageSubCategory();
+            FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(int.Parse(ddlCategoryName.SelectedValue)), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("AccountSettings:::ddlCategoryName_SelectedIndexChanged:::" + ex.Message);
+        }
+    }
+
     #endregion
 
     #region Methods
+    private int GetCountry()
+    {
+        try
+        {
+            switch (FormsFunction.GetCookieValueCountryInfo())
+            {
+                case 12:
+
+                    return 12;
+                case 14:
+
+                    return 14;
+                case 15:
+
+                    return 15;
+                case 16:
+
+                    return 16;
+                case 17:
+
+                    return 17;
+                default:
+                    return 0;
+            }
+        }
+        catch (Exception)
+        {
+            return 0;
+        }
+    }
+
     public string GetPictureUrl(string faceBookId)
     {
         WebResponse response = null;

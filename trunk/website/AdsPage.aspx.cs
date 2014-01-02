@@ -9,6 +9,12 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Net;
 using System.Collections.Specialized;
+using System.Data;
+using System.Web.Services;
+using System.Collections.Generic;
+using System.Web.Script.Serialization;
+using Newtonsoft.Json;
+using System.Collections;
 
 public partial class AdsPage : System.Web.UI.Page
 {
@@ -116,7 +122,7 @@ public partial class AdsPage : System.Web.UI.Page
                             }
                             else
                             {
-                                Response.Redirect("/",false);
+                                Response.Redirect("/", false);
                             }
                         }
                     }
@@ -225,7 +231,7 @@ public partial class AdsPage : System.Web.UI.Page
                 sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                 sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                 objAdsManager.AdsTitle = sTextTitleAds.ToLower();
-                objAdsManager.AdsDescription = editor1.Value; 
+                objAdsManager.AdsDescription = editor1.Value;
 
                 if (string.IsNullOrEmpty(hfEditImageAds.Value))
                 {
@@ -298,7 +304,7 @@ public partial class AdsPage : System.Web.UI.Page
         }
 
     }
- 
+
     //function to post message to twitter (parameter string message)
     //private void PostMessageToTwitter(string message)
     //{
@@ -395,11 +401,11 @@ public partial class AdsPage : System.Web.UI.Page
                     sp_CountryName.InnerHtml = "فلسطين";
                     spCurrany.InnerHtml = "شيكل";
                     return 15;
-				case 16:
+                case 16:
                     sp_CountryName.InnerHtml = "ليبيا";
                     spCurrany.InnerHtml = "دينار";
                     return 16;
-				case 17:
+                case 17:
                     sp_CountryName.InnerHtml = "مصر";
                     spCurrany.InnerHtml = "جنيه";
                     return 17;
@@ -467,4 +473,10 @@ public partial class AdsPage : System.Web.UI.Page
         }
     }
     #endregion
-}
+
+
+    #region Web Methods
+ 
+    #endregion
+} 
+ 
