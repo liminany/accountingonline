@@ -146,5 +146,32 @@ namespace DAL
                 return 0;
             }
         }
+
+
+        /// <summary>
+        /// Get All Category Account Admin
+        /// </summary>
+        /// <returns>return dataset for all Category</returns>
+        public DataSet GetUserIntrestedCatg_Software(EntityRegUsers objEntityRegUsers)
+        {
+            try
+            {
+                DBParameter param1 = new DBParameter("@userCountry", objEntityRegUsers.UserCountry);
+                DBParameter param2 = new DBParameter("@userCat", objEntityRegUsers.IntrestedCat);
+                DBParameter param3 = new DBParameter("@userSubCat", objEntityRegUsers.IntrestedSubCat);
+
+                DBParameterCollection paramCollection = new DBParameterCollection();
+                paramCollection.Add(param1);
+                paramCollection.Add(param2);
+                paramCollection.Add(param3);
+                DataSet dsReturnAllUser = _dbHelper.ExecuteDataSet("sp_AdsForArabiSkySoftware", paramCollection, CommandType.StoredProcedure);
+                return dsReturnAllUser;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("DAL:::ManageCategory:::GetUserIntrestedCatg_Software:::" + ex.Message);
+                throw;
+            }
+        }
     }
 }

@@ -70,6 +70,17 @@ public partial class AccountSettings : System.Web.UI.Page
                             }
                         }
                         txtUserMobilePhoneNumber.Value = objEntityRegUsers.UserMobileNumber;
+                        ddlCategoryName.SelectedValue = objEntityRegUsers.IntrestedCat.ToString();
+                        FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(objEntityRegUsers.IntrestedCat), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
+                        ddlSubCategoryName.SelectedValue = objEntityRegUsers.IntrestedSubCat.ToString();
+                        if (int.Parse(objEntityRegUsers.SyncEmail.ToString()) == 0)
+                        {
+                            rbtnNo.Checked = true;
+                        }
+                        else
+                        {
+                            rbtnYes.Checked = true;
+                        }
                     }
                     else
                     {
@@ -222,11 +233,11 @@ public partial class AccountSettings : System.Web.UI.Page
             int nReturnValue = objUserAuthentication.EditUserSoftwareManager(objEntityRegUsers);
             if (nReturnValue == 1)
             {
-                tr_UserMessage_2.InnerHtml = "تم تعديل البيانات بنجاح";
+                spEditSoftwareSettings.InnerHtml = "تم تعديل البيانات بنجاح";
             }
             else
             {
-                tr_UserMessage_2.InnerHtml = "هناك خطأ في تعديل البيانات الرجاء المحاولة فيما بعد";
+                spEditSoftwareSettings.InnerHtml = "هناك خطأ في تعديل البيانات الرجاء المحاولة فيما بعد";
             }
 
         }

@@ -303,6 +303,19 @@
                         </td>
                     </tr>
                     <tr>
+                        <td colspan="3" style="height: 10px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 140px; padding-bottom: 5px;">
+                        </td>
+                        <td>
+                            <span runat="server" id="spEditSoftwareSettings"></span>
+                        </td>
+                        <td align="left" style="padding-left: 10px;">
+                        </td>
+                    </tr>
+                    <tr>
                         <td colspan="3" style="height: 20px;">
                         </td>
                     </tr>
