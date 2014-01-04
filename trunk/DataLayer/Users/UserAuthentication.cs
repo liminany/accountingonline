@@ -92,6 +92,12 @@ namespace DAL
                     objEntityRegUsers.UserMobileNumber = reader["User_MobileNumber"].ToString();
                     objEntityRegUsers.UserCountry = int.Parse(reader["User_Country"].ToString());
                     objEntityRegUsers.UserCityAddress = int.Parse(reader["User_City"].ToString());
+
+                    objEntityRegUsers.IntrestedCat = int.Parse(reader["User_IntrestedCat"].ToString());
+                    objEntityRegUsers.IntrestedSubCat = int.Parse(reader["User_IntrestedSubCat"].ToString());
+                    objEntityRegUsers.SyncEmail = int.Parse(reader["User_SyncEmail"].ToString());
+
+
                     objEntityRegUsers.UserImage = reader["User_Image"].ToString();
                     objEntityRegUsers.CreateDateTime = Convert.ToDateTime(reader["User_CreateDate"].ToString());
                 }

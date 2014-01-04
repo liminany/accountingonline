@@ -216,4 +216,28 @@
     <changefreq>daily</changefreq>
     <priority>0.69</priority>
   </url>
+  <url>
+    <loc>http://www.arabisky.com/ViewAds?AdsID=0</loc>
+    <lastmod>2013-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.69</priority>
+  </url>
+  <url>
+    <loc>http://www.arabisky.com/ViewAds?AdsID=106</loc>
+    <lastmod>2013-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.69</priority>
+  </url>
+  <url>
+    <loc>http://www.arabisky.com/ViewAds?AdsID=0</loc>
+    <lastmod>2013-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.69</priority>
+  </url>
+  <url>
+    <loc>http://www.arabisky.com/ViewAds?AdsID=108</loc>
+    <lastmod>2013-12-28</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.69</priority>
+  </url>
 </urlset>

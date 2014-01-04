@@ -3,6 +3,7 @@ using System.Web.Services;
 using DAL;
 using Entity;
 using NLog;
+using System.Data;
 
 /// <summary>
 /// Summary description for ArabiSkyService
@@ -159,7 +160,7 @@ public class ArabiSkyService : System.Web.Services.WebService
                 {
                     if (objEntityRegUsers.UserID >= 1)
                     {
-                        return objEntityRegUsers; 
+                        return objEntityRegUsers;
                     }
                     else
                     {
@@ -179,6 +180,74 @@ public class ArabiSkyService : System.Web.Services.WebService
         }
     }
 
+    [WebMethod]
+    public DataTable GetUserAdsIntrestedList(string sSecretID, string sUserCountry, string sCatID, string sSubCatID)
+    {
+        try
+        {
+            if (sSecretID == "962785946301")
+            {
+                EntityRegUsers objEntityRegUsers = new EntityRegUsers();
+                ManageCategory objManageCategory = new ManageCategory();
+                objEntityRegUsers.UserCountry = int.Parse(sUserCountry);
+                objEntityRegUsers.IntrestedCat = int.Parse(sCatID);
+                objEntityRegUsers.IntrestedSubCat = int.Parse(sSubCatID);
+                return objManageCategory.GetUserIntrestedCatg_Software(objEntityRegUsers).Tables[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("ArabiSkyService:::GetUserAdsIntrestedList:::" + ex.Message);
+            return null;
+        }
+    }
 
+    [WebMethod]
+    public int CheckIfUserHaveEmail(string sSecretID, string sUserID)
+    {
+        try
+        {
+            if (sSecretID == "962785946301")
+            {
+                DBUserMessages objDBUserMessages = new DBUserMessages();
+                return objDBUserMessages.GetEmailUnReaded(Convert.ToInt32(sUserID));
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("ArabiSkyService:::CheckIfUserHaveEmail:::" + ex.Message);
+            return 0;
+        }
+    }
+
+    [WebMethod]
+    public DataTable GetUserPrivateMessage(string sSecretID, string sUserID)
+    {
+        try
+        {
+            if (sSecretID == "962785946301")
+            {
+                DBUserMessages objDBUserMessages = new DBUserMessages();
+                return objDBUserMessages.GetAllUserEmailByUserID(Convert.ToInt32(sUserID)).Tables[0];
+            }
+            else
+            {
+                return null;
+            }
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("ArabiSkyService:::GetUserPrivateMessage:::" + ex.Message);
+            return null;
+        }
+    }
     #endregion
 }
