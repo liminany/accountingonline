@@ -315,6 +315,10 @@ public partial class ViewAds : System.Web.UI.Page
                     return "ريال سعودي";
                 case 15:
                     return "شيكل";
+				case 16:
+                    return "دينار ليبي";
+				case 17:
+                    return "جنية مصري";
                 default:
                     return "غير معروف";
             }

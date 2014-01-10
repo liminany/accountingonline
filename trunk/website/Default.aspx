@@ -183,31 +183,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="arabiSky-clear">
-                    </div>
-                    <div style="height: 20px;">
-                    </div>
+                    <div class="arabiSky-clear" style="height: 20px;">
+                    </div> 
                     <div class="arabiSky-indexMainBlocks">
-                        <%--<div class="arabiSky-indexInnerBlocks">
-                            <div class="arabiSky-Title">
-                            </div>
-                            <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories?CatID=4&Title=للإيجار" title="للإيجار" style="color: #111111;
-                                    font-size: 20px;">للإيجار</a>&nbsp;<span></span>
-                            </div>
-                            <div class="arabiSky-indexHeadingRightCurve">
-                            </div>
-                            <div class="arabiSky-indexContent" style="height: 100px;">
-                                <ul>
-                                    <li><a href="Category?CatID=30&Title=العقارات-الإسكان" title="العقارات و الإسكان">العقارات
-                                        و الإسكان </a></li>
-                                    <li><a href="Category?CatID=31&Title=السيارات-المركبات" title="السيارات و المركبات">
-                                        السيارات و المركبات</a></li>
-                                    <li><a href="Category?CatID=32&Title=أشياء أخرى" title="أشياء أخرى">أشياء أخرى</a></li>
-                                </ul>
-                            </div>
-                            <!-- closing arabiSky-indexContent -->
-                        </div>--%>
                         <div class="arabiSky-indexInnerBlocks">
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
@@ -353,6 +331,7 @@
                         </div>
                     </div>
                 </div>
+                <div style="height:10px;clear:both;"></div>
                 <div style="width: 100%; height: auto;">
                     <table width="100%" cellpadding="0" cellspacing="0">
                         <tr id="ArabiSkyTools" runat="server">
