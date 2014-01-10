@@ -133,7 +133,7 @@
                                 <tr id="tr_RegisterUser" runat="server" style="display: none;">
                                     <td align="right">
                                         <ul id="navigation">
-                                            <li><a href="/" style="font-weight: 17px;"><span id="sp_UserTitle" runat="server"></span>
+                                            <li><a href="javascript:void(0)" style="font-weight: 17px;"><span id="sp_UserTitle" runat="server"></span>
                                                 <img src="~/images/ArabiSky_Down.png" runat="server" style="position: relative; top: 3px;
                                                     border: 0px;" width="16" height="16" align="top" alt="arabisky.com" /></a>
                                                 <ul style="position: absolute; right: 0px;">
@@ -145,7 +145,7 @@
                                                         <img src="~/images/ArabiSky_PersonalSettings.png" runat="server" style="border: 0px;"
                                                             align="top" alt="arabisky.com" />
                                                         بياناتي الشخصية</a></li>
-                                                    <li><a href="ArabiSkyApp">
+                                                    <li style="display:none;"><a href="ArabiSkyApp">
                                                         <img id="Img1" src="~/images/ArabiSkyApps.png" runat="server" style="border: 0px;"
                                                             align="top" width="20" height="20" alt="arabisky.com" />
                                                         تنزيل تطبيق سوق سماء العرب</a></li>
