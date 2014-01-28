@@ -229,14 +229,10 @@ namespace DAL
             {
                 DBParameter param1 = new DBParameter("@adsSubCat", nSubCat);
                 DBParameter param2 = new DBParameter("@countryID", nCountryID);
-                DBParameter param3 = new DBParameter("@PageIndex", 0);
-                DBParameter param4 = new DBParameter("@PageSize", 0);
                 DBParameterCollection paramCollection = new DBParameterCollection();
                 paramCollection.Add(param1);
-                paramCollection.Add(param2);
-                paramCollection.Add(param3);
-                paramCollection.Add(param4);
-                DataSet dsReturnAllUser = _dbHelper.ExecuteDataSet("sp_GetAdsCategoiresByCatID", paramCollection, CommandType.StoredProcedure);
+                paramCollection.Add(param2); 
+                DataSet dsReturnAllUser = _dbHelper.ExecuteDataSet("sp_GetAdsCategoiresByCatIDTop", paramCollection, CommandType.StoredProcedure);
                 return dsReturnAllUser;
             }
             catch (Exception ex)

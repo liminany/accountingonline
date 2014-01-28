@@ -25,3 +25,12 @@ D:\project\ArabiSky\DataLayer\bin\Debug\Entity.pdb
 D:\project\ArabiSky\DataLayer\obj\Debug\ResolveAssemblyReference.cache
 D:\project\ArabiSky\DataLayer\obj\Debug\DataLayer.dll
 D:\project\ArabiSky\DataLayer\obj\Debug\DataLayer.pdb
+D:\MyProject\accountingonline\DataLayer\bin\Debug\DataLayer.dll
+D:\MyProject\accountingonline\DataLayer\bin\Debug\DataLayer.pdb
+D:\MyProject\accountingonline\DataLayer\bin\Debug\DBHelper.dll
+D:\MyProject\accountingonline\DataLayer\bin\Debug\Entity.dll
+D:\MyProject\accountingonline\DataLayer\bin\Debug\DBHelper.pdb
+D:\MyProject\accountingonline\DataLayer\bin\Debug\Entity.pdb
+D:\MyProject\accountingonline\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\MyProject\accountingonline\DataLayer\obj\Debug\DataLayer.dll
+D:\MyProject\accountingonline\DataLayer\obj\Debug\DataLayer.pdb
