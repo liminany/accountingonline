@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+	<MyRouterCheckUpdate>
+		<VersionNumber>1.0.0</VersionNumber>
+		<WebsiteLink>http://arabisky.com/ArabiSkyApp</WebsiteLink>
+		<Description></Description>
+		<!--<Description></Description>-->
+		<!--<WebsiteLink></WebsiteLink>-->
+		<UpdatePriority></UpdatePriority>
+</MyRouterCheckUpdate> 
