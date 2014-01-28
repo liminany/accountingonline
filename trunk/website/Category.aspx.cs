@@ -8,11 +8,14 @@ using DAL;
 using Entity;
 using NLog;
 using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class Category : System.Web.UI.Page
 {
     #region variables
-    private static Logger _logger = LogManager.GetCurrentClassLogger(); 
+    private static Logger _logger = LogManager.GetCurrentClassLogger();
+    private int PageSize = 50;
     #endregion
 
     #region Pageload
@@ -26,21 +29,22 @@ public partial class Category : System.Web.UI.Page
                 {
                     DBAdsManager objDBAdsManager = new DBAdsManager();
                     DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()),FormsFunction.GetCookieValueCountryInfo());
-                    if (objDataSet.Tables[0].Rows.Count > 0)
-                    {
-                        string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
-                        CatName.InnerHtml = pageTitle;
-                        Page.Title = " سوق سماء العرب | " + pageTitle;
-                        Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
-                        sp_PageTitle.InnerHtml = pageTitle;
-                        rptSlimlerAds.DataSource = objDataSet;
-                        rptSlimlerAds.DataBind();
-                    }
+                    //if (objDataSet.Tables[0].Rows.Count > 0)
+                    //{
+                    //    string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
+                    //    CatName.InnerHtml = pageTitle;
+                    //    Page.Title = " سوق سماء العرب | " + pageTitle;
+                    //    Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
+                    //    sp_PageTitle.InnerHtml = pageTitle;
+                    //    //rptSlimlerAds.DataSource = objDataSet;
+                    //    //rptSlimlerAds.DataBind();
+                    //}
                 }
                 else
                 {
                     Response.Redirect("default", false);
                 }
+                this.GetCustomersPageWise(1);
             }
         }
         catch (Exception ex)
@@ -49,6 +53,57 @@ public partial class Category : System.Web.UI.Page
         }
     }
     #endregion
+
+
+    protected void Page_Changed(object sender, EventArgs e)
+    {
+        int pageIndex = int.Parse((sender as LinkButton).CommandArgument);
+        this.GetCustomersPageWise(pageIndex);
+    }
+
+    private void GetCustomersPageWise(int pageIndex)
+    {
+        string constring = ConfigurationManager.ConnectionStrings["SqlCon"].ConnectionString;
+        using (SqlConnection con = new SqlConnection(constring))
+        {
+            using (SqlCommand cmd = new SqlCommand("sp_GetAdsCategoiresByCatID", con))
+            {
+                cmd.CommandType = CommandType.StoredProcedure; 
+                cmd.Parameters.AddWithValue("@adsSubCat", int.Parse(Request.QueryString["CatID"].ToString()));
+                cmd.Parameters.AddWithValue("@countryID", FormsFunction.GetCookieValueCountryInfo());
+                cmd.Parameters.AddWithValue("@PageIndex", pageIndex);
+                cmd.Parameters.AddWithValue("@PageSize", PageSize);
+                cmd.Parameters.Add("@RecordCount", SqlDbType.Int, 4);
+                cmd.Parameters["@RecordCount"].Direction = ParameterDirection.Output;
+                con.Open();
+                IDataReader idr = cmd.ExecuteReader();
+                rptSlimlerAds.DataSource = idr;
+                rptSlimlerAds.DataBind();
+                idr.Close();
+                con.Close();
+                int recordCount = Convert.ToInt32(cmd.Parameters["@RecordCount"].Value);
+                this.PopulatePager(recordCount, pageIndex);
+            }
+        }
+    }
+
+
+    private void PopulatePager(int recordCount, int currentPage)
+    {
+        double dblPageCount = (double)((decimal)recordCount / Convert.ToDecimal(PageSize));
+        int pageCount = (int)Math.Ceiling(dblPageCount);
+        List<ListItem> pages = new List<ListItem>();
+        if (pageCount > 0)
+        {
+            for (int i = 1; i <= pageCount; i++)
+            {
+                pages.Add(new ListItem(i.ToString(), i.ToString(), i != currentPage));
+            }
+        }
+        rptPager.DataSource = pages;
+        rptPager.DataBind();
+    }
+
 
     #region Methods
     protected string CheckImage(string sImageURL)

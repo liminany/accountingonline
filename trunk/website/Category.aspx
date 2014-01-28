@@ -19,6 +19,26 @@
         {
             background-color: #e0f4ff !important;
         } 
+        .page_enabled, .page_disabled
+        {
+            display: inline-block;
+            height: 35px;
+            min-width: 24px;
+            line-height: 36px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #ccc;
+        }
+        .page_enabled
+        {
+            background-color: #eee;
+            color: #000;
+        }
+        .page_disabled
+        {
+            background-color: #6C6C6C;
+            color: #fff !important;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -124,7 +144,17 @@
                     </asp:Repeater>
                 </table>
             </div>
+        <div style="clear: both; height: 10px;">
         </div>
+        <div>
+            <asp:Repeater ID="rptPager" runat="server">
+                <ItemTemplate>
+                    <asp:LinkButton ID="lnkPage" runat="server" Text='<%#Eval("Text") %>' CommandArgument='<%# Eval("Value") %>'
+                        CssClass='<%# Convert.ToBoolean(Eval("Enabled")) ? "page_enabled" : "page_disabled" %>'
+                        OnClick="Page_Changed" OnClientClick='<%# !Convert.ToBoolean(Eval("Enabled")) ? "return false;" : "" %>'></asp:LinkButton>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>  
         <div style="clear: both; height: 10px;">
         </div>
         <div style="text-align: center;">
