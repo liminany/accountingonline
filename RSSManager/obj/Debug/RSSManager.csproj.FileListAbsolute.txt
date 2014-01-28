@@ -10,3 +10,7 @@ D:\project\ArabiSky\RSSManager\bin\Debug\RSSManager.dll
 D:\project\ArabiSky\RSSManager\bin\Debug\RSSManager.pdb
 D:\project\ArabiSky\RSSManager\obj\Debug\RSSManager.dll
 D:\project\ArabiSky\RSSManager\obj\Debug\RSSManager.pdb
+D:\MyProject\accountingonline\RSSManager\bin\Debug\RSSManager.dll
+D:\MyProject\accountingonline\RSSManager\bin\Debug\RSSManager.pdb
+D:\MyProject\accountingonline\RSSManager\obj\Debug\RSSManager.dll
+D:\MyProject\accountingonline\RSSManager\obj\Debug\RSSManager.pdb

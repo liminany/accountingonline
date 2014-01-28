@@ -1,0 +1,8 @@
+2014-01-28 23:55:47.8203 ERROR: DAL:::DBAdsManager:::GetAdsCategoiresByCatID:::Procedure or function 'sp_GetAdsCategoiresByCatID' expects parameter '@RecordCount', which was not supplied.
+(CalliEventHandlerDelegateProxy.Callback => Category.Page_Load => DBAdsManager.GetAdsCategoiresByCatID) 
+2014-01-28 23:55:47.9004 ERROR: Category:::Page_Load:::Procedure or function 'sp_GetAdsCategoiresByCatID' expects parameter '@RecordCount', which was not supplied.
+(Control.OnLoad => CalliEventHandlerDelegateProxy.Callback => Category.Page_Load) 
+2014-01-28 23:56:01.2721 ERROR: DAL:::DBAdsManager:::GetAdsCategoiresByCatID:::Procedure or function 'sp_GetAdsCategoiresByCatID' expects parameter '@RecordCount', which was not supplied.
+(CalliEventHandlerDelegateProxy.Callback => Category.Page_Load => DBAdsManager.GetAdsCategoiresByCatID) 
+2014-01-28 23:56:10.3806 ERROR: Category:::Page_Load:::Procedure or function 'sp_GetAdsCategoiresByCatID' expects parameter '@RecordCount', which was not supplied.
+(Control.OnLoad => CalliEventHandlerDelegateProxy.Callback => Category.Page_Load) 

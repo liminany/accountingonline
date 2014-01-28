@@ -7,3 +7,7 @@ D:\project\ArabiSky\DBHelper\bin\Debug\DBHelper.dll
 D:\project\ArabiSky\DBHelper\bin\Debug\DBHelper.pdb
 D:\project\ArabiSky\DBHelper\obj\Debug\DBHelper.dll
 D:\project\ArabiSky\DBHelper\obj\Debug\DBHelper.pdb
+D:\MyProject\accountingonline\DBHelper\bin\Debug\DBHelper.dll
+D:\MyProject\accountingonline\DBHelper\bin\Debug\DBHelper.pdb
+D:\MyProject\accountingonline\DBHelper\obj\Debug\DBHelper.dll
+D:\MyProject\accountingonline\DBHelper\obj\Debug\DBHelper.pdb

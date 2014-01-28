@@ -23,29 +23,29 @@ public partial class Category : System.Web.UI.Page
     {
         try
         {
-            if (!IsPostBack)
-            {
+            //if (!IsPostBack)
+            //{
                 if (!string.IsNullOrEmpty(Request.QueryString["CatID"]))
                 {
                     DBAdsManager objDBAdsManager = new DBAdsManager();
                     DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()),FormsFunction.GetCookieValueCountryInfo());
-                    //if (objDataSet.Tables[0].Rows.Count > 0)
-                    //{
-                    //    string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
-                    //    CatName.InnerHtml = pageTitle;
-                    //    Page.Title = " سوق سماء العرب | " + pageTitle;
-                    //    Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
-                    //    sp_PageTitle.InnerHtml = pageTitle;
-                    //    //rptSlimlerAds.DataSource = objDataSet;
-                    //    //rptSlimlerAds.DataBind();
-                    //}
+                    if (objDataSet.Tables[0].Rows.Count > 0)
+                    {
+                        string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
+                        CatName.InnerHtml = pageTitle;
+                        Page.Title = " سوق سماء العرب | " + pageTitle;
+                        Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
+                        sp_PageTitle.InnerHtml = pageTitle;
+                        //rptSlimlerAds.DataSource = objDataSet;
+                        //rptSlimlerAds.DataBind();
+                    }
                 }
                 else
                 {
                     Response.Redirect("default", false);
                 }
                 this.GetCustomersPageWise(1);
-            }
+            //}
         }
         catch (Exception ex)
         {
