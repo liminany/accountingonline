@@ -44,6 +44,7 @@
         }
     </style>
     <meta property="og:image" content="<%= facebookImage %>" />
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfAdsUserIDOwner" Value="0" />
@@ -94,7 +95,6 @@
                 <div id="div_ViewAds" style="float: right; margin-top: 20px; width: 100%;">
                     <div style="float: left; display: ;">
                         <div style="float: right; padding-left: 15px;">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                             <!-- ArabiSky_SqureAds -->
                             <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px"
                                 data-ad-client="ca-pub-7196218955155134" data-ad-slot="3574583608"></ins>
@@ -102,49 +102,6 @@
                                 (adsbygoogle = window.adsbygoogle || []).push({});
                             </script>
                         </div>
-                        <%--<table border="0" cellpadding="0" cellspacing="0">
-                            <tbody>
-                                <tr style="height: 100px;">
-                                    <td align="right" style="width: 80px;">
-                                        <a href="" id="ahrefUserProfile" runat="server">
-                                            <img src="images/ArabiSkyUnknowUser.png" runat="server" id="imgUserProfile" width="80"
-                                                height="80" alt="ArabiSky.com" />
-                                        </a>
-                                    </td>
-                                    <td align="right">
-                                        &nbsp;
-                                    </td>
-                                    <td align="left" style="padding-left: 20px; vertical-align: bottom">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="border-bottom: 1px solid #ccc;" colspan="3">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right">
-                                        إسم المستخدم :
-                                    </td>
-                                    <td colspan="2" align="right">
-                                        <span id="sp_UserFullName" runat="server" style="color: #111111; font-size: 15px;">
-                                        </span>&nbsp;
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="right" nowrap="NoWrap">
-                                        البريد الإلكتروني :
-                                    </td>
-                                    <td colspan="2" align="right">
-                                        <a href="javascript:void(0)" id="aEmailAddress" runat="server" style="font-size: 15px;">
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="border-bottom: 1px solid #ccc;" colspan="3">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>--%>
                     </div>
                     <div class="arabiSky-adDetails" style="float: right; width: 50%">
                         <ul style="font-size: 15px; font-weight: bolder;">
@@ -177,7 +134,6 @@
                     </div>
                     <div style="width: 100%">
                         <div style="float: right; margin-right: 30px;">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                             <!-- ArabiSky_SqureAds -->
                             <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px"
                                 data-ad-client="ca-pub-7196218955155134" data-ad-slot="3574583608"></ins>
@@ -346,97 +302,8 @@
     <div style="height: 20px; clear: both;">
     </div>
     <div style="width: 100%; height: auto;">
-        <%--<div>
-            <div class="arabiSky-indexHeadingLeftCurve">
-            </div>
-            <div class="arabiSky-indexHeadingContent" style="width: 97%;">
-                <div style="float: right;">
-                    <span style="color: #111111; font-size: 20px;">إعلانات مشابهة</span>
-                </div>
-            </div>
-            <div class="arabiSky-indexHeadingRightCurve">
-            </div>
-        </div>--%>
-        <%--        <div style="clear: both;">
-        </div>--%>
         <div>
-            <%--            <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
-                text-align: center;">
-                <table class="tbMainAds" width="100%" cellpadding="0" cellspacing="0">
-                    <asp:Repeater runat="server" ID="rptSlimlerAds">
-                        <HeaderTemplate>
-                            <thead>
-                                <tr>
-                                    <th align="right" style="width: 50%; padding-right: 30px;">
-                                        عنوان الإعلان
-                                    </th>
-                                    <th style="width: 13%" align="center">
-                                        القسم الفرعي
-                                    </th>
-                                    <th align="center" style="width: 10%;">
-                                        المدينة
-                                    </th>
-                                    <th colspan="2" align="center" style="padding-left: 20px; width: 10%">
-                                        الصورة
-                                    </th>
-                                </tr>
-                            </thead>
-                        </HeaderTemplate>
-                        <ItemTemplate>
-                            <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
-                                cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
-                                <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
-                                </td>
-                                <td style="width: 15%" align="center">
-                                    <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
-                                </td>
-                                <td align="center" style="width: 10%; font-size: 13px;">
-                                    <%# DataBinder.Eval(Container.DataItem, "CityName")%>
-                                </td>
-                                <td align="center" style="padding-left: 20px; width: 10%">
-                                    <p>
-                                        <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                            title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
-                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                width="50" height="50" alt="ArabiSky.com" />
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                        </ItemTemplate>
-                        <AlternatingItemTemplate>
-                            <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
-                                cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
-                                <td align="right" style="width: 65%; padding-right: 30px;">
-                                    <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
-                                </td>
-                                <td style="width: 15%" align="center">
-                                    <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
-                                </td>
-                                <td align="center" style="width: 10%; font-size: 13px;">
-                                    <%# DataBinder.Eval(Container.DataItem, "CityName")%>
-                                </td>
-                                <td align="center" style="padding-left: 20px; width: 10%">
-                                    <p>
-                                        <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                            title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
-                                            <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                width="50" height="50" alt="ArabiSky.com" />
-                                        </a>
-                                    </p>
-                                </td>
-                            </tr>
-                        </AlternatingItemTemplate>
-                    </asp:Repeater>
-                </table>
-            </div>
-            <div style="clear: both; height: 10px;">
-            </div>--%>
             <div style="text-align: center;">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                 <!-- ArabiSky_Default_Top -->
                 <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
                     data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>

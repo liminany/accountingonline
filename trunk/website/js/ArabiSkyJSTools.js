@@ -29,6 +29,7 @@ $(document).ready(function () {
 
 
 /////////////popup ////////////
+/*
 var popunder
 function get_cookie(Name) {
     var search = Name + "="
@@ -75,3 +76,4 @@ function rwmrgfdq_Popup() {
         window.open("http://livekora.net/", "rwmrgfdqpop", "scrollbars = 1, resizable = 1,status = 1,width=660,height=450");
     }
 }
+*/

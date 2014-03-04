@@ -9,7 +9,7 @@ window.onresize = function () {
 };
 
 //if (detectmob()) {
-//    document.location = "http://www.ArabiSky.com/mobile/default.aspx";
+//    document.location = "http://www.livekora.net/mobile/default.aspx";
 //}
 
 function JS_DOSearch(value) {
