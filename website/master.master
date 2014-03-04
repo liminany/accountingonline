@@ -1,52 +1,15 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="master.master.cs" Inherits="master" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="ar" />
 <html xmlns:fb="http://ogp.me/ns/fb#">
 <head runat="server">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <link href="js/Fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css" />
-    <script src="js/Fancybox/jquery.fancybox.js" type="text/javascript"></script>
-    <script src="js/ArabiSkyCookie.js" type="text/javascript"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            $("#fancybox-overlay").unbind();
-            $("a.fancybox").fancybox({
-                "hideOnOverlayClick": false, // prevents closing clicking OUTSIE fancybox
-                "hideOnContentClick": false, // prevents closing clicking INSIDE fancybox
-                "enableEscapeButton": false  // prevents closing pressing ESCAPE key
-            });
-            if (!CheckCookiesExists("ArabiSkyCheckCountry")) {
-                $("a.fancybox").trigger('click');
-            }
-        });
-        function funChooseCountry(countryCode) {
-            switch (countryCode) {
-                case "12":
-                    createCookie("ArabiSkyCheckCountry", "12", 1000);
-                    window.location.reload(true);
-                    break;
-                case "14":
-                    createCookie("ArabiSkyCheckCountry", "14", 1000);
-                    window.location.reload(true);
-                    break;
-                case "15":
-                    createCookie("ArabiSkyCheckCountry", "15", 1000);
-                    window.location.reload(true);
-                    break;
-                case "16":
-                    createCookie("ArabiSkyCheckCountry", "16", 1000);
-                    window.location.reload(true);
-                    break;
-                case "17":
-                    createCookie("ArabiSkyCheckCountry", "17", 1000);
-                    window.location.reload(true);
-                    break;
-                default:
-                    $("a.fancybox").trigger('click');
-                    break;
-            }
-        } 
-
+        $(document).ready(function () {$("#fancybox-overlay").unbind();$("a.fancybox").fancybox({hideOnOverlayClick:false,hideOnContentClick:false,enableEscapeButton:false});if(!CheckCookiesExists("ArabiSkyCheckCountry")){$("a.fancybox").trigger("click")}});
+        function funChooseCountry(e){switch(e){case"12":createCookie("ArabiSkyCheckCountry","12",1e3);window.location.reload(true);break;case"14":createCookie("ArabiSkyCheckCountry","14",1e3);window.location.reload(true);break;case"15":createCookie("ArabiSkyCheckCountry","15",1e3);window.location.reload(true);break;case"16":createCookie("ArabiSkyCheckCountry","16",1e3);window.location.reload(true);break;case"17":createCookie("ArabiSkyCheckCountry","17",1e3);window.location.reload(true);break;default:$("a.fancybox").trigger("click");break}}
     </script>
     <%= SquishIt.Framework.Bundle.Css()
            .Add("~/css/style1.1371718285.css")
@@ -54,31 +17,9 @@
            .Render("~/Styles/combined_#.css")
     %>
     <style type="text/css">
-        #screenshot
-        {
-            position: absolute;
-            border: 1px solid #ccc;
-            background: #333;
-            padding: 5px;
-            display: none;
-            color: #fff;
-        }
-        .arabiSky-postClassifieds MetroButton
-        {
-            width: 180px;
-            background: #f9ae4c;
-            border-radius: 5px;
-            margin-left: 5px;
-            height: 29px;
-            padding: 5px;
-            font-size: 25px !important;
-        }
-        .arabiSky-postClassifieds:hover
-        {
-            border-top: 2px solid #00629e !important;
-            font-size: 25px !important;
-            background-color: #ecedef !important;
-        }
+        #screenshot{position:absolute;border:1px solid #ccc;background:#333;display:none;color:#fff;padding:5px}
+		.arabiSky-postClassifieds MetroButton{width:180px;background:#f9ae4c;border-radius:5px;margin-left:5px;height:29px;font-size:25px!important;padding:5px}
+		.arabiSky-postClassifieds:hover{border-top:2px solid #00629e!important;font-size:25px!important;background-color:#ecedef!important}
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -87,15 +28,10 @@
     <div id="fb-root">
     </div>
     <script>
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=172727259569815";
-            fjs.parentNode.insertBefore(js, fjs);
-        } (document, 'script', 'facebook-jssdk'));
+        (function(e,t,n){var r,i=e.getElementsByTagName(t)[0];if(e.getElementById(n))return;r=e.createElement(t);r.id=n;r.src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=172727259569815";i.parentNode.insertBefore(r,i)})(document,"script","facebook-jssdk")
     </script>
     <form id="form1" runat="server">
+	<!-- begin adf.ly conversion tracking --><img src="http://adf.ly/ad/conv?aid=377946" width="1" height="1" border="0" hspace="0" vspace="0" /><!-- end adf.ly conversion tracking -->
     <asp:ScriptManager runat="server" ID="smMainPage" ScriptMode="Release" EnablePageMethods="true">
     </asp:ScriptManager>
     <asp:UpdateProgress ID="UpdateProgress1" runat="server" DisplayAfter="1">
@@ -267,6 +203,8 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
+			<script src="js/Fancybox/jquery.fancybox.js" type="text/javascript"></script>
+			<script src="js/ArabiSkyCookie.js" type="text/javascript"></script>
             <script src="Scripts/ckeditor/ckeditor.js" type="text/javascript"></script>
             <%= SquishIt.Framework.Bundle.JavaScript()
                .Add("~/js/ArabiSkyJSTools.js")
@@ -276,17 +214,7 @@
                .Render("~/Scripts/combined_#.js")
             %>
             <script type="text/javascript">
-                function MakeSearch() {
-                    var SearchType = document.getElementById("ctl00_home_search_cat_id").value;
-                    var SearchText = document.getElementById("ctl00_txtMasterSearch").value;
-                    if (SearchType == "-1" || SearchType == "0") {
-                        alert("الرجاء إختيار القسم المناسب و الشيء الذي ترغب البحث عنة");
-                        return false;
-                    }
-                    else {
-                        $("#" + '<%= lbtnRefreshGVMaster.ClientID %>').trigger('click');
-                    }
-                }
+                function MakeSearch(){var e=document.getElementById("ctl00_home_search_cat_id").value;var t=document.getElementById("ctl00_txtMasterSearch").value;if(e=="-1"||e=="0"){alert("الرجاء إختيار القسم المناسب و الشيء الذي ترغب البحث عنة");return false}else{$("#"+"<%= lbtnRefreshGVMaster.ClientID %>").trigger("click")}}
             </script>
             <footer>
                 <div style="text-align: center;">

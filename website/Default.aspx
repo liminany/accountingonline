@@ -23,46 +23,14 @@
     <meta property="og:keyword" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة , الخدمات , وظائف شاغرة , الباحثين عن عمل" />
     <meta property="og:url" content="http://arabisky.com/" />
     <script type="text/javascript">
-        function MakeDownSearch() {
-            var CountryID = document.getElementById("ctl00_ContentPlaceHolder1_ddlCountryName").value;
-            var CityID = document.getElementById("ctl00_ContentPlaceHolder1_ddlCityName").value;
-            var CatID = document.getElementById("ctl00_ContentPlaceHolder1_home_search_cat_id_Default").value;
-            var strUserMessage = "";
-            if ((CountryID == "-2" || CountryID == "")) {
-                strUserMessage += "الرجاء إختيار البلد\n";
-            }
-            if ((CityID == "-2" || CityID == "")) {
-                strUserMessage += "الرجاء إختيار المدينة\n";
-            }
-            if ((CatID == "-2" || CatID == "")) {
-                strUserMessage += "الرجاء إختيار القسم\n";
-            }
-
-            if (strUserMessage != "") {
-                alert(strUserMessage);
-            }
-            else {
-                $("#" + '<%= lbtnRefreshGVDownSearch.ClientID %>').trigger('click');
-            }
-        }
+        function MakeDownSearch(){var e=document.getElementById("ctl00_ContentPlaceHolder1_ddlCountryName").value;var t=document.getElementById("ctl00_ContentPlaceHolder1_ddlCityName").value;var n=document.getElementById("ctl00_ContentPlaceHolder1_home_search_cat_id_Default").value;var r="";if(e=="-2"||e==""){r+="الرجاء إختيار البلد\n"}if(t=="-2"||t==""){r+="الرجاء إختيار المدينة\n"}if(n=="-2"||n==""){r+="الرجاء إختيار القسم\n"}if(r!=""){alert(r)}else{$("#"+"<%= lbtnRefreshGVDownSearch.ClientID %>").trigger("click")}}
     </script>
     <style type="text/css">
-        .thumb
-        {
-            padding: 3px;
-            background-color: #fff;
-            border: solid 1px #ccc;
-            box-shadow: 0 0 3px rgba(30, 30, 30, 0.2);
-        }
-        .tr_AdsRows td
-        {
-            border-bottom: 1px solid #ccc;
-        }
-        .tr_AdsRows:hover
-        {
-            background-color: #e0f4ff !important;
-        } 
+        .thumb{background-color:#fff;border:solid 1px #ccc;box-shadow:0 0 3px rgba(30,30,30,0.2);padding:3px}
+		.tr_AdsRows td{border-bottom:1px solid #ccc}
+		.tr_AdsRows:hover{background-color:#e0f4ff!important}
     </style>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:UpdatePanel ID="upDefaultPage" runat="server" UpdateMode="Conditional">
@@ -77,7 +45,6 @@
                                 إعلانات مبوبة مجانية للعقارات، وظائف، والسيارات</h2>
                         </div>
                         <div style="float: left; z-index: 1000">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                             <!-- ArabiSky_Default_Top -->
                             <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
                                 data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
@@ -221,7 +188,6 @@
                                         عن عمل </a></li>
                                 </ul>
                             </div>
-                            <!-- closing arabiSky-indexContent -->
                         </div>
                     </div>
                     <div class="arabiSky-indexMainBlocks">
@@ -495,7 +461,6 @@
                                         مشاهدة اخر الإعلانات</a>
                                 </div>
                                 <div style="float: left;">
-                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                                     <!-- ArabiSky_Default_Top -->
                                     <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
                                         data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
@@ -613,7 +578,6 @@
                                         تابع أكثر الإعلانات مشاهدة</a>
                                 </div>
                                 <div style="float: left;">
-                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
                                     <!-- ArabiSky_Default_Top -->
                                     <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
                                         data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>

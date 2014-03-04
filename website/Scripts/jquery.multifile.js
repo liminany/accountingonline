@@ -479,7 +479,7 @@
 
         // STRING: collection lets you show messages in different languages
         STRING: {
-            remove: '<img src="../images/DeleteMessage.png" alt="remove image ArabiSky" style="width: 15px;height: 15px;border: 0px;" />',
+            remove: '<img src="../images/DeleteMessage.png" alt="remove image ArabiSky" style="width: 15px;height: 15px;" />',
             denied: 'إمتداد الصورة غير مقبول يمكنك إختيار .png او .jpg',
             file: '$file',
             selected: 'File selected: $file',
