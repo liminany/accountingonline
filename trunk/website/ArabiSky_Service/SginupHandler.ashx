@@ -51,16 +51,13 @@ public class SginupHandler : IHttpHandler
             }
             else
             {
-                serializer.Serialize("Please Enter Username and password", sbJsonResults);
-                context.Response.Clear();
-                context.Response.ContentType = "application/json; charset=utf-8";
+                context.Response.Write("false");
             }
 
         }
         catch (Exception)
         {
-
-            throw;
+            context.Response.Write("false");
         }
     }
 
