@@ -39,7 +39,7 @@
                     <tr>
                         <td align="center">
                             <a href="javascript:void(0)">
-                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" style="border: 0px" src="img/img_Country/img_jordan.png" />
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_jordan.png" />
                             </a>
                         </td>
                         <td align="center">
@@ -54,12 +54,12 @@
                         </td>
                         <td align="center">
                             <a href="javascript:void(0)">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/citroen.png" />
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Egypt.png" />
                             </a>
                         </td>
                         <td align="center">
                             <a href="javascript:void(0)">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/daewoo.png" />
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="" />
                             </a>
                         </td>
                     </tr>
@@ -87,24 +87,23 @@
                     <tr>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=dodge&Brand2=دودج">
-                                <img alt="ArabiSky.com" style="border: 0px" alt="ArabiSky.com" width="80" height="80"
-                                    src="BrandLogos/dodge.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" alt="ArabiSky.com" width="64" height="42" src="img/img_Country/img_Syria.png" /></a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=geely&Brand2=جيلي">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/geely.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Libya.png" /></a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=gmc&Brand2=جيمس">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/gmc.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Kuwait.png" /></a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=Great_Wall&Brand2=جريت وول">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/Great_Wall.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Qatar.png" /></a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=honda&Brand2=هوندا">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/honda.png" />
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Bahrain.png" />
                         </td>
                     </tr>
                     <tr>
@@ -131,23 +130,23 @@
                     <tr>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=hummer&Brand2=همر">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/hummer.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Yemen.png" /></a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=hyundai&Brand2=هونداي">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/hyundai.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Oman.png" /></a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=Infiniti&Brand2=انفنتي">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/inf.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="" /></a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=jaguar&Brand2=جاكور">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/jagu.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Algeria.png" /></a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=land rover&Brand2=لاند روفر">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/land-rover.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="BrandLogos/land-rover.png" /></a>
                         </td>
                     </tr>
                     <tr>
@@ -173,20 +172,20 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=lexus&Brand2=لكزس">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/lexus.png" /></a>
+                            <a href="javascript:void(0)">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Lebanon.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=mercedes&Brand2=مرسيدس">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/marchedrs.png" /></a>
+                            <a href="javascript:void(0)">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Iraq.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=mazda&Brand2=مازدا">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/mazda.png" /></a>
+                            <a href="javascript:void(0)">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Sudan.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Mitsubishi&Brand2=ميتسوبيشي لانسر">
-                                <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/Mitsubishi.gif" /></a>
+                            <a href="javascript:void(0)">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Mauritania.png" /></a>
                         </td>
                     </tr>
                     <tr>
