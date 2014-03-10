@@ -209,6 +209,7 @@ public partial class ViewAds : System.Web.UI.Page
             int nRetuenValue = objDBUserMessages.SendNewMessageForUser(objUserMessages);
             if (nRetuenValue == 1)
             {
+                //FormsFunction.SendMail("","سوق سماء العرب | لديك رسالة جديدة","")
                 div_UserMessage.InnerHtml = "لقد تم إرسال الرسالة بنجاح";
             }
             else

@@ -24,6 +24,8 @@ public partial class AdsPage : System.Web.UI.Page
     EntityRegUsers objEntityRegUsers = new EntityRegUsers();
     int nExpireDateCounte = 8;
     int nMaxImageUpload = 6;
+    public string AdsURL = string.Empty;
+    public string AdsText = string.Empty;
     #endregion
 
     #region Pageload
@@ -35,6 +37,8 @@ public partial class AdsPage : System.Web.UI.Page
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
+                    divNewAds.Style.Add("display", "");
+                    divSoicalMedia.Style.Add("display", "none");
                     #region Fill DropDown List
                     ManageCity objManageCity = new ManageCity();
                     EntiryCity objEntiryCity = new EntiryCity();
@@ -196,7 +200,15 @@ public partial class AdsPage : System.Web.UI.Page
                     trUserMessage.Style.Add("display", "");
                     if (nReturnValue != 0)
                     {
-                        spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم إضافة الاعلان بنجاح <a href='ViewAds?AdsID={0}'>انقر هنا لمشاهدة الإعلان</a>", nReturnValue.ToString());
+                        divNewAds.Style.Add("display", "none");
+                        divSoicalMedia.Style.Add("display", "");
+
+                        //spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم إضافة الاعلان بنجاح <a href='ViewAds?AdsID={0}'>انقر هنا لمشاهدة الإعلان</a>", nReturnValue.ToString());
+                        AdsURL = "http://arabisky.com/ViewAds?AdsID=" + nReturnValue.ToString();
+                        AdsText = sTextTitleAds;
+                       
+                        
+                        
                         txtAdsTitle.Value = string.Empty;
                         txtPrice.Value = string.Empty;
                         txtYouTubeURL.Value = string.Empty;
@@ -251,7 +263,10 @@ public partial class AdsPage : System.Web.UI.Page
                 trUserMessage.Style.Add("display", "");
                 if (nReturnValue != 0)
                 {
-                    Response.Redirect("AdsPage?AdsID=" + Request.QueryString["AdsID"].ToString() + "&message=true", false);
+                    divNewAds.Style.Add("display", "none");
+                    divSoicalMedia.Style.Add("display", "");
+                    AdsURL = "http://arabisky.com/ViewAds?AdsID=" + Request.QueryString["AdsID"].ToString();
+                    AdsText = sTextTitleAds;
                 }
                 else
                 {
@@ -464,8 +479,8 @@ public partial class AdsPage : System.Web.UI.Page
                     spCurrany.InnerHtml = "أوقية";
                     return 31;
                 default:
-                    Response.Redirect("country",false);
-                    return 0; 
+                    Response.Redirect("country", false);
+                    return 0;
             }
         }
         catch (Exception)

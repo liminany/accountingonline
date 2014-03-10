@@ -46,8 +46,53 @@
         <div style="clear: both;">
         </div>
         <div>
+            <div style="border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px;
+                text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;display:none;" id="divSoicalMedia" runat="server">
+                <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td align="center">
+                            <h1>
+                                قم بنشر إعلانك على شبكات التواصل الاجتماعي ليضاعف نسبة المشاهدات</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 30px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <table border="0" width="40%" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td align="center">
+                                        <a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=<%= AdsURL %>">
+                                            <img src="img/socialMedia/facebook.png" /></a>
+                                    </td>
+                                    <td align="center">
+                                        <a target="_blank" href="https://twitter.com/intent/tweet?url=<%= AdsURL %>&text=<%= AdsText %>">
+                                            <img src="img/socialMedia/twitter.png" /></a>
+                                    </td>
+                                    <td align="center">
+                                      <a target="_blank" href="https://plus.google.com/share?url=<%= AdsURL %>">
+                                            <img src="img/socialMedia/googleplus.png" /></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 50px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 30px;">
+                            <strong>ليتم ايصال اعلانك لعدد اكبر من الناس الرجاء قم بعمل مشاركة او share </strong>
+                        </td>
+                    </tr>
+                </table>
+            </div>
             <div style="float: right; border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px;
-                text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;">
+                text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;
+                display:;" id="divNewAds" runat="server">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr id="trUserMessage" runat="server" style="display: none;">
                         <td>
