@@ -95,7 +95,6 @@ public partial class master : System.Web.UI.MasterPage
                     div_EmailNotofication.Style.Add("display", "none");
                 }
 
-
                 switch (FormsFunction.GetCookieValueCountryInfo())
                 {
                     case 12:
