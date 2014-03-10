@@ -465,7 +465,7 @@ public partial class AdsPage : System.Web.UI.Page
                     return 17;
                 default:
                     Response.Redirect("country",false);
-                    break;
+                    return 0; 
             }
         }
         catch (Exception)
