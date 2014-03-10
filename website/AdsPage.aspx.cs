@@ -30,8 +30,7 @@ public partial class AdsPage : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         try
-        {
-            //PostMessageToTwitter("test")
+        { 
             if (!IsPostBack)
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
@@ -193,8 +192,7 @@ public partial class AdsPage : System.Web.UI.Page
                     SearchEngineOptimization objSearchEngineOptimization = new SearchEngineOptimization();
 
                     objSearchEngineOptimization.SiteMapGenerater(string.Format("http://www.arabisky.com/ViewAds?AdsID={0}", nReturnValue), DateTime.Now.ToString(), "daily", "0.69");
-                    //objSearchEngineOptimization.DoRSSGenerater(nReturnValue.ToString(), txtAdsTitle.Value, editor.Value, DateTime.Now.ToString());
-
+ 
                     trUserMessage.Style.Add("display", "");
                     if (nReturnValue != 0)
                     {
@@ -473,7 +471,6 @@ public partial class AdsPage : System.Web.UI.Page
         }
     }
     #endregion
-
 
     #region Web Methods
  

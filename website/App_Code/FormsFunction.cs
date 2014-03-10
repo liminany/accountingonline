@@ -271,7 +271,7 @@ public class FormsFunction
 
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
             smtp.EnableSsl = true;
-            NetworkCredential netCre = new NetworkCredential("khodrog@gmail.com", "osm_kho_219700");
+            NetworkCredential netCre = new NetworkCredential("khodrog@gmail.com", "osm_kho_9871040747");
             smtp.Credentials = netCre;
             smtp.Timeout = 10000;
             smtp.Send(mail);

@@ -10,7 +10,7 @@ public class GetDataHandler : IHttpHandler
     {
         try
         {
-            DAL.DBAdsManager obDBAdsManager = new DAL.DBAdsManager();
+            DAL.DBAdsManager obDBAdsManager = new DAL.DBAdsManager(); 
             System.Web.Script.Serialization.JavaScriptSerializer serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             System.Text.StringBuilder sbJsonResults = new System.Text.StringBuilder();
             if (!string.IsNullOrEmpty(context.Request.Params["operationType"].ToString().ToLower()))
@@ -105,8 +105,7 @@ public class GetDataHandler : IHttpHandler
                         context.Response.Write(sbJsonResults.ToString());
                         break;
                     case "getadsbycatid":
-                        DAL.DBAdsManager objDBAdsManager = new DAL.DBAdsManager();
-                        System.Data.DataTable dtGetAdsMainCategoiresByCatID = objDBAdsManager.GetAdsMainCategoiresByCatID(Convert.ToInt32(context.Request.Params["catID"].ToString().ToLower()), Convert.ToInt32(context.Request.Params["countryCode"].ToString().ToLower())).Tables[0];
+                        System.Data.DataTable dtGetAdsMainCategoiresByCatID = obDBAdsManager.GetAdsMainCategoiresByCatID(Convert.ToInt32(context.Request.Params["catID"].ToString().ToLower()), Convert.ToInt32(context.Request.Params["countryCode"].ToString().ToLower())).Tables[0];
                         System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, object>> rowsGetCatByID = new System.Collections.Generic.List<System.Collections.Generic.Dictionary<string, object>>();
                         System.Collections.Generic.Dictionary<string, object> rowGetCatByID;
                         foreach (System.Data.DataRow dr in dtGetAdsMainCategoiresByCatID.Rows)
