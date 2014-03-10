@@ -7,61 +7,61 @@
         function funChooseCountry(e) {
             switch (e) {
                 case "12":
-                    createCookie("ArabiSkyCheckCountry", "12", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "12", 1e3);
                     break;
                 case "14":
-                    createCookie("ArabiSkyCheckCountry", "14", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "14", 1e3);
                     break;
                 case "15":
-                    createCookie("ArabiSkyCheckCountry", "15", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "15", 1e3);
                     break;
                 case "16":
-                    createCookie("ArabiSkyCheckCountry", "16", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "16", 1e3);
                     break;
                 case "17":
-                    createCookie("ArabiSkyCheckCountry", "17", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "17", 1e3);
                     break;
                 case "19":
-                    createCookie("ArabiSkyCheckCountry", "19", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "19", 1e3);
                     break;
                 case "24":
-                    createCookie("ArabiSkyCheckCountry", "24", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "24", 1e3);
                     break;
                 case "23":
-                    createCookie("ArabiSkyCheckCountry", "23", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "23", 1e3);
                     break;
                 case "21":
-                    createCookie("ArabiSkyCheckCountry", "21", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "21", 1e3);
                     break;
                 case "20":
-                    createCookie("ArabiSkyCheckCountry", "20", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "20", 1e3);
                     break;
                 case "18":
-                    createCookie("ArabiSkyCheckCountry", "18", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "18", 1e3);
                     break;
                 case "22":
-                    createCookie("ArabiSkyCheckCountry", "22", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "22", 1e3);
                     break;
                 case "27":
-                    createCookie("ArabiSkyCheckCountry", "27", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "27", 1e3);
                     break;
                 case "26":
-                    createCookie("ArabiSkyCheckCountry", "26", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "26", 1e3);
                     break;
                 case "25":
-                    createCookie("ArabiSkyCheckCountry", "25", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "25", 1e3);
                     break;
                 case "28":
-                    createCookie("ArabiSkyCheckCountry", "28", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "28", 1e3);
                     break;
                 case "29":
-                    createCookie("ArabiSkyCheckCountry", "29", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "29", 1e3);
                     break;
                 case "30":
-                    createCookie("ArabiSkyCheckCountry", "30", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "30", 1e3);
                     break;
                 case "31":
-                    createCookie("ArabiSkyCheckCountry", "31", 1e3);
+                    createCookie("ArabiSkyCheckCountryFull", "31", 1e3);
                     break;
                 default:
                     break;
