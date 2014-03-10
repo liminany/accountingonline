@@ -88,6 +88,15 @@
                             <strong>ليتم ايصال اعلانك لعدد اكبر من الناس الرجاء قم بعمل مشاركة او share </strong>
                         </td>
                     </tr>
+                    <tr>
+                        <td style="height: 30px;">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <a href="/AdsPage" style="font-size:25px;font-weight:bolder;">انقر هنا لإضافة اعلان اخر</a>
+                        </td>
+                    </tr>
                 </table>
             </div>
             <div style="float: right; border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px;
