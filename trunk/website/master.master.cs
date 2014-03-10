@@ -154,7 +154,7 @@ public partial class master : System.Web.UI.MasterPage
                         ImgCountryFlagWithoutlogin.Src = "img/img_Country/img_Kuwait.png";
                         break;
                     case 21:
-                        ImgCountryFlag.Src = "img/img_Country/img_Emarats.png";
+                        ImgCountryFlag.Src = "img/img_Country/img_Qatar.png";
                         ImgCountryFlag.Alt = "قطر";
                         alinkCountryName.InnerHtml = "قطر";
                         alinkCountryNameWithoutLogin.InnerHtml = "قطر";
