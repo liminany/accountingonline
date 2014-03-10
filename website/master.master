@@ -84,9 +84,11 @@
                                     <td colspan="2">
                                         <a href="country">
                                             <img id="ImgCountryFlagWithoutlogin" src="~/images/world_map_earth.png" runat="server"
-                                                align="top" alt="arabisky.com" style="border: 0px; width: 26px; height: 20px;padding-top:2px;" /><span
+                                                align="top" alt="arabisky.com" style="border: 0px; width: 26px; height: 20px;padding-top:2px;" />
+                                                
+                                                <span
                                                     id="alinkCountryNameWithoutLogin" style="padding-right: 3px;" runat="server"></span>
-                                        </a><a id="A1" runat="server" href="~/signup">مستخدم جديد</a> <a id="A2" runat="server"
+                                        </a> <a id="A1" runat="server" href="~/signup">مستخدم جديد</a> <a id="A2" runat="server"
                                             href="login">تسجيل دخول</a>
                                     </td>
                                 </tr>
@@ -252,7 +254,9 @@
                     <div class="arabiSky-footerSeperator">
                     </div>
                     <div class="arabiSky-footerLinksTop">
-                        <a href="ContactUs">تواصل معنا</a> | <a href="Help">مساعدة</a>
+                        <a href="ContactUs">تواصل معنا</a> | 
+                        <a href="Help">مساعدة</a> | 
+                        <a href="country">بلدان اخرى</a>
                         | <a href='https://www.facebook.com/arabisky' target="_blank">
                             <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
                         | <a href='https://twitter.com/arabisky' target="_blank">
