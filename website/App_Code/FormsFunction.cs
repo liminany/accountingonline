@@ -414,8 +414,8 @@ public class FormsFunction
     {
         try
         {
-            if (HttpContext.Current.Request.Cookies["ArabiSkyCheckCountry"] != null)
-                return Convert.ToInt16(HttpContext.Current.Request.Cookies["ArabiSkyCheckCountry"].Value);
+            if (HttpContext.Current.Request.Cookies["ArabiSkyCheckCountryFull"] != null)
+                return Convert.ToInt16(HttpContext.Current.Request.Cookies["ArabiSkyCheckCountryFull"].Value);
             else
                 return 0;
         }
