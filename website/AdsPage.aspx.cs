@@ -410,59 +410,59 @@ public partial class AdsPage : System.Web.UI.Page
                 case 19:
                     sp_CountryName.InnerHtml = "الإمارات العربية المتحدة";
                     spCurrany.InnerHtml = "درهم";
-                    return 17;
+                    return 19;
                 case 24:
                     sp_CountryName.InnerHtml = "الجمهورية العربية السورية";
                     spCurrany.InnerHtml = "ليرة";
-                    return 17;
+                    return 24;
                 case 23:
                     sp_CountryName.InnerHtml = "الكويت";
                     spCurrany.InnerHtml = "دينار";
-                    return 17;
+                    return 23;
                 case 21:
                     sp_CountryName.InnerHtml = "قطر";
                     spCurrany.InnerHtml = "ريال";
-                    return 17;
+                    return 21;
                 case 20:
                     sp_CountryName.InnerHtml = "البحرين";
                     spCurrany.InnerHtml = "دينار";
-                    return 17;
+                    return 20;
                 case 18:
                     sp_CountryName.InnerHtml = "اليمن";
                     spCurrany.InnerHtml = "ريال";
-                    return 17;
+                    return 18;
                 case 22:
                     sp_CountryName.InnerHtml = "عُمان";
                     spCurrany.InnerHtml = "ريال";
-                    return 17;
+                    return 22;
                 case 27:
                     sp_CountryName.InnerHtml = "تونس";
                     spCurrany.InnerHtml = "دينار";
-                    return 17;
+                    return 27;
                 case 26:
                     sp_CountryName.InnerHtml = "الجزائر";
                     spCurrany.InnerHtml = "دينار";
-                    return 17;
+                    return 26;
                 case 25:
                     sp_CountryName.InnerHtml = "المغرب";
                     spCurrany.InnerHtml = "درهم";
-                    return 17;
+                    return 25;
                 case 28:
                     sp_CountryName.InnerHtml = "لبنان";
                     spCurrany.InnerHtml = "ليرة";
-                    return 17;
+                    return 28;
                 case 29:
                     sp_CountryName.InnerHtml = "العراق";
                     spCurrany.InnerHtml = "دينار";
-                    return 17;
+                    return 29;
                 case 30:
                     sp_CountryName.InnerHtml = "السودان";
                     spCurrany.InnerHtml = "جنية";
-                    return 17;
+                    return 30;
                 case 31:
                     sp_CountryName.InnerHtml = "موريتانيا";
                     spCurrany.InnerHtml = "أوقية";
-                    return 17;
+                    return 31;
                 default:
                     Response.Redirect("country",false);
                     return 0; 
