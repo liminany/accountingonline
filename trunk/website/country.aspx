@@ -3,6 +3,72 @@
     Inherits="country" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script type="text/javascript">
+        function funChooseCountry(e) {
+            switch (e) {
+                case "12":
+                    createCookie("ArabiSkyCheckCountry", "12", 1e3);
+                    break;
+                case "14":
+                    createCookie("ArabiSkyCheckCountry", "14", 1e3);
+                    break;
+                case "15":
+                    createCookie("ArabiSkyCheckCountry", "15", 1e3);
+                    break;
+                case "16":
+                    createCookie("ArabiSkyCheckCountry", "16", 1e3);
+                    break;
+                case "17":
+                    createCookie("ArabiSkyCheckCountry", "17", 1e3);
+                    break;
+                case "19":
+                    createCookie("ArabiSkyCheckCountry", "19", 1e3);
+                    break;
+                case "24":
+                    createCookie("ArabiSkyCheckCountry", "24", 1e3);
+                    break;
+                case "23":
+                    createCookie("ArabiSkyCheckCountry", "23", 1e3);
+                    break;
+                case "21":
+                    createCookie("ArabiSkyCheckCountry", "21", 1e3);
+                    break;
+                case "20":
+                    createCookie("ArabiSkyCheckCountry", "20", 1e3);
+                    break;
+                case "18":
+                    createCookie("ArabiSkyCheckCountry", "18", 1e3);
+                    break;
+                case "22":
+                    createCookie("ArabiSkyCheckCountry", "22", 1e3);
+                    break;
+                case "27":
+                    createCookie("ArabiSkyCheckCountry", "27", 1e3);
+                    break;
+                case "26":
+                    createCookie("ArabiSkyCheckCountry", "26", 1e3);
+                    break;
+                case "25":
+                    createCookie("ArabiSkyCheckCountry", "25", 1e3);
+                    break;
+                case "28":
+                    createCookie("ArabiSkyCheckCountry", "28", 1e3);
+                    break;
+                case "29":
+                    createCookie("ArabiSkyCheckCountry", "29", 1e3);
+                    break;
+                case "30":
+                    createCookie("ArabiSkyCheckCountry", "30", 1e3);
+                    break;
+                case "31":
+                    createCookie("ArabiSkyCheckCountry", "31", 1e3);
+                    break;
+                default:
+                    break;
+            }
+            window.location = "/";
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div style="height: 100px;">
@@ -25,7 +91,7 @@
             </div>
             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
                 <a href="" title="Education & Learning" style="color: #111111; font-size: 20px;"
-                    runat="server" id="spAdsTitle">البلدان - الرجاء قم بإختيار علم بلدك</a>
+                    runat="server" id="spAdsTitle">الرجاء قم بإختيار علم بلدك</a>
             </div>
             <div class="arabiSky-indexHeadingRightCurve">
             </div>
@@ -38,46 +104,46 @@
                 <table border="0" width="100%" cellpadding="0" cellspacing="0">
                     <tr>
                         <td align="center">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('12')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_jordan.png" />
                             </a>
                         </td>
                         <td align="center">
-                            <a href="javascript:void(0)">
-                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_jordan.png" />
+                            <a href="javascript:void(0)" onclick="funChooseCountry('15')">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Palastain.png" />
                             </a>
                         </td>
                         <td align="center">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('14')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_saudiArabia.png" />
                             </a>
                         </td>
                         <td align="center">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('17')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Egypt.png" />
                             </a>
                         </td>
                         <td align="center">
-                            <a href="javascript:void(0)">
-                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="" />
+                            <a href="javascript:void(0)" onclick="funChooseCountry('19')">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Emarats.png" />
                             </a>
                         </td>
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Audi&Brand2=اودي">الأردن</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('12')">الأردن</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=BMW&Brand2=بي إم دبليو">فلسطين</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('15')">فلسطين</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Chevrolet&Brand2=شفروليه">السعودية</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('14')">السعودية</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Citroen&Brand2=ستروين">مصر</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('17')">مصر</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Daewoo&Brand2=دايو">الإمارات</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('19')">الإمارات</a>
                         </td>
                     </tr>
                     <tr>
@@ -86,41 +152,41 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=dodge&Brand2=دودج">
-                                <img alt="ArabiSky.com" style="border: 0px" alt="ArabiSky.com" width="64" height="42" src="img/img_Country/img_Syria.png" /></a>
+                             <a href="javascript:void(0)" onclick="funChooseCountry('24')">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Syria.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=geely&Brand2=جيلي">
+                             <a href="javascript:void(0)" onclick="funChooseCountry('16')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Libya.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=gmc&Brand2=جيمس">
+                             <a href="javascript:void(0)" onclick="funChooseCountry('23')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Kuwait.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Great_Wall&Brand2=جريت وول">
+                             <a href="javascript:void(0)" onclick="funChooseCountry('21')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Qatar.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=honda&Brand2=هوندا">
-                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Bahrain.png" />
+                             <a href="javascript:void(0)" onclick="funChooseCountry('20')">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Bahrain.png" /></a>
                         </td>
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=dodge&Brand2=دودج">سوريا</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('24')">سوريا</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=geely&Brand2=جيلي">ليبيا</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('16')">ليبيا</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=gmc&Brand2=جيمس">الكويت</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('23')">الكويت</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Great_Wall&Brand2=جريت وول">قطر</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('21')">قطر</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=honda&Brand2=هوندا">البحرين</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('20')">البحرين</a>
                         </td>
                     </tr>
                     <tr>
@@ -129,41 +195,41 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=hummer&Brand2=همر">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('18')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Yemen.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=hyundai&Brand2=هونداي">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('22')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Oman.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Infiniti&Brand2=انفنتي">
-                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="" /></a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('27')">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Morocco.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=jaguar&Brand2=جاكور">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('26')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Algeria.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=land rover&Brand2=لاند روفر">
-                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="BrandLogos/land-rover.png" /></a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('25')">
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Tounis.png" /></a>
                         </td>
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Hummer&Brand2=همر">اليمن</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('18')">اليمن</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Hyundai&Brand2=هونداي">عُمان</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('22')">عُمان</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Infiniti&Brand2=انفنتي">تونس</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('27')">تونس</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Jaguar&Brand2=جاكور">الجزائر</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('26')">الجزائر</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Land Rover&Brand2=لاند روفر">المغرب</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('25')">المغرب</a>
                         </td>
                     </tr>
                     <tr>
@@ -172,34 +238,34 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('28')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Lebanon.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('29')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Iraq.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('30')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Sudan.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="javascript:void(0)">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('31')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Mauritania.png" /></a>
                         </td>
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=lexus&Brand2=لكزس">لبنان</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('28')">لبنان</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=mercedes&Brand2=مرسيدس">العراق</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('29')">العراق</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=mazda&Brand2=مازدا">السودان</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('30')">السودان</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Mitsubishi&Brand2=ميتسوبيشي لانسر">موريتانيا</a>
+                            <a href="javascript:void(0)" onclick="funChooseCountry('31')">موريتانيا</a>
                         </td>
                     </tr>
                     <tr>

@@ -59,9 +59,11 @@ public class InsertNewAdsHandler : IHttpHandler
                             SearchEngineOptimization objSearchEngineOptimization = new SearchEngineOptimization();
                             objSearchEngineOptimization.SiteMapGenerater(string.Format("http://www.arabisky.com/ViewAds?AdsID={0}", nReturnValue), DateTime.Now.ToString(), "daily", "0.69");
                         }
+                        break;
                     case "editads":
                         break; 
                     default:
+                        break;
                 }
             }
             else
