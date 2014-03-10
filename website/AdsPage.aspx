@@ -94,7 +94,11 @@
                     </tr>
                     <tr>
                         <td align="center">
-                            <a href="/AdsPage" style="font-size:25px;font-weight:bolder;">انقر هنا لإضافة اعلان اخر</a>
+                            <a href="/AdsPage" style="font-size:23px;font-weight:bolder;">انقر هنا لإضافة اعلان اخر</a>
+                        </td>
+                    </tr>
+                                        <tr>
+                        <td style="height: 50px;">
                         </td>
                     </tr>
                 </table>
