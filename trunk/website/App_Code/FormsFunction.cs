@@ -265,7 +265,7 @@ public class FormsFunction
             MailMessage mail = new MailMessage();
             mail.Subject = sEmailSubject;
             mail.From = new MailAddress("khodrog@gmail.com");
-            mail.To.Add("khodrog@gmail.com");
+            mail.To.Add(sToEmailAddress);
             mail.Body = sEmailBody;
             mail.IsBodyHtml = true;
 
