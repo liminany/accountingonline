@@ -96,8 +96,15 @@
                                             <asp:ListItem Text="80" Value="80"></asp:ListItem>
                                             <asp:ListItem Text="90" Value="90"></asp:ListItem>
                                             <asp:ListItem Text="100" Value="100"></asp:ListItem>
-                                            <asp:ListItem Text="100" Value="1000"></asp:ListItem>
-                                            <asp:ListItem Text="100" Value="2000"></asp:ListItem>
+                                            <asp:ListItem Text="1000" Value="1000"></asp:ListItem>
+                                            <asp:ListItem Text="2000" Value="2000"></asp:ListItem>
+                                            <asp:ListItem Text="5000" Value="5000"></asp:ListItem>
+                                            <asp:ListItem Text="10000" Value="10000"></asp:ListItem>
+                                            <asp:ListItem Text="20000" Value="20000"></asp:ListItem>
+                                            <asp:ListItem Text="50000" Value="50000"></asp:ListItem>
+                                            <asp:ListItem Text="100000" Value="100000"></asp:ListItem>
+                                            <asp:ListItem Text="900000" Value="900000"></asp:ListItem>
+                                            <asp:ListItem Text="10000000" Value="10000000"></asp:ListItem>
                                         </asp:DropDownList>
                                     </td>
                                     <td>
