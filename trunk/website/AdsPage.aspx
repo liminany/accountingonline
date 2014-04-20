@@ -29,10 +29,10 @@
     <asp:HiddenField runat="server" ID="hfEditImageAds" Value="0" />
     
     <div style="width:100%">
-        <div style="height: 30px; float: right;width:50%">
+        <div style="height: 30px; float: right;width:20%">
         <a href='/'>سوق سماء العرب </a>» <span id="spPageTitle" runat="server"></span>
     </div> 
-        <div style="width:50%;float:left;">
+        <div style="width: 74%;float:left;">
                                     <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
