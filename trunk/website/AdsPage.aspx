@@ -32,19 +32,19 @@
         <div style="height: 30px; float: right;width:20%">
         <a href='/'>سوق سماء العرب </a>» <span id="spPageTitle" runat="server"></span>
     </div> 
-        <div style="width: 74%;float:left;">
-                                    <script type="text/javascript"><!--
+        <div style="width: 74%; float: left;">
+            <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
     google_ad_slot = "7597006556";
     google_ad_width = 728;
     google_ad_height = 90;
     //-->
-                            </script>
-                            <script type="text/javascript"
-                                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-                            </script>
-    </div> 
+            </script>
+            <script type="text/javascript"
+                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
+        </div> 
     </div>
     <div style="clear:both;"></div>
     <div style="width: 100%; height: auto;">
