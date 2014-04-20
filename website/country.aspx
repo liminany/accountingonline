@@ -286,7 +286,7 @@
             <div style="clear: both; height: 10px;">
             </div>
             <div style="text-align: center;">
-                <div style="float: left;">
+                <div>
             <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
