@@ -296,15 +296,15 @@
             <div style="text-align: center;">
                 <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
-    /* View_Ads */
-    google_ad_slot = "6120273353";
-    google_ad_width = 300;
-    google_ad_height = 250;
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
     //-->
-                </script>
-                <script type="text/javascript"
-                    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-                </script>
+                            </script>
+                            <script type="text/javascript"
+                                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                            </script>
             </div>
         </div>
     </div>
