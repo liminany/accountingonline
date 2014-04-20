@@ -24,85 +24,73 @@
         <div style="clear: both;">
         </div>
         <div>
-            <div style="border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px;
-                text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;">
+            <div style="border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px; text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr style="height: 100px;">
                         <td align="right" style="width: 80px;">
                             <img id="imgUserProfile" runat="server" src="images/ArabiSkyUnknowUser.png" width="150"
                                 height="150" alt="ArabiSky.com" />
                         </td>
-                        <td align="right">
-                            &nbsp;
+                        <td align="right">&nbsp;
                         </td>
                         <td align="left" style="padding-left: 20px; vertical-align: bottom">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- ArabiSky_SqureAds -->
-                            <ins class="adsbygoogle" style="display: inline-block; width: 300px; height: 250px"
-                                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3574583608"></ins>
-                            <script>
-                                (adsbygoogle = window.adsbygoogle || []).push({});
+                            <script type="text/javascript"><!--
+                                google_ad_client = "ca-pub-8724688346081785";
+                                /* View_Ads */
+                                google_ad_slot = "6120273353";
+                                google_ad_width = 300;
+                                google_ad_height = 250;
+                                //-->
+                            </script>
+                            <script type="text/javascript"
+                                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
                             </script>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 10px;">
-                        </td>
+                        <td colspan="3" style="height: 10px;"></td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ccc;" colspan="3">
-                        </td>
+                        <td style="border-bottom: 1px solid #ccc;" colspan="3"></td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 10px;">
-                        </td>
+                        <td colspan="3" style="height: 10px;"></td>
                     </tr>
                     <tr>
-                        <td align="right">
-                            إسم المستخدم :
+                        <td align="right">إسم المستخدم :
                         </td>
                         <td colspan="2" align="right">
-                            <span style="color: #111111; font-size: 15px;" id="sp_UserFullName" runat="server">
-                            </span>&nbsp;
+                            <span style="color: #111111; font-size: 15px;" id="sp_UserFullName" runat="server"></span>&nbsp;
                         </td>
                     </tr>
                     <tr>
-                        <td align="right">
-                            البريد الإلكتروني :
+                        <td align="right">البريد الإلكتروني :
                         </td>
                         <td colspan="2" align="right">
-                            <a href="javascript:void(0)" style="font-size: 15px;" id="aEmailAddress" runat="server">
-                            </a>
+                            <a href="javascript:void(0)" style="font-size: 15px;" id="aEmailAddress" runat="server"></a>
                         </td>
                     </tr>
                     <tr>
-                        <td align="right">
-                            تاريخ التسجيل في الموقع :
+                        <td align="right">تاريخ التسجيل في الموقع :
                         </td>
                         <td colspan="2" align="right">
-                            <span style="color: #111111; font-size: 15px;" id="spCreateDate" runat="server">
-                            </span>&nbsp;
+                            <span style="color: #111111; font-size: 15px;" id="spCreateDate" runat="server"></span>&nbsp;
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 10px;">
-                        </td>
+                        <td colspan="3" style="height: 10px;"></td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ccc;" colspan="3">
-                        </td>
+                        <td style="border-bottom: 1px solid #ccc;" colspan="3"></td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 20px;">
-                        </td>
+                        <td colspan="3" style="height: 20px;"></td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="font-weight: bold;" align="center" id="spTitleBrowseAds" runat="server">
-                        </td>
+                        <td colspan="3" style="font-weight: bold;" align="center" id="spTitleBrowseAds" runat="server"></td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 20px;">
-                        </td>
+                        <td colspan="3" style="height: 20px;"></td>
                     </tr>
                     <tr>
                         <td align="right" colspan="3">
@@ -128,24 +116,20 @@
                                                 <HeaderTemplate>
                                                     <thead>
                                                         <tr>
-                                                            <th align="right" style="width: 50%; padding-right: 30px;">
-                                                                عنوان الإعلان
+                                                            <th align="right" style="width: 50%; padding-right: 30px;">عنوان الإعلان
                                                             </th>
-                                                            <th style="width: 13%" align="center">
-                                                                القسم الفرعي
+                                                            <th style="width: 13%" align="center">القسم الفرعي
                                                             </th>
-                                                            <th align="center" style="width: 10%;">
-                                                                المدينة
+                                                            <th align="center" style="width: 10%;">المدينة
                                                             </th>
-                                                            <th colspan="2" align="center" style="padding-left: 20px; width: 10%">
-                                                                الصورة
+                                                            <th colspan="2" align="center" style="padding-left: 20px; width: 10%">الصورة
                                                             </th>
                                                         </tr>
                                                     </thead>
                                                 </HeaderTemplate>
                                                 <ItemTemplate>
-                                                    <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px;
-                                                        cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
+                                                    <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
+                                                        onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
                                                             <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
                                                                 <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
@@ -168,8 +152,8 @@
                                                     </tr>
                                                 </ItemTemplate>
                                                 <AlternatingItemTemplate>
-                                                    <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px;
-                                                        cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
+                                                    <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
+                                                        onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
                                                             <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
                                                                 <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
@@ -199,20 +183,24 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 20px;">
-                        </td>
+                        <td colspan="3" style="height: 20px;"></td>
                     </tr>
                 </table>
             </div>
             <div style="clear: both; height: 10px;">
             </div>
             <div style="text-align: center;">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- ArabiSky_Default_Top -->
-                <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
-                    data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
-                <script>                    (adsbygoogle = window.adsbygoogle || []).push({});</script>
-                <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
+                <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+                </script>
+                <script type="text/javascript"
+                    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
             </div>
         </div>
     </div>

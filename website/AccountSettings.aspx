@@ -326,11 +326,16 @@
     <div style="clear: both; height: 10px;">
     </div>
     <div style="text-align: center;">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- ArabiSky_Default_Top -->
-        <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
-            data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
-        <script>            (adsbygoogle = window.adsbygoogle || []).push({});</script>
-        <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
+ <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+                            </script>
+                            <script type="text/javascript"
+                                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                            </script>
     </div>
 </asp:Content>
