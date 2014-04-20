@@ -41,6 +41,7 @@
             </script>
         </div>
     </div>
+    <div style="clear:both;"></div>
     <div style="width: 100%; height: auto;">
         <div>
             <div class="arabiSky-indexHeadingLeftCurve">
