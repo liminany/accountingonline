@@ -9,16 +9,14 @@
         <ContentTemplate>
             <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td style="height: 20px;">
-                    </td>
+                    <td style="height: 20px;"></td>
                 </tr>
                 <tr>
                     <td align="center">
                         <div>
                             <div id="arabiSky-signInSignUpBlockInner" style="width: 700px; height: 300px;">
                                 <div id="arabiSky-signUpBlock">
-                                    <h2>
-                                        تسجيل الدخول الى سوق سماء العرب
+                                    <h2>تسجيل الدخول الى سوق سماء العرب
                                     </h2>
                                     <div style="height: 20px; clear: both;">
                                     </div>
@@ -48,7 +46,8 @@
                                                 </label>
                                             </div>
                                             <div class="floatLeft" style="float: right; margin-right: 180px; margin-top: 5px;">
-                                                <a href="forgetPassword" class="forgotPass">نسيت كلمة المرور</a></div>
+                                                <a href="forgetPassword" class="forgotPass">نسيت كلمة المرور</a>
+                                            </div>
                                             <div style="clear: both;">
                                             </div>
                                         </div>
@@ -65,7 +64,8 @@
                                         <img src="images/connect-facebook.png" alt="ArabiSky - login By Facebook" onclick="loginByFacebook();" style="cursor: pointer;" />
                                         <script type="text/javascript">
                                             window.fbAsyncInit = function () {
-                                                FB.init({ appId: '172727259569815',
+                                                FB.init({
+                                                    appId: '172727259569815',
                                                     status: true, // check login status
                                                     cookie: true, // enable cookies to allow the server to access the session
                                                     xfbml: true, // parse XFBML
@@ -76,7 +76,7 @@
                                                 var e = document.createElement('script'); e.async = true;
                                                 e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
                                                 document.getElementById('fb-root').appendChild(e);
-                                            } ());
+                                            }());
 
                                             function loginByFacebook() {
                                                 FB.login(function (response) {
@@ -107,12 +107,17 @@
                             <div style="height: 10px; clear: both;">
                             </div>
                             <div style="text-align: center;">
-                                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                                <!-- ArabiSky_Default_Top -->
-                                <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
-                                    data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
-                                <script>                                    (adsbygoogle = window.adsbygoogle || []).push({});</script>
-                                <%--<div style="width:728px;height:90px;background-color:Red;"></div>--%>
+                                <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+                                </script>
+                                <script type="text/javascript"
+                                    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                                </script>
                             </div>
                         </div>
                     </td>

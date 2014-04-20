@@ -19,7 +19,18 @@
     <div style="height: 30px; float: right;">
         <a href='/'>سوق سماء العرب </a>»&nbsp;صندوق الرسائل الخاصة
     </div>
-    <div style="clear: both;">
+    <div style="float: left;">
+        <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+        </script>
+        <script type="text/javascript"
+            src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
     </div>
     <div style="width: 100%; height: auto;">
         <div>
@@ -35,8 +46,7 @@
         <div style="clear: both;">
         </div>
         <div>
-            <div style="border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px;
-                text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;">
+            <div style="border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px; text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr style="height: 100px;">
                         <td align="right" style="width: 80px;">
@@ -53,31 +63,26 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ccc;" colspan="3">
-                        </td>
+                        <td style="border-bottom: 1px solid #ccc;" colspan="3"></td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 10px;">
-                        </td>
+                        <td colspan="3" style="height: 10px;"></td>
                     </tr>
                     <tr>
                         <td colspan="3" align="right" dir="ltr">
-                            <div dir="ltr" style="overflow-y: scroll; height: 100px; text-align: right; float: right;
-                                padding-right: 10px;" id="div_EmailBody" runat="server">
+                            <div dir="ltr" style="overflow-y: scroll; height: 100px; text-align: right; float: right; padding-right: 10px;"
+                                id="div_EmailBody" runat="server">
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 30px;">
-                        </td>
+                        <td colspan="3" style="height: 30px;"></td>
                     </tr>
                     <tr>
-                        <td style="border-bottom: 1px solid #ccc;" colspan="3">
-                        </td>
+                        <td style="border-bottom: 1px solid #ccc;" colspan="3"></td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 20px;">
-                        </td>
+                        <td colspan="3" style="height: 20px;"></td>
                     </tr>
                     <tr>
                         <td colspan="3" style="height: 30px;">
@@ -85,23 +90,20 @@
                         </td>
                     </tr>
                     <tr>
-                        <td colspan="3" style="height: 20px;">
-                        </td>
+                        <td colspan="3" style="height: 20px;"></td>
                     </tr>
                     <tr>
                         <td colspan="3" align="right" style="display: none;" id="td_SendEmail">
                             <table width="100%" border="0" cellpadding="0" cellspacing="0">
                                 <tr>
-                                    <td>
-                                        عنوان الرسالة :
+                                    <td>عنوان الرسالة :
                                     </td>
                                     <td colspan="2" align="right">
                                         <input type="text" id="txtMessageTitle" runat="server" style="width: 400px;" />
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        نص الرسالة :
+                                    <td>نص الرسالة :
                                     </td>
                                     <td colspan="2" align="right">
                                         <textarea runat="server" id="editor" name="elm1" rows="5" cols="80" style="width: 80%">
@@ -109,23 +111,19 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" style="height: 10px;">
-                                    </td>
+                                    <td colspan="3" style="height: 10px;"></td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        &nbsp;
+                                    <td>&nbsp;
                                     </td>
                                     <td style="height: 30px;" align="right">
                                         <asp:Button ID="btnSendMessage" runat="server" CssClass="btnClass" Text="إرسال" OnClick="btnSendMessage_Click" />
                                     </td>
-                                    <td>
-                                        &nbsp;
+                                    <td>&nbsp;
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td colspan="3" style="height: 25px;">
-                                    </td>
+                                    <td colspan="3" style="height: 25px;"></td>
                                 </tr>
                             </table>
                         </td>

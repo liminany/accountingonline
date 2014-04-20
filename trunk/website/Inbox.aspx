@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="سوق سماء العرب | رسائلي الخاصة" MetaDescription="ArabiSky | سوق سماء العرب | إستطلاع رسائلي الخاصة من المستخدمين" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="Inbox.aspx.cs" Inherits="Inbox" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
         function DeleteCityInfo(MessageID) {
@@ -32,7 +33,18 @@
     <div style="height: 30px; float: right;">
         <a href='/'>سوق سماء العرب </a>» رسائلي
     </div>
-    <div style="clear: both;">
+    <div style="float: left;">
+        <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+        </script>
+        <script type="text/javascript"
+            src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+        </script>
     </div>
     <div style="width: 100%; height: auto;">
         <div>
@@ -53,31 +65,25 @@
                         <HeaderTemplate>
                             <thead>
                                 <tr>
-                                    <th align="right" style="width: 10%; padding-right: 30px;">
-                                        #
+                                    <th align="right" style="width: 10%; padding-right: 30px;">#
                                     </th>
-                                    <th align="right" style="width: 20%; padding-right: 30px;">
-                                        إسم المرسل
+                                    <th align="right" style="width: 20%; padding-right: 30px;">إسم المرسل
                                     </th>
-                                    <th style="width: 30%" align="right">
-                                        عنوان الرسالة
+                                    <th style="width: 30%" align="right">عنوان الرسالة
                                     </th>
-                                    <th align="center" style="width: 15%;">
-                                        التاريخ
+                                    <th align="center" style="width: 15%;">التاريخ
                                     </th>
-                                    <th colspan="2" align="center" style="padding-left: 20px; width: 10%">
-                                        الصورة
+                                    <th colspan="2" align="center" style="padding-left: 20px; width: 10%">الصورة
                                     </th>
                                 </tr>
                             </thead>
                         </HeaderTemplate>
                         <ItemTemplate>
-                            <tr style='background-color: #fff; <%# GetMessageStatus(DataBinder.Eval(Container.DataItem, "MessageFlag").ToString())%>;
-                                height: 40px'>
+                            <tr style='background-color: #fff; <%# GetMessageStatus(DataBinder.Eval(Container.DataItem, "MessageFlag").ToString())%>; height: 40px'>
                                 <td align="right" style="width: 10%; padding-right: 30px;">
                                     <img src="images/DeleteMessage.png" width="15" height="15" title="حذف الرسالة" style="cursor: pointer;"
                                         onclick="return DeleteCityInfo(<%# DataBinder.Eval(Container.DataItem, "MessageID")%>);"
-                                        alt="ArabiSky.com"/>
+                                        alt="ArabiSky.com" />
                                     &nbsp;
                                     <img src="images/imgReadMessage.png" width="15" height="15" title="تصفح الرسالة"
                                         style="cursor: pointer;" onclick="window.location='mail?messageID=<%# DataBinder.Eval(Container.DataItem, "MessageID")%>'"
@@ -101,8 +107,7 @@
                             </tr>
                         </ItemTemplate>
                         <AlternatingItemTemplate>
-                            <tr style='background-color: #ededed; <%# GetMessageStatus(DataBinder.Eval(Container.DataItem, "MessageFlag").ToString())%>;
-                                height: 40px;'>
+                            <tr style='background-color: #ededed; <%# GetMessageStatus(DataBinder.Eval(Container.DataItem, "MessageFlag").ToString())%>; height: 40px;'>
                                 <td align="right" style="width: 10%; padding-right: 30px;">
                                     <img src="images/DeleteMessage.png" width="15" height="15" title="حذف الرسالة" style="cursor: pointer;"
                                         onclick="return DeleteCityInfo('<%# DataBinder.Eval(Container.DataItem, "MessageID")%>');"
@@ -132,8 +137,8 @@
                     </asp:Repeater>
                 </table>
             </div>
-             <div style="text-align:center;border:1px solid #ccc;margin-right: 10px;height: 45px;padding-top: 30px;font-weight:bold;font-size:20px;" id="div_EmptyEmailTable" runat="server">
-               لايوجد رسائل خاصة
+            <div style="text-align: center; border: 1px solid #ccc; margin-right: 10px; height: 45px; padding-top: 30px; font-weight: bold; font-size: 20px;" id="div_EmptyEmailTable" runat="server">
+                لايوجد رسائل خاصة
             </div>
         </div>
         <div style="clear: both; height: 10px;">

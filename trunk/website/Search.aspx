@@ -3,19 +3,18 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style type="text/css">
-        .thumb
-        {
+        .thumb {
             padding: 3px;
             background-color: #fff;
             border: solid 1px #ccc;
             box-shadow: 0 0 3px rgba(30, 30, 30, 0.2);
         }
-        .tr_AdsRows td
-        {
+
+        .tr_AdsRows td {
             border-bottom: 1px solid #ccc;
         }
-        .tr_AdsRows:hover
-        {
+
+        .tr_AdsRows:hover {
             background-color: #e0f4ff !important;
         }
     </style>
@@ -26,11 +25,17 @@
             <a href='/'>سوق سماء العرب </a>»&nbsp;<span>بحث</span>
         </div>
         <div style="float: left;">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <!-- ArabiSky_Default_Top -->
-            <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
-                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
-            <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
+            <script type="text/javascript"><!--
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
+            </script>
+            <script type="text/javascript"
+                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script>
         </div>
     </div>
     <div style="clear: both;">
@@ -45,8 +50,7 @@
                             </div>
                             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
                                 <div style="float: right;">
-                                    <span style="color: #111111; font-size: 20px;" runat="server" id="sp_SearchTitle">
-                                    </span>
+                                    <span style="color: #111111; font-size: 20px;" runat="server" id="sp_SearchTitle"></span>
                                 </div>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
@@ -55,8 +59,7 @@
                         <div style="clear: both;">
                         </div>
                         <div>
-                            <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px;
-                                text-align: center;">
+                            <div style="border: 1px solid #ccc; height: auto; width: 973px; margin-right: 10px; text-align: center;">
                                 <table class="tbMainAds" style="width: 100%" cellpadding="0" cellspacing="0">
                                     <tr id="trMainAds" runat="server">
                                         <td>
@@ -64,24 +67,20 @@
                                                 <HeaderTemplate>
                                                     <thead>
                                                         <tr>
-                                                            <th align="right" style="width: 50%; padding-right: 30px;">
-                                                                عنوان الإعلان
+                                                            <th align="right" style="width: 50%; padding-right: 30px;">عنوان الإعلان
                                                             </th>
-                                                            <th style="width: 13%" align="center">
-                                                                القسم الفرعي
+                                                            <th style="width: 13%" align="center">القسم الفرعي
                                                             </th>
-                                                            <th align="center" style="width: 10%;">
-                                                                المدينة
+                                                            <th align="center" style="width: 10%;">المدينة
                                                             </th>
-                                                            <th colspan="2" align="center" style="padding-left: 20px; width: 10%">
-                                                                الصورة
+                                                            <th colspan="2" align="center" style="padding-left: 20px; width: 10%">الصورة
                                                             </th>
                                                         </tr>
                                                     </thead>
                                                 </HeaderTemplate>
                                                 <ItemTemplate>
                                                     <tr class="tr_AdsRows" style="color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
-                                                        cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
+                                                        onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
                                                             <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
                                                                 <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
@@ -104,8 +103,8 @@
                                                     </tr>
                                                 </ItemTemplate>
                                                 <AlternatingItemTemplate>
-                                                     <tr class="tr_AdsRows" style="background-color: #fafafa; color: #333; font-weight: bolder; height: 60px;
-                                                        cursor: pointer;" onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
+                                                    <tr class="tr_AdsRows" style="background-color: #fafafa; color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
+                                                        onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
                                                             <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
                                                                 <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
@@ -131,8 +130,7 @@
                                         </td>
                                     </tr>
                                     <tr id="trMainEmpty" runat="server">
-                                        <td style="text-align: right; padding: 30px;">
-                                            بحثك - <span id="sp_SearchWords" runat="server" style="font-weight: bold;"></span>
+                                        <td style="text-align: right; padding: 30px;">بحثك - <span id="sp_SearchWords" runat="server" style="font-weight: bold;"></span>
                                             - لم يطابق أي وثائق.<br />
                                             <br />
                                             الاقتراحات:<br />
@@ -151,11 +149,17 @@
                     <div style="clear: both; height: 10px;">
                     </div>
                     <div style="text-align: center;">
-                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <!-- ArabiSky_Default_Top -->
-                        <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
-                            data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
-                        <script>                            (adsbygoogle = window.adsbygoogle || []).push({});</script>
+                        <script type="text/javascript"><!--
+                            google_ad_client = "ca-pub-8724688346081785";
+                            /* LeaderBoard */
+                            google_ad_slot = "7597006556";
+                            google_ad_width = 728;
+                            google_ad_height = 90;
+                            //-->
+                        </script>
+                        <script type="text/javascript"
+                            src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                        </script>
                     </div>
                 </td>
             </tr>

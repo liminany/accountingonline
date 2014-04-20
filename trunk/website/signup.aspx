@@ -14,16 +14,14 @@
             </div>
             <table width="100%" cellpadding="0" cellspacing="0">
                 <tr>
-                    <td style="height: 20px;">
-                    </td>
+                    <td style="height: 20px;"></td>
                 </tr>
                 <tr>
                     <td align="center">
                         <div>
                             <div id="arabiSky-signInSignUpBlockInner" style="width: 700px; height: 450px;">
                                 <div id="arabiSky-signUpBlock">
-                                    <h2>
-                                        تسجيل حساب جديد في سماء العرب
+                                    <h2>تسجيل حساب جديد في سماء العرب
                                     </h2>
                                     <div style="height: 20px; clear: both;">
                                     </div>
@@ -65,8 +63,7 @@
                                                 id="re_password" runat="server" value="" maxlength="15" class="singinTextBox"
                                                 autocomplete="off">
                                         </div>
-                                        <div id="div_UserMessage" runat="server" style="font-weight: bold; font-size: 18px;
-                                            height: 40px; text-decoration: underline; clear: both;">
+                                        <div id="div_UserMessage" runat="server" style="font-weight: bold; font-size: 18px; height: 40px; text-decoration: underline; clear: both;">
                                         </div>
                                         <div class="singInTextField" style="float: right;">
                                             <asp:Button ID="btnSubmit" runat="server" Text="تسجيل" CssClass="singinBtn" OnClick="btnSubmit_Click" />
@@ -78,7 +75,8 @@
                                         <img src="images/connect-facebook.png" alt="ArabiSky - login By Facebook" onclick="loginByFacebook();" style="cursor: pointer;" />
                                         <script type="text/javascript">
                                             window.fbAsyncInit = function () {
-                                                FB.init({ appId: '172727259569815',
+                                                FB.init({
+                                                    appId: '172727259569815',
                                                     status: true, // check login status
                                                     cookie: true, // enable cookies to allow the server to access the session
                                                     xfbml: true, // parse XFBML
@@ -89,7 +87,7 @@
                                                 var e = document.createElement('script'); e.async = true;
                                                 e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
                                                 document.getElementById('fb-root').appendChild(e);
-                                            } ());
+                                            }());
 
                                             function loginByFacebook() {
                                                 FB.login(function (response) {
@@ -113,24 +111,28 @@
                                 </div>
                             </div>
                             <div class="signupTextBold">
-                                <h1>
-                                    هل لديك حساب مسبقا <a href="login">تسجيل دخول من هنا</a></h1>
+                                <h1>هل لديك حساب مسبقا <a href="login">تسجيل دخول من هنا</a></h1>
                             </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td style="height: 10px;">
-                    </td>
+                    <td style="height: 10px;"></td>
                 </tr>
                 <tr>
                     <td>
                         <div style="text-align: center;">
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- ArabiSky_Default_Top -->
-                            <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
-                                data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
-                            <script>                                (adsbygoogle = window.adsbygoogle || []).push({});</script>
+                            <script type="text/javascript"><!--
+                                google_ad_client = "ca-pub-8724688346081785";
+                                /* LeaderBoard */
+                                google_ad_slot = "7597006556";
+                                google_ad_width = 728;
+                                google_ad_height = 90;
+                                //-->
+                            </script>
+                            <script type="text/javascript"
+                                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                            </script>
                         </div>
                     </td>
                 </tr>
