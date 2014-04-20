@@ -129,7 +129,7 @@
                     <div style="height: 15px; clear: both;">
                     </div>
                     <div style="text-align: center;">
-                        <div style="float: left;">
+                        <div>
                             <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
