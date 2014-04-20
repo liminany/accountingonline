@@ -27,11 +27,12 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfUserID" Value="0" />
     <asp:HiddenField runat="server" ID="hfEditImageAds" Value="0" />
-    <div style="height: 30px; float: right;">
+    
+    <div style="width:100%">
+        <div style="height: 30px; float: right;width:50%">
         <a href='/'>سوق سماء العرب </a>» <span id="spPageTitle" runat="server"></span>
-    </div>
-    <div style="clear:both;"></div>
-    <div>
+    </div> 
+        <div style="width:50%">
                                     <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
@@ -43,6 +44,7 @@
                             <script type="text/javascript"
                                 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
                             </script>
+    </div> 
     </div>
     <div style="clear:both;"></div>
     <div style="width: 100%; height: auto;">
