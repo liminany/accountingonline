@@ -5,7 +5,7 @@
 
     void Application_BeginRequest(object sender, EventArgs e)
     {
-        try
+        /*try
         {
             if (HttpContext.Current.Request.Url.AbsoluteUri.StartsWith("http://arabisky"))
             {
@@ -27,7 +27,7 @@
         catch (Exception ex)
         {
             Response.Write(ex.Message);
-        }
+        }*/
     }
 
     void Application_Start(object sender, EventArgs e)
