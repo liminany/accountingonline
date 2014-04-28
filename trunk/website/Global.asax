@@ -3,18 +3,31 @@
 <script RunAt="server">    
 
 
-    void RegisterRoute(System.Web.Routing.RouteCollection routes)
-    {     
-        //routes.MapPageRoute("ViewAds", "Ads/{AdsID}/{title}", "~/ViewAds.aspx");
-        //routes.MapPageRoute("article-category", "{catTitle}/News/{articleID}/{title}", "~/Article.aspx");
-        //routes.MapPageRoute("category", "{catID}/{title}", "~/CategoryArticles.aspx");
-    }
-    
-    
-    
-    protected void Application_BeginRequest(object sender, EventArgs e)
+    void Application_BeginRequest(object sender, EventArgs e)
     {
-        
+        try
+        {
+            if (HttpContext.Current.Request.Url.AbsoluteUri.StartsWith("http://arabisky"))
+            {
+                string newUrl = string.Empty;
+                if (HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"] != null)
+                    newUrl = "http://arabisky.com/" + HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"].ToString();
+                else
+                    newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky");
+
+
+
+                Response.Status = "301 Moved Permanently";
+                Response.StatusCode = 301;
+                Response.StatusDescription = "Moved Permanently";
+                Response.AddHeader("Location", newUrl);
+                Response.End();
+            }
+        }
+        catch (Exception ex)
+        {
+            Response.Write(ex.Message);
+        }
     }
 
     void Application_Start(object sender, EventArgs e)
