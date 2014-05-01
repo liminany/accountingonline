@@ -46,6 +46,9 @@ public partial class ContactUs : System.Web.UI.Page
                 else
                 {
                     td_UserMessage.InnerHtml = "<h3 style='color:red'>هناك خطأ في إرسال الرسالة الرجاء المحاولة فيما بعد</h3>";
+                    recaptcha.Visible = true;
+                    ScriptManager.RegisterClientScriptBlock(this.Page, this.Page.GetType(), "recaptcha", "recaptcha.reload();", true);
+                    upContactUs.Update();
                 }
             }
             else
