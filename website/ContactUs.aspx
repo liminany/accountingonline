@@ -6,7 +6,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <asp:UpdatePanel runat="server" UpdateMode="Conditional">
+    <asp:UpdatePanel runat="server" ID="upContactUs" UpdateMode="Conditional">
         <ContentTemplate>
             <div style="height: 30px; float: right;">
                 <a href='/'>سوق سماء العرب </a>» <span>إتصل بنا</span>
