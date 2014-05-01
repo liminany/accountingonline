@@ -48,6 +48,10 @@ public partial class ContactUs : System.Web.UI.Page
                     td_UserMessage.InnerHtml = "<h3 style='color:red'>هناك خطأ في إرسال الرسالة الرجاء المحاولة فيما بعد</h3>";
                 }
             }
+            else
+            {
+                td_UserMessage.InnerHtml = "<h3 style='color:red'>الرجاء التحقق من رمز الدخول</h3>";
+            }
         }
         catch (Exception ex)
         {
