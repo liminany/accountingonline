@@ -47,15 +47,6 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <recaptcha:RecaptchaControl ID="recaptcha" runat="server" PublicKey="6Lc23PISAAAAAOmIdAcnaWthMMgvisMJW6ky2hwI" PrivateKey="6Lc23PISAAAAAPwaKIs3XDUytrAqxH6Yd6V61t_r" />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>&nbsp;
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
                                     <table class="freecontactform" style="background-image: url(images/free-form-background-grey.jpg); background-repeat: repeat-x">
                                         <tbody>
                                             <tr>
@@ -114,6 +105,13 @@
                                                 <td>
                                                     <asp:RequiredFieldValidator runat="server" ID="rfvMessage" ErrorMessage="الرجاء إدخال نص الرسالة التي تريد ارسالها"
                                                         ControlToValidate="Your_Message"></asp:RequiredFieldValidator>
+                                                </td>
+                                            </tr> 
+                                            <tr>
+                                                <td valign="top">&nbsp;
+                                                </td>
+                                                <td colspan="2">
+                                                    <recaptcha:RecaptchaControl ID="recaptcha" runat="server" PublicKey="6Lc23PISAAAAAOmIdAcnaWthMMgvisMJW6ky2hwI" PrivateKey="6Lc23PISAAAAAPwaKIs3XDUytrAqxH6Yd6V61t_r" />
                                                 </td>
                                             </tr>
                                             <tr>
