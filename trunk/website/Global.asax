@@ -7,7 +7,7 @@
     {
         try
         {
-            if (HttpContext.Current.Request.Url.AbsoluteUri.StartsWith("http://arabisky") || HttpContext.Current.Request.Url.AbsoluteUri.StartsWith("http://www.arabisky"))
+            if (HttpContext.Current.Request.Url.AbsoluteUri.StartsWith("http://arabisky"))
             {
                 string newUrl = string.Empty;
                 if (HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"] != null)
