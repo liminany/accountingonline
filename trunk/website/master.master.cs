@@ -182,11 +182,11 @@ public partial class master : System.Web.UI.MasterPage
                         ImgCountryFlagWithoutlogin.Src = "img/img_Country/img_Oman.png";
                         break;
                     case 27:
-                        ImgCountryFlag.Src = "img/img_Country/img_Tounis.png";
-                        ImgCountryFlag.Alt = "تونس";
-                        alinkCountryName.InnerHtml = "تونس";
-                        alinkCountryNameWithoutLogin.InnerHtml = "تونس";
-                        ImgCountryFlagWithoutlogin.Src = "img/img_Country/img_Tounis.png";
+                        ImgCountryFlag.Src = "img/img_Country/img_Morocco.png";
+                        ImgCountryFlag.Alt = "المغرب";
+                        alinkCountryName.InnerHtml = "المغرب";
+                        alinkCountryNameWithoutLogin.InnerHtml = "المغرب";
+                        ImgCountryFlagWithoutlogin.Src = "img/img_Country/img_Morocco.png";
                         break;
                     case 26:
                         ImgCountryFlag.Src = "img/img_Country/img_Algeria.png";
@@ -196,11 +196,11 @@ public partial class master : System.Web.UI.MasterPage
                         ImgCountryFlagWithoutlogin.Src = "img/img_Country/img_Algeria.png";
                         break;
                     case 25:
-                        ImgCountryFlag.Src = "img/img_Country/img_Morocco.png";
-                        ImgCountryFlag.Alt = "المغرب";
-                        alinkCountryName.InnerHtml = "المغرب";
-                        alinkCountryNameWithoutLogin.InnerHtml = "المغرب";
-                        ImgCountryFlagWithoutlogin.Src = "img/img_Country/img_Morocco.png";
+                        ImgCountryFlag.Src = "img/img_Country/img_Tounis.png";
+                        ImgCountryFlag.Alt = "تونس";
+                        alinkCountryName.InnerHtml = "تونس";
+                        alinkCountryNameWithoutLogin.InnerHtml = "تونس";
+                        ImgCountryFlagWithoutlogin.Src = "img/img_Country/img_Tounis.png";
                         break;
                     case 28:
                         ImgCountryFlag.Src = "img/img_Country/img_Lebanon.png";
