@@ -1,8 +1,0 @@
-D:\project\LiveKora\RSSManager\bin\Release\RSSManager.dll
-D:\project\LiveKora\RSSManager\bin\Release\RSSManager.pdb
-D:\project\LiveKora\RSSManager\bin\Release\HtmlAgilityPack.dll
-D:\project\LiveKora\RSSManager\bin\Release\HtmlAgilityPack.pdb
-D:\project\LiveKora\RSSManager\bin\Release\HtmlAgilityPack.xml
-D:\project\LiveKora\RSSManager\obj\Release\RSSManager.dll
-D:\project\LiveKora\RSSManager\obj\Release\RSSManager.pdb
-D:\project\LiveKora\RSSManager\obj\Release\ResolveAssemblyReference.cache

@@ -305,10 +305,9 @@ public class FormsFunction
                     }
                     sEmailText = sEmailText.Replace("#UserEmailAddress#", sEmailAddress);
                     sEmailText = sEmailText.Replace("#UserPassword#", sPassword);
-                    SendEmailServiceByArabiSkyInfo(sEmailAddress, sEmailText, "موقع سماء العرب | تفعيل الحساب");
+                    SendEmailServiceByArabiSkyInfo(sEmailAddress, sEmailText, "موقع سماء العرب | مستخدم جديد ");
                     return SendEMail.Success;
                 case 1:
-                    //Send Email forget Password
                     using (StreamReader objStreamReader = new StreamReader(HttpContext.Current.Server.MapPath("~/UserEmail/ForGetPasswordAccount.htm")))
                     {
                         sEmailText = objStreamReader.ReadToEnd();
@@ -316,6 +315,13 @@ public class FormsFunction
                     sEmailText = sEmailText.Replace("#UserEmailAddress#", sEmailAddress);
                     sEmailText = sEmailText.Replace("#UserPassword#", sPassword);
                     SendEmailServiceByArabiSkyInfo(sEmailAddress, sEmailText, "موقع سماء العرب | إستعادة كلمة المرور");
+                    return SendEMail.Success;
+                case 2:
+                    using (StreamReader objStreamReader = new StreamReader(HttpContext.Current.Server.MapPath("~/UserEmail/MessageNotify.htm")))
+                    {
+                        sEmailText = objStreamReader.ReadToEnd();
+                    }
+                    SendEmailServiceByArabiSkyInfo(sEmailAddress, sEmailText, "موقع سماء العرب | رسالة جديدة من موقع سوق سماء العرب");
                     return SendEMail.Success;
                 default:
                     return SendEMail.Error;
@@ -339,7 +345,7 @@ public class FormsFunction
     {
         try
         {
-            string sEmailText = string.Format("UserFullName: {0}<br />UserEmail Address: {1}<br />User Message: {2}<br />", sUserFullName,sUserEmailAddress,sUserMessage);
+            string sEmailText = string.Format("UserFullName: {0}<br />UserEmail Address: {1}<br />User Message: {2}<br />", sUserFullName, sUserEmailAddress, sUserMessage);
             int nReturnValue = SendEmailServiceByArabiSkyInfo("khodrog@gmail.com", sEmailText, "موقع سماء العرب | رسالة للدعم الفني");
             if (nReturnValue == 1)
             {
@@ -356,7 +362,7 @@ public class FormsFunction
             return SendEMail.Execption;
         }
     }
- 
+
 
 
 
