@@ -22,7 +22,12 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
+            int nSubCatID = 0;
+            int nAdsID = 0;
+            int nAdsHit = 0;
             url = HttpContext.Current.Request.Url.AbsoluteUri;
+
+
             if (!string.IsNullOrEmpty(Request.QueryString["AdsID"]))
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
@@ -42,11 +47,8 @@ public partial class ViewAds : System.Web.UI.Page
                 else
                 {
                     div_SendPrivateMessage.Style.Add("display", "none");
-                }
+                } 
 
-                int nSubCatID = 0;
-                int nAdsID = 0;
-                int nAdsHit = 0;
                 foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"].ToString())).Tables[0].Rows)
                 {
                     sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='Category?CatID=" + rows["SubCatID"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
@@ -54,8 +56,7 @@ public partial class ViewAds : System.Web.UI.Page
                     Page.Title = "سوق سماء العرب - " + rows["AdsTitle"].ToString();
                     Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
 
-                    txtMessageTitle.Text = "Re : " + rows["AdsTitle"].ToString();
-                    //editor.Value = string.Format("هذا الاعلان بخصوص الإعلان {0}", url);
+                    txtMessageTitle.Text = "Re : " + rows["AdsTitle"].ToString(); 
 
                     if (Convert.ToInt32(rows["AdsPrice"].ToString()) > 0)
                     {
@@ -123,18 +124,7 @@ public partial class ViewAds : System.Web.UI.Page
                     rptSlimlerAds.DataSource = objDBAdsManager.GetSimlirAdsTen(nSubCatID, FormsFunction.GetCookieValueCountryInfo());
                     rptSlimlerAds.DataBind();
 
-                    #region UserProfile
-                    //sp_UserFullName.InnerHtml = rows["User_FullName"].ToString();
-                    //aEmailAddress.InnerHtml = rows["User_EmailAddress"].ToString();
-                    //ahrefUserProfile.HRef = "UserProfile?UserID=" + rows["UserID"].ToString();
-                    //if (string.IsNullOrEmpty(rows["User_Image"].ToString()))
-                    //{
-                    //    imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
-                    //}
-                    //else
-                    //{
-                    //    imgUserProfile.Src = rows["User_Image"].ToString();
-                    //}
+                    #region UserProfile 
                     #endregion
                 }
 
@@ -202,6 +192,10 @@ public partial class ViewAds : System.Web.UI.Page
         {
             DBUserMessages objDBUserMessages = new DBUserMessages();
             UserMessages objUserMessages = new UserMessages();
+            UserAuthentication objUserAuthentication = new UserAuthentication();
+
+            string sUserOwnerAdsEmailAddress = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfAdsUserIDOwner.Value)).UserEmailAddress.ToString();
+
             objUserMessages.MessageUserID = Convert.ToInt32(hfAdsUserIDOwner.Value);
             objUserMessages.MessageSendUsers = Convert.ToInt32(hfUserID.Value);
             objUserMessages.MessageTitle = txtMessageTitle.Text;
@@ -209,7 +203,7 @@ public partial class ViewAds : System.Web.UI.Page
             int nRetuenValue = objDBUserMessages.SendNewMessageForUser(objUserMessages);
             if (nRetuenValue == 1)
             {
-                //FormsFunction.SendMail("","سوق سماء العرب | لديك رسالة جديدة","")
+                SendEMail objSendEMail = FormsFunction.SendAndGetEmailTempleteByArabiSkyInfo(2, sUserOwnerAdsEmailAddress, "");
                 div_UserMessage.InnerHtml = "لقد تم إرسال الرسالة بنجاح";
             }
             else

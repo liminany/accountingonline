@@ -75,6 +75,7 @@ public partial class signup : System.Web.UI.Page
             {
                 if (objEntityRegUsers.UserID >= 1)
                 {
+                    SendEMail objSendEMail = FormsFunction.SendAndGetEmailTempleteByArabiSkyInfo(0, objEntityRegUsers.UserEmailAddress, EncryptionMethods.Encryption.Decrypt(objEntityRegUsers.UserPassword));
                     Session["UserInfo"] = objEntityRegUsers;
                     Response.Redirect("/", false);
                 }
