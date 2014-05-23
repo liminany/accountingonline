@@ -69,7 +69,7 @@ public partial class _Default : System.Web.UI.Page
             string sCountryCode = ddlCountryName.SelectedValue;
             string sCityID = ddlCityName.SelectedValue;
             string sSelectedSubCat = home_search_cat_id_Default.Value;
-            Response.Redirect(string.Format("Search?Type=Search&CountryCode={0}&CityID={1}&SubCat={2}", sCountryCode, sCityID, sSelectedSubCat), false);
+            Response.Redirect(string.Format("~/Search?Type=Search&CountryCode={0}&CityID={1}&SubCat={2}", sCountryCode, sCityID, sSelectedSubCat), false);
         }
         catch (Exception ex)
         {
