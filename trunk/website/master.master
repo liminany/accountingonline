@@ -148,7 +148,7 @@
                 <div id="arabiSky-headerMain">
                     <div id="arabiSky-header" style="z-index: 0">
                         <div id="arabiSky-logo" style="height: 90px;">
-                            <a href="/">
+                            <a href="~/" runat="server">
                                 <img src="~/images/ArabiSkyLogo.png" runat="server" alt="ArabiSky.com" border="0"
                                     style="height: 135px; position: relative; bottom: 51px; right: 55px;" /></a>
                         </div>
@@ -159,52 +159,8 @@
                             <div class="arabiSky-searchBlock" style="width: 550px; padding-top: 5px;">
                                 <!-- searchLeftCurve Starts here -->
                                 <div class="arabiSky-searchLeftCurve">
-                                    <div class="arabiSky-searchbox">
-                                        <input type="text" placeholder="ما الذي تبحث عنه" id="txtMasterSearch" runat="server" />
-                                    </div>
-                                    <div style="padding-right: 10px;">
-                                        <select name="home_search_cat_id" id="home_search_cat_id" runat="server" style="width: 200px;"
-                                            class="arabiSky-homeSelectbox">
-                                            <option value="-1">إختر القسم</option>
-                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                font-weight: bold;">للبيع</option>
-                                            <option value="6">&nbsp;&nbsp;العقارات و الإسكان</option>
-                                            <option value="7">&nbsp;&nbsp;السيارات و المركبات</option>
-                                            <option value="8">&nbsp;&nbsp;الكهربائيات و الإلكترونيات</option>
-                                            <option value="9">&nbsp;&nbsp;الأثاث و المفروشات</option>
-                                            <option value="10">&nbsp;&nbsp;أرقام هواتف مميزة</option>
-                                            <option value="11">&nbsp;&nbsp;أشياء أخرى</option>
-                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                font-weight: bold;">الخدمات</option>
-                                            <option value="12">&nbsp;&nbsp;دروس و دورات تدريبية</option>
-                                            <option value="13">&nbsp;&nbsp;الكومبيوتر و الإنترنت</option>
-                                            <option value="14">&nbsp;&nbsp;بناء و مقاولات</option>
-                                            <option value="15">&nbsp;&nbsp;خدمات كهربائية</option>
-                                            <option value="16">&nbsp;&nbsp;السفر و السياحة</option>
-                                            <option value="17">&nbsp;&nbsp;خدمات طبية</option>
-                                            <option value="18">&nbsp;&nbsp;تجهيز الأطعمة و الحفلات</option>
-                                            <option value="19">&nbsp;&nbsp;إصلاح و صيانة السيارات</option>
-                                            <option value="20">&nbsp;&nbsp;خدمات قانونية</option>
-                                            <option value="21">&nbsp;&nbsp;خدمات أخرى</option>
-                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                font-weight: bold;">وظائف شاغرة</option>
-                                            <option value="22">&nbsp;&nbsp;إدارة / سكرتارية</option>
-                                            <option value="23">&nbsp;&nbsp;تسويق / مبيعات</option>
-                                            <option value="24">&nbsp;&nbsp;تدريس / تدريب</option>
-                                            <option value="25">&nbsp;&nbsp;كمبيوتر / تقنية المعلومات</option>
-                                            <option value="26">&nbsp;&nbsp;محاسبة / مالية</option>
-                                            <option value="27">&nbsp;&nbsp;طب / تمريض</option>
-                                            <option value="28">&nbsp;&nbsp;هندسة</option>
-                                            <option value="29">&nbsp;&nbsp;أشغال أخرى</option>
-                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                font-weight: bold;">للإيجار</option>
-                                            <option value="30">&nbsp;&nbsp;العقارات و الإسكان</option>
-                                            <option value="31">&nbsp;&nbsp;السيارات و المركبات</option>
-                                            <option value="32">&nbsp;&nbsp;أشياء أخرى</option>
-                                            <option value="0" disabled="disabled" style="color: #000; background-color: #ededed;
-                                                font-weight: bold;">الباحثين عن عمل</option>
-                                            <option value="33">&nbsp;&nbsp;الباحثين عن عمل</option>
-                                        </select>
+                                    <div class="arabiSky-searchbox" style="width:100% !important;">
+                                        <input type="text" placeholder="ما الذي تبحث عنه" id="txtMasterSearch" runat="server"  style="width: 430px;"/>
                                     </div>
                                 </div>
                                 <div style="padding-top: 5px;">
@@ -231,9 +187,10 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-            <script src="js/Fancybox/jquery.fancybox.js" type="text/javascript"></script>
-            <script src="js/ArabiSkyCookie.js" type="text/javascript"></script>
-            <script src="Scripts/ckeditor/ckeditor.js" type="text/javascript"></script>
+             <script type="text/javascript" src="<%= this.ResolveClientUrl("~/js/Fancybox/jquery.fancybox.js")%>"></script>
+             <script type="text/javascript" src="<%= this.ResolveClientUrl("~/js/ArabiSkyCookie.js")%>"></script>
+             <script type="text/javascript" src="<%= this.ResolveClientUrl("~/Scripts/ckeditor/ckeditor.js")%>"></script>
+             
             <%= SquishIt.Framework.Bundle.JavaScript()
                .Add("~/js/ArabiSkyJSTools.js")
                .Add("~/Scripts/jquery.bxslider.js")
@@ -242,7 +199,10 @@
                .Render("~/Scripts/combined_#.js")
             %>
             <script type="text/javascript">
-                function MakeSearch() { var e = document.getElementById("ctl00_home_search_cat_id").value; var t = document.getElementById("ctl00_txtMasterSearch").value; if (e == "-1" || e == "0") { alert("الرجاء إختيار القسم المناسب و الشيء الذي ترغب البحث عنة"); return false } else { $("#" + "<%= lbtnRefreshGVMaster.ClientID %>").trigger("click") } }
+                function MakeSearch() { 
+                    var t = document.getElementById("ctl00_txtMasterSearch").value;
+                    $("#" + "<%= lbtnRefreshGVMaster.ClientID %>").trigger("click")
+                }
             </script>
             <footer>
                 <div style="text-align: center;">

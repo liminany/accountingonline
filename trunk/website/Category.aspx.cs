@@ -25,10 +25,10 @@ public partial class Category : System.Web.UI.Page
         {
             //if (!IsPostBack)
             //{
-                if (!string.IsNullOrEmpty(Request.QueryString["CatID"]))
+            if (!string.IsNullOrEmpty(Page.RouteData.Values["CatID"].ToString()))
                 {
                     DBAdsManager objDBAdsManager = new DBAdsManager();
-                    DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Request.QueryString["CatID"].ToString()),FormsFunction.GetCookieValueCountryInfo());
+                    DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Page.RouteData.Values["CatID"].ToString()), FormsFunction.GetCookieValueCountryInfo());
                     if (objDataSet.Tables[0].Rows.Count > 0)
                     {
                         string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
@@ -68,8 +68,8 @@ public partial class Category : System.Web.UI.Page
         {
             using (SqlCommand cmd = new SqlCommand("sp_GetAdsCategoiresByCatID", con))
             {
-                cmd.CommandType = CommandType.StoredProcedure; 
-                cmd.Parameters.AddWithValue("@adsSubCat", int.Parse(Request.QueryString["CatID"].ToString()));
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@adsSubCat", int.Parse(Page.RouteData.Values["CatID"].ToString()));
                 cmd.Parameters.AddWithValue("@countryID", FormsFunction.GetCookieValueCountryInfo());
                 cmd.Parameters.AddWithValue("@PageIndex", pageIndex);
                 cmd.Parameters.AddWithValue("@PageSize", PageSize);
@@ -117,7 +117,7 @@ public partial class Category : System.Web.UI.Page
             }
             else
             {
-                return "images/ArabiSkyLogo.png";
+                return "../../images/ArabiSkyLogo.png";
             }
         }
         catch (Exception)
@@ -154,7 +154,7 @@ public partial class Category : System.Web.UI.Page
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Trim();
         strTitle = strTitle.Trim('-');
-        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
+        strTitle = string.Format("../../ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
     #endregion

@@ -148,7 +148,7 @@ public partial class AdsPage : System.Web.UI.Page
     protected void btnAddNewAds_Click(object sender, EventArgs e)
     {
         try
-        {
+        { 
             string sQueryStringAdsID = Request.QueryString["AdsID"];
             if (string.IsNullOrEmpty(sQueryStringAdsID))
             {
@@ -206,9 +206,9 @@ public partial class AdsPage : System.Web.UI.Page
                         //spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم إضافة الاعلان بنجاح <a href='ViewAds?AdsID={0}'>انقر هنا لمشاهدة الإعلان</a>", nReturnValue.ToString());
                         AdsURL = "http://arabisky.com/ViewAds?AdsID=" + nReturnValue.ToString();
                         AdsText = sTextTitleAds;
-                       
-                        
-                        
+
+
+
                         txtAdsTitle.Value = string.Empty;
                         txtPrice.Value = string.Empty;
                         txtYouTubeURL.Value = string.Empty;
@@ -265,7 +265,7 @@ public partial class AdsPage : System.Web.UI.Page
                 {
                     divNewAds.Style.Add("display", "none");
                     divSoicalMedia.Style.Add("display", "");
-                    AdsURL = "http://arabisky.com/ViewAds?AdsID=" + Request.QueryString["AdsID"].ToString();
+                    AdsURL = "http://www.arabisky.com/ViewAds?AdsID=" + Request.QueryString["AdsID"].ToString();
                     AdsText = sTextTitleAds;
                 }
                 else
