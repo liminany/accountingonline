@@ -252,7 +252,7 @@ public partial class master : System.Web.UI.MasterPage
     {
         try
         {
-            Response.Redirect(string.Format("Search?Type=custom&subID={0}&text={1}", home_search_cat_id.Value, txtMasterSearch.Value.Trim()), false);
+            Response.Redirect(string.Format("Search?Type=MainSearch&text={0}", txtMasterSearch.Value.Trim()), false);
         }
         catch (Exception ex)
         {

@@ -82,7 +82,7 @@ public partial class Search : System.Web.UI.Page
                         default:
                             sp_SearchTitle.InnerHtml = Request.QueryString["text"].ToString();
                             sSearchText = Request.QueryString["text"].ToString();
-                            nSearchSubCat = int.Parse(Request.QueryString["subID"].ToString());
+                            nSearchSubCat = -2;
                             Page.Title = "موقع سماء العرب | " + sSearchText;
                             Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
                             nSearchID = 3;
@@ -138,7 +138,7 @@ public partial class Search : System.Web.UI.Page
             }
             else
             {
-                return "images/ArabiSkyLogo.png";
+                return "../../images/ArabiSkyLogo.png";
             }
         }
         catch (Exception)
@@ -175,7 +175,7 @@ public partial class Search : System.Web.UI.Page
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Trim();
         strTitle = strTitle.Trim('-');
-        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
+        strTitle = string.Format("ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
     #endregion
