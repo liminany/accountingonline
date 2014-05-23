@@ -27,8 +27,7 @@ public partial class ViewAds : System.Web.UI.Page
             int nAdsHit = 0;
             url = HttpContext.Current.Request.Url.AbsoluteUri;
 
-
-            if (!string.IsNullOrEmpty(Request.QueryString["AdsID"]))
+            if (!string.IsNullOrEmpty(Page.RouteData.Values["AdsID"].ToString()))
             {
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
@@ -47,16 +46,16 @@ public partial class ViewAds : System.Web.UI.Page
                 else
                 {
                     div_SendPrivateMessage.Style.Add("display", "none");
-                } 
+                }
 
-                foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"].ToString())).Tables[0].Rows)
+                foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString())).Tables[0].Rows)
                 {
                     sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='Category?CatID=" + rows["SubCatID"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
                     spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
                     Page.Title = "سوق سماء العرب - " + rows["AdsTitle"].ToString();
                     Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
 
-                    txtMessageTitle.Text = "Re : " + rows["AdsTitle"].ToString(); 
+                    txtMessageTitle.Text = "Re : " + rows["AdsTitle"].ToString();
 
                     if (Convert.ToInt32(rows["AdsPrice"].ToString()) > 0)
                     {
@@ -124,7 +123,7 @@ public partial class ViewAds : System.Web.UI.Page
                     rptSlimlerAds.DataSource = objDBAdsManager.GetSimlirAdsTen(nSubCatID, FormsFunction.GetCookieValueCountryInfo());
                     rptSlimlerAds.DataBind();
 
-                    #region UserProfile 
+                    #region UserProfile
                     #endregion
                 }
 
@@ -160,7 +159,7 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            int nRetunValue = objDBAdsManager.DeleteAdsAndRejected(Convert.ToInt32(Request.QueryString["AdsID"].ToString()));
+            int nRetunValue = objDBAdsManager.DeleteAdsAndRejected(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()));
             if (nRetunValue == 1)
             {
                 Response.Redirect("PinddingAds", false);
@@ -175,7 +174,7 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            int nRetunValue = objDBAdsManager.ApprovedAds(Convert.ToInt32(Request.QueryString["AdsID"].ToString()));
+            int nRetunValue = objDBAdsManager.ApprovedAds(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()));
             if (nRetunValue == 1)
             {
                 Response.Redirect("PinddingAds", false);
@@ -222,7 +221,7 @@ public partial class ViewAds : System.Web.UI.Page
         {
             if (!string.IsNullOrEmpty(Request.QueryString["AdsID"]))
             {
-                int nReturnValue = objDBAdsManager.DeleteAdsAndRejected(Convert.ToInt32(Request.QueryString["AdsID"].ToString()));
+                int nReturnValue = objDBAdsManager.DeleteAdsAndRejected(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()));
                 if (nReturnValue == 1)
                 {
                     Response.Redirect("MyAds", false);
@@ -245,7 +244,7 @@ public partial class ViewAds : System.Web.UI.Page
             if (!string.IsNullOrEmpty(Request.QueryString["AdsID"]))
             {
                 DateTime newUpdateDateTime = DateTime.Now.AddDays(nRequiredUpdateAdsPeroid);
-                int nReturnValue = objDBAdsManager.ReActivateAds(Convert.ToInt32(hfUserID.Value), Convert.ToInt32(Request.QueryString["AdsID"].ToString()), newUpdateDateTime);
+                int nReturnValue = objDBAdsManager.ReActivateAds(Convert.ToInt32(hfUserID.Value), Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()), newUpdateDateTime);
                 if (nReturnValue == 1)
                 {
                     Response.Write("<script>alert('لقد تم إعادة تفعيل الإعلان بنجاح');</script>");
@@ -269,7 +268,7 @@ public partial class ViewAds : System.Web.UI.Page
         {
             if (!string.IsNullOrEmpty(Request.QueryString["AdsID"]))
             {
-                Response.Redirect("AdsPage?AdsID=" + Request.QueryString["AdsID"].ToString(), false);
+                Response.Redirect("AdsPage/" + Page.RouteData.Values["AdsID"].ToString(), false);
             }
         }
         catch (Exception ex)
@@ -310,13 +309,41 @@ public partial class ViewAds : System.Web.UI.Page
                     return "ريال سعودي";
                 case 15:
                     return "شيكل";
-				case 16:
+                case 16:
                     return "دينار ليبي";
-				case 17:
+                case 17:
                     return "جنية مصري";
+                case 19:
+                    return "درهم إماراتي";
+                case 24:
+                    return "ليرة سورية";
+                case 23:
+                    return "دينار كويتي";
+                case 21:
+                    return "ريال قطري";
+                case 20:
+                    return "دينار بحريني";
+                case 18:
+                    return "رسال يمني";
+                case 22:
+                    return "رسال عماني";
+                case 27:
+                    return "دينار تونسي";
+                case 26:
+                    return "دينار جزائري";
+                case 25:
+                    return "درهم مغربي";
+                case 28:
+                    return "ليرة لبناني";
+                case 29:
+                    return "دينار عراقي";
+                case 30:
+                    return "جنية سوداني";
+                case 31:
+                    return "أوقية موريتانيا";
                 default:
                     return "غير معروف";
-            }
+            } 
         }
         catch (Exception)
         {
@@ -417,7 +444,7 @@ public partial class ViewAds : System.Web.UI.Page
         strTitle = strTitle.Replace("---", "-");
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Trim();
-        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
+        strTitle = string.Format("../../ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
     #endregion

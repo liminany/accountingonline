@@ -15,8 +15,6 @@
                 else
                     newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky");
 
-
-
                 Response.Status = "301 Moved Permanently";
                 Response.StatusCode = 301;
                 Response.StatusDescription = "Moved Permanently";
@@ -29,10 +27,20 @@
             Response.Write(ex.Message);
         }
     }
+     
 
+    public static void RegisterRoutes(RouteCollection routeCollection)
+    {
+        routeCollection.MapPageRoute("RouteForAdsPage", "ViewAds/{AdsID}/{AdsTitle}", "~/ViewAds.aspx");
+        routeCollection.MapPageRoute("RouteForCategoriesPage", "Categories/{CatID}/{Title}", "~/Categories.aspx");
+        routeCollection.MapPageRoute("RouteForCategoryPage", "Category/{CatID}/{Title}", "~/Category.aspx");
+        
+    }
+    
+    
     void Application_Start(object sender, EventArgs e)
     {
-        //RegisterRoute(RouteTable.Routes);
+        RegisterRoutes(RouteTable.Routes);
     }
 
     void Application_End(object sender, EventArgs e)
