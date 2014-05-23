@@ -265,7 +265,7 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories?CatID=1" title="للبيع" style="color: #111111; font-size: 20px;"> للبيع</a>&nbsp;<span></span>
+                                <a href="Categories/1/للبيع" title="للبيع" style="color: #111111; font-size: 20px;"> للبيع</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
@@ -284,7 +284,7 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/6/" title="مطلوب-شراء" style="color: #111111; font-size: 20px;">مطلوب شراء</a>&nbsp;<span></span>
+                                <a href="Categories/6/مطلوب-شراء" title="مطلوب-شراء" style="color: #111111; font-size: 20px;">مطلوب شراء</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
