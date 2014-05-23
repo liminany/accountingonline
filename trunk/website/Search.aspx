@@ -80,7 +80,7 @@
                                                 </HeaderTemplate>
                                                 <ItemTemplate>
                                                     <tr class="tr_AdsRows" style="color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
-                                                        onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
+                                                        onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
                                                             <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
                                                                 <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
@@ -104,7 +104,7 @@
                                                 </ItemTemplate>
                                                 <AlternatingItemTemplate>
                                                     <tr class="tr_AdsRows" style="background-color: #fafafa; color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
-                                                        onclick="window.location='ViewAds?AdsID=<%# DataBinder.Eval(Container.DataItem, "AdsID")%>'">
+                                                        onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                                         <td align="right" style="width: 65%; padding-right: 30px;">
                                                             <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
                                                                 <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
