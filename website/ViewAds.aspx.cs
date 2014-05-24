@@ -224,7 +224,7 @@ public partial class ViewAds : System.Web.UI.Page
                 int nReturnValue = objDBAdsManager.DeleteAdsAndRejected(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()));
                 if (nReturnValue == 1)
                 {
-                    Response.Redirect("MyAds", false);
+                    Response.Redirect("../../MyAds", false);
                 }
                 else
                 {
