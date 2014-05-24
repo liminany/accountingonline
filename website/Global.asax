@@ -12,11 +12,12 @@
                 string newUrl = string.Empty;
                 if (HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"] != null)
                 {
-                    newUrl = "http://arabisky.com/" + HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"].ToString();
+                    string sAdsID = Request.QueryString["AdsID"].ToString();
+                    newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", string.Format("http://www.arabisky.com/{0}/", sAdsID));
                 }
                 else
                 {
-                    if (HttpContext.Current.Request.Url.ToString().ToLower().Contains("AdsID"))
+                    if (HttpContext.Current.Request.Url.ToString().Contains("AdsID"))
                     {
                         string sAdsID = Request.QueryString["AdsID"].ToString(); 
                         newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", string.Format("http://www.arabisky.com/{0}/", sAdsID));
