@@ -33,9 +33,10 @@ public partial class Categories : System.Web.UI.Page
                     Page.Title = " سوق سماء العرب | " + pageTitle;
                     Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
                     sp_PageTitle.InnerHtml = pageTitle;
-                    rptSlimlerAds.DataSource = objDataSet;
-                    rptSlimlerAds.DataBind();
+                    //rptSlimlerAds.DataSource = objDataSet;
+                    //rptSlimlerAds.DataBind();
                 }
+                this.GetCustomersPageWise(1);
             }
             else
             {
