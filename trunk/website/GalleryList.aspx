@@ -24,7 +24,7 @@
         <div style="float: right;">
             <a href='/'>سوق سماء العرب </a>»&nbsp;<span id="sp_PageTitle" runat="server"></span>
         </div>
-        <div style="width: 74%; float: left;">
+        <div style="float: left;">
             <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
@@ -37,14 +37,6 @@
                 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
             </script>
         </div>
-    </div>
-    <div style="float: left;">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- ArabiSky_Default_Top -->
-        <ins class="adsbygoogle" style="display: inline-block; width: 728px; height: 90px"
-            data-ad-client="ca-pub-7196218955155134" data-ad-slot="3354257605"></ins>
-        <script>                (adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
     </div>
     <div style="clear: both;">
     </div>
@@ -646,8 +638,7 @@
         </tr>
         <tr>
             <td align="center">
-                 <div style="width: 74%; float: left;">
-            <script type="text/javascript"><!--
+                <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
     google_ad_slot = "7597006556";
@@ -658,8 +649,6 @@
             <script type="text/javascript"
                 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
             </script>
-        </div> 
-    </div>
             </td>
         </tr>
     </table>
