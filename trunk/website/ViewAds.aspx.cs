@@ -268,7 +268,7 @@ public partial class ViewAds : System.Web.UI.Page
         {
             if (!string.IsNullOrEmpty(Page.RouteData.Values["AdsID"].ToString()))
             {
-                Response.Redirect("AdsPage/" + Page.RouteData.Values["AdsID"].ToString(), false);
+                Response.Redirect("../AdsPage/" + Page.RouteData.Values["AdsID"].ToString(), false);
             }
         }
         catch (Exception ex)
