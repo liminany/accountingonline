@@ -23,27 +23,26 @@ public partial class Category : System.Web.UI.Page
     {
         try
         {
-            if (!IsPostBack)
+
+            if (!string.IsNullOrEmpty(Page.RouteData.Values["CatID"].ToString()))
             {
-                if (!string.IsNullOrEmpty(Page.RouteData.Values["CatID"].ToString()))
+                DBAdsManager objDBAdsManager = new DBAdsManager();
+                DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Page.RouteData.Values["CatID"].ToString()), FormsFunction.GetCookieValueCountryInfo());
+                if (objDataSet.Tables[0].Rows.Count > 0)
                 {
-                    DBAdsManager objDBAdsManager = new DBAdsManager();
-                    DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Page.RouteData.Values["CatID"].ToString()), FormsFunction.GetCookieValueCountryInfo());
-                    if (objDataSet.Tables[0].Rows.Count > 0)
-                    {
-                        string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
-                        CatName.InnerHtml = pageTitle;
-                        Page.Title = " سوق سماء العرب | " + pageTitle;
-                        Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
-                        sp_PageTitle.InnerHtml = pageTitle;
-                    }
+                    string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
+                    CatName.InnerHtml = pageTitle;
+                    Page.Title = " سوق سماء العرب | " + pageTitle;
+                    Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
+                    sp_PageTitle.InnerHtml = pageTitle;
                 }
-                else
-                {
-                    Response.Redirect("~/", false);
-                }
-                this.GetCustomersPageWise(1);
             }
+            else
+            {
+                Response.Redirect("~/", false);
+            }
+            this.GetCustomersPageWise(1);
+
         }
         catch (Exception ex)
         {
@@ -67,7 +66,7 @@ public partial class Category : System.Web.UI.Page
             using (SqlCommand cmd = new SqlCommand("sp_GetMainAdsCategoiresByCatIDMethods", con))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@adsSubCat", int.Parse(Page.RouteData.Values["CatID"].ToString()));
+                cmd.Parameters.AddWithValue("@CatID", int.Parse(Page.RouteData.Values["CatID"].ToString()));
                 cmd.Parameters.AddWithValue("@countryID", FormsFunction.GetCookieValueCountryInfo());
                 cmd.Parameters.AddWithValue("@PageIndex", pageIndex);
                 cmd.Parameters.AddWithValue("@PageSize", PageSize);
