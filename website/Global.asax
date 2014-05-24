@@ -16,8 +16,6 @@
                     newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky");
 
 
-                
-                
                 Response.Status = "301 Moved Permanently";
                 Response.StatusCode = 301;
                 Response.StatusDescription = "Moved Permanently";
