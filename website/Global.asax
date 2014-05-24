@@ -18,19 +18,19 @@
                 {
                     if (HttpContext.Current.Request.Url.AbsoluteUri.Contains("?AdsID="))
                     {
-                        string sAdsID = Request.QueryString["AdsID"].ToString();
-                        string sAdsTitle = Request.QueryString["AdsTitle"].ToString();
-                        newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", string.Format("http://www.arabisky.com/{0}/{1}", sAdsID, sAdsTitle));   
+                        string sAdsID = Request.QueryString["AdsID"].ToString(); 
+                        newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", string.Format("http://www.arabisky.com/{0}/", sAdsID));
+ 
                     }
                     else
                     {
-                        newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky.com");   
+                        newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky.com");
                     }
                 }
 
 
-                
-                
+
+
                 Response.Status = "301 Moved Permanently";
                 Response.StatusCode = 301;
                 Response.StatusDescription = "Moved Permanently";
@@ -43,17 +43,18 @@
             Response.Write(ex.Message);
         }
     }
-     
+
 
     public static void RegisterRoutes(RouteCollection routeCollection)
     {
+
         routeCollection.MapPageRoute("RouteForAdsPage", "ViewAds/{AdsID}/{AdsTitle}", "~/ViewAds.aspx");
         routeCollection.MapPageRoute("RouteForCategoriesPage", "Categories/{CatID}/{Title}", "~/Categories.aspx");
         routeCollection.MapPageRoute("RouteForCategoryPage", "Category/{CatID}/{Title}", "~/Category.aspx");
-        
+
     }
-    
-    
+
+
     void Application_Start(object sender, EventArgs e)
     {
         RegisterRoutes(RouteTable.Routes);
