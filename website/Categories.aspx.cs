@@ -7,11 +7,14 @@ using System.Web.UI.WebControls;
 using NLog;
 using DAL;
 using System.Data;
+using System.Data.SqlClient;
+using System.Configuration;
 
 public partial class Categories : System.Web.UI.Page
 {
     #region variables
     private static Logger _logger = LogManager.GetCurrentClassLogger();
+    private int PageSize = 50;
     #endregion
 
     #region Pageload
@@ -65,6 +68,55 @@ public partial class Categories : System.Web.UI.Page
         {
             return "null";
         }
+    }
+
+    protected void Page_Changed(object sender, EventArgs e)
+    {
+        int pageIndex = int.Parse((sender as LinkButton).CommandArgument);
+        this.GetCustomersPageWise(pageIndex);
+    }
+
+    private void GetCustomersPageWise(int pageIndex)
+    {
+        string constring = ConfigurationManager.ConnectionStrings["SqlCon"].ConnectionString;
+        using (SqlConnection con = new SqlConnection(constring))
+        {
+            using (SqlCommand cmd = new SqlCommand("sp_GetAdsCategoiresByCatID", con))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@adsSubCat", int.Parse(Page.RouteData.Values["CatID"].ToString()));
+                cmd.Parameters.AddWithValue("@countryID", FormsFunction.GetCookieValueCountryInfo());
+                cmd.Parameters.AddWithValue("@PageIndex", pageIndex);
+                cmd.Parameters.AddWithValue("@PageSize", PageSize);
+                cmd.Parameters.Add("@RecordCount", SqlDbType.Int, 4);
+                cmd.Parameters["@RecordCount"].Direction = ParameterDirection.Output;
+                con.Open();
+                IDataReader idr = cmd.ExecuteReader();
+                rptSlimlerAds.DataSource = idr;
+                rptSlimlerAds.DataBind();
+                idr.Close();
+                con.Close();
+                int recordCount = Convert.ToInt32(cmd.Parameters["@RecordCount"].Value);
+                this.PopulatePager(recordCount, pageIndex);
+            }
+        }
+    }
+
+
+    private void PopulatePager(int recordCount, int currentPage)
+    {
+        double dblPageCount = (double)((decimal)recordCount / Convert.ToDecimal(PageSize));
+        int pageCount = (int)Math.Ceiling(dblPageCount);
+        List<ListItem> pages = new List<ListItem>();
+        if (pageCount > 0)
+        {
+            for (int i = 1; i <= pageCount; i++)
+            {
+                pages.Add(new ListItem(i.ToString(), i.ToString(), i != currentPage));
+            }
+        }
+        rptPager.DataSource = pages;
+        rptPager.DataBind();
     }
 
     protected string GenerateURL(object strId, object Title)

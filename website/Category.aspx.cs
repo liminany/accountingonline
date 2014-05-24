@@ -23,9 +23,9 @@ public partial class Category : System.Web.UI.Page
     {
         try
         {
-            //if (!IsPostBack)
-            //{
-            if (!string.IsNullOrEmpty(Page.RouteData.Values["CatID"].ToString()))
+            if (!IsPostBack)
+            {
+                if (!string.IsNullOrEmpty(Page.RouteData.Values["CatID"].ToString()))
                 {
                     DBAdsManager objDBAdsManager = new DBAdsManager();
                     DataSet objDataSet = objDBAdsManager.GetAdsCategoiresByCatID(int.Parse(Page.RouteData.Values["CatID"].ToString()), FormsFunction.GetCookieValueCountryInfo());
@@ -36,16 +36,14 @@ public partial class Category : System.Web.UI.Page
                         Page.Title = " سوق سماء العرب | " + pageTitle;
                         Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
                         sp_PageTitle.InnerHtml = pageTitle;
-                        //rptSlimlerAds.DataSource = objDataSet;
-                        //rptSlimlerAds.DataBind();
                     }
                 }
                 else
                 {
-                    Response.Redirect("default", false);
+                    Response.Redirect("~/", false);
                 }
                 this.GetCustomersPageWise(1);
-            //}
+            }
         }
         catch (Exception ex)
         {
