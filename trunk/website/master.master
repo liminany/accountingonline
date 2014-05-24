@@ -82,7 +82,7 @@
                             <table width="100%" cellpadding="0" cellspacing="0">
                                 <tr id="tr_DefaultUser" runat="server" style="display: ;">
                                     <td colspan="2">
-                                        <a href="country" style="width: 140px;">
+                                        <a href="~/country" runat="server" style="width: 140px;">
                                             <img id="ImgCountryFlagWithoutlogin" src="~/images/world_map_earth.png" runat="server"
                                                 align="top" alt="arabisky.com" style="border: 0px; width: 26px; height: 20px;padding-top:2px;" />
                                                 
@@ -100,11 +100,11 @@
                                                 <img src="~/images/ArabiSky_Down.png" runat="server" style="position: relative; top: 3px;
                                                     border: 0px;" width="16" height="16" align="top" alt="arabisky.com" /></a>
                                                 <ul style="position: absolute; right: 0px;">
-                                                    <li><a href="MyAds">
+                                                    <li><a runat="server" href="~/MyAds">
                                                         <img src="~/images/ArabiSky_Ads.png" runat="server" style="border: 0px;" align="top"
                                                             alt="arabisky.com" />
                                                         إعلاناتي الخاصة </a></li>
-                                                    <li><a href="AccountSettings">
+                                                    <li><a href="~/AccountSettings" runat="server">
                                                         <img src="~/images/ArabiSky_PersonalSettings.png" runat="server" style="border: 0px;"
                                                             align="top" alt="arabisky.com" />
                                                         بياناتي الشخصية</a></li>
@@ -112,7 +112,7 @@
                                                         <img id="Img1" src="~/images/ArabiSkyApps.png" runat="server" style="border: 0px;"
                                                             align="top" width="20" height="20" alt="arabisky.com" />
                                                         تنزيل تطبيق سوق سماء العرب</a></li>
-                                                    <li><a href="logout">
+                                                    <li><a runat="server" href="~/logout">
                                                         <img src="~/images/ArabiSky_LogOut.png" runat="server" align="top" style="border: 0px;"
                                                             alt="arabisky.com" />
                                                         خروج </a></li>
@@ -121,7 +121,7 @@
                                         </ul>
                                     </td>
                                     <td>
-                                        <a href="Inbox">
+                                        <a href="~/Inbox" runat="server">
                                             <img src="~/images/ArabiSky_mail.png" runat="server" align="top" alt="arabisky.com"
                                                 style="border: 0px;" /><span id="spMessageCounter" runat="server"></span></a>
                                     </td>
