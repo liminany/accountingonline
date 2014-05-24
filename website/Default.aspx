@@ -187,7 +187,7 @@
                                         و الإسكان </a></li>
                                     <li><a href="Category/31/السيارات-المركبات" title="السيارات و المركبات">
                                         السيارات و المركبات</a></li>
-                                    <li><a href="Category/32/أشياء أخرى" title="أشياء أخرى">أشياء أخرى</a></li>
+                                    <li><a href="Category/32/أشياء-أخرى" title="أشياء أخرى">أشياء أخرى</a></li>
                                 </ul>
                             </div>
                             <!-- closing arabiSky-indexContent -->
@@ -196,14 +196,14 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories?CatID=5&Title=الباحثين عن عمل" title="الباحثين عن عمل" style="color: #111111;
+                                <a href="Categories/5/الباحثين-عن-عمل" title="الباحثين عن عمل" style="color: #111111;
                                     font-size: 20px;">الباحثين عن عمل</a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent" style="height: 40px;">
                                 <ul>
-                                    <li><a href="Category?CatID=33&Title=الباحثين عن عمل" title="الباحثين عن عمل">الباحثين
+                                    <li><a href="Category/33/الباحثين-عن-عمل" title="الباحثين عن عمل">الباحثين
                                         عن عمل </a></li>
                                 </ul>
                             </div>
@@ -290,7 +290,7 @@
                             </div>
                             <div class="arabiSky-indexContent">
                                 <ul>
-                                    <li><a href="Category/34/" title="الباحثين-عن-عمل">مطلوب شراء </a></li>
+                                    <li><a href="Category/34/مطلوب-شراء" title="الباحثين-عن-عمل">مطلوب شراء </a></li>
                                 </ul>
                             </div>
                             <!-- closing arabiSky-indexContent -->

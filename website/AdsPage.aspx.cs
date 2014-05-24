@@ -148,7 +148,7 @@ public partial class AdsPage : System.Web.UI.Page
     protected void btnAddNewAds_Click(object sender, EventArgs e)
     {
         try
-        { 
+        {
             string sQueryStringAdsID = Request.QueryString["AdsID"];
             if (string.IsNullOrEmpty(sQueryStringAdsID))
             {
@@ -195,7 +195,7 @@ public partial class AdsPage : System.Web.UI.Page
                     int nReturnValue = objDBAdsManager.InsertNewAds(objAdsManager);
                     SearchEngineOptimization objSearchEngineOptimization = new SearchEngineOptimization();
 
-                    objSearchEngineOptimization.SiteMapGenerater(string.Format("http://www.arabisky.com/ViewAds?AdsID={0}", nReturnValue), DateTime.Now.ToString(), "daily", "0.69");
+                    objSearchEngineOptimization.SiteMapGenerater(string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", nReturnValue, objAdsManager.AdsTitle), DateTime.Now.ToString(), "daily", "0.69");
 
                     trUserMessage.Style.Add("display", "");
                     if (nReturnValue != 0)
