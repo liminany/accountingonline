@@ -59,7 +59,7 @@ public class SearchEngineOptimization
         //_root root for new element
         // path sitemap physical location eg sitemap.xml  (at root)
 
-        string path = "sitemap/sitemap.xml";
+        string path = "sitemap.xml";
         try
         {
             XmlDocument doc = new XmlDocument();
