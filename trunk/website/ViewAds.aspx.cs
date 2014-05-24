@@ -11,7 +11,7 @@ public partial class ViewAds : System.Web.UI.Page
     private static Logger _logger = LogManager.GetCurrentClassLogger();
     private EntityRegUsers objEntityRegUsers = new EntityRegUsers();
     public string url = string.Empty;
-    public string facebookImage = "http://arabisky.com/images/ArabiSkyLogo.png";
+    public string facebookImage = "http://www.arabisky.com/images/ArabiSkyLogo.png";
 
     private int nRequiredUpdateAdsPeroid = 8;
     private DBAdsManager objDBAdsManager = new DBAdsManager();
@@ -268,7 +268,7 @@ public partial class ViewAds : System.Web.UI.Page
         {
             if (!string.IsNullOrEmpty(Page.RouteData.Values["AdsID"].ToString()))
             {
-                Response.Redirect("../../AdsPage?AdsID=" + Page.RouteData.Values["AdsID"].ToString(), false);
+                Response.Redirect("../../AdsPage/" + Page.RouteData.Values["AdsID"].ToString() + "/", false);
             }
         }
         catch (Exception ex)
@@ -362,7 +362,7 @@ public partial class ViewAds : System.Web.UI.Page
 
             if (string.IsNullOrEmpty(images[0].ToString()))
             {
-                facebookImage = "http://arabisky.com/images/ArabiSkyLogo.png";
+                facebookImage = "http://www.arabisky.com/images/ArabiSkyLogo.png";
             }
             else
             {

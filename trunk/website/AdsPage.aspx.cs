@@ -195,7 +195,7 @@ public partial class AdsPage : System.Web.UI.Page
                     int nReturnValue = objDBAdsManager.InsertNewAds(objAdsManager);
                     SearchEngineOptimization objSearchEngineOptimization = new SearchEngineOptimization();
 
-                    objSearchEngineOptimization.SiteMapGenerater(string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", nReturnValue, objAdsManager.AdsTitle), DateTime.Now.ToString(), "daily", "0.69");
+                    objSearchEngineOptimization.SiteMapGenerater(GenerateURL(nReturnValue, objAdsManager.AdsTitle), DateTime.Now.ToString(), "daily", "0.69");
 
                     trUserMessage.Style.Add("display", "");
                     if (nReturnValue != 0)
@@ -204,7 +204,7 @@ public partial class AdsPage : System.Web.UI.Page
                         divSoicalMedia.Style.Add("display", "");
 
                         //spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم إضافة الاعلان بنجاح <a href='ViewAds?AdsID={0}'>انقر هنا لمشاهدة الإعلان</a>", nReturnValue.ToString());
-                        AdsURL = "http://arabisky.com/ViewAds?AdsID=" + nReturnValue.ToString();
+                        AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString();
                         AdsText = sTextTitleAds;
 
 
@@ -265,7 +265,7 @@ public partial class AdsPage : System.Web.UI.Page
                 {
                     divNewAds.Style.Add("display", "none");
                     divSoicalMedia.Style.Add("display", "");
-                    AdsURL = "http://www.arabisky.com/ViewAds?AdsID=" + Request.QueryString["AdsID"].ToString();
+                    AdsURL = "http://www.arabisky.com/ViewAds/" + Request.QueryString["AdsID"].ToString() + "/";
                     AdsText = sTextTitleAds;
                 }
                 else
@@ -396,6 +396,39 @@ public partial class AdsPage : System.Web.UI.Page
     //        responseResult = "Twitter Post Error: " + ex.Message.ToString() + ", authHeader: " + authorizationHeader;
     //    }
     //}
+	
+	    protected string GenerateURL(object strId, object Title)
+    {
+        string strTitle = Title.ToString();
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
+        }
+        strTitle = strTitle.Replace(" ", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
+        strTitle = string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", strId, strTitle);
+        return strTitle;
+    }
+	
     private int GetCountry()
     {
         try
