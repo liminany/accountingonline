@@ -16,11 +16,10 @@
                 }
                 else
                 {
-                    if (HttpContext.Current.Request.Url.AbsoluteUri.Contains("?AdsID="))
+                    if (HttpContext.Current.Request.Url.ToString().ToLower().Contains("AdsID"))
                     {
                         string sAdsID = Request.QueryString["AdsID"].ToString(); 
                         newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", string.Format("http://www.arabisky.com/{0}/", sAdsID));
- 
                     }
                     else
                     {
