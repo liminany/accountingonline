@@ -219,7 +219,7 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            if (!string.IsNullOrEmpty(Request.QueryString["AdsID"]))
+            if (!string.IsNullOrEmpty(Page.RouteData.Values["AdsID"].ToString()))
             {
                 int nReturnValue = objDBAdsManager.DeleteAdsAndRejected(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()));
                 if (nReturnValue == 1)
@@ -241,7 +241,7 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            if (!string.IsNullOrEmpty(Request.QueryString["AdsID"]))
+            if (!string.IsNullOrEmpty(Page.RouteData.Values["AdsID"].ToString()))
             {
                 DateTime newUpdateDateTime = DateTime.Now.AddDays(nRequiredUpdateAdsPeroid);
                 int nReturnValue = objDBAdsManager.ReActivateAds(Convert.ToInt32(hfUserID.Value), Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()), newUpdateDateTime);
@@ -266,7 +266,7 @@ public partial class ViewAds : System.Web.UI.Page
     {
         try
         {
-            if (!string.IsNullOrEmpty(Request.QueryString["AdsID"]))
+            if (!string.IsNullOrEmpty(Page.RouteData.Values["AdsID"].ToString()))
             {
                 Response.Redirect("AdsPage/" + Page.RouteData.Values["AdsID"].ToString(), false);
             }
@@ -343,7 +343,7 @@ public partial class ViewAds : System.Web.UI.Page
                     return "أوقية موريتانيا";
                 default:
                     return "غير معروف";
-            } 
+            }
         }
         catch (Exception)
         {
