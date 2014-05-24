@@ -174,7 +174,7 @@
                             <div class="arabiSky-postClassifieds MetroButton" style="background-color: #f89a21;
                                 border-bottom: 1px solid #ccc; border-radius: 0px; width: 170px; margin-left: 0px;
                                 border-top: 2px solid red; height: 30px;">
-                                <a href="AdsPage" style="display: block; width: 100%; height: 100%; text-decoration: none;
+                                <a href="~/AdsPage" runat="server" style="display: block; width: 100%; height: 100%; text-decoration: none;
                                     color: #333; font-size: 17px;">اضف إعلانك الان</a>
                             </div>
                         </div>
@@ -214,9 +214,9 @@
                     <div class="arabiSky-footerSeperator">
                     </div>
                     <div class="arabiSky-footerLinksTop">
-                        <a href="ContactUs">تواصل معنا</a> | 
-                        <a href="Help">مساعدة</a> | 
-                        <a href="country">بلدان اخرى</a>
+                        <a href="~/ContactUs" runat="server">تواصل معنا</a> | 
+                        <a href="~/Help" runat="server">مساعدة</a> | 
+                        <a href="~/country" runat="server">بلدان اخرى</a>
                         | <a href='https://www.facebook.com/arabisky' target="_blank">
                             <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
                         | <a href='https://twitter.com/arabisky' target="_blank">
@@ -227,7 +227,7 @@
                     <div class="arabiSky-footerSeperator">
                     </div>
                     <div class="arabiSky-copyright">
-                        &copy; جميع الحقوق محفوظة <b><a href='http://arabisky.com/' target="_blank">لسوق سماء
+                        &copy; جميع الحقوق محفوظة <b><a href='http://www.arabisky.com/' target="_blank">لسوق سماء
                             العرب للإعلانات المبوبة</a>
                     </div>
                 </div>
@@ -239,7 +239,7 @@
             runat="server">
             <div style="margin: 0 auto; width: 100%; text-align: center; padding-top: 10px;">
                 لديك <span id="spMessageCountNotification" runat="server">0</span> رسائل جديدة <a
-                    href="mail">انقر هنا للدخول</a>
+                    href="~/mail" runat="server">انقر هنا للدخول</a>
             </div>
         </div>
         <asp:Button ID="lbtnRefreshGVMaster" CssClass="ClassHideDiv" runat="server" Text="" Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnRefreshGVMaster_Click">
