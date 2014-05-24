@@ -63,10 +63,10 @@ public partial class Category : System.Web.UI.Page
         string constring = ConfigurationManager.ConnectionStrings["SqlCon"].ConnectionString;
         using (SqlConnection con = new SqlConnection(constring))
         {
-            using (SqlCommand cmd = new SqlCommand("sp_GetMainAdsCategoiresByCatIDMethods", con))
+            using (SqlCommand cmd = new SqlCommand("sp_GetMainAdsSubCategoiresByCatIDMethods", con))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@CatID", int.Parse(Page.RouteData.Values["CatID"].ToString()));
+                cmd.Parameters.AddWithValue("@SubCatID", int.Parse(Page.RouteData.Values["CatID"].ToString()));
                 cmd.Parameters.AddWithValue("@countryID", FormsFunction.GetCookieValueCountryInfo());
                 cmd.Parameters.AddWithValue("@PageIndex", pageIndex);
                 cmd.Parameters.AddWithValue("@PageSize", PageSize);
