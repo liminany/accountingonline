@@ -11,25 +11,9 @@
             {
                 string newUrl = string.Empty;
                 if (HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"] != null)
-                {
-                    string sAdsID = Request.QueryString["AdsID"].ToString();
-                    newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", string.Format("http://www.arabisky.com/{0}/", sAdsID));
-                }
+                    newUrl = "http://arabisky.com/" + HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"].ToString();
                 else
-                {
-                    if (HttpContext.Current.Request.Url.ToString().Contains("AdsID"))
-                    {
-                        string sAdsID = Request.QueryString["AdsID"].ToString(); 
-                        newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", string.Format("http://www.arabisky.com/{0}/", sAdsID));
-                    }
-                    else
-                    {
-                        newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky.com");
-                    }
-                }
-
-
-
+                    newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky");
 
                 Response.Status = "301 Moved Permanently";
                 Response.StatusCode = 301;
@@ -43,18 +27,17 @@
             Response.Write(ex.Message);
         }
     }
-
+     
 
     public static void RegisterRoutes(RouteCollection routeCollection)
     {
-
         routeCollection.MapPageRoute("RouteForAdsPage", "ViewAds/{AdsID}/{AdsTitle}", "~/ViewAds.aspx");
         routeCollection.MapPageRoute("RouteForCategoriesPage", "Categories/{CatID}/{Title}", "~/Categories.aspx");
         routeCollection.MapPageRoute("RouteForCategoryPage", "Category/{CatID}/{Title}", "~/Category.aspx");
-
+        
     }
-
-
+    
+    
     void Application_Start(object sender, EventArgs e)
     {
         RegisterRoutes(RouteTable.Routes);
