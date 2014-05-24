@@ -15,6 +15,7 @@
                 else
                     newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky");
 
+                Response.RedirectToRoute("ViewAds", new { AdsID = "1" });
                 
                 Response.Status = "301 Moved Permanently";
                 Response.StatusCode = 301;
