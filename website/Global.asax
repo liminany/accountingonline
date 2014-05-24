@@ -11,10 +11,26 @@
             {
                 string newUrl = string.Empty;
                 if (HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"] != null)
+                {
                     newUrl = "http://arabisky.com/" + HttpContext.Current.Items["UrlRewritingNet.UrlRewriter.VirtualUrl"].ToString();
+                }
                 else
-                    newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky");
+                {
+                    if (HttpContext.Current.Request.Url.AbsoluteUri.Contains("AdsID"))
+                    {
+                        string sAdsID = Request.QueryString["AdsID"].ToString();
+                        string sAdsTitle = Request.QueryString["AdsTitle"].ToString();
+                        newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", string.Format("http://www.arabisky.com/{0}/{1}", sAdsID, sAdsTitle));   
+                    }
+                    else
+                    {
+                        newUrl = HttpContext.Current.Request.Url.AbsoluteUri.Replace("http://arabisky", "http://www.arabisky.com");   
+                    }
+                }
 
+
+                
+                
                 Response.Status = "301 Moved Permanently";
                 Response.StatusCode = 301;
                 Response.StatusDescription = "Moved Permanently";
