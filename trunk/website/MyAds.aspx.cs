@@ -111,7 +111,7 @@ public partial class MyAds : System.Web.UI.Page
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Trim();
         strTitle = strTitle.Trim('-');
-        strTitle = string.Format("ViewAds?AdsID={0}&AdsTitle={1}", strId, strTitle);
+        strTitle = string.Format("../../ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
 
