@@ -50,7 +50,7 @@ public partial class ViewAds : System.Web.UI.Page
 
                 foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString())).Tables[0].Rows)
                 {
-                    sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='Category?CatID=" + rows["SubCatID"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
+                    sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='../../Category/" + rows["SubCatID"].ToString() + "/" + rows["CatName"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
                     spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
                     Page.Title = "سوق سماء العرب - " + rows["AdsTitle"].ToString();
                     Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
@@ -357,7 +357,7 @@ public partial class ViewAds : System.Web.UI.Page
             string[] images = imagesURL.Split('|');
             for (int i = 0; i < images.Length; i++)
             {
-                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='cursor:pointer;border:2px solid #333;height:120px;width:120px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + images[i].Replace("~", "..") + "'><img style='max-width: 120px;max-height: 120px;width:120px;height:120px;' src='" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
+                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='cursor:pointer;border:2px solid #333;height:120px;width:120px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + "../" + images[i].Replace("~", "..") + "'><img style='max-width: 120px;max-height: 120px;width:120px;height:120px;' src='" + "../" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
             }
 
             if (string.IsNullOrEmpty(images[0].ToString()))
@@ -366,7 +366,7 @@ public partial class ViewAds : System.Web.UI.Page
             }
             else
             {
-                facebookImage = images[0].Replace("~", "http://arabisky.com");
+                facebookImage = images[0].Replace("~", "http://www.arabisky.com");
             }
         }
         catch (Exception)
@@ -408,7 +408,7 @@ public partial class ViewAds : System.Web.UI.Page
             }
             else
             {
-                return "images/ArabiSkyLogo.png";
+                return "../../images/ArabiSkyLogo.png";
             }
         }
         catch (Exception)
