@@ -16,7 +16,7 @@
                 }
                 else
                 {
-                    if (HttpContext.Current.Request.Url.AbsoluteUri.Contains("AdsID"))
+                    if (HttpContext.Current.Request.Url.AbsoluteUri.Contains("?AdsID="))
                     {
                         string sAdsID = Request.QueryString["AdsID"].ToString();
                         string sAdsTitle = Request.QueryString["AdsTitle"].ToString();
