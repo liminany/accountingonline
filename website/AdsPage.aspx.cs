@@ -204,7 +204,7 @@ public partial class AdsPage : System.Web.UI.Page
                         divSoicalMedia.Style.Add("display", "");
 
                         //spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم إضافة الاعلان بنجاح <a href='ViewAds?AdsID={0}'>انقر هنا لمشاهدة الإعلان</a>", nReturnValue.ToString());
-                        AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString();
+                        AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString() + "/";
                         AdsText = sTextTitleAds;
 
 
