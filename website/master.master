@@ -11,7 +11,7 @@
         $(document).ready(function () {
             if (!CheckCookiesExists("ArabiSkyCheckCountryFull")) {
                 if (location.pathname.substring(1) != "country") {
-                    window.location = "country";
+                    window.location = "../../country";
                 }
             }
         });
