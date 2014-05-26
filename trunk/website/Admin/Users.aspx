@@ -95,7 +95,7 @@
                                             <%# DataBinder.Eval(Container.DataItem, "User_FullName")%>
                                         </td>
                                         <td align="center">
-                                            <a href="ApprovedAds?UserID=<%# DataBinder.Eval(Container.DataItem,"UserID") %>">
+                                            <a style="color:#ff0000;" href="ApprovedAds?UserID=<%# DataBinder.Eval(Container.DataItem,"UserID") %>">
                                                 <%# DataBinder.Eval(Container.DataItem, "User_EmailAddress")%></a>
                                         </td>
                                         <td align="center">
@@ -126,7 +126,7 @@
                                             <%# DataBinder.Eval(Container.DataItem, "User_FullName")%>
                                         </td>
                                         <td align="center">
-                                            <a href="ApprovedAds?UserID=<%# DataBinder.Eval(Container.DataItem,"UserID") %>">
+                                            <a style="color:#ff0000;" href="ApprovedAds?UserID=<%# DataBinder.Eval(Container.DataItem,"UserID") %>">
                                                 <%# DataBinder.Eval(Container.DataItem, "User_EmailAddress")%></a>
                                         </td>
                                         <td align="center">
