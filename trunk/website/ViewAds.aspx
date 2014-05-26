@@ -112,7 +112,7 @@
                 <div style="width: 100%">
                 </div>
                 <div style="width: 59%; float: right;">
-                    <div id="div1" style="float: right; margin-right: 30px; color: #111111; font-size: 17px; padding-top: 10px; font-weight: bolder;">
+                    <div style="border-bottom: 2px dashed #ccc;padding-top: 10px;width: 102%;float: right;height: 37px;color: #111111;background-color: #ededed;display: ;font-weight: bolder;font-size: 25px;text-align: right;padding-right: 25px;">
                         تفاصيل الإعلان
                     </div>
                     <div style="clear: both; height: 20px;">
