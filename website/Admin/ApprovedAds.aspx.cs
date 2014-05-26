@@ -21,8 +21,17 @@ public partial class Admin_ApprovedAds : ParentPage
             if (!IsPostBack)
             {
                 DBAdsManager objDBAdsManager = new DBAdsManager();
-                rptPenddingAds.DataSource = objDBAdsManager.GetAllApprovedAds();
-                rptPenddingAds.DataBind();
+
+                if (Request.QueryString["UserID"] == null)
+                {
+                    rptPenddingAds.DataSource = objDBAdsManager.GetAllApprovedAds();
+                    rptPenddingAds.DataBind();
+                }
+                else
+                {
+                    rptPenddingAds.DataSource = objDBAdsManager.GetAllMyAdsByUserID(Convert.ToInt32(Request.QueryString["UserID"].ToString()));
+                    rptPenddingAds.DataBind();
+                }
             }
         }
         catch (Exception ex)
@@ -33,7 +42,7 @@ public partial class Admin_ApprovedAds : ParentPage
     #endregion
 
     #region Events
-     
+
 
     #endregion
 
