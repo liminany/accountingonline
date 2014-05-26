@@ -196,7 +196,7 @@
                 </div>
                 <div style="clear: both; height: 5px; border-bottom: 1px solid #ccc;">
                 </div>
-                <div id="div_Image" runat="server" style="background-color: #ededed;width: 100%;height: 37px;font-size: 23px;border-bottom: 2px dashed #ccc;float: right; color: #111111;font-size: 17px;padding-top: 10px;font-weight: bolder;">
+                <div id="div_Image" runat="server" style="background-color: #ededed;width: 100%;height: 37px;font-size: 23px;border-bottom: 2px dashed #ccc;float: right; color: #111111;font-size: 17px;padding-top: 10px;font-weight: bolder;font-size: 25px;">
                     صور الإعلان
                 </div>
                 <div style="clear: both; height: 10px;">
