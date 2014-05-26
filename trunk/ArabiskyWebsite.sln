@@ -3,32 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "website(5)", "website\", "{EE70E4D4-7C10-4E73-A701-9246743C53DA}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "website(5)", "http://localhost:60683", "{43D438E1-A223-44A7-AA25-C235B6ABD793}"
 	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{667D623B-A256-4248-AA35-918E42EDBDC3}|DataLayer.dll;{F92F94E1-EB62-4DBA-82E5-5F72C6EAB9FE}|DBHelper.dll;{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}|Entity.dll;{616222D2-E4B1-4150-BAD9-1512D1F14973}|RSSManager.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/website"
+		ProjectReferences = "{667d623b-a256-4248-aa35-918e42edbdc3}|DataLayer.dll;{F92F94E1-EB62-4DBA-82E5-5F72C6EAB9FE}|DBHelper.dll;{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}|Entity.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_60683"
 		Debug.AspNetCompiler.PhysicalPath = "website\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\website\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60683\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/website"
+		Release.AspNetCompiler.VirtualPath = "/localhost_60683"
 		Release.AspNetCompiler.PhysicalPath = "website\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\website\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60683\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "60683"
+		SlnRelativePath = "website\"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{667D623B-A256-4248-AA35-918E42EDBDC3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBHelper", "DBHelper\DBHelper.csproj", "{F92F94E1-EB62-4DBA-82E5-5F72C6EAB9FE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{667D623B-A256-4248-AA35-918E42EDBDC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,10 +37,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EE70E4D4-7C10-4E73-A701-9246743C53DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE70E4D4-7C10-4E73-A701-9246743C53DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE70E4D4-7C10-4E73-A701-9246743C53DA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE70E4D4-7C10-4E73-A701-9246743C53DA}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{43D438E1-A223-44A7-AA25-C235B6ABD793}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D438E1-A223-44A7-AA25-C235B6ABD793}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43D438E1-A223-44A7-AA25-C235B6ABD793}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{43D438E1-A223-44A7-AA25-C235B6ABD793}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{667D623B-A256-4248-AA35-918E42EDBDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667D623B-A256-4248-AA35-918E42EDBDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667D623B-A256-4248-AA35-918E42EDBDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667D623B-A256-4248-AA35-918E42EDBDC3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F92F94E1-EB62-4DBA-82E5-5F72C6EAB9FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F92F94E1-EB62-4DBA-82E5-5F72C6EAB9FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F92F94E1-EB62-4DBA-82E5-5F72C6EAB9FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -48,10 +53,6 @@ Global
 		{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{667D623B-A256-4248-AA35-918E42EDBDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{667D623B-A256-4248-AA35-918E42EDBDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{667D623B-A256-4248-AA35-918E42EDBDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{667D623B-A256-4248-AA35-918E42EDBDC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
