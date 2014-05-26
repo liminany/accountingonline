@@ -63,7 +63,7 @@ public partial class AdsPage : System.Web.UI.Page
                     }
 
 
-                    string sQueryStringAdsID = Request.QueryString["AdsID"];
+                    string sQueryStringAdsID = Page.RouteData.Values["AdsID"].ToString();
                     if (string.IsNullOrEmpty(sQueryStringAdsID))
                     {
                         spPageTitle.InnerHtml = "إضافة إعلان جديد";
@@ -93,7 +93,7 @@ public partial class AdsPage : System.Web.UI.Page
                         if (Request.Url.AbsoluteUri.IndexOf("message") >= 39)
                         {
                             trUserMessage.Style.Add("display", "");
-                            spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم تعديل الاعلان بنجاح <a href='ViewAds?AdsID={0}'>انقر هنا لمشاهدة الإعلان</a>", Request.QueryString["AdsID"].ToString());
+                            spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم تعديل الاعلان بنجاح <a href='../../ViewAds/{0}/'>انقر هنا لمشاهدة الإعلان</a>", Page.RouteData.Values["AdsID"].ToString());
                             txtAdsTitle.Value = string.Empty;
                             txtPrice.Value = string.Empty;
                             txtYouTubeURL.Value = string.Empty;
@@ -105,7 +105,7 @@ public partial class AdsPage : System.Web.UI.Page
                         }
                         DBAdsManager objDBAdsManager = new DBAdsManager();
                         ManageSubCategory objManageSubCategory = new ManageSubCategory();
-                        foreach (System.Data.DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"].ToString())).Tables[0].Rows)
+                        foreach (System.Data.DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString())).Tables[0].Rows)
                         {
                             if (hfUserID.Value == rows["UserID"].ToString())
                             {
@@ -229,7 +229,7 @@ public partial class AdsPage : System.Web.UI.Page
                 //Edit Ads Submit
                 DBAdsManager objDBAdsManager = new DBAdsManager();
                 AdsManager objAdsManager = new AdsManager();
-                objAdsManager.AdsID = Convert.ToInt32(Request.QueryString["AdsID"].ToString());
+                objAdsManager.AdsID = Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString());
                 objAdsManager.UserID = Convert.ToInt32(hfUserID.Value);
                 objAdsManager.CatID = Convert.ToInt32(ddlCategoryName.SelectedValue);
                 objAdsManager.SubCatID = Convert.ToInt32(ddlSubCategoryName.SelectedValue);
@@ -265,7 +265,7 @@ public partial class AdsPage : System.Web.UI.Page
                 {
                     divNewAds.Style.Add("display", "none");
                     divSoicalMedia.Style.Add("display", "");
-                    AdsURL = "http://www.arabisky.com/ViewAds/" + Request.QueryString["AdsID"].ToString() + "/";
+                    AdsURL = "http://www.arabisky.com/ViewAds/" + Page.RouteData.Values["AdsID"].ToString() +"/";
                     AdsText = sTextTitleAds;
                 }
                 else
