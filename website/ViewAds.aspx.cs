@@ -25,7 +25,7 @@ public partial class ViewAds : System.Web.UI.Page
         try
         {
             DBAdsManager objDBAdsManager = new DBAdsManager();
-            objDBAdsManager.DeleteAdsAndRejected(1);
+            objDBAdsManager.AdsHaveIssues(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()));
             div_UserMessage.InnerHtml = "شكرا لك لقد تم ارسال التبليغ للدعم الفني";
         }
         catch (Exception ex)
