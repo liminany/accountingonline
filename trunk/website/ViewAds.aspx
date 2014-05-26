@@ -210,21 +210,21 @@
                     <div style="height: 20px; clear: both">
                     </div>
                     <div>
-                        <div style="margin-right: 30px; float: right;" onclick="funSendEMail('facebook')">
+                        <div style="margin-right: 5px; float: right;" onclick="funSendEMail('facebook')">
                             <h3 class="accorRightHeader" id="sendEmailResponse" style="width: 215px;">
                                 <span class="rightIcons">
                                     <img src="/images/imgFacebook.png" style="position: relative; bottom: 3px;" alt="ArabiSky.com" /></span>
                                 <span class="accorText">أكتب تعليق لصحاب الإعلان </span>
                             </h3>
                         </div>
-                        <div style="margin-right: 30px; float: right;" id="div_SendPrivateMessage" runat="server"
+                        <div style="margin-right: 5px; float: right;" id="div_SendPrivateMessage" runat="server"
                             onclick="funSendEMail('message')">
                             <h3 class="accorRightHeader" id="H1" style="width: 215px;">
                                 <span class="rightIcons">
                                     <img src="/images/sendMailIcon.png" alt="ArabiSky.com" /></span> <span class="accorText">أرسل رسالة خاصة لصاحب الإعلان </span>
                             </h3>
                         </div>
-                        <div style="margin-right: 30px; float: right;">
+                        <div style="margin-right: 5px; float: right;">
                             <h3 class="accorRightHeader" style="width: 215px;">
                                 <div onclick="funAdsHaveIssues()">
                                     <span class="rightIcons">
