@@ -363,6 +363,25 @@ namespace DAL
             }
         }
 
+        public int AdsHaveIssues(int nAdsID)
+        {
+            try
+            {
+                int rowsAffected = 0;
+                DBParameter param1 = new DBParameter("@adsID", nAdsID);
+                DBParameterCollection paramCollection = new DBParameterCollection();
+                paramCollection.Add(param1);
+                rowsAffected = _dbHelper.ExecuteNonQuery("sp_AdsHaveIssues", paramCollection, CommandType.StoredProcedure);
+                return rowsAffected;
+            }
+            catch (Exception ex)
+            {
+                _logger.Error("DAL:::DBAdsManager:::AdsHaveIssues:::" + ex.Message);
+                return 0;
+            }
+        }
+
+
         public int ApprovedAds(int nAdsID)
         {
             try

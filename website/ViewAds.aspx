@@ -10,10 +10,6 @@
                 'closeBtn': true,
                 closeOnEscape: true// disable escape event on dialog
             });
-            CKEDITOR.replace('ctl00_ContentPlaceHolder1_editor1',
-	        {
-	            language: 'ar'
-	        });
         });
     </script>
     <style type="text/css">
@@ -217,7 +213,7 @@
                         <div style="margin-right: 30px; float: right;" onclick="funSendEMail('facebook')">
                             <h3 class="accorRightHeader" id="sendEmailResponse" style="width: 215px;">
                                 <span class="rightIcons">
-                                    <img src="/images/imgFacebook.png" style="position: relative; bottom: 3px;" alt="ArabiSky.com"></span>
+                                    <img src="/images/imgFacebook.png" style="position: relative; bottom: 3px;" alt="ArabiSky.com" /></span>
                                 <span class="accorText">أكتب تعليق لصحاب الإعلان </span>
                             </h3>
                         </div>
@@ -225,7 +221,15 @@
                             onclick="funSendEMail('message')">
                             <h3 class="accorRightHeader" id="H1" style="width: 215px;">
                                 <span class="rightIcons">
-                                    <img src="/images/sendMailIcon.png" alt="ArabiSky.com"></span> <span class="accorText">أرسل رسالة خاصة لصاحب الإعلان </span>
+                                    <img src="/images/sendMailIcon.png" alt="ArabiSky.com" /></span> <span class="accorText">أرسل رسالة خاصة لصاحب الإعلان </span>
+                            </h3>
+                        </div>
+                        <div style="margin-right: 30px; float: right;">
+                            <h3 class="accorRightHeader" style="width: 215px;">
+                                <div onclick="funAdsHaveIssues()">
+                                    <span class="rightIcons">
+                                        <img src="img/img_Error.png" style="width: 20px;" alt="ArabiSky.com" /></span> <span class="accorText">الإبلاغ عن إساءة الإعلان الحالي</span>
+                                </div>
                             </h3>
                         </div>
                         <div id="div_UserMessage" runat="server" style="margin-right: 30px; float: right; font-weight: bold; font-size: 15px; margin-top: 7px;">
@@ -301,11 +305,17 @@
     google_ad_width = 728;
     google_ad_height = 90;
     //-->
-                            </script>
-                            <script type="text/javascript"
-                                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-                            </script>
+                </script>
+                <script type="text/javascript"
+                    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
             </div>
         </div>
     </div>
+    <asp:Button runat="server" Style="visibility: hidden" ID="btnAdsIssues" OnClick="btnAdsIssues_Click" />
+    <script type="text/javascript">
+        function funAdsHaveIssues() {
+            $("#ctl00_ContentPlaceHolder1_btnAdsIssues").click();
+        }
+    </script>
 </asp:Content>
