@@ -228,7 +228,7 @@
                             <h3 class="accorRightHeader" style="width: 215px;">
                                 <div onclick="funAdsHaveIssues()">
                                     <span class="rightIcons">
-                                        <img src="img/img_Error.png" style="width: 20px;" alt="ArabiSky.com" /></span> <span class="accorText">الإبلاغ عن إساءة الإعلان الحالي</span>
+                                        <img src="~/img/img_Error.png" runat="server" style="width: 20px;" alt="ArabiSky.com" /></span> <span class="accorText">الإبلاغ عن إساءة الإعلان الحالي</span>
                                 </div>
                             </h3>
                         </div>
