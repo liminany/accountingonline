@@ -199,12 +199,11 @@
                 <div id="div_Image" runat="server" style="float: right; margin-right: 30px; color: #111111; font-size: 17px; padding-top: 10px; font-weight: bolder;">
                     صور الإعلان
                 </div>
-                <div style="clear: both; height: 20px;">
+                <div style="clear: both; height: 10px;">
                 </div>
-                <div style="display: none; margin: 10px; text-align: center; width: 100%; padding-right: 10px;"
-                    id="div_Slider" runat="server">
+                <div style="display: none; margin: 10px; text-align: center; width: 100%; padding-right: 10px;" id="div_Slider" runat="server">
                 </div>
-                <div id="div_ContactSpace" runat="server" style="clear: both; height: 20px;">
+                <div id="div_ContactSpace" runat="server" style="clear: both; height: 10px;">
                 </div>
                 <div id="div_ContactUser" runat="server">
                     <div style="height: 20px; clear: both">
@@ -277,7 +276,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div style="display: ;" id="div_Facebook">
+                    <div style="display:;" id="div_Facebook">
                         <table width="90%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="right" style="padding-right: 20px;">
