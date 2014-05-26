@@ -107,10 +107,8 @@
                         </ul>
                     </div>
                 </div>
-                <div style="clear: both; height: 30px; border-bottom: 1px solid #ccc;">
-                </div>
-                <div style="width: 100%">
-                </div>
+                <div style="clear: both; height: 8px; border-bottom: 1px solid #ccc;">
+                </div> 
                 <div style="width: 59%; float: right;">
                     <div style="border-bottom: 2px dashed #ccc;padding-top: 10px;width: 102%;float: right;height: 37px;color: #111111;background-color: #ededed;display: ;font-weight: bolder;font-size: 25px;text-align: right;padding-right: 25px;">
                         تفاصيل الإعلان
