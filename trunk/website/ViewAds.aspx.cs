@@ -51,6 +51,7 @@ public partial class ViewAds : System.Web.UI.Page
                 if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                 {
                     div_SendPrivateMessage.Style.Add("display", "");
+					div_AdsHaveIssues.Style.Add("display", "");
                     if (FormsFunction.GetCookieData().Length != 0)
                     {
                         string[] arrUserCookieInfo = FormsFunction.GetCookieData();
@@ -65,6 +66,7 @@ public partial class ViewAds : System.Web.UI.Page
                 else
                 {
                     div_SendPrivateMessage.Style.Add("display", "none");
+					div_AdsHaveIssues.Style.Add("display", "none");
                 }
 
                 foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString())).Tables[0].Rows)
@@ -98,12 +100,14 @@ public partial class ViewAds : System.Web.UI.Page
                     if (hfAdsUserIDOwner.Value == hfUserID.Value)
                     {
                         div_SendPrivateMessage.Style.Add("display", "none");
+						div_AdsHaveIssues.Style.Add("display", "none");
                         UserControls.Style.Add("display", "");
                         div_ContactSpace.Style.Add("display", "");
                     }
                     else
                     {
                         div_SendPrivateMessage.Style.Add("display", "");
+						div_AdsHaveIssues.Style.Add("display", "");
                         UserControls.Style.Add("display", "none");
                         div_ContactSpace.Style.Add("display", "none");
                     }
@@ -111,10 +115,12 @@ public partial class ViewAds : System.Web.UI.Page
                     if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
                     {
                         div_SendPrivateMessage.Style.Add("display", "");
+						div_AdsHaveIssues.Style.Add("display", "");
                     }
                     else
                     {
                         div_SendPrivateMessage.Style.Add("display", "none");
+						div_AdsHaveIssues.Style.Add("display", "none");
                     }
 
 

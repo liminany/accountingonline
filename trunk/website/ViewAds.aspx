@@ -221,7 +221,7 @@
                                     <img src="/images/sendMailIcon.png" alt="ArabiSky.com" /></span> <span class="accorText">أرسل رسالة خاصة لصاحب الإعلان </span>
                             </h3>
                         </div>
-                        <div style="margin-right: 5px; float: right;">
+                        <div style="margin-right: 5px; float: right;" id="div_AdsHaveIssues" runat="server">
                             <h3 class="accorRightHeader" style="width: 215px;">
                                 <div onclick="return funAdsHaveIssues()">
                                     <span class="rightIcons">
