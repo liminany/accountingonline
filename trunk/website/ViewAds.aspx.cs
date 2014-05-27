@@ -25,8 +25,11 @@ public partial class ViewAds : System.Web.UI.Page
         try
         {
             DBAdsManager objDBAdsManager = new DBAdsManager();
-            objDBAdsManager.AdsHaveIssues(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()));
-            div_UserMessage.InnerHtml = "شكرا لك لقد تم ارسال التبليغ للدعم الفني";
+            int nReturnValue = objDBAdsManager.AdsHaveIssues(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString()));
+            if(nReturnValue == 1)
+			{
+				Response.Redirect("~/", false);
+			}
         }
         catch (Exception ex)
         {
