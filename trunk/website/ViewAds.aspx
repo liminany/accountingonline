@@ -223,7 +223,7 @@
                         </div>
                         <div style="margin-right: 5px; float: right;">
                             <h3 class="accorRightHeader" style="width: 215px;">
-                                <div onclick="funAdsHaveIssues()">
+                                <div onclick="return funAdsHaveIssues()">
                                     <span class="rightIcons">
                                         <img src="~/img/img_Error.png" runat="server" style="width: 20px;" alt="ArabiSky.com" /></span> <span class="accorText">الإبلاغ عن إساءة الإعلان الحالي</span>
                                 </div>
@@ -312,7 +312,15 @@
     <asp:Button runat="server" Style="visibility: hidden" ID="btnAdsIssues" OnClick="btnAdsIssues_Click" />
     <script type="text/javascript">
         function funAdsHaveIssues() {
-            $("#ctl00_ContentPlaceHolder1_btnAdsIssues").click();
+			var adsHaveIssues = confirm("هل انت متأكد من التبليغ عن هذا الإعلان ؟");
+			if (adsHaveIssues)
+			{
+				$("#ctl00_ContentPlaceHolder1_btnAdsIssues").click();
+			}
+			else
+			{
+				return false;
+			}
         }
     </script>
 </asp:Content>
