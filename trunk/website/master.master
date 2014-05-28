@@ -208,7 +208,7 @@
                .Render("~/Scripts/combined_#.js")
             %>
             <script type="text/javascript">
-                function MakeSearch() {
+                function MakeSearch(e) {
                     if (e.keyCode == 13) {
                         var t = document.getElementById("ctl00_txtMasterSearch").value;
                         $("#" + "<%= lbtnRefreshGVMaster.ClientID %>").trigger("click");
