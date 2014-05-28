@@ -169,7 +169,7 @@
                                 <!-- searchLeftCurve Starts here -->
                                 <div class="arabiSky-searchLeftCurve">
                                     <div class="arabiSky-searchbox" style="width:100% !important;">
-                                        <input type="text" placeholder="ما الذي تبحث عنه" id="txtMasterSearch" runat="server"  style="width: 430px;"/>
+                                        <input type="text" placeholder="ما الذي تبحث عنه" id="txtMasterSearch" runat="server" onkeypress="return MakeSearch(event)"  style="width: 430px;"/>
                                     </div>
                                 </div>
                                 <div style="padding-top: 5px;">
@@ -208,9 +208,11 @@
                .Render("~/Scripts/combined_#.js")
             %>
             <script type="text/javascript">
-                function MakeSearch() { 
-                    var t = document.getElementById("ctl00_txtMasterSearch").value;
-                    $("#" + "<%= lbtnRefreshGVMaster.ClientID %>").trigger("click")
+                function MakeSearch() {
+                    if (e.keyCode == 13) {
+                        var t = document.getElementById("ctl00_txtMasterSearch").value;
+                        $("#" + "<%= lbtnRefreshGVMaster.ClientID %>").trigger("click");
+                    } 
                 }
             </script>
             <footer>
