@@ -23,7 +23,7 @@
     <meta property="og:keyword" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة, وظائف خالية , الخدمات , وظائف شاغرة , الباحثين عن عمل" />
     <meta property="og:url" content="http://www.arabisky.com/" />
     <script type="text/javascript">
-        function MakeDownSearch() { var e = document.getElementById("ctl00_ContentPlaceHolder1_ddlCountryName").value; var t = document.getElementById("ctl00_ContentPlaceHolder1_ddlCityName").value; var n = document.getElementById("ctl00_ContentPlaceHolder1_home_search_cat_id_Default").value; var r = ""; if (e == "-2" || e == "") { r += "الرجاء إختيار البلد\n" } if (t == "-2" || t == "") { r += "الرجاء إختيار المدينة\n" } if (n == "-2" || n == "") { r += "الرجاء إختيار القسم\n" } if (r != "") { alert(r) } else { $("#" + "<%= lbtnRefreshGVDownSearch.ClientID %>").trigger("click") } }
+        function MakeDownSearch() { var e = document.getElementById("ctl00_ContentPlaceHolder1_ddlCountryName").value; var t = document.getElementById("ctl00_ContentPlaceHolder1_ddlCityName").value; var n = document.getElementById("ctl00_ContentPlaceHolder1_home_search_cat_id_Default").value; var r = ""; if (e == "-2" || e == "") { r += "الرجاء إختيار البلد\n" } if (t == "-2" || t == "") { r += "الرجاء إختيار المدينة\n" } if (n == "-2" || n == "") { r += "الرجاء إختيار القسم\n" } if (r != "") { alert(r) } else { $("#" + "<%= lbtnRefreshGVDownSearch.ClientID %>").trigger("click"); } }
     </script>
     <style type="text/css">
         .thumb {
