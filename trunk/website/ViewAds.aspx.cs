@@ -46,7 +46,7 @@ public partial class ViewAds : System.Web.UI.Page
                 
                 foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"])).Tables[0].Rows)
                 {
-                    Response.Redirect(GenerateURL(Request.QueryString["AdsID"].ToString(), rows["AdsTitle"].ToString()), false);
+                    Response.Redirect(string.Format("http://www.arabisky.com/" + GenerateURLGoogle(Request.QueryString["AdsID"].ToString(), rows["AdsTitle"].ToString())), false);
                 }
             }
             else
@@ -481,6 +481,38 @@ public partial class ViewAds : System.Web.UI.Page
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Trim();
         strTitle = string.Format("../../ViewAds/{0}/{1}", strId, strTitle);
+        return strTitle;
+    }
+
+    protected string GenerateURLGoogle(object strId, object Title)
+    {
+        string strTitle = Title.ToString();
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
+        }
+        strTitle = strTitle.Replace(" ", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
+        strTitle = string.Format("ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
     #endregion
