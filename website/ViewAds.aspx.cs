@@ -381,7 +381,7 @@ public partial class ViewAds : System.Web.UI.Page
             string[] images = imagesURL.Split('|');
             for (int i = 0; i < images.Length; i++)
             {
-                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='margin-top: 15px;cursor:pointer;border:2px solid #333;height:168px;width:200px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + "../" + images[i].Replace("~", "..") + "'><img style='max-width: 200px;max-height: 168px;width:200px;height:168px;' src='" + "../" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
+                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='margin-top: 15px;cursor:pointer;border:2px solid #333;height:168px;width:200px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + "http://arabisky.s3.amazonaws.com/" + images[i] + "'><img style='max-width: 200px;max-height: 168px;width:200px;height:168px;' src='" + "../" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
             }
 
             if (string.IsNullOrEmpty(images[0].ToString()))

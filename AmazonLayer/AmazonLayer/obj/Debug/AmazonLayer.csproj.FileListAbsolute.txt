@@ -1,0 +1,14 @@
+F:\Projects\CarsWatcher_final\Projects\WebApplication\AmazonLayer\bin\Debug\AmazonLayer.dll.config
+F:\Projects\CarsWatcher_final\Projects\WebApplication\AmazonLayer\bin\Debug\AmazonLayer.dll
+F:\Projects\CarsWatcher_final\Projects\WebApplication\AmazonLayer\bin\Debug\AmazonLayer.pdb
+F:\Projects\CarsWatcher_final\Projects\WebApplication\AmazonLayer\bin\Debug\AWS.TraceListener.dll
+F:\Projects\CarsWatcher_final\Projects\WebApplication\AmazonLayer\bin\Debug\AWSSDK.dll
+F:\Projects\CarsWatcher_final\Projects\WebApplication\AmazonLayer\obj\Debug\AmazonLayer.csprojResolveAssemblyReference.cache
+F:\Projects\CarsWatcher_final\Projects\WebApplication\AmazonLayer\obj\Debug\AmazonLayer.dll
+F:\Projects\CarsWatcher_final\Projects\WebApplication\AmazonLayer\obj\Debug\AmazonLayer.pdb
+D:\MyProject\accountingonline\AmazonLayer\AmazonLayer\bin\Debug\AmazonLayer.dll.config
+D:\MyProject\accountingonline\AmazonLayer\AmazonLayer\bin\Debug\AmazonLayer.dll
+D:\MyProject\accountingonline\AmazonLayer\AmazonLayer\bin\Debug\AmazonLayer.pdb
+D:\MyProject\accountingonline\AmazonLayer\AmazonLayer\obj\Debug\AmazonLayer.csprojResolveAssemblyReference.cache
+D:\MyProject\accountingonline\AmazonLayer\AmazonLayer\obj\Debug\AmazonLayer.dll
+D:\MyProject\accountingonline\AmazonLayer\AmazonLayer\obj\Debug\AmazonLayer.pdb

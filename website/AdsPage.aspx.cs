@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using System.Collections;
+using Arabisky.AmazonLayer;
 
 public partial class AdsPage : System.Web.UI.Page
 {
@@ -203,11 +204,8 @@ public partial class AdsPage : System.Web.UI.Page
                         divNewAds.Style.Add("display", "none");
                         divSoicalMedia.Style.Add("display", "");
 
-                        //spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم إضافة الاعلان بنجاح <a href='ViewAds?AdsID={0}'>انقر هنا لمشاهدة الإعلان</a>", nReturnValue.ToString());
                         AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString() + "/";
                         AdsText = sTextTitleAds;
-
-
 
                         txtAdsTitle.Value = string.Empty;
                         txtPrice.Value = string.Empty;
@@ -397,7 +395,7 @@ public partial class AdsPage : System.Web.UI.Page
     //    }
     //}
 	
-	    protected string GenerateURL(object strId, object Title)
+	protected string GenerateURL(object strId, object Title)
     {
         string strTitle = Title.ToString();
         strTitle = strTitle.Trim();
@@ -533,11 +531,16 @@ public partial class AdsPage : System.Web.UI.Page
 
                 if (uploadfile.ContentLength > 0)
                 {
+                    AmazonS3Handler objAmazonS3Handler = new AmazonS3Handler("AKIAIA64W3NYEUDSN65A", "c6FHbPknK/nDrUhKWGOEKthLupUaL51yWl77AYVU", "arabisky");
+                    
                     string newname = "ArabiSky_" + Guid.NewGuid().ToString();
                     string extension = Path.GetExtension(uploadfile.FileName);
                     string sFile1Path = "~/ArabiSkyImages/Ads/" + newname + extension;
-                    string sFile2Path = Server.MapPath("~/ArabiSkyImages/Ads/" + newname + extension);
-                    uploadfile.SaveAs(sFile2Path);
+                    //string sFile2Path = Server.MapPath("~/ArabiSkyImages/Ads/" + newname + extension);
+                    //uploadfile.SaveAs(sFile2Path);
+                    //arabisky/ArabiSkyImages/Ads
+                    objAmazonS3Handler.PutImage(uploadfile.InputStream, "ArabiSkyImages/Ads/" + newname + extension);
+
                     sImagesPath = sImagesPath + sFile1Path + "|";
                 }
             }
@@ -565,7 +568,7 @@ public partial class AdsPage : System.Web.UI.Page
             {
                 for (int i = 0; i < images.Length; i++)
                 {
-                    imgAdsImage.InnerHtml = imgAdsImage.InnerHtml + string.Format("<div id='div_" + i + "' style='float:right;margin:10px;'><div style='border: 5px solid #f9ae4c;'><img class='AdsImage' src='" + images[i].Replace("~", "..") + "' style='max-width:130px;max-height:130px;' /></div><div style='clear:both;text-align:center;margin-top: 5px;'><a href='javascript:void(0)' style='border: 0px;' onclick='funDeleteImage(\"div_{0}\")'><img src='../images/remove.png' /></a></div></div>", i);
+                    imgAdsImage.InnerHtml = imgAdsImage.InnerHtml + string.Format("<div id='div_" + i + "' style='float:right;margin:10px;'><div style='border: 5px solid #f9ae4c;'><img class='AdsImage' src='" + "http://arabisky.s3.amazonaws.com/" + images[i] + "' style='max-width:130px;max-height:130px;' /></div><div style='clear:both;text-align:center;margin-top: 5px;'><a href='javascript:void(0)' style='border: 0px;' onclick='funDeleteImage(\"div_{0}\")'><img src='../images/remove.png' /></a></div></div>", i);
                 }
                 file_upload.Attributes.Add("maxlength", (nMaxImageUpload - images.Length).ToString());
             }

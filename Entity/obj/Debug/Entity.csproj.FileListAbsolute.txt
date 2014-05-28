@@ -21,3 +21,4 @@ D:\MyProject\accountingonline\Entity\bin\Debug\Entity.dll
 D:\MyProject\accountingonline\Entity\bin\Debug\Entity.pdb
 D:\MyProject\accountingonline\Entity\obj\Debug\Entity.dll
 D:\MyProject\accountingonline\Entity\obj\Debug\Entity.pdb
+D:\MyProject\accountingonline\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
