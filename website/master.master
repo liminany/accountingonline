@@ -173,7 +173,7 @@
                                     </div>
                                 </div>
                                 <div style="padding-top: 5px;">
-                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearch();"
+                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearch(event);"
                                         style="padding-right: 5px; padding-top: 2px;" />
                                 </div>
                                 <div class="arabiSky-clear">
