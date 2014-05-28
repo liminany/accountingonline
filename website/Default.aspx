@@ -609,7 +609,7 @@
                 </div>
             </div>
             <asp:Button ID="lbtnRefreshGVDownSearch" CssClass="ClassHideDiv" runat="server" Text=""
-                Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnRefreshGVDownSearch_Click">
+                Height="0px" Width="0px" TabIndex="1000" Style="visibility: hidden" OnClick="lbtnRefreshGVDownSearch_Click">
             </asp:Button>
         </ContentTemplate>
     </asp:UpdatePanel>
