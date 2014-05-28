@@ -52,7 +52,7 @@
                             </a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=bmw&Brand2=بي إم دبليو">
+                            <a href="Search?Type=Brand&subID=7&Brand1=bmw&Brand2=بي-إم-دبليو">
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/bmw.png" />
                             </a>
                         </td>
@@ -77,7 +77,7 @@
                             <a href="Search?Type=Brand&subID=7&Brand1=Audi&Brand2=اودي">Audi</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=BMW&Brand2=بي إم دبليو">BMW</a>
+                            <a href="Search?Type=Brand&subID=7&Brand1=BMW&Brand2=بي-إم-دبليو">BMW</a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=Chevrolet&Brand2=شفروليه">Chevrolet</a>
@@ -108,7 +108,7 @@
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/gmc.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Great_Wall&Brand2=جريت وول">
+                            <a href="Search?Type=Brand&subID=7&Brand1=Great_Wall&Brand2=جريت-وول">
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/Great_Wall.png" /></a>
                         </td>
                         <td align="center">
@@ -127,7 +127,7 @@
                             <a href="Search?Type=Brand&subID=7&Brand1=gmc&Brand2=جيمس">GMC</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Great_Wall&Brand2=جريت وول">Great Wall</a>
+                            <a href="Search?Type=Brand&subID=7&Brand1=Great_Wall&Brand2=جريت-وول">Great Wall</a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=honda&Brand2=هوندا">Honda</a>
@@ -155,7 +155,7 @@
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/jagu.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=land rover&Brand2=لاند روفر">
+                            <a href="Search?Type=Brand&subID=7&Brand1=land rover&Brand2=لاند-روفر">
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/land-rover.png" /></a>
                         </td>
                     </tr>
@@ -173,7 +173,7 @@
                             <a href="Search?Type=Brand&subID=7&Brand1=Jaguar&Brand2=جاكور">Jaguar</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Land Rover&Brand2=لاند روفر">Land Rover</a>
+                            <a href="Search?Type=Brand&subID=7&Brand1=Land Rover&Brand2=لاند-روفر">Land Rover</a>
                         </td>
                     </tr>
                     <tr>
@@ -194,7 +194,7 @@
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/mazda.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Mitsubishi&Brand2=ميتسوبيشي لانسر">
+                            <a href="Search?Type=Brand&subID=7&Brand1=Mitsubishi&Brand2=ميتسوبيشي-لانسر">
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/Mitsubishi.gif" /></a>
                         </td>
                         <td align="center">
@@ -213,7 +213,7 @@
                             <a href="Search?Type=Brand&subID=7&Brand1=mazda&Brand2=مازدا">Mazda</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Mitsubishi&Brand2=ميتسوبيشي لانسر">Mitsubishi</a>
+                            <a href="Search?Type=Brand&subID=7&Brand1=Mitsubishi&Brand2=ميتسوبيشي-لانسر">Mitsubishi</a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=nissan&Brand2=نيسان">Nissan</a>
@@ -299,7 +299,7 @@
                             <a href="Search?Type=Brand&subID=7&Brand1=Toyota&Brand2=تويوتا">Toyota</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Volkswagen&Brand2=فلوكس فاجن">Volkswagen</a>
+                            <a href="Search?Type=Brand&subID=7&Brand1=Volkswagen&Brand2=فلوكس-فاجن">Volkswagen</a>
                         </td>
                         <td align="center">
                             <a href="Search?Type=Brand&subID=7&Brand1=volvo&Brand2=فولفو">Volvo</a>
