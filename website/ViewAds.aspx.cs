@@ -43,9 +43,10 @@ public partial class ViewAds : System.Web.UI.Page
         {
             if (Request.QueryString["AdsID"] != null)
             {
+                
                 foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"])).Tables[0].Rows)
                 {
-                    Response.Redirect(string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", Request.QueryString["AdsID"].ToString(), rows["AdsTitle"].ToString()), false);
+                    Response.Redirect(GenerateURL(Request.QueryString["AdsID"].ToString(), rows["AdsTitle"].ToString()), false);
                 }
             }
             else
