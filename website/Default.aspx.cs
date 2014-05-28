@@ -26,10 +26,26 @@ public partial class _Default : System.Web.UI.Page
                 objEntiryCountry.Action = 6;
                 FormsFunction.BindDDL(ref ddlCountryName, objDALManageCountry.GetAllCountry(objEntiryCountry), "CountryName", "CountryID", "إختر البلد");
                 DBAdsManager obDBAdsManager = new DBAdsManager();
-                rptlatstAdsAdded.DataSource = obDBAdsManager.GetDashbaordAds(FormsFunction.GetCookieValueCountryInfo()).Tables[0];
-                rptlatstAdsAdded.DataBind();
-                rptMostViewd.DataSource = obDBAdsManager.GetDashbaordAds(FormsFunction.GetCookieValueCountryInfo()).Tables[1];
-                rptMostViewd.DataBind();
+				
+				int nCountryCode = FormsFunction.GetCookieValueCountryInfo();
+				
+				if (nCountryCode == -1)
+				{
+					rptlatstAdsAdded.DataSource = obDBAdsManager.GetDashbaordAds("12").Tables[0];
+					rptlatstAdsAdded.DataBind();
+					rptMostViewd.DataSource = obDBAdsManager.GetDashbaordAds("12").Tables[1];
+					rptMostViewd.DataBind();
+				}
+				else
+				{
+					rptlatstAdsAdded.DataSource = obDBAdsManager.GetDashbaordAds(FormsFunction.GetCookieValueCountryInfo()).Tables[0];
+					rptlatstAdsAdded.DataBind();
+					rptMostViewd.DataSource = obDBAdsManager.GetDashbaordAds(FormsFunction.GetCookieValueCountryInfo()).Tables[1];
+					rptMostViewd.DataBind();
+
+				}
+				
+				
             }
             if (FormsFunction.GetCookieValueCountryInfo() != 12)
                 ArabiSkyTools.Style.Add("display", "none");
