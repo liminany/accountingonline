@@ -7,7 +7,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "website(5)", "http://localh
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
-		ProjectReferences = "{667d623b-a256-4248-aa35-918e42edbdc3}|DataLayer.dll;{F92F94E1-EB62-4DBA-82E5-5F72C6EAB9FE}|DBHelper.dll;{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}|Entity.dll;"
+		ProjectReferences = "{667d623b-a256-4248-aa35-918e42edbdc3}|DataLayer.dll;{F92F94E1-EB62-4DBA-82E5-5F72C6EAB9FE}|DBHelper.dll;{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}|Entity.dll;{974004dc-a12a-4b93-99f4-8a2087eab7b5}|AmazonLayer.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_60683"
 		Debug.AspNetCompiler.PhysicalPath = "website\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_60683\"
@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBHelper", "DBHelper\DBHelp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmazonLayer", "AmazonLayer\AmazonLayer\AmazonLayer.csproj", "{974004DC-A12A-4B93-99F4-8A2087EAB7B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,10 @@ Global
 		{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{485436A7-07A3-4DC2-8B67-2EB4F36C9AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{974004DC-A12A-4B93-99F4-8A2087EAB7B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{974004DC-A12A-4B93-99F4-8A2087EAB7B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{974004DC-A12A-4B93-99F4-8A2087EAB7B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{974004DC-A12A-4B93-99F4-8A2087EAB7B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
