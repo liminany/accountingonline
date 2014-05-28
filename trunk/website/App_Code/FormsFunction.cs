@@ -423,7 +423,7 @@ public class FormsFunction
             if (HttpContext.Current.Request.Cookies["ArabiSkyCheckCountryFull"] != null)
                 return Convert.ToInt16(HttpContext.Current.Request.Cookies["ArabiSkyCheckCountryFull"].Value);
             else
-                return "-1";
+                return 12;
         }
         catch (Exception ex)
         {
