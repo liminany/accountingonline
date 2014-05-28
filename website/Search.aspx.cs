@@ -67,7 +67,7 @@ public partial class Search : System.Web.UI.Page
                             nSearchID = 5;
                             break;
                         case "AdvanceSearch":
-                            sSearchText = Request.QueryString["TextSearch"].ToString();
+                            sSearchText = Request.QueryString["TextSearch"].ToString().Trim();
                             nCountryCode = Convert.ToInt32(Request.QueryString["Country"].ToString());
                             nCityID = Convert.ToInt32(Request.QueryString["City"].ToString() == string.Empty ? "-2" : Request.QueryString["City"].ToString());
                             nCatID = Convert.ToInt32(Request.QueryString["Cat"].ToString() == string.Empty ? "-2" : Request.QueryString["Cat"].ToString());
@@ -81,7 +81,7 @@ public partial class Search : System.Web.UI.Page
                             break;
                         default:
                             sp_SearchTitle.InnerHtml = Request.QueryString["text"].ToString();
-                            sSearchText = Request.QueryString["text"].ToString();
+                            sSearchText = Request.QueryString["text"].ToString().Trim();
                             nSearchSubCat = -2;
                             Page.Title = "موقع سماء العرب | " + sSearchText;
                             Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
