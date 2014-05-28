@@ -173,7 +173,7 @@
                                     </div>
                                 </div>
                                 <div style="padding-top: 5px;">
-                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearch(event);"
+                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearchButton();"
                                         style="padding-right: 5px; padding-top: 2px;" />
                                 </div>
                                 <div class="arabiSky-clear">
@@ -214,6 +214,10 @@
                         $("#" + "<%= lbtnRefreshGVMaster.ClientID %>").trigger("click");
                     } 
                 }
+                function MakeSearchButton() {
+                    var t = document.getElementById("ctl00_txtMasterSearch").value;
+                    $("#" + "<%= lbtnRefreshGVMaster.ClientID %>").trigger("click");
+                } 
             </script>
             <footer>
                 <div style="text-align: center;">
