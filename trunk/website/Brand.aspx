@@ -155,7 +155,7 @@
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/jagu.png" /></a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=land rover&Brand2=لاند-روفر">
+                            <a href="Search?Type=Brand&subID=7&Brand1=land-rover&Brand2=لاند-روفر">
                                 <img alt="ArabiSky.com" style="border: 0px" width="80" height="80" src="BrandLogos/land-rover.png" /></a>
                         </td>
                     </tr>
@@ -173,7 +173,7 @@
                             <a href="Search?Type=Brand&subID=7&Brand1=Jaguar&Brand2=جاكور">Jaguar</a>
                         </td>
                         <td align="center">
-                            <a href="Search?Type=Brand&subID=7&Brand1=Land Rover&Brand2=لاند-روفر">Land Rover</a>
+                            <a href="Search?Type=Brand&subID=7&Brand1=Land-Rover&Brand2=لاند-روفر">Land Rover</a>
                         </td>
                     </tr>
                     <tr>
