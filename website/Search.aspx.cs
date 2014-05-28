@@ -58,8 +58,8 @@ public partial class Search : System.Web.UI.Page
                             nSearchID = 4;
                             break;
                         case "Brand":
-                            sBrand_1 = Request.QueryString["Brand1"].ToString();
-                            sBrand_2 = Request.QueryString["Brand2"].ToString();
+                            sBrand_1 = Request.QueryString["Brand1"].ToString().Replace("-"," ");
+                            sBrand_2 = Request.QueryString["Brand2"].ToString().Replace("-", " ");
                             sp_SearchTitle.InnerHtml = " بحث " + sBrand_1 + " -  " + sBrand_2;
                             nSearchSubCat = int.Parse(Request.QueryString["subID"].ToString());
                             Page.Title = "موقع سماء العرب | " + sBrand_1 + "-" + sBrand_2;
