@@ -27,9 +27,9 @@ public partial class _Default : System.Web.UI.Page
                 FormsFunction.BindDDL(ref ddlCountryName, objDALManageCountry.GetAllCountry(objEntiryCountry), "CountryName", "CountryID", "إختر البلد");
                 DBAdsManager obDBAdsManager = new DBAdsManager();
 				
-				int nCountryCode = FormsFunction.GetCookieValueCountryInfo();
+				string nCountryCode = FormsFunction.GetCookieValueCountryInfo();
 				
-				if (nCountryCode == -1)
+				if (nCountryCode == "-1")
 				{
 					rptlatstAdsAdded.DataSource = obDBAdsManager.GetDashbaordAds("12").Tables[0];
 					rptlatstAdsAdded.DataBind();
