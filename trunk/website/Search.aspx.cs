@@ -39,13 +39,13 @@ public partial class Search : System.Web.UI.Page
                         case "SearchLast":
                             sp_SearchTitle.InnerHtml = "تابع أكثر الإعلانات مشاهدة";
                             Page.Title = "موقع سماء العرب | " + sp_SearchTitle.InnerHtml;
-                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
+                            Page.MetaDescription = "موقع سماء العرب | تابع أكثر الإعلانات مشاهدة";
                             nSearchID = 2;
                             break;
                         case "Newest":
                             sp_SearchTitle.InnerHtml = "تابع مشاهدة اخر الإعلانات";
                             Page.Title = "موقع سماء العرب | " + sp_SearchTitle.InnerHtml;
-                            Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
+                            Page.MetaDescription = "موقع سماء العرب | تابع مشاهدة اخر الإعلانات";
                             nSearchID = 1;
                             break;
                         case "Search":
