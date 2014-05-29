@@ -19,10 +19,10 @@ public partial class Admin_ViewAds : ParentPage
     {
         try
         {
-            if (Request.Url.AbsoluteUri.IndexOf("AdsID") >= 0)
+            if (Request.Url.AbsoluteUri.IndexOf("AID") >= 0)
             {
                 DBAdsManager objDBAdsManager = new DBAdsManager();
-                AdsManager objAdsManager = objDBAdsManager.GetAdsInfoByAdsID(int.Parse(Request.QueryString["AdsID"].ToString()));
+                AdsManager objAdsManager = objDBAdsManager.GetAdsInfoByAdsID(int.Parse(Request.QueryString["AID"].ToString()));
                 AdsTitle.InnerHtml = objAdsManager.AdsTitle;
                 spAdsFullDescription.InnerHtml = objAdsManager.AdsDescription;
                 div_YouTubeURL.InnerHtml = string.Format("<iframe width='680' height='400' src='{0}' frameborder='0' allowfullscreen=''></iframe>", RunVedio(objAdsManager.AdsYouTubeURL));
@@ -52,7 +52,7 @@ public partial class Admin_ViewAds : ParentPage
         try
         {
             DBAdsManager objDBAdsManager = new DBAdsManager();
-            int nRetunValue = objDBAdsManager.DeleteAdsAndRejected(int.Parse(Request.QueryString["AdsID"].ToString()));
+            int nRetunValue = objDBAdsManager.DeleteAdsAndRejected(int.Parse(Request.QueryString["AID"].ToString()));
             if (nRetunValue == 1)
             {
                 Response.Redirect("PinddingAds");
@@ -72,7 +72,7 @@ public partial class Admin_ViewAds : ParentPage
         try
         {
             DBAdsManager objDBAdsManager = new DBAdsManager();
-            int nRetunValue = objDBAdsManager.ApprovedAds(int.Parse(Request.QueryString["AdsID"].ToString()));
+            int nRetunValue = objDBAdsManager.ApprovedAds(int.Parse(Request.QueryString["AID"].ToString()));
             if (nRetunValue == 1)
             {
                 Response.Redirect("PinddingAds");
