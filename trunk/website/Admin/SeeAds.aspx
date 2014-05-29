@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/AdminSite.master" AutoEventWireup="true"
-    CodeFile="ViewAdsAdmin.aspx.cs" Inherits="Admin_ViewAds" %>
+    CodeFile="SeeAds.aspx.cs" Inherits="Admin_ViewAds" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
