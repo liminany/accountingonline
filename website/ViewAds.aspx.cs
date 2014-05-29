@@ -428,7 +428,8 @@ public partial class ViewAds : System.Web.UI.Page
             string[] images = sImageURL.Split('|');
             if (!string.IsNullOrEmpty(images[0]))
             {
-                return images[0].ToString().Replace("~", "");
+                //return images[0].ToString().Replace("~", "");
+                return "http://arabisky.s3.amazonaws.com/" + images[0];
             }
             else
             {
