@@ -480,8 +480,8 @@ public partial class ViewAds : System.Web.UI.Page
         strTitle = strTitle.Replace("---", "-");
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Trim();
-        strTitle = string.Format("../../ViewAds/{0}/{1}", strId, strTitle);
         hfCurrentURLLike.Value = string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", strId, strTitle);
+        strTitle = string.Format("../../ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
 
