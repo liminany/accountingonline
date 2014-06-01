@@ -6,7 +6,10 @@
     <meta name="keywords" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة , الخدمات , وظائف شاغرة , الباحثين عن عمل,سوق سماء العرب,كل ما تحتاجة في الأردن,جوردان ماركت,إعلانات تجارية,إعلانات مبوبة,أضف إعلان,إعلان,الأردن,عمان,السلط,جرش,إربد,معان,الزرقاء,مادبا,العقبة,المفرق,الكرك,كهربائيات,إلكترونيات,أثاث بيتي,أثاث مكتبي,سلع مستعملة,سياحة وسفر,خدمات,عقارات,شقق,منازل,بيوت,أراضي,عناية صحية وجمالية,مركبات,سيارات,ملابس,للإيجار,للبيع,كمبيوتر,لابتوب,خلوي,نقليات,سياحة,فنادق,شاليهات,ألعاب,فيديو,طابعات,ماكنات تصوير,ثلاجات,غسالات,أفران,وظائف خالية,غرف نوم, غرف سفرة,غرف جلوس,كراسي,فرشات,صالونات" />
     <meta name="title" content="ArabiSky  -  سوق سماء العرب | وظائف | إعلانات | بيع و شراء | سيارات و مركبات" />
     <title>ArabiSky - سوق سماء العرب | وظائف | إعلانات | بيع و شراء</title>
-    <meta http-equiv="content-language" content="ar" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="language" content="ar" />
+    <meta http-equiv="Content-Language" content="ar-sa" />
+    <meta name="distribution" content="global" />
     <meta name="author" content="arabisky.com" />
     <meta name="contact" content="info@arabisky.com" />
     <meta name="copyright" content="Copyright (c)2014. All Rights Reserved For Arabisky.com" />
@@ -57,12 +60,12 @@
                         <div style="float: left; z-index: 1000">
                             <div style="float: left;">
                                     <script type="text/javascript"><!--
-                            google_ad_client = "ca-pub-8724688346081785";
-                            /* LeaderBoard */
-                            google_ad_slot = "7597006556";
-                            google_ad_width = 728;
-                            google_ad_height = 90;
-                            //-->
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
                                     </script>
                                     <script type="text/javascript"
                                         src="//pagead2.googlesyndication.com/pagead/show_ads.js">
