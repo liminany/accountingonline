@@ -262,21 +262,20 @@
         <script>(function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-43880128-1", "arabisky.com"); ga("send", "pageview")</script>
         <!-- Facebook Conversion Code for Arabisky -->
         <script>(function () {
-    var _fbq = window._fbq || (window._fbq = []);
-    if (!_fbq.loaded) {
-        var fbds = document.createElement('script');
-        fbds.async = true;
-        fbds.src = '//connect.facebook.net/en_US/fbds.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(fbds, s);
-        _fbq.loaded = true;
-    }
-})();
+            var _fbq = window._fbq || (window._fbq = []);
+            if (!_fbq.loaded) {
+                var fbds = document.createElement('script');
+                fbds.async = true;
+                fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(fbds, s);
+                _fbq.loaded = true;
+            }
+        })();
             window._fbq = window._fbq || [];
             window._fbq.push(['track', '6018768782064', { 'value': '0.01', 'currency': 'USD' }]);
         </script>
-        <noscript>
-            <img height="1" width="1" alt="" style="display: none" src="https://www.facebook.com/tr?ev=6018768782064&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
+        <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6018768782064&amp;cd[value]=0.01&amp;cd[currency]=USD&amp;noscript=1" /></noscript>
     </div>
     </form>
 </body>
