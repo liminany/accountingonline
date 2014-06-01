@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="master.master.cs" Inherits="master" %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#"  xml:lang="ar" lang="ar" xmlns:og="http://opengraphprotocol.org/schema/"  xmlns:fb="http://www.facebook.com/2008/fbml">
 <head runat="server">
@@ -157,7 +156,7 @@
                     <div id="arabiSky-header" style="z-index: 0">
                         <div id="arabiSky-logo" style="height: 90px;">
                             <a href="~/" runat="server">
-                                <img src="~/images/ArabiSkyLogo.png" runat="server" alt="ArabiSky.com" border="0"
+                                <img src="~/images/ArabiSkyLogo.png" itemprop="image" runat="server" alt="ArabiSky.com" border="0"
                                     style="height: 135px; position: relative; bottom: 51px; right: 55px;" /></a>
                         </div>
                         <div id="arabiSky-mainsearchBlock">
