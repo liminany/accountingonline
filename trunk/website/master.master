@@ -79,7 +79,7 @@
     <div id="wrapper">
         <div id="arabiSky-wrapper">
             <div id="arabiSky-topMenuMain">
-			<div id="country" style="background-color: #666;color: #fff;height: 50px;font-size: 26px;text-align: center;padding-top: 17px;display:none;">
+			<div id="country" onclick="gaq.push(['_trackEvent', 'Arabisky_Master_ChooseFlag', 'Arabisky_Master_ChooseFlag', 'Arabisky_Master_ChooseFlag']);" style="background-color: #666;color: #fff;height: 50px;font-size: 26px;text-align: center;padding-top: 17px;display:none;">
 				<a href="../../country" style="color:#fff;"> الرجاء قم بإختيار علم بلدك</a>
 			</div>
                 <div id="arabiSky-topMenu">
@@ -88,7 +88,7 @@
                         </div>
                         <div class="arabiSky-menuLinks">
                             <table width="100%" cellpadding="0" cellspacing="0">
-                                <tr id="tr_DefaultUser" runat="server" style="display: ;">
+                                <tr id="tr_DefaultUser" runat="server" style="display:;">
                                     <td colspan="2">
                                         <a href="~/country" runat="server" style="width: 140px;">
                                             <img id="ImgCountryFlagWithoutlogin" src="~/images/world_map_earth.png" runat="server"
@@ -96,8 +96,8 @@
                                                 
                                                 <span
                                                     id="alinkCountryNameWithoutLogin" style="padding-right: 3px;" runat="server"></span>
-                                        </a> <a id="A1" runat="server" href="~/signup">مستخدم جديد</a> <a id="A2" runat="server"
-                                            href="login">تسجيل دخول</a>
+                                        </a> <a id="A1" runat="server" href="~/signup" onclick="gaq.push(['_trackEvent', 'Arabisky_Master_NewUser', 'Arabisky_Master_NewUser', 'Arabisky_Master_NewUser']);">مستخدم جديد</a> <a id="A2" runat="server"
+                                            href="login" onclick="gaq.push(['_trackEvent', 'Arabisky_Master_Login', 'Arabisky_Master_Login', 'Arabisky_Master_Login']);">تسجيل دخول</a>
                                     </td>
                                 </tr>
                                 <tr id="tr_RegisterUser" runat="server" style="display: none;">
@@ -108,11 +108,11 @@
                                                 <img src="~/images/ArabiSky_Down.png" runat="server" style="position: relative; top: 3px;
                                                     border: 0px;" width="16" height="16" align="top" alt="arabisky.com" /></a>
                                                 <ul style="position: absolute; right: 0px;">
-                                                    <li><a runat="server" href="~/MyAds">
+                                                    <li><a runat="server" href="~/MyAds" onclick="gaq.push(['_trackEvent', 'Arabisky_Master_MyAds', 'Arabisky_Master_MyAds', 'Arabisky_Master_MyAds']);">
                                                         <img src="~/images/ArabiSky_Ads.png" runat="server" style="border: 0px;" align="top"
                                                             alt="arabisky.com" />
                                                         إعلاناتي الخاصة </a></li>
-                                                    <li><a href="~/AccountSettings" runat="server">
+                                                    <li><a href="~/AccountSettings" runat="server" onclick="gaq.push(['_trackEvent', 'Arabisky_Master_AccountSettings', 'Arabisky_Master_AccountSettings', 'Arabisky_Master_AccountSettings']);">
                                                         <img src="~/images/ArabiSky_PersonalSettings.png" runat="server" style="border: 0px;"
                                                             align="top" alt="arabisky.com" />
                                                         بياناتي الشخصية</a></li>
@@ -120,7 +120,7 @@
                                                         <img id="Img1" src="~/images/ArabiSkyApps.png" runat="server" style="border: 0px;"
                                                             align="top" width="20" height="20" alt="arabisky.com" />
                                                         تنزيل تطبيق سوق سماء العرب</a></li>
-                                                    <li><a runat="server" href="~/logout">
+                                                    <li><a runat="server" href="~/logout" onclick="gaq.push(['_trackEvent', 'Arabisky_Master_Logout', 'Arabisky_Master_Logout', 'Arabisky_Master_Logout']);">
                                                         <img src="~/images/ArabiSky_LogOut.png" runat="server" align="top" style="border: 0px;"
                                                             alt="arabisky.com" />
                                                         خروج </a></li>
@@ -168,12 +168,12 @@
                                 <!-- searchLeftCurve Starts here -->
                                 <div class="arabiSky-searchLeftCurve">
                                     <div class="arabiSky-searchbox" style="width:100% !important;">
-                                        <input type="text" placeholder="ما الذي تبحث عنه" id="txtMasterSearch" runat="server" onkeypress="return MakeSearch(event)"  style="width: 430px;"/>
+                                        <input type="text" placeholder="ما الذي تبحث عنه" id="txtMasterSearch" runat="server" onkeypress="return MakeSearch(event);gaq.push(['_trackEvent', 'Arabisky_Master_TextboxSearch', 'Arabisky_Master_TextboxSearch', 'Arabisky_Master_TextboxSearch']);"  style="width: 430px;"/>
                                     </div>
                                 </div>
                                 <div style="padding-top: 5px;">
-                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearchButton();"
-                                        style="padding-right: 5px; padding-top: 2px;" />
+                                    <img src="~/images/search1.png" runat="server" alt="ArabiSky.com" onclick="javascript:return MakeSearchButton();gaq.push(['_trackEvent', 'Arabisky_Master_ButtonSearch', 'Arabisky_Master_ButtonSearch', 'Arabisky_Master_ButtonSearch']);"
+                                        style="padding-right: 5px; padding-top: 2px;"  />
                                 </div>
                                 <div class="arabiSky-clear">
                                 </div>
@@ -182,7 +182,7 @@
                             <div class="arabiSky-postClassifieds MetroButton" style="background-color: #f89a21;
                                 border-bottom: 1px solid #ccc; border-radius: 0px; width: 170px; margin-left: 0px;
                                 border-top: 2px solid red; height: 30px;">
-                                <a href="~/AdsPage" runat="server" style="display: block; width: 100%; height: 100%; text-decoration: none;
+                                <a href="~/AdsPage" onclick="gaq.push(['_trackEvent', 'Arabisky_Master_AddNewAds', 'Arabisky_Master_AddNewAds', 'Arabisky_Master_AddNewAds']);" runat="server" style="display: block; width: 100%; height: 100%; text-decoration: none;
                                     color: #333; font-size: 17px;">اضف إعلانك الان</a>
                             </div>
                         </div>
@@ -259,9 +259,8 @@
         <asp:Button ID="lbtnRefreshGVMaster" TabIndex="0" CssClass="ClassHideDiv" runat="server" Text="" Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnRefreshGVMaster_Click">
         </asp:Button>
         <asp:Button ID="lbtnCountry" CssClass="ClassHideDiv" runat="server" Text="" Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnCountry_Click"></asp:Button>
-        <script>(function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-43880128-1", "arabisky.com");
+        <script>(function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-43880128-1",{ 'userId': 'khodrog@gmail.com' }, "arabisky.com");
             ga("send", "pageview");
-            ga('set', '&uid', '<%# sUserID %>');
         </script>
     </div>
     </form>
