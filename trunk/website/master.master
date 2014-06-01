@@ -259,7 +259,12 @@
         <asp:Button ID="lbtnRefreshGVMaster" TabIndex="0" CssClass="ClassHideDiv" runat="server" Text="" Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnRefreshGVMaster_Click">
         </asp:Button>
         <asp:Button ID="lbtnCountry" CssClass="ClassHideDiv" runat="server" Text="" Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnCountry_Click"></asp:Button>
-        <script>(function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); ga("create", "UA-43880128-1",{ 'userId': 'khodrog@gmail.com' }, "arabisky.com");
+        <script>(function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"); 
+            
+
+            ga('create', 'UA-43880128-1', {'userId': '10'});    
+            ga('require', 'displayfeatures');
+            ga('set', 'dimension1', '10');          
             ga("send", "pageview");
         </script>
     </div>
