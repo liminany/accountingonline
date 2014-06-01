@@ -10,6 +10,7 @@ public partial class master : System.Web.UI.MasterPage
     #region Variables
     private static Logger _logger = LogManager.GetCurrentClassLogger();
     EntityRegUsers objEntityRegUsers = new EntityRegUsers();
+    public string sUserID = string.Empty;
     private static readonly Regex REGEX_BETWEEN_TAGS = new Regex(@">\s+<", RegexOptions.Compiled);
     private static readonly Regex REGEX_LINE_BREAKS = new Regex(@"\n\s+", RegexOptions.Compiled);
     #endregion
@@ -87,6 +88,7 @@ public partial class master : System.Web.UI.MasterPage
                     {
                         div_EmailNotofication.Style.Add("display", "none");
                     }
+                    sUserID = objEntityRegUsers.UserEmailAddress.ToString();
                 }
                 else
                 {
