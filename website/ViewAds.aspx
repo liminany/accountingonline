@@ -61,16 +61,16 @@
     </div>
     <div style="clear: both; height: 1px;">
     </div>
-    <div style="width: 100%; height: auto;">
+    <div style="width: 100%; height: auto;" itemscope="" itemtype="http://data-vocabulary.org/Product">
         <div>
             <div class="arabiSky-indexHeadingLeftCurve">
             </div>
             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
                 <div style="float: right;">
-                    <span style="color: #111111; font-size: 20px;" runat="server" id="spAdsTitle"></span>
+                    <h1 itemprop="name" style="color: #111111; font-size: 20px;" runat="server" id="spAdsTitle"></h1>
                 </div>
                 <div style="float: left;">
-                    <span style="color: #111111; font-size: 17px; font-weight: bolder;" runat="server"
+                    <span  itemprop="price" style="color: #111111; font-size: 17px; font-weight: bolder;" runat="server"
                         id="sp_Price"></span>
                 </div>
             </div>
@@ -108,15 +108,15 @@
                     </div>
                 </div>
                 <div style="clear: both; height: 8px; border-bottom: 1px solid #ccc;">
-                </div> 
+                </div>
                 <div style="width: 59%; float: right;">
-                    <div style="border-bottom: 2px dashed #ccc;padding-top: 10px;width: 102%;float: right;height: 37px;color: #111111;background-color: #ededed;display: ;font-weight: bolder;font-size: 25px;text-align: right;padding-right: 25px;">
+                    <div style="border-bottom: 2px dashed #ccc; padding-top: 10px; width: 102%; float: right; height: 37px; color: #111111; background-color: #ededed; display: ; font-weight: bolder; font-size: 25px; text-align: right; padding-right: 25px;">
                         تفاصيل الإعلان
                     </div>
                     <div style="clear: both; height: 20px;">
                     </div>
                     <div>
-                        <div style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%; float: right; height: auto; word-wrap: break-word; padding-left: 10px;"
+                        <div itemprop="description" style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%; float: right; height: auto; word-wrap: break-word; padding-left: 10px;"
                             id="div_AdsDescription"
                             runat="server">
                         </div>
@@ -194,7 +194,7 @@
                 </div>
                 <div style="clear: both; height: 5px; border-bottom: 1px solid #ccc;">
                 </div>
-                <div id="div_Image" runat="server" style="background-color: #ededed;width: 100%;height: 37px;font-size: 23px;border-bottom: 2px dashed #ccc;float: right; color: #111111;font-size: 17px;padding-top: 10px;font-weight: bolder;font-size: 25px;">
+                <div id="div_Image" runat="server" style="background-color: #ededed; width: 100%; height: 37px; font-size: 23px; border-bottom: 2px dashed #ccc; float: right; color: #111111; font-size: 17px; padding-top: 10px; font-weight: bolder; font-size: 25px;">
                     صور الإعلان
                 </div>
                 <div style="clear: both; height: 10px;">
@@ -274,7 +274,7 @@
                             </tr>
                         </table>
                     </div>
-                    <div style="display:;" id="div_Facebook">
+                    <div style="display: ;" id="div_Facebook">
                         <table width="90%" border="0" cellpadding="0" cellspacing="0">
                             <tr>
                                 <td align="right" style="padding-right: 20px;">
@@ -312,15 +312,13 @@
     <asp:Button runat="server" Style="visibility: hidden" ID="btnAdsIssues" OnClick="btnAdsIssues_Click" />
     <script type="text/javascript">
         function funAdsHaveIssues() {
-			var adsHaveIssues = confirm("هل انت متأكد من التبليغ عن هذا الإعلان ؟");
-			if (adsHaveIssues)
-			{
-				$("#ctl00_ContentPlaceHolder1_btnAdsIssues").click();
-			}
-			else
-			{
-				return false;
-			}
+            var adsHaveIssues = confirm("هل انت متأكد من التبليغ عن هذا الإعلان ؟");
+            if (adsHaveIssues) {
+                $("#ctl00_ContentPlaceHolder1_btnAdsIssues").click();
+            }
+            else {
+                return false;
+            }
         }
     </script>
 </asp:Content>
