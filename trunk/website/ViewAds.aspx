@@ -8,7 +8,7 @@
                 openEffect: 'none',
                 closeEffect: 'none',
                 'closeBtn': true,
-                closeOnEscape: true// disable escape event on dialog
+                closeOnEscape: false// disable escape event on dialog
             });
         });
     </script>
@@ -38,13 +38,22 @@
                 cursor: pointer;
             }
     </style>
-    <meta property="og:image" content="<%= facebookImage %>" />
+
+    <link rel="canonical" href="<%= hfCurrentURLLike.Value %>" />
+    <meta property="og:url" content="<%= hfCurrentURLLike.Value %>" />
+    <meta property="og:image" content='<%= facebookImage %>' />
+    <meta property="fb:app_id" content="172727259569815" />
+    <meta property="og:type" content="Sport" />
+    <meta property="og:title" content='<%= sAdsTitle %>' />
+    <meta property="og:description" content='<%= sAdsDescription %>' />
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfAdsUserIDOwner" Value="0" />
     <asp:HiddenField runat="server" ID="hfUserID" Value="0" />
     <asp:HiddenField runat="server" ID="hfUpdateDateTime" Value="0" />
     <asp:HiddenField runat="server" ID="hfImages" Value="0" />
+    <asp:HiddenField runat="server" ID="hfCurrentURLLike" Value="" />
     <div style="width: 100%;">
         <div id="sitemap" runat="server" style="height: 30px; float: right;">
         </div>
@@ -98,7 +107,7 @@
                         </div>
                     </div>
                     <div class="arabiSky-adDetails" style="float: right; width: 50%">
-                        <ul style="font-size: 15px; font-weight: bolder;">
+                        <ul style="font-size: 15px; font-weight: bolder;" itemprop="offerDetails" itemscope itemtype="http://data-vocabulary.org/Offer">
                             <li style="text-align: right;" id="liSection" runat="server"></li>
                             <li style="text-align: right;" id="liSubSection" runat="server"></li>
                             <li style="text-align: right;" id="liCountry" runat="server"></li>
