@@ -43,7 +43,7 @@
     <meta property="og:url" content="<%= hfCurrentURLLike.Value %>" />
     <meta property="og:image" content='<%= facebookImage %>' />
     <meta property="fb:app_id" content="172727259569815" />
-    <meta property="og:type" content="Sport" />
+    <meta property="og:type" content="arabiskyapp:classified">
     <meta property="og:title" content='<%= sAdsTitle %>' />
     <meta property="og:description" content='<%= sAdsDescription %>' />
 
