@@ -64,7 +64,6 @@ public partial class AdsPage : System.Web.UI.Page
 
 
                     spPageTitle.InnerHtml = "إضافة إعلان جديد";
-
                     #region Ads Exceded
                     objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfUserID.Value));
                     if (objEntityRegUsers.CountAdsUsed >= objEntityRegUsers.UserCountAds)
@@ -80,6 +79,7 @@ public partial class AdsPage : System.Web.UI.Page
                     {
                         btnAddNewAds.Style.Add("display", "");
                     }
+                    #endregion
                 }
                 else
                 {
