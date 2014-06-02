@@ -52,8 +52,7 @@
     <asp:HiddenField runat="server" ID="hfAdsUserIDOwner" Value="0" />
     <asp:HiddenField runat="server" ID="hfUserID" Value="0" />
     <asp:HiddenField runat="server" ID="hfUpdateDateTime" Value="0" />
-    <asp:HiddenField runat="server" ID="hfImages" Value="0" />
-    <asp:HiddenField runat="server" ID="hfCurrentURLLike" Value="" />
+    <asp:HiddenField runat="server" ID="hfImages" Value="0" /> 
     <div style="width: 100%;">
         <div id="sitemap" runat="server" style="height: 30px; float: right;">
         </div>
