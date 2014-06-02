@@ -303,7 +303,7 @@ public partial class ViewAds : System.Web.UI.Page
         {
             if (!string.IsNullOrEmpty(Page.RouteData.Values["AdsID"].ToString()))
             {
-                Response.Redirect("http://www.arabisky.com/EditAds?AdsID=" + Page.RouteData.Values["AdsID"].ToString(), false);
+                Response.Redirect("/EditAds?AdsID=" + Page.RouteData.Values["AdsID"].ToString() + "&Type=edit", false);
             }
         }
         catch (Exception ex)
