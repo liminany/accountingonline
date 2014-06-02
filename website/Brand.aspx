@@ -32,8 +32,8 @@
             <div class="arabiSky-indexHeadingLeftCurve">
             </div>
             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
-                <a href="" title="Education & Learning" style="color: #111111; font-size: 20px;"
-                    runat="server" id="spAdsTitle">انواع سيارات</a>
+                <a href="" title="بحث-بواسطة-نوع-السيارة" style="color: #111111; font-size: 20px;"
+                    runat="server" id="spAdsTitle"><h1>بحث بواسطة نوع السيارة</h1></a>
             </div>
             <div class="arabiSky-indexHeadingRightCurve">
             </div>
