@@ -49,7 +49,7 @@
                         </div>
                         <div class="arabiSky-indexHeadingContent" style="width: 98%;">
                             <div style="float: right;">
-                                <span style="color: #111111; font-size: 20px;">مكاتب تاجير سيارات</span>
+                                <h1 style="color: #111111; font-size: 20px;">مكاتب تاجير سيارات</h1>
                             </div>
                         </div>
                         <div class="arabiSky-indexHeadingRightCurve" style="width: 1%;">
@@ -82,7 +82,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">0799934777
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -94,7 +94,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">064743111
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -106,7 +106,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">0797451501
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -118,7 +118,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">5857436 0795099616
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -130,7 +130,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">0788490005
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                 </tbody>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="arabiSky-indexHeadingContent" style="width: 98%;">
                             <div style="float: right;">
-                                <span style="color: #111111; font-size: 20px;">معارض سيارات</span>
+                                <h1 style="color: #111111; font-size: 20px;">معارض سيارات</h1>
                             </div>
                         </div>
                         <div class="arabiSky-indexHeadingRightCurve" style="width: 1%;">
@@ -181,7 +181,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065504031
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -193,7 +193,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065652221
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -205,7 +205,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065674267
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -217,7 +217,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065538958
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -229,7 +229,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065624191
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -241,7 +241,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065660822
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -253,7 +253,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065660822
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -265,7 +265,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065535635
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -277,7 +277,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065535244
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -289,7 +289,7 @@
                                         <td align="center" style="width: 10%; font-size: 13px;">065699420
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                 </tbody>
@@ -307,7 +307,7 @@
                         </div>
                         <div class="arabiSky-indexHeadingContent" style="width: 98%;">
                             <div style="float: right;">
-                                <span style="color: #111111; font-size: 20px;">مراكز فحص</span>
+                                <h1 style="color: #111111; font-size: 20px;">مراكز فحص</h1>
                             </div>
                         </div>
                         <div class="arabiSky-indexHeadingRightCurve" style="width: 1%;">
@@ -342,7 +342,7 @@
                                             5690536
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -355,7 +355,7 @@
                                             0795041323
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -368,7 +368,7 @@
                                             0788543902
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -381,7 +381,7 @@
                                             <a href="mailto:ramibadran@maktoob.com">ramibadran@maktoob.com</a>
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -395,7 +395,7 @@
                                             4741367
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -408,7 +408,7 @@
                                             0799040415
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -422,7 +422,7 @@
                                             5544301
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -435,7 +435,7 @@
                                             0795367400
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -449,7 +449,7 @@
                                             4167777
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -463,7 +463,7 @@
                                             5691315
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -477,7 +477,7 @@
                                             06515889
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -490,7 +490,7 @@
                                             0785625786
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -503,7 +503,7 @@
                                             0788547033
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -516,7 +516,7 @@
                                             0796888013
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -530,7 +530,7 @@
                                             064165124
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -543,7 +543,7 @@
                                             0799977262
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -556,7 +556,7 @@
                                             0788897971
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -569,7 +569,7 @@
                                             0776387872
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -582,7 +582,7 @@
                                             0795677556
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -595,7 +595,7 @@
                                             0786701175
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #fff; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -609,7 +609,7 @@
                                             065150525
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                     <tr style="background-color: #ededed; color: #333; font-weight: bolder; height: 60px; cursor: pointer;">
@@ -623,7 +623,7 @@
                                             065162638
                                         </td>
                                         <td align="center" style="padding-left: 20px; width: 10%">
-                                            <img src="images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
+                                            <img src="../../images/ArabiSkyLogo.png" width="50" height="50" alt="ArabiSky.com">
                                         </td>
                                     </tr>
                                 </tbody>
