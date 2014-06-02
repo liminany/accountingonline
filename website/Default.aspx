@@ -316,15 +316,15 @@
                                                 <tr>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/carLogo.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList?Tag=RC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;">تأجير سيارات</h1>&nbsp;&nbsp;</a>
+                                                        <a href="GalleryList/RC/تأجير-سيارات" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;">تأجير سيارات</h1>&nbsp;&nbsp;</a>
                                                     </td>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/CarGrey.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList?Tag=GC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;"> معارض سيارات </h1>&nbsp;&nbsp;</a>
+                                                        <a href="GalleryList/GC/معارض-سيارات" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;"> معارض سيارات </h1>&nbsp;&nbsp;</a>
                                                     </td>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/carCheck.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList?Tag=CC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;"> مراكز الفحص </h1>&nbsp;&nbsp;</a>
+                                                        <a href="GalleryList/CC/مراكز-الفحص"  style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;"> مراكز الفحص </h1>&nbsp;&nbsp;</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
