@@ -1,6 +1,5 @@
 ﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="ViewAds.aspx.cs" Inherits="ViewAds"  %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
         $(document).ready(function () {
