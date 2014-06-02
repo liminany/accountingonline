@@ -32,21 +32,9 @@ public partial class Category : System.Web.UI.Page
                 {
                     string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString() + " - " + objDataSet.Tables[0].Rows[0].ItemArray[3].ToString();
                     CatName.InnerHtml = pageTitle;
+                    Page.Title = " سوق سماء العرب | " + pageTitle;
+                    Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
                     sp_PageTitle.InnerHtml = pageTitle;
-                    switch (Page.RouteData.Values["CatID"].ToString())
-                    {
-                        case "3":
-                            CatName.InnerHtml = pageTitle;
-                            Page.Title = " سوق سماء العرب | " + pageTitle;
-                            Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | احصل على احدث وظائف الشرق الاوسط و الخليج والتي تشمل وظائف السعودية، وظائف دبي، وظائف الأردن، وظائف مصر، وظائف الامارات على موقع سماء العرب";
-                            break;
-                        default:
-                            CatName.InnerHtml = pageTitle;
-                            Page.Title = " سوق سماء العرب | " + pageTitle;
-                            Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | " + pageTitle;
-                            break;
-                    }
-
                 }
             }
             else
