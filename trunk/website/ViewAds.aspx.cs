@@ -76,7 +76,7 @@ public partial class ViewAds : System.Web.UI.Page
                     foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString())).Tables[0].Rows)
                     {
                         sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='../../Category/" + rows["SubCatID"].ToString() + "/" + rows["CatName"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
-                        spAdsTitle.InnerHtml = BuildAdsTitle(rows["AdsTitle"].ToString());
+                        spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
                         sAdsURL = GenerateURLStatsic(rows["AdsID"].ToString(), rows["AdsTitle"].ToString());
 
                         sAdsTitle = BuildAdsTitle(rows["AdsTitle"].ToString());
