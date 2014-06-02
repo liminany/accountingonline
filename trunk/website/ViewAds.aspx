@@ -1,6 +1,6 @@
 ﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="ViewAds.aspx.cs" Inherits="ViewAds"  %>
-<%@ Register  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# arabiskyapp: http://ogp.me/ns/fb/arabiskyapp#"%>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
         $(document).ready(function () {
