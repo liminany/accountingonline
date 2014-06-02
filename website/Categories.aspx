@@ -69,7 +69,7 @@
             </div>
             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
                 <div style="float: right;">
-                    <span style="color: #111111; font-size: 20px;" id="CatName" runat="server"></span>
+                    <h1 style="color: #111111; font-size: 20px;" id="CatName" runat="server"></h1>
                 </div>
             </div>
             <div class="arabiSky-indexHeadingRightCurve">
