@@ -33,84 +33,87 @@ public partial class EditAds : System.Web.UI.Page
     {
         try
         {
-            if (!IsPostBack)
+            if (Request.QueryString["AdsID"] != null)
             {
-                if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
+                if (!IsPostBack)
                 {
-                    divNewAds.Style.Add("display", "");
-                    divSoicalMedia.Style.Add("display", "none");
-                    #region Fill DropDown List
-                    ManageCity objManageCity = new ManageCity();
-                    EntiryCity objEntiryCity = new EntiryCity();
-                    ManageCategory objManageCategory = new ManageCategory();
-                    objEntiryCity.Action = 6;
-                    objEntiryCity.CityStatus = 1;
-                    objEntiryCity.CityName = string.Empty;
-                    objEntiryCity.Country_FK_ID = GetCountry();
-                    FormsFunction.BindDDL(ref ddlCityName, objManageCity.GetAllCityByCountryID(objEntiryCity), "CityName", "CityID", "إختر المدينة");
-                    FormsFunction.BindDDL(ref ddlCategoryName, objManageCategory.GetAllCategory(), "CatName", "Cat_ID", "إختر القسم");
-                    #endregion
+                    if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
+                    {
+                        divNewAds.Style.Add("display", "");
+                        divSoicalMedia.Style.Add("display", "none");
+                        #region Fill DropDown List
+                        ManageCity objManageCity = new ManageCity();
+                        EntiryCity objEntiryCity = new EntiryCity();
+                        ManageCategory objManageCategory = new ManageCategory();
+                        objEntiryCity.Action = 6;
+                        objEntiryCity.CityStatus = 1;
+                        objEntiryCity.CityName = string.Empty;
+                        objEntiryCity.Country_FK_ID = GetCountry();
+                        FormsFunction.BindDDL(ref ddlCityName, objManageCity.GetAllCityByCountryID(objEntiryCity), "CityName", "CityID", "إختر المدينة");
+                        FormsFunction.BindDDL(ref ddlCategoryName, objManageCategory.GetAllCategory(), "CatName", "Cat_ID", "إختر القسم");
+                        #endregion
 
-                    if (FormsFunction.GetCookieData().Length != 0)
-                    {
-                        string[] arrUserCookieInfo = FormsFunction.GetCookieData();
-                        hfUserID.Value = arrUserCookieInfo[0].ToString();
-                    }
-                    else
-                    {
-                        objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
-                        hfUserID.Value = objEntityRegUsers.UserID.ToString();
-                    }
-
-                    spPageTitle.InnerHtml = "تعديل إعلان";
-                    Page.Title = "سوق سماء العرب | تعديل معلومات إعلان";
-                    Page.MetaDescription = "سوق سماء العرب | ArabiSky.com | تعديل بيانات إعلان";
-                    if (Request.Url.AbsoluteUri.IndexOf("message") >= 39)
-                    {
-                        trUserMessage.Style.Add("display", "");
-                        spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم تعديل الاعلان بنجاح <a href='../../ViewAds/{0}/'>انقر هنا لمشاهدة الإعلان</a>", Request.QueryString["AdsID"].ToString());
-                        txtAdsTitle.Value = string.Empty;
-                        txtPrice.Value = string.Empty;
-                        txtYouTubeURL.Value = string.Empty;
-                        ddlCategoryName.SelectedIndex = -1;
-                        ddlCityName.SelectedIndex = -1;
-                        ddlSubCategoryName.SelectedIndex = -1;
-                        editor1.Value = string.Empty;
-                        txtAdsTitle.Focus();
-                    }
-                     
-
-                    DBAdsManager objDBAdsManager = new DBAdsManager();
-                    ManageSubCategory objManageSubCategory = new ManageSubCategory();
-                    foreach (System.Data.DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"].ToString())).Tables[0].Rows)
-                    {
-                        if (hfUserID.Value == rows["UserID"].ToString())
+                        if (FormsFunction.GetCookieData().Length != 0)
                         {
-                            spAdsTitle.InnerHtml = "تعديل إعلان - " + rows["AdsTitle"].ToString();
-                            btnAddNewAds.Text = "تعديل الإعلان";
-                            btnAddNewAds.OnClientClick = "javascript:return GetImageToUpdateAds();";
-                            txtAdsTitle.Value = rows["AdsTitle"].ToString();
-                            ddlCategoryName.SelectedValue = rows["Cat_ID"].ToString();
-                            FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(int.Parse(rows["Cat_ID"].ToString())), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
-                            ddlSubCategoryName.SelectedValue = rows["SubCatID"].ToString();
-                            sp_CountryName.InnerHtml = rows["CountryName"].ToString();
-                            ddlCityName.SelectedValue = rows["CityID"].ToString();
-                            txtPrice.Value = rows["AdsPrice"].ToString();
-                            editor1.Value = rows["AdsDescription"].ToString();
-                            txtYouTubeURL.Value = rows["AdsYoutubeURL"].ToString();
-                            ViewAdsImage(rows["AdsImages"].ToString());
+                            string[] arrUserCookieInfo = FormsFunction.GetCookieData();
+                            hfUserID.Value = arrUserCookieInfo[0].ToString();
                         }
                         else
                         {
-                            Response.Redirect("/", false);
+                            objEntityRegUsers = (EntityRegUsers)Session["UserInfo"];
+                            hfUserID.Value = objEntityRegUsers.UserID.ToString();
                         }
+
+                        spPageTitle.InnerHtml = "تعديل إعلان";
+                        Page.Title = "سوق سماء العرب | تعديل معلومات إعلان";
+                        Page.MetaDescription = "سوق سماء العرب | ArabiSky.com | تعديل بيانات إعلان";
+                        if (Request.Url.AbsoluteUri.IndexOf("message") >= 39)
+                        {
+                            trUserMessage.Style.Add("display", "");
+                            spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم تعديل الاعلان بنجاح <a href='../../ViewAds/{0}/'>انقر هنا لمشاهدة الإعلان</a>", Request.QueryString["AdsID"].ToString());
+                            txtAdsTitle.Value = string.Empty;
+                            txtPrice.Value = string.Empty;
+                            txtYouTubeURL.Value = string.Empty;
+                            ddlCategoryName.SelectedIndex = -1;
+                            ddlCityName.SelectedIndex = -1;
+                            ddlSubCategoryName.SelectedIndex = -1;
+                            editor1.Value = string.Empty;
+                            txtAdsTitle.Focus();
+                        }
+
+
+                        DBAdsManager objDBAdsManager = new DBAdsManager();
+                        ManageSubCategory objManageSubCategory = new ManageSubCategory();
+                        foreach (System.Data.DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"].ToString())).Tables[0].Rows)
+                        {
+                            if (hfUserID.Value == rows["UserID"].ToString())
+                            {
+                                spAdsTitle.InnerHtml = "تعديل إعلان - " + rows["AdsTitle"].ToString();
+                                btnAddNewAds.Text = "تعديل الإعلان";
+                                btnAddNewAds.OnClientClick = "javascript:return GetImageToUpdateAds();";
+                                txtAdsTitle.Value = rows["AdsTitle"].ToString();
+                                ddlCategoryName.SelectedValue = rows["Cat_ID"].ToString();
+                                FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(int.Parse(rows["Cat_ID"].ToString())), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
+                                ddlSubCategoryName.SelectedValue = rows["SubCatID"].ToString();
+                                sp_CountryName.InnerHtml = rows["CountryName"].ToString();
+                                ddlCityName.SelectedValue = rows["CityID"].ToString();
+                                txtPrice.Value = rows["AdsPrice"].ToString();
+                                editor1.Value = rows["AdsDescription"].ToString();
+                                txtYouTubeURL.Value = rows["AdsYoutubeURL"].ToString();
+                                ViewAdsImage(rows["AdsImages"].ToString());
+                            }
+                            else
+                            {
+                                Response.Redirect("/", false);
+                            }
+                        }
+
+
                     }
-
-
-                }
-                else
-                {
-                    Response.Redirect("login", false);
+                    else
+                    {
+                        Response.Redirect("login", false);
+                    }
                 }
             }
 
