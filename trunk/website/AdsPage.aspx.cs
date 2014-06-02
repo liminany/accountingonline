@@ -100,128 +100,66 @@ public partial class AdsPage : System.Web.UI.Page
     {
         try
         {
-            string sQueryStringAdsID = Page.RouteData.Values["AdsID"].ToString();
-            if (string.IsNullOrEmpty(sQueryStringAdsID))
+            objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfUserID.Value));
+            if (objEntityRegUsers.CountAdsUsed >= objEntityRegUsers.UserCountAds)
             {
-                objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfUserID.Value));
-                if (objEntityRegUsers.CountAdsUsed >= objEntityRegUsers.UserCountAds)
-                {
-                    trUserMessage.Style.Add("display", "");
-                    trUserMessage.Style.Add("background-color", "red");
-                    trUserMessage.Style.Add("color", "#fff");
-                    trUserMessage.Style.Add("height", "30px");
-                    btnAddNewAds.Style.Add("display", "none");
-                    spUserMessages.InnerHtml = "<img style='width: 30px;' alt='arabiSky.com' src='images/Warning.png' />&nbsp;<span style='position: relative; bottom: 7px;'>لقد تجاوزت عدد الإعلانات المسموح لك بإستعمالها</span></a>";
-                }
-                else
-                {
-                    btnAddNewAds.Style.Add("display", "");
-                    DBAdsManager objDBAdsManager = new DBAdsManager();
-                    AdsManager objAdsManager = new AdsManager();
-                    objAdsManager.UserID = Convert.ToInt32(hfUserID.Value);
-                    objAdsManager.CatID = Convert.ToInt32(ddlCategoryName.SelectedValue);
-                    objAdsManager.SubCatID = Convert.ToInt32(ddlSubCategoryName.SelectedValue);
-                    objAdsManager.CountryID = GetCountry();
-                    objAdsManager.CityID = Convert.ToInt32(ddlCityName.SelectedValue);
-                    objAdsManager.AdsPrice = (!string.IsNullOrEmpty(txtPrice.Value)) ? Convert.ToDouble(txtPrice.Value) : 0;
-                    string sTextTitleAds = txtAdsTitle.Value.Replace("ة", "ه");
-                    sTextTitleAds = sTextTitleAds.Replace("أ", "ا");
-                    sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
-                    sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
-                    objAdsManager.AdsTitle = sTextTitleAds.ToLower();
-                    objAdsManager.AdsDescription = editor1.Value;
-                    objAdsManager.AdsUpdateCreateDate = DateTime.Now.AddDays(nExpireDateCounte);
-
-
-                    if (file_upload.HasFile)
-                    {
-                        objAdsManager.AdsImages = UploadAdsImages();
-                    }
-                    else
-                    {
-                        objAdsManager.AdsImages = string.Empty;
-                    }
-
-                    objAdsManager.AdsYouTubeURL = txtYouTubeURL.Value;
-                    int nReturnValue = objDBAdsManager.InsertNewAds(objAdsManager);
-                    SearchEngineOptimization objSearchEngineOptimization = new SearchEngineOptimization();
-
-                    objSearchEngineOptimization.SiteMapGenerater(GenerateURL(nReturnValue, objAdsManager.AdsTitle), DateTime.Now.ToString(), "daily", "0.69");
-
-                    trUserMessage.Style.Add("display", "");
-                    if (nReturnValue != 0)
-                    {
-                        divNewAds.Style.Add("display", "none");
-                        divSoicalMedia.Style.Add("display", "");
-
-                        //spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم إضافة الاعلان بنجاح <a href='ViewAds?AdsID={0}'>انقر هنا لمشاهدة الإعلان</a>", nReturnValue.ToString());
-                        AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString() + "/";
-                        AdsText = sTextTitleAds;
-
-
-
-                        txtAdsTitle.Value = string.Empty;
-                        txtPrice.Value = string.Empty;
-                        txtYouTubeURL.Value = string.Empty;
-                        ddlCategoryName.SelectedIndex = -1;
-                        ddlCityName.SelectedIndex = -1;
-                        ddlSubCategoryName.SelectedIndex = -1;
-                        editor1.Value = string.Empty;
-                        txtAdsTitle.Focus();
-                    }
-                    else
-                    {
-                        spUserMessages.InnerHtml = "<img style='width: 30px;' alt='arabiSky.com' src='images/Warning.png' />&nbsp;<span style='position: relative; bottom: 7px;'>هناك خطأ في إضافة الاعلان الرجاء المحاولة فيما بعد</span></a>";
-                    }
-                }
+                trUserMessage.Style.Add("display", "");
+                trUserMessage.Style.Add("background-color", "red");
+                trUserMessage.Style.Add("color", "#fff");
+                trUserMessage.Style.Add("height", "30px");
+                btnAddNewAds.Style.Add("display", "none");
+                spUserMessages.InnerHtml = "<img style='width: 30px;' alt='arabiSky.com' src='images/Warning.png' />&nbsp;<span style='position: relative; bottom: 7px;'>لقد تجاوزت عدد الإعلانات المسموح لك بإستعمالها</span></a>";
             }
             else
             {
-                //Edit Ads Submit
+                btnAddNewAds.Style.Add("display", "");
                 DBAdsManager objDBAdsManager = new DBAdsManager();
                 AdsManager objAdsManager = new AdsManager();
-                objAdsManager.AdsID = Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString());
                 objAdsManager.UserID = Convert.ToInt32(hfUserID.Value);
                 objAdsManager.CatID = Convert.ToInt32(ddlCategoryName.SelectedValue);
                 objAdsManager.SubCatID = Convert.ToInt32(ddlSubCategoryName.SelectedValue);
                 objAdsManager.CountryID = GetCountry();
                 objAdsManager.CityID = Convert.ToInt32(ddlCityName.SelectedValue);
-                objAdsManager.AdsPrice = Convert.ToDouble(txtPrice.Value);
+                objAdsManager.AdsPrice = (!string.IsNullOrEmpty(txtPrice.Value)) ? Convert.ToDouble(txtPrice.Value) : 0;
                 string sTextTitleAds = txtAdsTitle.Value.Replace("ة", "ه");
                 sTextTitleAds = sTextTitleAds.Replace("أ", "ا");
                 sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                 sTextTitleAds = sTextTitleAds.Replace("إ", "ا");
                 objAdsManager.AdsTitle = sTextTitleAds.ToLower();
                 objAdsManager.AdsDescription = editor1.Value;
-
-                if (string.IsNullOrEmpty(hfEditImageAds.Value))
+                objAdsManager.AdsUpdateCreateDate = DateTime.Now.AddDays(nExpireDateCounte);
+                if (file_upload.HasFile)
                 {
                     objAdsManager.AdsImages = UploadAdsImages();
                 }
                 else
                 {
-                    objAdsManager.AdsImages = hfEditImageAds.Value.Substring(0, hfEditImageAds.Value.Length - 1);
-                    objAdsManager.AdsImages = objAdsManager.AdsImages + "|" + UploadAdsImages();
-                    if (objAdsManager.AdsImages[objAdsManager.AdsImages.Length - 1] == '|')
-                    {
-                        objAdsManager.AdsImages = objAdsManager.AdsImages.Substring(0, objAdsManager.AdsImages.Length - 1);
-                    }
+                    objAdsManager.AdsImages = string.Empty;
                 }
-
-
                 objAdsManager.AdsYouTubeURL = txtYouTubeURL.Value;
-                int nReturnValue = objDBAdsManager.EditAds(objAdsManager);
+                int nReturnValue = objDBAdsManager.InsertNewAds(objAdsManager);
+                SearchEngineOptimization objSearchEngineOptimization = new SearchEngineOptimization();
+                objSearchEngineOptimization.SiteMapGenerater(GenerateURL(nReturnValue, objAdsManager.AdsTitle), DateTime.Now.ToString(), "daily", "0.69");
+
                 trUserMessage.Style.Add("display", "");
                 if (nReturnValue != 0)
                 {
                     divNewAds.Style.Add("display", "none");
                     divSoicalMedia.Style.Add("display", "");
-                    AdsURL = "http://www.arabisky.com/ViewAds/" + Page.RouteData.Values["AdsID"].ToString() + "/";
+                    AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString() + "/";
                     AdsText = sTextTitleAds;
+                    txtAdsTitle.Value = string.Empty;
+                    txtPrice.Value = string.Empty;
+                    txtYouTubeURL.Value = string.Empty;
+                    ddlCategoryName.SelectedIndex = -1;
+                    ddlCityName.SelectedIndex = -1;
+                    ddlSubCategoryName.SelectedIndex = -1;
+                    editor1.Value = string.Empty;
+                    txtAdsTitle.Focus();
                 }
                 else
                 {
-                    spUserMessages.InnerHtml = "<img style='width: 30px;' alt='arabiSky.com' src='images/Warning.png' />&nbsp;<span style='position: relative; bottom: 7px;'>هناك خطأ في تعديل الاعلان الرجاء المحاولة فيما بعد</span></a>";
+                    spUserMessages.InnerHtml = "<img style='width: 30px;' alt='arabiSky.com' src='images/Warning.png' />&nbsp;<span style='position: relative; bottom: 7px;'>هناك خطأ في إضافة الاعلان الرجاء المحاولة فيما بعد</span></a>";
                 }
             }
         }
