@@ -29,9 +29,7 @@ public partial class Categories : System.Web.UI.Page
                 if (objDataSet.Tables[0].Rows.Count > 0)
                 {
                     string pageTitle = objDataSet.Tables[0].Rows[0].ItemArray[2].ToString();
-
                     sp_PageTitle.InnerHtml = pageTitle;
-                    
                     switch (Page.RouteData.Values["CatID"].ToString())
                     {
                         case "3":
