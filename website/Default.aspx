@@ -53,19 +53,23 @@
                 <div id="arabiSky-content" style="padding-bottom: 0; text-align: right;">
                     <div>
                         <div style="float: right;width: 255px;">
-                            <h1>سماء العرب للإعلانات المبوبة ,سيارات,عقارات,وظائف</h1>
+                            <h1>سماء العرب للإعلانات المبوبة
+                                ,<a href="http://www.arabisky.com/Categories/3/سيارات">سيارات</a>
+                                ,<a href="http://www.arabisky.com/Categories/3/عقارات-اراضي-اسكان">عقارات</a>
+                                ,<a href="http://www.arabisky.com/Categories/3/وظائف-شاغرة">وظائف</a>
+                            </h1>
                             <h2 style="font-size: 13px; font-weight: lighter; padding-bottom: 0px;">تمتع مع سوق سماء العرب باسهل طريقة للبيع و الشراء و البحث عن وظائف عبر الانترنت
                             </h2>
                         </div>
                         <div style="float: left; z-index: 1000">
                             <div style="float: left;">
                                 <script type="text/javascript"><!--
-    google_ad_client = "ca-pub-8724688346081785";
-    /* LeaderBoard */
-    google_ad_slot = "7597006556";
-    google_ad_width = 728;
-    google_ad_height = 90;
-    //-->
+                                    google_ad_client = "ca-pub-8724688346081785";
+                                    /* LeaderBoard */
+                                    google_ad_slot = "7597006556";
+                                    google_ad_width = 728;
+                                    google_ad_height = 90;
+                                    //-->
                                 </script>
                                 <script type="text/javascript"
                                     src="//pagead2.googlesyndication.com/pagead/show_ads.js">
