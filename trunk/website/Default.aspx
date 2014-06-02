@@ -54,7 +54,7 @@
                     <div>
                         <div style="float: right;width: 255px;">
                             <h1>سماء العرب للإعلانات المبوبة
-                                ,<a href="http://www.arabisky.com/Categories/3/سيارات">سيارات</a>
+                                <a href="http://www.arabisky.com/Categories/3/سيارات">سيارات</a>
                                 ,<a href="http://www.arabisky.com/Categories/3/عقارات-اراضي-اسكان">عقارات</a>
                                 ,<a href="http://www.arabisky.com/Categories/3/وظائف-شاغرة">وظائف</a>
                             </h1>
