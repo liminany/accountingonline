@@ -206,21 +206,21 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/3/وظائف-شاغرة" title="وظائف شاغرة" style="color: #111111; font-size: 20px;">وظائف شاغرة</a>&nbsp;<span></span>
+                                <a href="Categories/3/وظائف-شاغرة" title="وظائف شاغرة" style="color: #111111; font-size: 20px;"><h1>وظائف شاغرة</h1></a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <!-- arabiSky-indexContent starts -->
                             <div class="arabiSky-indexContent" style="height: 230px;">
                                 <ul>
-                                    <li><a href="Category/22/إدارة-سكرتارية" title="ادارة-سكرتارية">إدارة / سكرتارية</a></li>
-                                    <li><a href="Category/23/تسويق-مبيعات" title="تسويق-مبيعات">تسويق / مبيعات </a></li>
-                                    <li><a href="Category/24/تدريس-تدريب" title="تدريس-تدريب">تدريس / تدريب</a></li>
-                                    <li><a href="Category/25/كمبيوتر-تقنية-المعلومات" title="كمبيوتر-تقنية المعلومات">كمبيوتر / تقنية المعلومات </a></li>
-                                    <li><a href="Category/26/محاسبة-مالية" title="محاسبة-مالية">محاسبة / مالية</a></li>
-                                    <li><a href="Category/27/طب-تمريض" title="طب-تمريض">طب / تمريض</a></li>
-                                    <li><a href="Category/28/هندسة" title="هندسة">هندسة </a></li>
-                                    <li><a href="Category/29/أشغال-أخرى" title="أشغال-أخرى">أشغال أخرى</a></li>
+                                    <li><a href="Category/22/إدارة-سكرتارية" title="ادارة-سكرتارية"><h1 style="font-size:16px !important;color:#06c !important;"> إدارة / سكرتارية</h1></a></li>
+                                    <li><a href="Category/23/تسويق-مبيعات" title="تسويق-مبيعات"><h1 style="font-size:16px !important;color:#06c !important;"> تسويق / مبيعات </h1></a></li>
+                                    <li><a href="Category/24/تدريس-تدريب" title="تدريس-تدريب"><h1 style="font-size:16px !important;color:#06c !important;">تدريس / تدريب</h1></a></li>
+                                    <li><a href="Category/25/كمبيوتر-تقنية-المعلومات" title="كمبيوتر-تقنية المعلومات"><h1 style="font-size:16px !important;color:#06c !important;">كمبيوتر / تقنية المعلومات </h1></a></li>
+                                    <li><a href="Category/26/محاسبة-مالية" title="محاسبة-مالية"><h1 style="font-size:16px !important;color:#06c !important;">محاسبة / مالية</h1></a></li>
+                                    <li><a href="Category/27/طب-تمريض" title="طب-تمريض"><h1 style="font-size:16px !important;color:#06c !important;">طب / تمريض</h1></a></li>
+                                    <li><a href="Category/28/هندسة" title="هندسة"><h1 style="font-size:16px !important;color:#06c !important;">هندسة </h1></a></li>
+                                    <li><a href="Category/29/أشغال-أخرى" title="أشغال-أخرى"><h1 style="font-size:16px !important;color:#06c !important;">أشغال أخرى</h1></a></li>
                                 </ul>
                             </div>
                             <!-- closing arabiSky-indexContent -->
@@ -231,22 +231,22 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/2/الخدمات" title="الخدمات" style="color: #111111; font-size: 20px;">الخدمات</a>&nbsp;<span></span>
+                                <a href="Categories/2/الخدمات" title="الخدمات" style="color: #111111; font-size: 20px;"><h1>الخدمات</h1></a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent" style="height: 230px;">
                                 <ul>
-                                    <li><a href="Category/12/دروس-دورات-تدريبية" title="دروس و دورات تدريبية">دروس و دورات تدريبية</a></li>
-                                    <li><a href="Category/13/الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت">الكومبيوتر و الإنترنت</a></li>
-                                    <li><a href="Category/14/بناء-مقاولات" title="بناء و مقاولات">بناء و مقاولات</a></li>
-                                    <li><a href="Category/15/خدمات-كهربائية" title="خدمات كهربائية">خدمات كهربائية</a></li>
-                                    <li><a href="Category/16/السفر-السياحة" title="السفر و السياحة">السفر و السياحة</a></li>
-                                    <li><a href="Category/17/خدمات-طبية" title="خدمات طبية">خدمات طبية </a></li>
-                                    <li><a href="Category/18/تجهيز-الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات">تجهيز الأطعمة و الحفلات </a></li>
-                                    <li><a href="Category/19/إصلاح-صيانة-السيارات" title="إصلاح و صيانة السيارات">إصلاح و صيانة السيارات</a></li>
-                                    <li><a href="Category/20/خدمات-قانونية" title="خدمات قانونية">خدمات قانونية </a></li>
-                                    <li><a href="Category/21/خدمات-أخرى" title="خدمات أخرى">خدمات أخرى</a></li>
+                                    <li><a href="Category/12/دروس-دورات-تدريبية" title="دروس و دورات تدريبية"><h1 style="font-size:16px !important;color:#06c !important;">دروس و دورات تدريبية</h1></a></li>
+                                    <li><a href="Category/13/الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت"><h1 style="font-size:16px !important;color:#06c !important;">الكومبيوتر و الإنترنت</h1></a></li>
+                                    <li><a href="Category/14/بناء-مقاولات" title="بناء و مقاولات"><h1 style="font-size:16px !important;color:#06c !important;">بناء و مقاولات</h1></a></li>
+                                    <li><a href="Category/15/خدمات-كهربائية" title="خدمات كهربائية"><h1 style="font-size:16px !important;color:#06c !important;">خدمات كهربائية</h1></a></li>
+                                    <li><a href="Category/16/السفر-السياحة" title="السفر و السياحة"><h1 style="font-size:16px !important;color:#06c !important;">السفر و السياحة</h1></a></li>
+                                    <li><a href="Category/17/خدمات-طبية" title="خدمات طبية"><h1 style="font-size:16px !important;color:#06c !important;">خدمات طبية </h1></a></li>
+                                    <li><a href="Category/18/تجهيز-الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات"><h1 style="font-size:16px !important;color:#06c !important;">تجهيز الأطعمة و الحفلات </h1></a></li>
+                                    <li><a href="Category/19/إصلاح-صيانة-السيارات" title="إصلاح و صيانة السيارات"><h1 style="font-size:16px !important;color:#06c !important;">إصلاح و صيانة السيارات</h1></a></li>
+                                    <li><a href="Category/20/خدمات-قانونية" title="خدمات قانونية"><h1 style="font-size:16px !important;color:#06c !important;">خدمات قانونية </h1></a></li>
+                                    <li><a href="Category/21/خدمات-أخرى" title="خدمات أخرى"><h1 style="font-size:16px !important;color:#06c !important;">خدمات أخرى</h1></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -256,18 +256,18 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/1/للبيع" title="للبيع" style="color: #111111; font-size: 20px;">للبيع</a>&nbsp;<span></span>
+                                <a href="Categories/1/للبيع" title="للبيع" style="color: #111111; font-size: 20px;"><h1>للبيع</h1></a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent" style="height: 120px;">
                                 <ul>
-                                    <li><a href="Category/6/العقارات-الإسكان" title="العقارات و الإسكان">العقارات و الإسكان</a></li>
-                                    <li><a href="Category/7/السيارات-المركبات" title="السيارات و المركبات">السيارات و المركبات</a></li>
-                                    <li><a href="Category/8/الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات">الكهربائيات و الإلكترونيات</a></li>
-                                    <li><a href="Category/9/الأثاث-المفروشات" title="الأثاث و المفروشات">الأثاث و المفروشات</a></li>
-                                    <li><a href="Category/10/أرقام-هواتف-مميزة" title="ارقام هواتف مميزة">أرقام هواتف مميزة</a></li>
-                                    <li><a href="Category/11/أشياء-أخرى" title="اشياء أخرى">أشياء أخرى</a></li>
+                                    <li><a href="Category/6/العقارات-الإسكان" title="العقارات و الإسكان"><h1 style="font-size:16px !important;color:#06c !important;">العقارات و الإسكان</h1></a></li>
+                                    <li><a href="Category/7/السيارات-المركبات" title="السيارات و المركبات"><h1 style="font-size:16px !important;color:#06c !important;">السيارات و المركبات</h1></a></li>
+                                    <li><a href="Category/8/الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات"><h1 style="font-size:16px !important;color:#06c !important;">الكهربائيات و الإلكترونيات</h1></a></li>
+                                    <li><a href="Category/9/الأثاث-المفروشات" title="الأثاث و المفروشات"><h1 style="font-size:16px !important;color:#06c !important;">الأثاث و المفروشات</h1></a></li>
+                                    <li><a href="Category/10/أرقام-هواتف-مميزة" title="ارقام هواتف مميزة"><h1 style="font-size:16px !important;color:#06c !important;">أرقام هواتف مميزة</h1></a></li>
+                                    <li><a href="Category/11/أشياء-أخرى" title="اشياء أخرى"><h1 style="font-size:16px !important;color:#06c !important;">أشياء أخرى</h1></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -275,13 +275,13 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/6/مطلوب-شراء" title="مطلوب-شراء" style="color: #111111; font-size: 20px;">مطلوب شراء</a>&nbsp;<span></span>
+                                <a href="Categories/6/مطلوب-شراء" title="مطلوب-شراء" style="color: #111111; font-size: 20px;"><h1>مطلوب شراء</h1></a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent">
                                 <ul>
-                                    <li><a href="Category/34/مطلوب-شراء" title="الباحثين-عن-عمل">مطلوب شراء </a></li>
+                                    <li><a href="Category/34/مطلوب-شراء" title="الباحثين-عن-عمل"><h1 style="font-size:16px !important;color:#06c !important;">مطلوب شراء </h1></a></li>
                                 </ul>
                             </div>
                             <!-- closing arabiSky-indexContent -->
@@ -316,15 +316,15 @@
                                                 <tr>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/carLogo.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList?Tag=RC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;تأجير سيارات&nbsp;&nbsp;</a>
+                                                        <a href="GalleryList?Tag=RC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;">تأجير سيارات</h1>&nbsp;&nbsp;</a>
                                                     </td>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/CarGrey.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList?Tag=GC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp; معارض سيارات &nbsp;&nbsp;</a>
+                                                        <a href="GalleryList?Tag=GC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;"> معارض سيارات </h1>&nbsp;&nbsp;</a>
                                                     </td>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/carCheck.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList?Tag=CC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp; مراكز الفحص &nbsp;&nbsp;</a>
+                                                        <a href="GalleryList?Tag=CC" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;"> مراكز الفحص </h1>&nbsp;&nbsp;</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
