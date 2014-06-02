@@ -63,71 +63,22 @@ public partial class AdsPage : System.Web.UI.Page
                     }
 
 
-                    string sQueryStringAdsID = Page.RouteData.Values["AdsID"].ToString();
-                    if (string.IsNullOrEmpty(sQueryStringAdsID))
-                    {
-                        spPageTitle.InnerHtml = "إضافة إعلان جديد";
+                    spPageTitle.InnerHtml = "إضافة إعلان جديد";
 
-                        #region Ads Exceded
-                        objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfUserID.Value));
-                        if (objEntityRegUsers.CountAdsUsed >= objEntityRegUsers.UserCountAds)
-                        {
-                            trUserMessage.Style.Add("display", "");
-                            trUserMessage.Style.Add("background-color", "red");
-                            trUserMessage.Style.Add("color", "#fff");
-                            trUserMessage.Style.Add("height", "30px");
-                            btnAddNewAds.Style.Add("display", "none");
-                            spUserMessages.InnerHtml = "<img style='width: 30px;' alt='arabiSky.com' src='images/Warning.png' />&nbsp;<span style='position: relative; bottom: 7px;'>لقد تجاوزت عدد الإعلانات المسموح لك بإستعمالها</span></a>";
-                        }
-                        else
-                        {
-                            btnAddNewAds.Style.Add("display", "");
-                        }
-                        #endregion
+                    #region Ads Exceded
+                    objEntityRegUsers = objUserAuthentication.GetUserInfoByUserID(Convert.ToInt32(hfUserID.Value));
+                    if (objEntityRegUsers.CountAdsUsed >= objEntityRegUsers.UserCountAds)
+                    {
+                        trUserMessage.Style.Add("display", "");
+                        trUserMessage.Style.Add("background-color", "red");
+                        trUserMessage.Style.Add("color", "#fff");
+                        trUserMessage.Style.Add("height", "30px");
+                        btnAddNewAds.Style.Add("display", "none");
+                        spUserMessages.InnerHtml = "<img style='width: 30px;' alt='arabiSky.com' src='images/Warning.png' />&nbsp;<span style='position: relative; bottom: 7px;'>لقد تجاوزت عدد الإعلانات المسموح لك بإستعمالها</span></a>";
                     }
                     else
                     {
-                        spPageTitle.InnerHtml = "تعديل إعلان";
-                        Page.Title = "سوق سماء العرب | تعديل معلومات إعلان";
-                        Page.MetaDescription = "سوق سماء العرب | ArabiSky.com | تعديل بيانات إعلان";
-                        if (Request.Url.AbsoluteUri.IndexOf("message") >= 39)
-                        {
-                            trUserMessage.Style.Add("display", "");
-                            spUserMessages.InnerHtml = string.Format("<img style='height: 15px; width: 15px;' alt='arabiSky.com' src='images/jobsbullet.jpg' /> تم تعديل الاعلان بنجاح <a href='../../ViewAds/{0}/'>انقر هنا لمشاهدة الإعلان</a>", Page.RouteData.Values["AdsID"].ToString());
-                            txtAdsTitle.Value = string.Empty;
-                            txtPrice.Value = string.Empty;
-                            txtYouTubeURL.Value = string.Empty;
-                            ddlCategoryName.SelectedIndex = -1;
-                            ddlCityName.SelectedIndex = -1;
-                            ddlSubCategoryName.SelectedIndex = -1;
-                            editor1.Value = string.Empty;
-                            txtAdsTitle.Focus();
-                        }
-                        DBAdsManager objDBAdsManager = new DBAdsManager();
-                        ManageSubCategory objManageSubCategory = new ManageSubCategory();
-                        foreach (System.Data.DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString())).Tables[0].Rows)
-                        {
-                            if (hfUserID.Value == rows["UserID"].ToString())
-                            {
-                                spAdsTitle.InnerHtml = "تعديل إعلان - " + rows["AdsTitle"].ToString();
-                                btnAddNewAds.Text = "تعديل الإعلان";
-                                btnAddNewAds.OnClientClick = "javascript:return GetImageToUpdateAds();";
-                                txtAdsTitle.Value = rows["AdsTitle"].ToString();
-                                ddlCategoryName.SelectedValue = rows["Cat_ID"].ToString();
-                                FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(int.Parse(rows["Cat_ID"].ToString())), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
-                                ddlSubCategoryName.SelectedValue = rows["SubCatID"].ToString();
-                                sp_CountryName.InnerHtml = rows["CountryName"].ToString();
-                                ddlCityName.SelectedValue = rows["CityID"].ToString();
-                                txtPrice.Value = rows["AdsPrice"].ToString();
-                                editor1.Value = rows["AdsDescription"].ToString();
-                                txtYouTubeURL.Value = rows["AdsYoutubeURL"].ToString();
-                                ViewAdsImage(rows["AdsImages"].ToString());
-                            }
-                            else
-                            {
-                                Response.Redirect("/", false);
-                            }
-                        }
+                        btnAddNewAds.Style.Add("display", "");
                     }
                 }
                 else
