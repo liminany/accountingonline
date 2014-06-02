@@ -39,8 +39,8 @@
             }
     </style>
 
-    <link rel="canonical" href="<%= hfCurrentURLLike.Value %>" />
-    <meta property="og:url" content="<%= hfCurrentURLLike.Value %>" />
+    <link rel="canonical" href="<%= sAdsURL %>" />
+    <meta property="og:url" content="<%= sAdsURL %>" />
     <meta property="og:image" content='<%= facebookImage %>' />
     <meta property="fb:app_id" content="172727259569815" />
     <meta property="og:type" content="arabiskyapp:classified">

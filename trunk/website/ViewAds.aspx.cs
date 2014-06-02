@@ -13,6 +13,7 @@ public partial class ViewAds : System.Web.UI.Page
     public string url = string.Empty;
     public string sAdsTitle = string.Empty;
     public string sAdsDescription = string.Empty;
+    public string sAdsURL = string.Empty;
     public string facebookImage = "http://www.arabisky.com/images/ArabiSkyLogo.png";
 
     private int nRequiredUpdateAdsPeroid = 8;
@@ -76,7 +77,7 @@ public partial class ViewAds : System.Web.UI.Page
                     {
                         sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='../../Category/" + rows["SubCatID"].ToString() + "/" + rows["CatName"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
                         spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
-
+                        sAdsURL = string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", rows["AdsID"].ToString(), rows["AdsTitle"].ToString());
 
                         sAdsTitle = rows["AdsTitle"].ToString();
                         sAdsDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
