@@ -76,13 +76,13 @@ public partial class ViewAds : System.Web.UI.Page
                     foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString())).Tables[0].Rows)
                     {
                         sitemap.InnerHtml = "<a href='/'> سوق سماء العرب </a>" + " » <a href='../../Category/" + rows["SubCatID"].ToString() + "/" + rows["CatName"].ToString() + "'>" + rows["CatName"].ToString() + "</a> » " + rows["SubCategoriesName"].ToString();
-                        spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
+                        spAdsTitle.InnerHtml = BuildAdsTitle(rows["AdsTitle"].ToString());
                         sAdsURL = GenerateURLStatsic(rows["AdsID"].ToString(), rows["AdsTitle"].ToString());
 
-                        sAdsTitle = rows["AdsTitle"].ToString();
+                        sAdsTitle = BuildAdsTitle(rows["AdsTitle"].ToString());
                         sAdsDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
 
-                        Page.Title = "سوق سماء العرب - " + rows["AdsTitle"].ToString();
+                        Page.Title = "سوق سماء العرب - " + BuildAdsTitle(rows["AdsTitle"].ToString());
                         Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
 
                         txtMessageTitle.Text = "Re : " + rows["AdsTitle"].ToString();
@@ -514,6 +514,37 @@ public partial class ViewAds : System.Web.UI.Page
         strTitle = strTitle.Replace("--", "-");
         strTitle = strTitle.Trim();
         strTitle = string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", strId, strTitle);
+        return strTitle;
+    }
+
+    protected string BuildAdsTitle(object Title)
+    {
+        string strTitle = Title.ToString();
+        strTitle = strTitle.Trim();
+        strTitle = strTitle.Trim('-');
+        strTitle = strTitle.ToLower();
+        char[] chars = @"$%#@!*?;:~`+=()[]{}|\'<>,/^&"".".ToCharArray();
+        strTitle = strTitle.Replace("c#", "C-Sharp");
+        strTitle = strTitle.Replace("vb.net", "VB-Net");
+        strTitle = strTitle.Replace("asp.net", "Asp-Net");
+        strTitle = strTitle.Replace(".", "-");
+        for (int i = 0; i < chars.Length; i++)
+        {
+            string strChar = chars.GetValue(i).ToString();
+            if (strTitle.Contains(strChar))
+            {
+                strTitle = strTitle.Replace(strChar, string.Empty);
+            }
+        }
+        strTitle = strTitle.Replace(" ", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("-----", "-");
+        strTitle = strTitle.Replace("----", "-");
+        strTitle = strTitle.Replace("---", "-");
+        strTitle = strTitle.Replace("--", "-");
+        strTitle = strTitle.Trim();
         return strTitle;
     }
     #endregion
