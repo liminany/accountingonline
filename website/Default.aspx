@@ -53,7 +53,7 @@
                 <div id="arabiSky-content" style="padding-bottom: 0; text-align: right;">
                     <div>
                         <div style="float: right;">
-                            <h1>سماء العرب للإعلانات المبوبة ,سيارات , عقارات , وظائف</h1>
+                            <h1>سماء العرب للإعلانات المبوبة ,سيارات,عقارات,وظائف</h1>
                             <h2 style="font-size: 13px; font-weight: lighter; padding-bottom: 0px;">تمتع مع سوق سماء العرب باسهل طريقة للبيع و الشراء و البحث عن وظائف عبر الانترنت
                             </h2>
                         </div>
