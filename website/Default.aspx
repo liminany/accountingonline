@@ -52,7 +52,7 @@
             <div>
                 <div id="arabiSky-content" style="padding-bottom: 0; text-align: right;">
                     <div>
-                        <div style="float: right;">
+                        <div style="float: right;width: 255px;">
                             <h1>سماء العرب للإعلانات المبوبة ,سيارات,عقارات,وظائف</h1>
                             <h2 style="font-size: 13px; font-weight: lighter; padding-bottom: 0px;">تمتع مع سوق سماء العرب باسهل طريقة للبيع و الشراء و البحث عن وظائف عبر الانترنت
                             </h2>
@@ -195,7 +195,7 @@
                             <div class="arabiSky-indexContent" style="height: 40px;">
                                 <ul>
                                     <li><a href="Category/33/الباحثين-عن-عمل" title="الباحثين عن عمل">
-                                        <h1>الباحثين عن عمل  </h1>
+                                         <h1 style="font-size:16px !important;color:#06c !important;">الباحثين عن عمل  </h1>
                                     </a></li>
                                 </ul>
                             </div>
