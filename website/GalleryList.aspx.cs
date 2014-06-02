@@ -17,9 +17,9 @@ public partial class GalleryList : System.Web.UI.Page
     {
         try
         {
-            if (Request.QueryString["Tag"] != null)
+            if (Page.RouteData.Values["Tag"] != null)
             {
-                switch (Request.QueryString["Tag"].ToString())
+                switch (Page.RouteData.Values["Tag"].ToString())
                 {
                     case "RC":
                         trGC.Style.Add("display", "none");
