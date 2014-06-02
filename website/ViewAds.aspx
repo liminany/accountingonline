@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
-    CodeFile="ViewAds.aspx.cs" Inherits="ViewAds" %>
-
+﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
+    CodeFile="ViewAds.aspx.cs" Inherits="ViewAds"  %>
+<%@ Register  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# arabiskyapp: http://ogp.me/ns/fb/arabiskyapp#"%>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
         $(document).ready(function () {
@@ -21,8 +21,7 @@
             font-weight: bold;
             text-align: right;
         }
-
-            .rows:hover {
+        .rows:hover {
                 width: 100%;
                 height: 50px;
                 background-color: #fcfcfc;
@@ -30,8 +29,7 @@
                 font-weight: bold;
                 text-align: right;
             }
-
-            .rows a {
+        .rows a {
                 position: relative;
                 top: 17px;
                 right: 10px;
@@ -43,10 +41,9 @@
     <meta property="og:url" content="<%= sAdsURL %>" />
     <meta property="og:image" content='<%= facebookImage %>' />
     <meta property="fb:app_id" content="172727259569815" />
-    <meta property="og:type" content="arabiskyapp:classified">
+    <meta property="og:type" content="arabiskyapp:classified" />
     <meta property="og:title" content='<%= sAdsTitle %>' />
     <meta property="og:description" content='<%= sAdsDescription %>' />
-
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfAdsUserIDOwner" Value="0" />
