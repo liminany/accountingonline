@@ -232,7 +232,7 @@
                             <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
                         | <a href='https://twitter.com/arabisky' target="_blank">
                             <img src="~/images/twitter_footer.png" alt="ArabiSky.com" runat="server"></a>
-                        | <a href='https://plus.google.com/u/4/112541149871591985208' target="_blank">
+                        | <a href='https://plus.google.com/+ArabiskyClassified/' target="_blank">
                             <img src="~/images/gplus_footer.png" alt="ArabiSky.com" runat="server"></a>
                     </div>
                     <div class="arabiSky-footerSeperator">
