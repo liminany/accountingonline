@@ -74,7 +74,7 @@
                                             <%# DataBinder.Eval(Container.DataItem, "AdsCreateDate")%>
                                         </td>
                                         <td class="options-width" align="center">
-                                            <a href='/admin/SeeAds?AdsID=<%# DataBinder.Eval(Container.DataItem,"AdsID") %>' title="View Ads"
+                                            <a href='/admin/SeeAds?AID=<%# DataBinder.Eval(Container.DataItem,"AdsID") %>' title="View Ads"
                                                 class="icon-1 info-tooltip"></a>
                                         </td>
                                     </tr>
@@ -100,7 +100,7 @@
                                             <%# DataBinder.Eval(Container.DataItem, "AdsCreateDate")%>
                                         </td>
                                         <td class="options-width" align="center">
-                                            <a href='/admin/SeeAds?AdsID=<%# DataBinder.Eval(Container.DataItem,"AdsID") %>' title="View Ads"
+                                            <a href='/admin/SeeAds?AID=<%# DataBinder.Eval(Container.DataItem,"AdsID") %>' title="View Ads"
                                                 class="icon-1 info-tooltip"></a>
                                         </td>
                                     </tr>
