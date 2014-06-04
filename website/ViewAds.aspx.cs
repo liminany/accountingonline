@@ -238,6 +238,10 @@ public partial class ViewAds : System.Web.UI.Page
             if (nRetuenValue == 1)
             {
                 SendEMail objSendEMail = FormsFunction.SendAndGetEmailTempleteByArabiSkyInfo(2, sUserOwnerAdsEmailAddress, "");
+
+                string sGoToBottom = "<script type='text/javascript'>" +
+                                        "$(document).ready(function () { window.scrollTo(0, document.body.clientHeight)});</script>";
+                ScriptManager.RegisterStartupScript(this.Page, this.Page.GetType, "ScrollToControl", sGoToBottom, false);               
                 div_UserMessage.InnerHtml = "لقد تم إرسال الرسالة بنجاح";
             }
             else
