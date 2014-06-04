@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://www.arabisky.com/ArabiSky_Service/ManageEmailShoot.asmx?wsdl" filename="ManageEmailShoot.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="http://www.arabisky.com/ArabiSky_Service/ManageEmailShoot.asmx?disco" filename="ManageEmailShoot.disco" />
+  </Results>
+</DiscoveryClientResultsFile>
