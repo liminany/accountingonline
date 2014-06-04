@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="InsertNewEmailAddress">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sEmailAddress" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertNewEmailAddressResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertNewEmailAddressResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="InsertNewEmailAddressSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertNewEmailAddress" />
+  </wsdl:message>
+  <wsdl:message name="InsertNewEmailAddressSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertNewEmailAddressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ManageEmailShootSoap">
+    <wsdl:operation name="InsertNewEmailAddress">
+      <wsdl:input message="tns:InsertNewEmailAddressSoapIn" />
+      <wsdl:output message="tns:InsertNewEmailAddressSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManageEmailShootSoap" type="tns:ManageEmailShootSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertNewEmailAddress">
+      <soap:operation soapAction="http://tempuri.org/InsertNewEmailAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ManageEmailShootSoap12" type="tns:ManageEmailShootSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertNewEmailAddress">
+      <soap12:operation soapAction="http://tempuri.org/InsertNewEmailAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManageEmailShoot">
+    <wsdl:port name="ManageEmailShootSoap" binding="tns:ManageEmailShootSoap">
+      <soap:address location="http://www.arabisky.com/ArabiSky_Service/ManageEmailShoot.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ManageEmailShootSoap12" binding="tns:ManageEmailShootSoap12">
+      <soap12:address location="http://www.arabisky.com/ArabiSky_Service/ManageEmailShoot.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

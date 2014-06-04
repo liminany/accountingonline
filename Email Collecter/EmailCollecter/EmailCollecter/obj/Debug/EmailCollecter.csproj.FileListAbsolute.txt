@@ -1,0 +1,6 @@
+D:\MyProject\accountingonline\Email Collecter\EmailCollecter\EmailCollecter\bin\Debug\EmailCollecter.exe.config
+D:\MyProject\accountingonline\Email Collecter\EmailCollecter\EmailCollecter\bin\Debug\EmailCollecter.exe
+D:\MyProject\accountingonline\Email Collecter\EmailCollecter\EmailCollecter\bin\Debug\EmailCollecter.pdb
+D:\MyProject\accountingonline\Email Collecter\EmailCollecter\EmailCollecter\obj\Debug\EmailCollecter.csprojResolveAssemblyReference.cache
+D:\MyProject\accountingonline\Email Collecter\EmailCollecter\EmailCollecter\obj\Debug\EmailCollecter.exe
+D:\MyProject\accountingonline\Email Collecter\EmailCollecter\EmailCollecter\obj\Debug\EmailCollecter.pdb
