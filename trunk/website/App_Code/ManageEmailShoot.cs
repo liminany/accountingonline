@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Services;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Data;
 /// <summary>
 /// Summary description for ManageEmailShoot
 /// </summary>
@@ -30,6 +31,36 @@ public class ManageEmailShoot : System.Web.Services.WebService
             objSqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
             objSqlCommand.CommandText = "sp_InsertEmailShoot";
             objSqlCommand.Parameters.AddWithValue("@emailAddress", sEmailAddress);
+            objSqlConnection.Open();
+            return objSqlCommand.ExecuteNonQuery();
+        }
+    }
+
+    [WebMethod]
+    public DataSet GetEmailShoot(string sEmailAddress)
+    {
+        using (SqlConnection objSqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlCon"].ConnectionString))
+        {
+            SqlCommand objSqlCommand = new SqlCommand();
+            SqlDataAdapter objSqlDataAdapter = new SqlDataAdapter(objSqlCommand);
+            DataSet objDataSet = new DataSet();
+            objSqlCommand.Connection = objSqlConnection;
+            objSqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            objSqlCommand.CommandText = "sp_GetEmailShoot";
+            objSqlDataAdapter.Fill(objDataSet);
+            return objDataSet;
+        }
+    }
+
+    public int UpdateEmailAddressFlag(string sEmailID)
+    {
+        using (SqlConnection objSqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlCon"].ConnectionString))
+        {
+            SqlCommand objSqlCommand = new SqlCommand();
+            objSqlCommand.Connection = objSqlConnection;
+            objSqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            objSqlCommand.CommandText = "sp_InsertEmailShoot";
+            objSqlCommand.Parameters.AddWithValue("@emailID", sEmailID);
             objSqlConnection.Open();
             return objSqlCommand.ExecuteNonQuery();
         }
