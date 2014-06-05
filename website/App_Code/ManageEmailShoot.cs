@@ -37,7 +37,7 @@ public class ManageEmailShoot : System.Web.Services.WebService
     }
 
     [WebMethod]
-    public DataSet GetEmailShoot(string sEmailAddress)
+    public DataSet GetEmailShoot()
     {
         using (SqlConnection objSqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlCon"].ConnectionString))
         {
