@@ -297,7 +297,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0">
                         <tr id="ArabiSkyTools" runat="server">
                             <td colspan="3">
-                                <div style="width: 100%; height: auto;">
+                                <div style="width: 100%; height: auto;width: 99%;height: auto;margin-right: 12px;">
                                     <div>
                                         <div class="arabiSky-indexHeadingLeftCurve" style="width: 1%;">
                                         </div>
