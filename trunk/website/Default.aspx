@@ -52,7 +52,7 @@
             <div>
                 <div id="arabiSky-content" style="padding-bottom: 0; text-align: right;">
                     <div>
-                        <div style="float: right;width: 255px;">
+                        <div style="float: right; width: 255px;">
                             <h1>سماء العرب للإعلانات المبوبة
                                 <a href="http://www.arabisky.com/Categories/3/سيارات">سيارات</a>
                                 ,<a href="http://www.arabisky.com/Categories/3/عقارات-اراضي-اسكان">عقارات</a>
@@ -64,12 +64,12 @@
                         <div style="float: left; z-index: 1000">
                             <div style="float: left;">
                                 <script type="text/javascript"><!--
-                                    google_ad_client = "ca-pub-8724688346081785";
-                                    /* LeaderBoard */
-                                    google_ad_slot = "7597006556";
-                                    google_ad_width = 728;
-                                    google_ad_height = 90;
-                                    //-->
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
                                 </script>
                                 <script type="text/javascript"
                                     src="//pagead2.googlesyndication.com/pagead/show_ads.js">
@@ -174,13 +174,13 @@
                             <div class="arabiSky-indexContent" style="height: 100px;">
                                 <ul>
                                     <li><a href="Category/30/العقارات-الإسكان" title="العقارات و الإسكان">
-                                        <h1 style="font-size:16px !important;color:#06c !important;">العقارات و الإسكان</h1>
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">العقارات و الإسكان</h1>
                                     </a></li>
                                     <li><a href="Category/31/السيارات-المركبات" title="السيارات و المركبات">
-                                        <h1 style="font-size:16px !important;color:#06c !important;">السيارات و المركبات</h1>
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">السيارات و المركبات</h1>
                                     </a></li>
                                     <li><a href="Category/32/أشياء-أخرى" title="أشياء أخرى">
-                                        <h1 style="font-size:16px !important;color:#06c !important;">أشياء أخرى </h1>
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أشياء أخرى </h1>
                                     </a></li>
                                 </ul>
                             </div>
@@ -199,7 +199,7 @@
                             <div class="arabiSky-indexContent" style="height: 40px;">
                                 <ul>
                                     <li><a href="Category/33/الباحثين-عن-عمل" title="الباحثين عن عمل">
-                                         <h1 style="font-size:16px !important;color:#06c !important;">الباحثين عن عمل  </h1>
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">الباحثين عن عمل  </h1>
                                     </a></li>
                                 </ul>
                             </div>
@@ -210,21 +210,39 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/3/وظائف-شاغرة" title="وظائف شاغرة" style="color: #111111; font-size: 20px;"><h1>وظائف شاغرة</h1></a>&nbsp;<span></span>
+                                <a href="Categories/3/وظائف-شاغرة" title="وظائف شاغرة" style="color: #111111; font-size: 20px;">
+                                    <h1>وظائف شاغرة</h1>
+                                </a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <!-- arabiSky-indexContent starts -->
                             <div class="arabiSky-indexContent" style="height: 230px;">
                                 <ul>
-                                    <li><a href="Category/22/إدارة-سكرتارية" title="ادارة-سكرتارية"><h1 style="font-size:16px !important;color:#06c !important;"> إدارة / سكرتارية</h1></a></li>
-                                    <li><a href="Category/23/تسويق-مبيعات" title="تسويق-مبيعات"><h1 style="font-size:16px !important;color:#06c !important;"> تسويق / مبيعات </h1></a></li>
-                                    <li><a href="Category/24/تدريس-تدريب" title="تدريس-تدريب"><h1 style="font-size:16px !important;color:#06c !important;">تدريس / تدريب</h1></a></li>
-                                    <li><a href="Category/25/كمبيوتر-تقنية-المعلومات" title="كمبيوتر-تقنية المعلومات"><h1 style="font-size:16px !important;color:#06c !important;">كمبيوتر / تقنية المعلومات </h1></a></li>
-                                    <li><a href="Category/26/محاسبة-مالية" title="محاسبة-مالية"><h1 style="font-size:16px !important;color:#06c !important;">محاسبة / مالية</h1></a></li>
-                                    <li><a href="Category/27/طب-تمريض" title="طب-تمريض"><h1 style="font-size:16px !important;color:#06c !important;">طب / تمريض</h1></a></li>
-                                    <li><a href="Category/28/هندسة" title="هندسة"><h1 style="font-size:16px !important;color:#06c !important;">هندسة </h1></a></li>
-                                    <li><a href="Category/29/أشغال-أخرى" title="أشغال-أخرى"><h1 style="font-size:16px !important;color:#06c !important;">أشغال أخرى</h1></a></li>
+                                    <li><a href="Category/22/إدارة-سكرتارية" title="ادارة-سكرتارية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">إدارة / سكرتارية</h1>
+                                    </a></li>
+                                    <li><a href="Category/23/تسويق-مبيعات" title="تسويق-مبيعات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">تسويق / مبيعات </h1>
+                                    </a></li>
+                                    <li><a href="Category/24/تدريس-تدريب" title="تدريس-تدريب">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">تدريس / تدريب</h1>
+                                    </a></li>
+                                    <li><a href="Category/25/كمبيوتر-تقنية-المعلومات" title="كمبيوتر-تقنية المعلومات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">كمبيوتر / تقنية المعلومات </h1>
+                                    </a></li>
+                                    <li><a href="Category/26/محاسبة-مالية" title="محاسبة-مالية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">محاسبة / مالية</h1>
+                                    </a></li>
+                                    <li><a href="Category/27/طب-تمريض" title="طب-تمريض">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">طب / تمريض</h1>
+                                    </a></li>
+                                    <li><a href="Category/28/هندسة" title="هندسة">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">هندسة </h1>
+                                    </a></li>
+                                    <li><a href="Category/29/أشغال-أخرى" title="أشغال-أخرى">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أشغال أخرى</h1>
+                                    </a></li>
                                 </ul>
                             </div>
                             <!-- closing arabiSky-indexContent -->
@@ -235,22 +253,44 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/2/الخدمات" title="الخدمات" style="color: #111111; font-size: 20px;"><h1>الخدمات</h1></a>&nbsp;<span></span>
+                                <a href="Categories/2/الخدمات" title="الخدمات" style="color: #111111; font-size: 20px;">
+                                    <h1>الخدمات</h1>
+                                </a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent" style="height: 230px;">
                                 <ul>
-                                    <li><a href="Category/12/دروس-دورات-تدريبية" title="دروس و دورات تدريبية"><h1 style="font-size:16px !important;color:#06c !important;">دروس و دورات تدريبية</h1></a></li>
-                                    <li><a href="Category/13/الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت"><h1 style="font-size:16px !important;color:#06c !important;">الكومبيوتر و الإنترنت</h1></a></li>
-                                    <li><a href="Category/14/بناء-مقاولات" title="بناء و مقاولات"><h1 style="font-size:16px !important;color:#06c !important;">بناء و مقاولات</h1></a></li>
-                                    <li><a href="Category/15/خدمات-كهربائية" title="خدمات كهربائية"><h1 style="font-size:16px !important;color:#06c !important;">خدمات كهربائية</h1></a></li>
-                                    <li><a href="Category/16/السفر-السياحة" title="السفر و السياحة"><h1 style="font-size:16px !important;color:#06c !important;">السفر و السياحة</h1></a></li>
-                                    <li><a href="Category/17/خدمات-طبية" title="خدمات طبية"><h1 style="font-size:16px !important;color:#06c !important;">خدمات طبية </h1></a></li>
-                                    <li><a href="Category/18/تجهيز-الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات"><h1 style="font-size:16px !important;color:#06c !important;">تجهيز الأطعمة و الحفلات </h1></a></li>
-                                    <li><a href="Category/19/إصلاح-صيانة-السيارات" title="إصلاح و صيانة السيارات"><h1 style="font-size:16px !important;color:#06c !important;">إصلاح و صيانة السيارات</h1></a></li>
-                                    <li><a href="Category/20/خدمات-قانونية" title="خدمات قانونية"><h1 style="font-size:16px !important;color:#06c !important;">خدمات قانونية </h1></a></li>
-                                    <li><a href="Category/21/خدمات-أخرى" title="خدمات أخرى"><h1 style="font-size:16px !important;color:#06c !important;">خدمات أخرى</h1></a></li>
+                                    <li><a href="Category/12/دروس-دورات-تدريبية" title="دروس و دورات تدريبية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">دروس و دورات تدريبية</h1>
+                                    </a></li>
+                                    <li><a href="Category/13/الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">الكومبيوتر و الإنترنت</h1>
+                                    </a></li>
+                                    <li><a href="Category/14/بناء-مقاولات" title="بناء و مقاولات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">بناء و مقاولات</h1>
+                                    </a></li>
+                                    <li><a href="Category/15/خدمات-كهربائية" title="خدمات كهربائية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">خدمات كهربائية</h1>
+                                    </a></li>
+                                    <li><a href="Category/16/السفر-السياحة" title="السفر و السياحة">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">السفر و السياحة</h1>
+                                    </a></li>
+                                    <li><a href="Category/17/خدمات-طبية" title="خدمات طبية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">خدمات طبية </h1>
+                                    </a></li>
+                                    <li><a href="Category/18/تجهيز-الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">تجهيز الأطعمة و الحفلات </h1>
+                                    </a></li>
+                                    <li><a href="Category/19/إصلاح-صيانة-السيارات" title="إصلاح و صيانة السيارات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">إصلاح و صيانة السيارات</h1>
+                                    </a></li>
+                                    <li><a href="Category/20/خدمات-قانونية" title="خدمات قانونية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">خدمات قانونية </h1>
+                                    </a></li>
+                                    <li><a href="Category/21/خدمات-أخرى" title="خدمات أخرى">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">خدمات أخرى</h1>
+                                    </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -260,18 +300,32 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/1/للبيع" title="للبيع" style="color: #111111; font-size: 20px;"><h1>للبيع</h1></a>&nbsp;<span></span>
+                                <a href="Categories/1/للبيع" title="للبيع" style="color: #111111; font-size: 20px;">
+                                    <h1>للبيع</h1>
+                                </a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent" style="height: 120px;">
                                 <ul>
-                                    <li><a href="Category/6/العقارات-الإسكان" title="العقارات و الإسكان"><h1 style="font-size:16px !important;color:#06c !important;">العقارات و الإسكان</h1></a></li>
-                                    <li><a href="Category/7/السيارات-المركبات" title="السيارات و المركبات"><h1 style="font-size:16px !important;color:#06c !important;">السيارات و المركبات</h1></a></li>
-                                    <li><a href="Category/8/الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات"><h1 style="font-size:16px !important;color:#06c !important;">الكهربائيات و الإلكترونيات</h1></a></li>
-                                    <li><a href="Category/9/الأثاث-المفروشات" title="الأثاث و المفروشات"><h1 style="font-size:16px !important;color:#06c !important;">الأثاث و المفروشات</h1></a></li>
-                                    <li><a href="Category/10/أرقام-هواتف-مميزة" title="ارقام هواتف مميزة"><h1 style="font-size:16px !important;color:#06c !important;">أرقام هواتف مميزة</h1></a></li>
-                                    <li><a href="Category/11/أشياء-أخرى" title="اشياء أخرى"><h1 style="font-size:16px !important;color:#06c !important;">أشياء أخرى</h1></a></li>
+                                    <li><a href="Category/6/العقارات-الإسكان" title="العقارات و الإسكان">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">العقارات و الإسكان</h1>
+                                    </a></li>
+                                    <li><a href="Category/7/السيارات-المركبات" title="السيارات و المركبات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">السيارات و المركبات</h1>
+                                    </a></li>
+                                    <li><a href="Category/8/الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">الكهربائيات و الإلكترونيات</h1>
+                                    </a></li>
+                                    <li><a href="Category/9/الأثاث-المفروشات" title="الأثاث و المفروشات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">الأثاث و المفروشات</h1>
+                                    </a></li>
+                                    <li><a href="Category/10/أرقام-هواتف-مميزة" title="ارقام هواتف مميزة">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أرقام هواتف مميزة</h1>
+                                    </a></li>
+                                    <li><a href="Category/11/أشياء-أخرى" title="اشياء أخرى">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أشياء أخرى</h1>
+                                    </a></li>
                                 </ul>
                             </div>
                         </div>
@@ -279,13 +333,17 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/6/مطلوب-شراء" title="مطلوب-شراء" style="color: #111111; font-size: 20px;"><h1>مطلوب شراء</h1></a>&nbsp;<span></span>
+                                <a href="Categories/6/مطلوب-شراء" title="مطلوب-شراء" style="color: #111111; font-size: 20px;">
+                                    <h1>مطلوب شراء</h1>
+                                </a>&nbsp;<span></span>
                             </div>
                             <div class="arabiSky-indexHeadingRightCurve">
                             </div>
                             <div class="arabiSky-indexContent">
                                 <ul>
-                                    <li><a href="Category/34/مطلوب-شراء" title="الباحثين-عن-عمل"><h1 style="font-size:16px !important;color:#06c !important;">مطلوب شراء </h1></a></li>
+                                    <li><a href="Category/34/مطلوب-شراء" title="الباحثين-عن-عمل">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">مطلوب شراء </h1>
+                                    </a></li>
                                 </ul>
                             </div>
                             <!-- closing arabiSky-indexContent -->
@@ -297,7 +355,7 @@
                     <table width="100%" cellpadding="0" cellspacing="0">
                         <tr id="ArabiSkyTools" runat="server">
                             <td colspan="3">
-                                <div style="width: 100%; height: auto;width: 99%;height: auto;margin-right: 12px;">
+                                <div style="width: 100%; height: auto; width: 99%; height: auto; margin-right: 12px;">
                                     <div>
                                         <div class="arabiSky-indexHeadingLeftCurve" style="width: 1%;">
                                         </div>
@@ -320,15 +378,18 @@
                                                 <tr>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/carLogo.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList/RC/تأجير-سيارات" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;">تأجير سيارات</h1>&nbsp;&nbsp;</a>
+                                                        <a href="GalleryList/RC/تأجير-سيارات" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size: 16px !important; color: #06c !important;">تأجير سيارات</h1>
+                                                            &nbsp;&nbsp;</a>
                                                     </td>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/CarGrey.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList/GC/معارض-سيارات" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;"> معارض سيارات </h1>&nbsp;&nbsp;</a>
+                                                        <a href="GalleryList/GC/معارض-سيارات" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size: 16px !important; color: #06c !important;">معارض سيارات </h1>
+                                                            &nbsp;&nbsp;</a>
                                                     </td>
                                                     <td align="right" style="width: 300px;">
                                                         <img src="images/carCheck.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
-                                                        <a href="GalleryList/CC/مراكز-الفحص"  style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size:16px !important;color:#06c !important;"> مراكز الفحص </h1>&nbsp;&nbsp;</a>
+                                                        <a href="GalleryList/CC/مراكز-الفحص" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size: 16px !important; color: #06c !important;">مراكز الفحص </h1>
+                                                            &nbsp;&nbsp;</a>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -381,8 +442,8 @@
                                                         <tr class="tr_AdsRows" style="color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
                                                             onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <h2><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a></h2>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -405,8 +466,8 @@
                                                         <tr class="tr_AdsRows" style="background-color: #fafafa; color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
                                                             onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <h2><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a></h2>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -499,8 +560,8 @@
                                                         <tr class="tr_AdsRows" style="color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
                                                             onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <h2><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a></h2>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
@@ -523,8 +584,8 @@
                                                         <tr class="tr_AdsRows last" style="background-color: #fafafa; color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
                                                             onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                                             <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                                <h2><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a></h2>
                                                             </td>
                                                             <td style="width: 15%" align="center">
                                                                 <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
