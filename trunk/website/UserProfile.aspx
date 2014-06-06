@@ -2,6 +2,22 @@
     CodeFile="UserProfile.aspx.cs" Inherits="UserProfile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style type="text/css">
+        .thumb {
+            background-color: #fff;
+            border: solid 1px #ccc;
+            box-shadow: 0 0 3px rgba(30,30,30,0.2);
+            padding: 3px;
+        }
+
+        .tr_AdsRows td {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .tr_AdsRows:hover {
+            background-color: #e0f4ff !important;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" Value="0" ID="hfUserProfileID" />
@@ -35,12 +51,12 @@
                         </td>
                         <td align="left" style="padding-left: 20px; vertical-align: bottom">
                             <script type="text/javascript"><!--
-                                google_ad_client = "ca-pub-8724688346081785";
-                                /* View_Ads */
-                                google_ad_slot = "6120273353";
-                                google_ad_width = 300;
-                                google_ad_height = 250;
-                                //-->
+    google_ad_client = "ca-pub-8724688346081785";
+    /* View_Ads */
+    google_ad_slot = "6120273353";
+    google_ad_width = 300;
+    google_ad_height = 250;
+    //-->
                             </script>
                             <script type="text/javascript"
                                 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
@@ -99,7 +115,7 @@
                                     <div class="arabiSky-indexHeadingLeftCurve">
                                     </div>
                                     <div class="arabiSky-indexHeadingContent" style="width: 97%;">
-                                        <div style="float: right;width:200px;">
+                                        <div style="float: right; width: 200px;">
                                             <h1 style="color: #111111; font-size: 20px;" id="CatName" runat="server">إعلانات الخاصة
                                                 بالمستخدم</h1>
                                         </div>
@@ -129,51 +145,51 @@
                                                 </HeaderTemplate>
                                                 <ItemTemplate>
                                                     <tr class="tr_AdsRows" style="color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
-                                                            onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
-                                                            <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
-                                                            </td>
-                                                            <td style="width: 15%" align="center">
-                                                                <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
-                                                            </td>
-                                                            <td align="center" style="width: 10%; font-size: 13px;">
-                                                                <%# DataBinder.Eval(Container.DataItem, "CityName")%>
-                                                            </td>
-                                                            <td align="center" style="padding-left: 20px; width: 10%">
-                                                                <p>
-                                                                    <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                        title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
-                                                                        <img class="thumb" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                            width="40" height="40" alt="ArabiSky.com" />
-                                                                    </a>
-                                                                </p>
-                                                            </td>
-                                                        </tr>
+                                                        onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
+                                                        <td align="right" style="width: 65%; padding-right: 30px;">
+                                                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                        </td>
+                                                        <td style="width: 15%" align="center">
+                                                            <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
+                                                        </td>
+                                                        <td align="center" style="width: 10%; font-size: 13px;">
+                                                            <%# DataBinder.Eval(Container.DataItem, "CityName")%>
+                                                        </td>
+                                                        <td align="center" style="padding-left: 20px; width: 10%">
+                                                            <p>
+                                                                <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                    title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                    <img class="thumb" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        width="40" height="40" alt="ArabiSky.com" />
+                                                                </a>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
                                                 </ItemTemplate>
                                                 <AlternatingItemTemplate>
                                                     <tr class="tr_AdsRows" style="background-color: #fafafa; color: #333; font-weight: bolder; height: 60px; cursor: pointer;"
-                                                            onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
-                                                            <td align="right" style="width: 65%; padding-right: 30px;">
-                                                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                                                    <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
-                                                            </td>
-                                                            <td style="width: 15%" align="center">
-                                                                <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
-                                                            </td>
-                                                            <td align="center" style="width: 10%; font-size: 13px;">
-                                                                <%# DataBinder.Eval(Container.DataItem, "CityName")%>
-                                                            </td>
-                                                            <td align="center" style="padding-left: 20px; width: 10%;">
-                                                                <p>
-                                                                    <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                        title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
-                                                                        <img style="font-size: 11px; color: #333;" class="thumb" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                            width="40" height="40" alt="ArabiSky.com" />
-                                                                    </a>
-                                                                </p>
-                                                            </td>
-                                                        </tr>
+                                                        onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
+                                                        <td align="right" style="width: 65%; padding-right: 30px;">
+                                                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                                                <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></a>
+                                                        </td>
+                                                        <td style="width: 15%" align="center">
+                                                            <%# DataBinder.Eval(Container.DataItem, "SubCategoriesName")%>
+                                                        </td>
+                                                        <td align="center" style="width: 10%; font-size: 13px;">
+                                                            <%# DataBinder.Eval(Container.DataItem, "CityName")%>
+                                                        </td>
+                                                        <td align="center" style="padding-left: 20px; width: 10%;">
+                                                            <p>
+                                                                <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                    title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
+                                                                    <img style="font-size: 11px; color: #333;" class="thumb" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
+                                                                        width="40" height="40" alt="ArabiSky.com" />
+                                                                </a>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
                                                 </AlternatingItemTemplate>
                                             </asp:Repeater>
                                         </table>
