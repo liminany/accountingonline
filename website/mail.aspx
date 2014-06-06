@@ -56,7 +56,7 @@
                     <tr style="height: 100px;">
                         <td align="right" style="width: 80px;">
                             <a id="ahrefUserProfile" runat="server">
-                                <img style="border: 0px;" runat="server" id="imgUserProfile" src="images/ArabiSkyUnknowUser.png"
+                                <img style="border: 0px;" runat="server" id="imgUserProfile" src="../../images/ArabiSkyUnknowUser.png"
                                     width="70" height="70" alt="ArabiSky" />
                             </a>
                         </td>

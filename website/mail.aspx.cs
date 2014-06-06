@@ -46,7 +46,7 @@ public partial class mail : System.Web.UI.Page
                             hfSendToUserID.Value = rowItemMessage["UserID"].ToString();
                             if (string.IsNullOrEmpty(rowItemMessage["User_Image"].ToString()))
                             {
-                                imgUserProfile.Src = "images/ArabiSkyUnknowUser.png";
+                                imgUserProfile.Src = "../../images/ArabiSkyUnknowUser.png";
                             }
                             else
                             {
