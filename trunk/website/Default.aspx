@@ -210,7 +210,7 @@
                             <div class="arabiSky-indexHeadingLeftCurve">
                             </div>
                             <div class="arabiSky-indexHeadingContent">
-                                <a href="Categories/3/وظائف-شاغرة" title="وظائف شاغرة" style="color: #111111; font-size: 20px;">
+                                <a href="Categories/3/وظائف-شاغرة-وظائف-خالية" title="وظائف-شاغرة-وظائف-خالية" style="color: #111111; font-size: 20px;">
                                     <h1>وظائف شاغرة - وظائف خالية</h1>
                                 </a>&nbsp;<span></span>
                             </div>
