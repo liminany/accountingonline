@@ -16,32 +16,37 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfUserID" Value="0" />
     <asp:HiddenField runat="server" ID="hfSendToUserID" Value="0" />
-    <div style="height: 30px; float: right;">
-        <a href='/'>سوق سماء العرب </a>»&nbsp;صندوق الرسائل الخاصة
-    </div>
-    <div style="float: left;">
-        <script type="text/javascript"><!--
+    <div style="height: 100px;">
+        <div style="float: right; width: 238px;">
+            <a href='/'>سوق سماء العرب </a>»&nbsp;<span> صندوق الرسائل الخاصة</span>
+        </div>
+        <div style="float: left;">
+            <div style="float: left;">
+                <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
     google_ad_slot = "7597006556";
     google_ad_width = 728;
     google_ad_height = 90;
     //-->
-        </script>
-        <script type="text/javascript"
-            src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-        </script>
+                </script>
+                <script type="text/javascript"
+                    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+            </div>
+        </div>
+    </div>
+    <div style="clear: both;">
     </div>
     <div style="width: 100%; height: auto;">
         <div>
-            <div class="arabiSky-indexHeadingLeftCurve">
-            </div>
+            <div class="arabiSky-indexHeadingLeftCurve"></div>
             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
-                <a href="" title="Education & Learning" style="color: #111111; font-size: 20px;"
-                    id="spMessageTitle" runat="server"></a>&nbsp;<span></span>
+                <h1 id="spMessageTitle" runat="server" style="color: #111111; font-size: 20px;">
+                    الرجاء قم بإختيار علم بلدك
+                </h1> 
             </div>
-            <div class="arabiSky-indexHeadingRightCurve">
-            </div>
+            <div class="arabiSky-indexHeadingRightCurve"></div>
         </div>
         <div style="clear: both;">
         </div>

@@ -76,19 +76,19 @@
             <a href='/'>سوق سماء العرب </a>»&nbsp;<span>البلدان</span>
         </div>
         <div style="float: left;">
-          <div style="float: left;">
-            <script type="text/javascript"><!--
+            <div style="float: left;">
+                <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
     google_ad_slot = "7597006556";
     google_ad_width = 728;
     google_ad_height = 90;
     //-->
-            </script>
-            <script type="text/javascript"
-                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>
-        </div>
+                </script>
+                <script type="text/javascript"
+                    src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                </script>
+            </div>
         </div>
     </div>
     <div style="clear: both;">
@@ -98,8 +98,8 @@
             <div class="arabiSky-indexHeadingLeftCurve">
             </div>
             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
-                <a href="" title="Education & Learning" style="color: #111111; font-size: 20px;"
-                    runat="server" id="spAdsTitle">الرجاء قم بإختيار علم بلدك</a>
+                <h1 style="color: #111111; font-size: 20px;"
+                    runat="server" id="spAdsTitle">الرجاء قم بإختيار علم بلدك</h1>
             </div>
             <div class="arabiSky-indexHeadingRightCurve">
             </div>
@@ -107,8 +107,7 @@
         <div style="clear: both;">
         </div>
         <div>
-            <div style="float: right; border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px;
-                text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;">
+            <div style="float: right; border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px; text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px;">
                 <table border="0" width="100%" cellpadding="0" cellspacing="0">
                     <tr>
                         <td align="center">
@@ -155,28 +154,27 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 50px;" align="center">
-                        </td>
+                        <td style="height: 50px;" align="center"></td>
                     </tr>
                     <tr>
                         <td align="center">
-                             <a href="javascript:void(0)" onclick="funChooseCountry('24')">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('24')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Syria.png" /></a>
                         </td>
                         <td align="center">
-                             <a href="javascript:void(0)" onclick="funChooseCountry('16')">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('16')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Libya.png" /></a>
                         </td>
                         <td align="center">
-                             <a href="javascript:void(0)" onclick="funChooseCountry('23')">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('23')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Kuwait.png" /></a>
                         </td>
                         <td align="center">
-                             <a href="javascript:void(0)" onclick="funChooseCountry('21')">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('21')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Qatar.png" /></a>
                         </td>
                         <td align="center">
-                             <a href="javascript:void(0)" onclick="funChooseCountry('20')">
+                            <a href="javascript:void(0)" onclick="funChooseCountry('20')">
                                 <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Bahrain.png" /></a>
                         </td>
                     </tr>
@@ -198,8 +196,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 50px;" align="center">
-                        </td>
+                        <td style="height: 50px;" align="center"></td>
                     </tr>
                     <tr>
                         <td align="center">
@@ -212,8 +209,8 @@
                         </td>
                         <td align="center">
                             <a href="javascript:void(0)" onclick="funChooseCountry('25')">
-							<img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Tounis.png" /></a>
-                                
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Tounis.png" /></a>
+
                         </td>
                         <td align="center">
                             <a href="javascript:void(0)" onclick="funChooseCountry('26')">
@@ -221,7 +218,7 @@
                         </td>
                         <td align="center">
                             <a href="javascript:void(0)" onclick="funChooseCountry('27')">
-                            <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Morocco.png" /></a>
+                                <img alt="ArabiSky.com" style="border: 0px" width="64" height="42" src="img/img_Country/img_Morocco.png" /></a>
                         </td>
                     </tr>
                     <tr>
@@ -242,8 +239,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 50px;" align="center">
-                        </td>
+                        <td style="height: 50px;" align="center"></td>
                     </tr>
                     <tr>
                         <td align="center">
@@ -278,28 +274,27 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 50px;" align="center">
-                        </td>
+                        <td style="height: 50px;" align="center"></td>
                     </tr>
- 
+
                 </table>
             </div>
             <div style="clear: both; height: 10px;">
             </div>
             <div style="text-align: center;">
                 <div>
-            <script type="text/javascript"><!--
+                    <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
     /* LeaderBoard */
     google_ad_slot = "7597006556";
     google_ad_width = 728;
     google_ad_height = 90;
     //-->
-            </script>
-            <script type="text/javascript"
-                src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-            </script>
-        </div>
+                    </script>
+                    <script type="text/javascript"
+                        src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+                    </script>
+                </div>
             </div>
         </div>
     </div>
