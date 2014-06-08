@@ -6,10 +6,6 @@
     <meta name="keywords" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة , الخدمات , وظائف شاغرة , الباحثين عن عمل,سوق سماء العرب,كل ما تحتاجة في الأردن,جوردان ماركت,إعلانات تجارية,إعلانات مبوبة,أضف إعلان,إعلان,الأردن,عمان,السلط,جرش,إربد,معان,الزرقاء,مادبا,العقبة,المفرق,الكرك,كهربائيات,إلكترونيات,أثاث بيتي,أثاث مكتبي,سلع مستعملة,سياحة وسفر,خدمات,عقارات,شقق,منازل,بيوت,أراضي,عناية صحية وجمالية,مركبات,سيارات,ملابس,للإيجار,للبيع,كمبيوتر,لابتوب,خلوي,نقليات,سياحة,فنادق,شاليهات,ألعاب,فيديو,طابعات,ماكنات تصوير,ثلاجات,غسالات,أفران,وظائف خالية,غرف نوم, غرف سفرة,غرف جلوس,كراسي,فرشات,صالونات" />
     <meta name="title" content="ArabiSky  -  سوق سماء العرب | وظائف | إعلانات | بيع و شراء | سيارات و مركبات" />
     <title>ArabiSky - سوق سماء العرب | وظائف | إعلانات | بيع و شراء</title>
-    <meta name="distribution" content="global" />
-    <meta name="author" content="arabisky.com" />
-    <meta name="contact" content="info@arabisky.com" />
-    <meta name="copyright" content="Copyright (c)2014. All Rights Reserved For Arabisky.com" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta itemprop="name" content="ArabiSky | سوق سماء العرب للإعلانات المبوبة" />
@@ -23,6 +19,7 @@
     <meta property="og:description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل" />
     <meta property="og:keyword" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة, وظائف خالية , الخدمات , وظائف شاغرة , الباحثين عن عمل" />
     <meta property="og:url" content="http://www.arabisky.com/" />
+	<link rel="canonical" href="http://www.arabisky.com"/>
     <script type="text/javascript">
         function MakeDownSearch() { var e = document.getElementById("ctl00_ContentPlaceHolder1_ddlCountryName").value; var t = document.getElementById("ctl00_ContentPlaceHolder1_ddlCityName").value; var n = document.getElementById("ctl00_ContentPlaceHolder1_home_search_cat_id_Default").value; var r = ""; if (e == "-2" || e == "") { r += "الرجاء إختيار البلد\n" } if (t == "-2" || t == "") { r += "الرجاء إختيار المدينة\n" } if (n == "-2" || n == "") { r += "الرجاء إختيار القسم\n" } if (r != "") { alert(r) } else { $("#" + "<%= lbtnRefreshGVDownSearch.ClientID %>").trigger("click"); } }
     </script>
