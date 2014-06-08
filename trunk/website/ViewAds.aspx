@@ -120,10 +120,10 @@
                     <div style="clear: both; height: 20px;">
                     </div>
                     <div>
-                        <div itemprop="description" style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%; float: right; height: auto; word-wrap: break-word; padding-left: 10px;"
+                        <h2 itemprop="description" style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%; float: right; height: auto; word-wrap: break-word; padding-left: 10px;"
                             id="div_AdsDescription"
                             runat="server">
-                        </div>
+                        </h2>
                     </div>
                     <div style="clear: both; height: 20px;">
                     </div>
