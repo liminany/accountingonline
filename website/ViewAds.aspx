@@ -164,7 +164,7 @@
                 height: 200px;
             }
         </style>
-        <div class="trending lefty QuranTemplete" style="width: 100%; text-align: center; padding-top: 75px !important; padding: 27px; margin-top: 15px;">
+        <div class="trending lefty QuranTemplete" style="width: 100%; text-align: left; padding-top: 75px !important; padding: 27px; margin-top: 15px;">
             <iframe align="center" src="http://www.arabisky.com/Quran/index.html" frameborder="0" allowtransparency="0" scrolling="no" width="100%" height="90px"></iframe>
         </div>
                 <div style="clear: both; height: 20px;">
