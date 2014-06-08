@@ -11,9 +11,6 @@
     <meta itemprop="name" content="ArabiSky | سوق سماء العرب للإعلانات المبوبة" />
     <meta itemprop="description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل" />
     <meta itemprop="image" content="http://www.arabisky.com/images/ArabiSkylogo.png" />
-    <meta property="fb:page_id" content="507506199302545" />
-    <meta property="fb:app_id" content="172727259569815" />
-    <meta property="og:type" content="arabiskyapp:classified">
     <meta property="og:image" content='http://www.arabisky.com/images/ArabiSkyLogo.png' />
     <meta property="og:title" content='ArabiSky  - سوق سماء العرب | وظائف | إعلانات | بيع و شراء' />
     <meta property="og:description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل" />
