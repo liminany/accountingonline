@@ -157,6 +157,12 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
+				<style>
+.QuranTemplete {
+background-image: url(img/Quran.jpg);
+height: 200px;
+}
+</style> <div class="trending lefty QuranTemplete" style="width: 100%; text-align: center; padding-top: 75px !important; padding: 27px; margin-top: 15px;"> <iframe align="center" src="Quran/index.html" frameborder="0" allowtransparency="0" scrolling="no" width="100%" height="90px"></iframe> </div>
                 <div style="clear: both; height: 20px;">
                 </div>
                 <div style="text-align: right; margin-right: 30px; margin-left: 30px; width: 900px; height: auto; word-wrap: break-word; padding-left: 10px;">
