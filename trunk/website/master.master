@@ -347,77 +347,77 @@
                                     </a></li>
                                 </ul>
                       <ul style="float:right;width:160px">
-                                    <li><a href="Category/12/دروس-دورات-تدريبية" title="دروس و دورات تدريبية">
+                                    <li><a runat="server" href="~/Category/12/دروس-دورات-تدريبية" title="دروس و دورات تدريبية">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">دروس و دورات تدريبية</h1>
                                     </a></li>
-                                    <li><a href="Category/13/الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت">
+                                    <li><a runat="server" href="~/Category/13/الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">الكومبيوتر و الإنترنت</h1>
                                     </a></li>
-                                    <li><a href="Category/14/بناء-مقاولات" title="بناء و مقاولات">
+                                    <li><a runat="server" href="~/Category/14/بناء-مقاولات" title="بناء و مقاولات">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">بناء و مقاولات</h1>
                                     </a></li>
-                                    <li><a href="Category/15/خدمات-كهربائية" title="خدمات كهربائية">
+                                    <li><a runat="server" href="~/Category/15/خدمات-كهربائية" title="خدمات كهربائية">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">خدمات كهربائية</h1>
                                     </a></li>
-                                    <li><a href="Category/16/السفر-السياحة" title="السفر و السياحة">
+                                    <li><a runat="server" href="~/Category/16/السفر-السياحة" title="السفر و السياحة">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">السفر و السياحة</h1>
                                     </a></li>
-                                    <li><a href="Category/17/خدمات-طبية" title="خدمات طبية">
+                                    <li><a runat="server" href="~/Category/17/خدمات-طبية" title="خدمات طبية">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">خدمات طبية </h1>
                                     </a></li>
-                                    <li><a href="Category/18/تجهيز-الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات">
+                                    <li><a runat="server" href="~/Category/18/تجهيز-الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">تجهيز الأطعمة و الحفلات </h1>
                                     </a></li>
-                                    <li><a href="Category/19/إصلاح-صيانة-السيارات" title="إصلاح و صيانة السيارات">
+                                    <li><a runat="server" href="~/Category/19/إصلاح-صيانة-السيارات" title="إصلاح و صيانة السيارات">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">إصلاح و صيانة السيارات</h1>
                                     </a></li>
-                                    <li><a href="Category/20/خدمات-قانونية" title="خدمات قانونية">
+                                    <li><a runat="server" href="~/Category/20/خدمات-قانونية" title="خدمات قانونية">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">خدمات قانونية </h1>
                                     </a></li>
-                                    <li><a href="Category/21/خدمات-أخرى" title="خدمات أخرى">
+                                    <li><a runat="server" href="~/Category/21/خدمات-أخرى" title="خدمات أخرى">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">خدمات أخرى</h1>
                                     </a></li>
                                 </ul>
                    <ul style="float:right;width:160px">
-                                    <li><a href="Category/22/إدارة-سكرتارية" title="ادارة-سكرتارية">
+                                    <li><a runat="server" href="~/Category/22/إدارة-سكرتارية" title="ادارة-سكرتارية">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">إدارة / سكرتارية</h1>
                                     </a></li>
-                                    <li><a href="Category/23/تسويق-مبيعات" title="تسويق-مبيعات">
+                                    <li><a runat="server" href="~/Category/23/تسويق-مبيعات" title="تسويق-مبيعات">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">تسويق / مبيعات </h1>
                                     </a></li>
-                                    <li><a href="Category/24/تدريس-تدريب" title="تدريس-تدريب">
+                                    <li><a runat="server" href="~/Category/24/تدريس-تدريب" title="تدريس-تدريب">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">تدريس / تدريب</h1>
                                     </a></li>
-                                    <li><a href="Category/25/كمبيوتر-تقنية-المعلومات" title="كمبيوتر-تقنية المعلومات">
+                                    <li><a runat="server" href="~/Category/25/كمبيوتر-تقنية-المعلومات" title="كمبيوتر-تقنية المعلومات">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">كمبيوتر / تقنية المعلومات </h1>
                                     </a></li>
-                                    <li><a href="Category/26/محاسبة-مالية" title="محاسبة-مالية">
+                                    <li><a runat="server" href="~/Category/26/محاسبة-مالية" title="محاسبة-مالية">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">محاسبة / مالية</h1>
                                     </a></li>
-                                    <li><a href="Category/27/طب-تمريض" title="طب-تمريض">
+                                    <li><a runat="server" href="~/Category/27/طب-تمريض" title="طب-تمريض">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">طب / تمريض</h1>
                                     </a></li>
-                                    <li><a href="Category/28/هندسة" title="هندسة">
+                                    <li><a runat="server" href="~/Category/28/هندسة" title="هندسة">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">هندسة </h1>
                                     </a></li>
-                                    <li><a href="Category/29/أشغال-أخرى" title="أشغال-أخرى">
+                                    <li><a runat="server" href="~/Category/29/أشغال-أخرى" title="أشغال-أخرى">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">أشغال أخرى</h1>
                                     </a></li>
                                 </ul>
                   <ul style="float:right;width:160px">
-                                    <li><a href="Category/33/الباحثين-عن-عمل" title="الباحثين عن عمل">
+                                    <li><a runat="server" href="~/Category/33/الباحثين-عن-عمل" title="الباحثين عن عمل">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">الباحثين عن عمل  </h1>
                                     </a></li>
                                 </ul>
               <ul style="float:right;width:160px">
-                                    <li><a href="Category/30/العقارات-الإسكان" title="العقارات و الإسكان">
-                                        <h1 style="font-size: 16px !important; color: #06c !important;">العقارات و الإسكان</h1>
+                                    <li><a runat="server" href="~/Category/30/العقارات-الإسكان" title="العقارات و الإسكان للايجار">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">العقارات و الإسكان للايجار</h1>
                                     </a></li>
-                                    <li><a href="Category/31/السيارات-المركبات" title="السيارات و المركبات">
-                                        <h1 style="font-size: 16px !important; color: #06c !important;">السيارات و المركبات</h1>
+                                    <li><a runat="server" href="~/Category/31/السيارات-المركبات" title="السيارات و المركبات للايجار">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">السيارات و المركبات للايجار</h1>
                                     </a></li>
-                                    <li><a href="Category/32/أشياء-أخرى" title="أشياء أخرى">
-                                        <h1 style="font-size: 16px !important; color: #06c !important;">أشياء أخرى </h1>
+                                    <li><a runat="server" href="~/Category/32/أشياء-أخرى" title="أشياء أخرى للايجار">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أشياء أخرى للايجار </h1>
                                     </a></li>
                                 </ul>
                     </div> 
