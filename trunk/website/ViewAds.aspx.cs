@@ -147,7 +147,7 @@ public partial class ViewAds : System.Web.UI.Page
                         {
                             div_Slider.Style.Add("display", "");
                             div_Image.Style.Add("display", "");
-                            ViewAdsImage(rows["AdsImages"].ToString());
+                            ViewAdsImage(rows["AdsImages"].ToString(),rows["AdsTitle"].ToString(),rows["CatName"].ToString(),rows["SubCategoriesName"].ToString());
                         }
                         else
                         {
@@ -389,7 +389,7 @@ public partial class ViewAds : System.Web.UI.Page
             return "غير معروف";
         }
     }
-    private void ViewAdsImage(string imagesURL)
+    private void ViewAdsImage(string imagesURL,string sAdsTitle,string sCatName,string sSubCategoriesName)
     {
         try
         {
@@ -397,7 +397,8 @@ public partial class ViewAds : System.Web.UI.Page
             for (int i = 0; i < images.Length; i++)
             {
                 /*div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='margin-top: 15px;cursor:pointer;border:2px solid #333;height:168px;width:200px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='" + "http://arabisky.s3.amazonaws.com/" + images[0] + "'><img style='max-width: 200px;max-height: 168px;width:200px;height:168px;' src='" + "http://arabisky.s3.amazonaws.com/" + images[0] + "' alt='' /></a></div>";*/
-                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='margin-top: 15px;cursor:pointer;border:2px solid #333;height:168px;width:200px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='../" + images[i].Replace("~", "..") + "'><img style='max-width: 200px;max-height: 168px;width:200px;height:168px;' src='" + "../" + images[i].Replace("~", "..") + "' alt='' /></a></div>";
+				string sImageAlt =  sAdsTitle + "-" + sCatName + "-" + sSubCategoriesName;
+                div_Slider.InnerHtml = div_Slider.InnerHtml + "<div class='various' style='margin-top: 15px;cursor:pointer;border:2px solid #333;height:168px;width:200px;float:right;margin-right: 10px;'><a class='fancybox' rel='gallery1' href='../" + images[i].Replace("~", "..") + "'><img alt='"+sImageAlt+"' title='"+sAdsTitle+"' style='max-width: 200px;max-height: 168px;width:200px;height:168px;' src='" + "../" + images[i].Replace("~", "..") + "' alt='"+sImageAlt+"' title='"+sAdsTitle+"' /></a></div>";
             }
 
             if (string.IsNullOrEmpty(images[0].ToString()))
