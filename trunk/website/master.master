@@ -6,31 +6,31 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="language" content="ar" />
     <meta http-equiv="Content-Language" content="ar-sa" />
-	<meta name='audience' content='all' />
-	<meta name="distribution" content="global" />
-	<meta name='rating' content='general' />  
-	<meta name='googlebot' content='index,follow' />
-	<meta name='robots' content='noodp,noydir,index,follow' />
-	<meta name='revisit-after' content='1 days' /> 
+    <meta name='audience' content='all' />
+    <meta name="distribution" content="global" />
+    <meta name='rating' content='general' />
+    <meta name='googlebot' content='index,follow' />
+    <meta name='robots' content='noodp,noydir,index,follow' />
+    <meta name='revisit-after' content='1 days' />
     <meta name="author" content="arabisky.com" />
     <meta name="contact" content="info@arabisky.com" />
     <meta name="copyright" content="Copyright (c)2014. All Rights Reserved For Arabisky.com" />
-	<meta name="expires" content="never"/>
+    <meta name="expires" content="never" />
     <meta property="fb:page_id" content="507506199302545" />
     <meta property="fb:app_id" content="172727259569815" />
     <meta property="og:type" content="arabiskyapp:classified">
-	<meta name="twitter:card" content="product">
-	<meta name="twitter:site" content="@arabisky">
-	<meta name="twitter:creator" content="@khodrog">
-	<meta name="twitter:title" content="ArabiSky - سوق سماء العرب | وظائف | إعلانات | بيع و شراء | سيارات و مركبات">
-	<meta name="twitter:description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة و كذلك لنشر اعلانات في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل">
-	<meta name="twitter:image:src" content="http://www.arabisky.com/images/ArabiSkyLogo.png">
-	<meta name="twitter:data1" content="سماء العرب للكل العرب">
-	<meta name="twitter:label1" content="بدك شغل ادخل على موقعنا و دور على شغل">
-	<meta name="twitter:data2" content="الاردن,الامارات,الجزائر,العراق,وجميع الدول العربية">
-	<meta name="twitter:label2" content="Amman - Jordan">
-	<meta name="twitter:domain" content="arabisky.com">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="twitter:card" content="product">
+    <meta name="twitter:site" content="@arabisky">
+    <meta name="twitter:creator" content="@khodrog">
+    <meta name="twitter:title" content="ArabiSky - سوق سماء العرب | وظائف | إعلانات | بيع و شراء | سيارات و مركبات">
+    <meta name="twitter:description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة و كذلك لنشر اعلانات في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل">
+    <meta name="twitter:image:src" content="http://www.arabisky.com/images/ArabiSkyLogo.png">
+    <meta name="twitter:data1" content="سماء العرب للكل العرب">
+    <meta name="twitter:label1" content="بدك شغل ادخل على موقعنا و دور على شغل">
+    <meta name="twitter:data2" content="الاردن,الامارات,الجزائر,العراق,وجميع الدول العربية">
+    <meta name="twitter:label2" content="Amman - Jordan">
+    <meta name="twitter:domain" content="arabisky.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
     <link href="<%= this.ResolveClientUrl("~/js/Fancybox/jquery.fancybox.css")%>" rel="stylesheet" type="text/css" />
     <link rel="publisher" href="https://plus.google.com/+ArabiskyClassified" />
@@ -111,6 +111,18 @@
             font-size: 17px;
             font-weight: 700;
         }
+
+        .slidingDiv {
+            height: 190px;
+            background-color: #99CCFF;
+            padding: 20px;
+            margin-top: 10px;
+            border-bottom: 5px solid #3399FF;
+        }
+
+        .show_hide {
+            display: none;
+        }
     </style>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -144,7 +156,7 @@
                 </div>
                 <div id="Progress">
                     <img src="~/images/search_loader.gif" runat="server" style="vertical-align: middle; margin-top: 9px;"
-                        alt="ArabiSky.com" />
+                        alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" />
                     <span style="position: relative; top: 7px; font-weight: bold; font-size: 19px;">الرجاء
                     الإنتظار</span>
                 </div>
@@ -166,7 +178,7 @@
                                         <td colspan="2">
                                             <a href="~/country" runat="server" style="width: 140px;">
                                                 <img id="ImgCountryFlagWithoutlogin" src="~/images/world_map_earth.png" runat="server"
-                                                    align="top" alt="arabisky.com" style="border: 0px; width: 26px; height: 20px; padding-top: 2px;" />
+                                                    align="top" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" style="border: 0px; width: 26px; height: 20px; padding-top: 2px;" />
 
                                                 <span
                                                     id="alinkCountryNameWithoutLogin" style="padding-right: 3px;" runat="server"></span>
@@ -229,7 +241,7 @@
                     <div id="arabiSky-header" style="z-index: 0">
                         <div id="arabiSky-logo" style="height: 90px;">
                             <a href="~/" runat="server">
-                                <img src="~/images/ArabiSkyLogo.png" itemprop="image" runat="server" alt="ArabiSky.com" border="0"
+                                <img src="~/images/ArabiSkyLogo.png" itemprop="image" runat="server" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" border="0"
                                     style="height: 135px; position: relative; bottom: 51px; right: 55px;" /></a>
                         </div>
                         <div id="arabiSky-mainsearchBlock">
@@ -303,6 +315,7 @@
                         <a href="~/ContactUs" runat="server">تواصل معنا</a> | 
                         <a href="~/Help" runat="server">مساعدة</a> | 
                         <a href="~/country" runat="server">بلدان اخرى</a>
+                      |  <a href="javascript:void(0)" class="show_hide">الاقسام</a>
                         | <a href='https://www.facebook.com/arabisky' target="_blank">
                             <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
                         | <a href='https://twitter.com/arabisky' target="_blank">
@@ -312,6 +325,102 @@
                     </div>
                     <div class="arabiSky-footerSeperator">
                     </div>
+                    <div class="arabiSky-indexContent slidingDiv" id="div_cat" style="display:none; text-align: right;width: 900px; margin: 0 auto;border:0px !important;background:none !important;overflow:hidden;">
+                       <ul style="float:right;width:160px">
+                                    <li><a href="Category/6/العقارات-الإسكان" title="العقارات و الإسكان">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">العقارات و الإسكان</h1>
+                                    </a></li>
+                                    <li><a href="Category/7/السيارات-المركبات" title="السيارات و المركبات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">السيارات و المركبات</h1>
+                                    </a></li>
+                                    <li><a href="Category/8/الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">الكهربائيات و الإلكترونيات</h1>
+                                    </a></li>
+                                    <li><a href="Category/9/الأثاث-المفروشات" title="الأثاث و المفروشات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">الأثاث و المفروشات</h1>
+                                    </a></li>
+                                    <li><a href="Category/10/أرقام-هواتف-مميزة" title="ارقام هواتف مميزة">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أرقام هواتف مميزة</h1>
+                                    </a></li>
+                                    <li><a href="Category/11/أشياء-أخرى" title="اشياء أخرى">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أشياء أخرى</h1>
+                                    </a></li>
+                                </ul>
+                      <ul style="float:right;width:160px">
+                                    <li><a href="Category/12/دروس-دورات-تدريبية" title="دروس و دورات تدريبية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">دروس و دورات تدريبية</h1>
+                                    </a></li>
+                                    <li><a href="Category/13/الكومبيوتر-الإنترنت" title="الكومبيوتر و الإنترنت">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">الكومبيوتر و الإنترنت</h1>
+                                    </a></li>
+                                    <li><a href="Category/14/بناء-مقاولات" title="بناء و مقاولات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">بناء و مقاولات</h1>
+                                    </a></li>
+                                    <li><a href="Category/15/خدمات-كهربائية" title="خدمات كهربائية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">خدمات كهربائية</h1>
+                                    </a></li>
+                                    <li><a href="Category/16/السفر-السياحة" title="السفر و السياحة">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">السفر و السياحة</h1>
+                                    </a></li>
+                                    <li><a href="Category/17/خدمات-طبية" title="خدمات طبية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">خدمات طبية </h1>
+                                    </a></li>
+                                    <li><a href="Category/18/تجهيز-الأطعمة-الحفلات" title="تجهيز الأطعمة و الحفلات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">تجهيز الأطعمة و الحفلات </h1>
+                                    </a></li>
+                                    <li><a href="Category/19/إصلاح-صيانة-السيارات" title="إصلاح و صيانة السيارات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">إصلاح و صيانة السيارات</h1>
+                                    </a></li>
+                                    <li><a href="Category/20/خدمات-قانونية" title="خدمات قانونية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">خدمات قانونية </h1>
+                                    </a></li>
+                                    <li><a href="Category/21/خدمات-أخرى" title="خدمات أخرى">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">خدمات أخرى</h1>
+                                    </a></li>
+                                </ul>
+                   <ul style="float:right;width:160px">
+                                    <li><a href="Category/22/إدارة-سكرتارية" title="ادارة-سكرتارية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">إدارة / سكرتارية</h1>
+                                    </a></li>
+                                    <li><a href="Category/23/تسويق-مبيعات" title="تسويق-مبيعات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">تسويق / مبيعات </h1>
+                                    </a></li>
+                                    <li><a href="Category/24/تدريس-تدريب" title="تدريس-تدريب">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">تدريس / تدريب</h1>
+                                    </a></li>
+                                    <li><a href="Category/25/كمبيوتر-تقنية-المعلومات" title="كمبيوتر-تقنية المعلومات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">كمبيوتر / تقنية المعلومات </h1>
+                                    </a></li>
+                                    <li><a href="Category/26/محاسبة-مالية" title="محاسبة-مالية">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">محاسبة / مالية</h1>
+                                    </a></li>
+                                    <li><a href="Category/27/طب-تمريض" title="طب-تمريض">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">طب / تمريض</h1>
+                                    </a></li>
+                                    <li><a href="Category/28/هندسة" title="هندسة">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">هندسة </h1>
+                                    </a></li>
+                                    <li><a href="Category/29/أشغال-أخرى" title="أشغال-أخرى">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أشغال أخرى</h1>
+                                    </a></li>
+                                </ul>
+                  <ul style="float:right;width:160px">
+                                    <li><a href="Category/33/الباحثين-عن-عمل" title="الباحثين عن عمل">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">الباحثين عن عمل  </h1>
+                                    </a></li>
+                                </ul>
+              <ul style="float:right;width:160px">
+                                    <li><a href="Category/30/العقارات-الإسكان" title="العقارات و الإسكان">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">العقارات و الإسكان</h1>
+                                    </a></li>
+                                    <li><a href="Category/31/السيارات-المركبات" title="السيارات و المركبات">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">السيارات و المركبات</h1>
+                                    </a></li>
+                                    <li><a href="Category/32/أشياء-أخرى" title="أشياء أخرى">
+                                        <h1 style="font-size: 16px !important; color: #06c !important;">أشياء أخرى </h1>
+                                    </a></li>
+                                </ul>
+                    </div> 
                     <div class="arabiSky-copyright">
                         &copy; جميع الحقوق محفوظة <b><a href='http://www.arabisky.com/' target="_blank">لسوق سماء
                             العرب للإعلانات المبوبة</a>
@@ -329,9 +438,16 @@
             </div>
             <asp:Button ID="lbtnRefreshGVMaster" TabIndex="0" CssClass="ClassHideDiv" runat="server" Text="" Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnRefreshGVMaster_Click"></asp:Button>
             <asp:Button ID="lbtnCountry" CssClass="ClassHideDiv" runat="server" Text="" Height="0px" Width="0px" Style="visibility: hidden" OnClick="lbtnCountry_Click"></asp:Button>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".slidingDiv").hide();
+                    $(".show_hide").show();
+                    $('.show_hide').click(function () {
+                        $(".slidingDiv").slideToggle();
+                    });
+                });
+            </script>
             <script>(function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
-
-
                 ga('create', 'UA-43880128-1', { 'userId': '10' });
                 ga('require', 'displayfeatures');
                 ga('set', 'dimension1', '10');
