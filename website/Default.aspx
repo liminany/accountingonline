@@ -130,7 +130,7 @@
                                             </td>
                                             <td align="right">
                                                 <img src="../images/search1.png" onclick="javascript:return MakeDownSearch();" style="padding-right: 5px; padding-bottom: 10px; height: 30px;"
-                                                    alt="ArabiSky.com">
+                                                    alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف">
                                             </td>
                                             <td style="width: 10px;"></td>
                                             <td align="center"></td>
@@ -332,7 +332,7 @@
                             </div>
                             <div class="arabiSky-indexContent">
                                 <ul>
-                                    <li><a href="Category/34/مطلوب-شراء" title="الباحثين-عن-عمل">
+                                    <li><a href="Category/34/مطلوب-شراء" title="مطلوب-شراء">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">مطلوب شراء </h1>
                                     </a></li>
                                 </ul>
@@ -368,17 +368,17 @@
                                                 </tr>
                                                 <tr>
                                                     <td align="right" style="width: 300px;">
-                                                        <img src="images/carLogo.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
+                                                        <img src="images/carLogo.png" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" style="width: 50px; height: 50px;" />
                                                         <a href="GalleryList/RC/تأجير-سيارات" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size: 16px !important; color: #06c !important;">تأجير سيارات</h1>
                                                             &nbsp;&nbsp;</a>
                                                     </td>
                                                     <td align="right" style="width: 300px;">
-                                                        <img src="images/CarGrey.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
+                                                        <img src="images/CarGrey.png" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" style="width: 50px; height: 50px;" />
                                                         <a href="GalleryList/GC/معارض-سيارات" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size: 16px !important; color: #06c !important;">معارض سيارات </h1>
                                                             &nbsp;&nbsp;</a>
                                                     </td>
                                                     <td align="right" style="width: 300px;">
-                                                        <img src="images/carCheck.png" alt="ArabiSky car Image" style="width: 50px; height: 50px;" />
+                                                        <img src="images/carCheck.png" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" style="width: 50px; height: 50px;" />
                                                         <a href="GalleryList/CC/مراكز-الفحص" style="position: relative; bottom: 10px; font-weight: bold;">&nbsp;&nbsp;<h1 style="font-size: 16px !important; color: #06c !important;">مراكز الفحص </h1>
                                                             &nbsp;&nbsp;</a>
                                                     </td>
@@ -447,7 +447,7 @@
                                                                     <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
                                                                         title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
                                                                         <img class="thumb" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                            width="40" height="40" alt="ArabiSky.com" />
+                                                                            width="40" height="40" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" />
                                                                     </a>
                                                                 </p>
                                                             </td>
@@ -471,7 +471,7 @@
                                                                     <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
                                                                         title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
                                                                         <img style="font-size: 11px; color: #333;" class="thumb" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                            width="40" height="40" alt="ArabiSky.com" />
+                                                                            width="40" height="40" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" />
                                                                     </a>
                                                                 </p>
                                                             </td>
@@ -565,7 +565,7 @@
                                                                     <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
                                                                         title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
                                                                         <img class="thumb" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                            width="40" height="40" alt="ArabiSky.com" />
+                                                                            width="40" height="40" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" />
                                                                     </a>
                                                                 </p>
                                                             </td>
@@ -589,7 +589,7 @@
                                                                     <a href="javascript:void(0)" class="screenshot" rel='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
                                                                         title='<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>'>
                                                                         <img class="thumb" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>'
-                                                                            width="40" height="40" alt="ArabiSky.com" />
+                                                                            width="40" height="40" alt="سماء العرب للإعلانات المبوبة سيارات ,عقارات ,وظائف" />
                                                                     </a>
                                                                 </p>
                                                             </td>
