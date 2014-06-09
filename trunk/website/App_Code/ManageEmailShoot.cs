@@ -52,6 +52,7 @@ public class ManageEmailShoot : System.Web.Services.WebService
         }
     }
 
+    [WebMethod]
     public int UpdateEmailAddressFlag(string sEmailID)
     {
         using (SqlConnection objSqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["SqlCon"].ConnectionString))
