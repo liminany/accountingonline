@@ -327,22 +327,22 @@
                     </div>
                     <div class="arabiSky-indexContent slidingDiv" id="div_cat" style="display:none; text-align: right;width: 900px; margin: 0 auto;border:0px !important;background:none !important;overflow:hidden;">
                        <ul style="float:right;width:160px">
-                                    <li><a href="Category/6/العقارات-الإسكان" title="العقارات و الإسكان">
+                                    <li><a runat="server" href="~/Category/6/العقارات-الإسكان" title="العقارات و الإسكان">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">العقارات و الإسكان</h1>
                                     </a></li>
-                                    <li><a href="Category/7/السيارات-المركبات" title="السيارات و المركبات">
+                                    <li><a runat="server" href="~/Category/7/السيارات-المركبات" title="السيارات و المركبات">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">السيارات و المركبات</h1>
                                     </a></li>
-                                    <li><a href="Category/8/الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات">
+                                    <li><a runat="server" href="~/Category/8/الكهربائيات-الإلكترونيات" title="الكهربائيات و الإلكترونيات">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">الكهربائيات و الإلكترونيات</h1>
                                     </a></li>
-                                    <li><a href="Category/9/الأثاث-المفروشات" title="الأثاث و المفروشات">
+                                    <li><a runat="server" href="~/Category/9/الأثاث-المفروشات" title="الأثاث و المفروشات">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">الأثاث و المفروشات</h1>
                                     </a></li>
-                                    <li><a href="Category/10/أرقام-هواتف-مميزة" title="ارقام هواتف مميزة">
+                                    <li><a runat="server" href="~/Category/10/أرقام-هواتف-مميزة" title="ارقام هواتف مميزة">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">أرقام هواتف مميزة</h1>
                                     </a></li>
-                                    <li><a href="Category/11/أشياء-أخرى" title="اشياء أخرى">
+                                    <li><a runat="server" href="~/Category/11/أشياء-أخرى" title="اشياء أخرى">
                                         <h1 style="font-size: 16px !important; color: #06c !important;">أشياء أخرى</h1>
                                     </a></li>
                                 </ul>
