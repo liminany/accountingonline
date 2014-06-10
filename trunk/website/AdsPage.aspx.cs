@@ -146,7 +146,7 @@ public partial class AdsPage : System.Web.UI.Page
                 {
                     divNewAds.Style.Add("display", "none");
                     divSoicalMedia.Style.Add("display", "");
-                    div_ShortURL.InnerHtml = FormsFunction.GetTinyURL(GenerateURL(nReturnValue, objAdsManager.AdsTitle));
+                    div_ShortURL.InnerHtml = string.Format("<a href='{0}'>{0}</a>",FormsFunction.GetTinyURL(GenerateURL(nReturnValue, objAdsManager.AdsTitle))); 
                     AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString() + "/";
                     AdsText = sTextTitleAds;
                     txtAdsTitle.Value = string.Empty;
@@ -286,8 +286,8 @@ public partial class AdsPage : System.Web.UI.Page
     //        responseResult = "Twitter Post Error: " + ex.Message.ToString() + ", authHeader: " + authorizationHeader;
     //    }
     //}
-	
-	    protected string GenerateURL(object strId, object Title)
+
+    protected string GenerateURL(object strId, object Title)
     {
         string strTitle = Title.ToString();
         strTitle = strTitle.Trim();
@@ -318,7 +318,7 @@ public partial class AdsPage : System.Web.UI.Page
         strTitle = string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
-	
+
     private int GetCountry()
     {
         try
