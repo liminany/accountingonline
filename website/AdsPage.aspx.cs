@@ -146,7 +146,7 @@ public partial class AdsPage : System.Web.UI.Page
                 {
                     divNewAds.Style.Add("display", "none");
                     divSoicalMedia.Style.Add("display", "");
-                    div_ShortURL.InnerHtml = string.Format("<a href='{0}'>{0}</a>",FormsFunction.GetTinyURL(GenerateURL(nReturnValue, objAdsManager.AdsTitle))); 
+                    div_ShortURL.InnerHtml = string.Format("<a href='{0}'>{0}</a>", Server.UrlEncode(FormsFunction.GetTinyURL(GenerateURL(nReturnValue, objAdsManager.AdsTitle))));
                     AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString() + "/";
                     spAdsTitle.InnerHtml = "تم إضافة الاعلان بنجاح - " + objAdsManager.AdsTitle;
                     txtAdsTitle.Value = string.Empty;
@@ -183,7 +183,7 @@ public partial class AdsPage : System.Web.UI.Page
     }
     #endregion
 
-        #region Methods
+    #region Methods
     static public string postedonwall(string uid, string access_token, string message)
     {
         try
