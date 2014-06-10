@@ -93,22 +93,17 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 50px;"></td>
+                        <td style="height: 30px;"></td>
                     </tr>
-                    <tr>
-                        <td style="height: 30px;">
-                            <strong>ليتم ايصال اعلانك لعدد اكبر من الناس الرجاء قم بعمل مشاركة او share </strong>
-                        </td>
-                    </tr>
+
                     <tr>
                         <td style="height: 60px;">
                             <div id="div_ShortURL" runat="server" style="background-color: #f5f5f5; border: 2px dashed #ccc; height: 40px; line-height: 40px; font-weight: bold; font-size: 20px;">
-                                
                             </div>
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 10px;"></td>
+                        <td style="height: 25px;"></td>
                     </tr>
                     <tr>
                         <td align="center">
