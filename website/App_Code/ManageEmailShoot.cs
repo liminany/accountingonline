@@ -60,7 +60,7 @@ public class ManageEmailShoot : System.Web.Services.WebService
             SqlCommand objSqlCommand = new SqlCommand();
             objSqlCommand.Connection = objSqlConnection;
             objSqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            objSqlCommand.CommandText = "sp_InsertEmailShoot";
+            objSqlCommand.CommandText = "sp_UpdateEmailShoot";
             objSqlCommand.Parameters.AddWithValue("@emailID", sEmailID);
             objSqlConnection.Open();
             return objSqlCommand.ExecuteNonQuery();
