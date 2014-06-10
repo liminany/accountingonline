@@ -10,6 +10,8 @@ using System.Xml;
 using Entity;
 using NLog;
 using System.Collections;
+using System.Text;
+using System.Text.RegularExpressions;
 
 /// <summary>
 /// Summary description for FormsFunction
@@ -20,6 +22,7 @@ public class FormsFunction
     #region Variables
     private static XmlDocument xmlDoc = null;
     private static Logger _logger = LogManager.GetCurrentClassLogger();
+    private const string googleTinyUrlKey = "AIzaSyAh57E5UclNYYoiQVtXgivSAYNYS2jsBtk";
     #endregion
 
     /// <summary>
@@ -365,7 +368,55 @@ public class FormsFunction
 
 
 
+    #region Google Tiny URL
+    /// <summary>
+    /// googleTinyUrlKey key Registered By Nizar A. Basbous
+    /// to create a new key plz visit
+    /// https://code.google.com/apis/console/?pli=1#project:977464455263:access
+    /// </summary>
+    /// <param name="url"></param>
+    /// <returns></returns>
+    public static string GetTinyURL(string url)
+    {
+        string post = "{\"longUrl\": \"" + url + "\"}";
+        string shortUrl = url;
+        HttpWebRequest request = (HttpWebRequest)WebRequest.Create("https://www.googleapis.com/urlshortener/v1/url?key=" + googleTinyUrlKey);
 
+        try
+        {
+            request.ServicePoint.Expect100Continue = false;
+            request.Method = "POST";
+            request.ContentLength = post.Length;
+            request.ContentType = "application/json";
+            request.Headers.Add("Cache-Control", "no-cache");
+
+            using (Stream requestStream = request.GetRequestStream())
+            {
+                byte[] postBuffer = Encoding.ASCII.GetBytes(post);
+                requestStream.Write(postBuffer, 0, postBuffer.Length);
+            }
+
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            {
+                using (Stream responseStream = response.GetResponseStream())
+                {
+                    using (StreamReader responseReader = new StreamReader(responseStream))
+                    {
+                        string json = responseReader.ReadToEnd();
+                        shortUrl = Regex.Match(json, @"""id"": ?""(?<id>.+)""").Groups["id"].Value;
+                    }
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // if Google's URL Shortner is down...
+            System.Diagnostics.Debug.WriteLine(ex.Message);
+            System.Diagnostics.Debug.WriteLine(ex.StackTrace);
+        }
+        return shortUrl;
+    }
+    #endregion
 
 
 

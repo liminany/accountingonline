@@ -27,11 +27,11 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <asp:HiddenField runat="server" ID="hfUserID" Value="0" />
     <asp:HiddenField runat="server" ID="hfEditImageAds" Value="0" />
-    
-    <div style="width:100%">
-        <div style="height: 30px; float: right;width:20%">
-        <a href='/'>سوق سماء العرب </a>» <span id="spPageTitle" runat="server"></span>
-    </div> 
+
+    <div style="width: 100%">
+        <div style="height: 30px; float: right; width: 20%">
+            <a href='/'>سوق سماء العرب </a>» <span id="spPageTitle" runat="server"></span>
+        </div>
         <div style="width: 74%; float: left;">
             <script type="text/javascript"><!--
     google_ad_client = "ca-pub-8724688346081785";
@@ -44,9 +44,9 @@
             <script type="text/javascript"
                 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
             </script>
-        </div> 
+        </div>
     </div>
-    <div style="clear:both;height:5px;"></div>
+    <div style="clear: both; height: 5px;"></div>
     <div style="width: 100%; height: auto;">
         <div>
             <div class="arabiSky-indexHeadingLeftCurve">
@@ -101,7 +101,14 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="height: 30px;"></td>
+                        <td style="height: 60px;">
+                            <div id="div_ShortURL" runat="server" style="background-color: #f5f5f5; border: 2px dashed #ccc; height: 40px; line-height: 40px; font-weight: bold; font-size: 20px;">
+                                
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 10px;"></td>
                     </tr>
                     <tr>
                         <td align="center">

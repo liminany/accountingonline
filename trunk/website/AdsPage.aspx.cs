@@ -146,6 +146,7 @@ public partial class AdsPage : System.Web.UI.Page
                 {
                     divNewAds.Style.Add("display", "none");
                     divSoicalMedia.Style.Add("display", "");
+                    div_ShortURL.InnerHtml = FormsFunction.GetTinyURL(GenerateURL(nReturnValue, objAdsManager.AdsTitle));
                     AdsURL = "http://www.arabisky.com/ViewAds/" + nReturnValue.ToString() + "/";
                     AdsText = sTextTitleAds;
                     txtAdsTitle.Value = string.Empty;
