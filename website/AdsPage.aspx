@@ -61,7 +61,7 @@
         <div style="clear: both;">
         </div>
         <div>
-            <div style="border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px; text-align: center; padding-right: 20px; padding-top: 15px; padding-left: 20px; display: none;"
+            <div style="border: 1px solid #ccc; height: auto; width: 933px; margin-right: 10px; text-align: center; padding-right: 20px; padding-top: 30px; padding-left: 20px; display: none;"
                 id="divSoicalMedia" runat="server">
                 <table width="100%" border="0" cellpadding="0" cellspacing="0">
                     <tr>
