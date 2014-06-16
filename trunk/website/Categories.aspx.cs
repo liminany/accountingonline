@@ -33,7 +33,8 @@ public partial class Categories : System.Web.UI.Page
                     switch (Page.RouteData.Values["CatID"].ToString())
                     {
                         case "3":
-                            CatName.InnerHtml = pageTitle;
+                            CatName.InnerHtml = "وظائف شاغرة - وظائف خاليه";
+                            sp_PageTitle.InnerHtml = "وظائف شاغرة - وظائف خاليه";
                             Page.Title = " سوق سماء العرب | " + pageTitle;
                             Page.MetaDescription = "ArabiSky.com | سوق سماء العرب | احصل على احدث وظائف الشرق الاوسط و الخليج والتي تشمل وظائف السعودية، وظائف دبي، وظائف الأردن، وظائف مصر، وظائف الامارات على موقع سماء العرب";
                             break;

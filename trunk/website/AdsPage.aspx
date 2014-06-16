@@ -22,28 +22,6 @@
             });
             $("#ctl00_ContentPlaceHolder1_hfEditImageAds").val(imageNew);
         }
-        $(document).ready(function () {
-            $("#ctl00_ContentPlaceHolder1_ddlCategoryName").change(function () {
-                var htmlBody = "";
-                $("#ctl00_ContentPlaceHolder1_ddlSubCategoryName").append($("<option></option>").val(-1).html("الرجاء الإنتظار ...."));
-                $.ajax({
-                    type: "POST",
-                    contentType: "application/json; charset=utf-8",
-                    url: "/AdsPage.aspx/FetchSubCatInformation",
-                    data: "{'sCatID':'" + $("#ctl00_ContentPlaceHolder1_ddlCategoryName").val() + "'}",
-                    dataType: "json",
-                    success: function (data) {
-                        $("#ctl00_ContentPlaceHolder1_ddlSubCategoryName").empty();
-                        for (var i = 0; i < data.d.length; i++) {
-                            $("#ctl00_ContentPlaceHolder1_ddlSubCategoryName").append($("<option></option>").val(data.d[i].SubCategoryID).html(data.d[i].SubCategoryName));
-                        }
-                    },
-                    error: function (result) {
-                        alert("Error");
-                    }
-                }); 
-            });
-        });
     </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -56,12 +34,12 @@
         </div>
         <div style="width: 74%; float: left;">
             <script type="text/javascript"><!--
-                google_ad_client = "ca-pub-8724688346081785";
-                /* LeaderBoard */
-                google_ad_slot = "7597006556";
-                google_ad_width = 728;
-                google_ad_height = 90;
-                //-->
+    google_ad_client = "ca-pub-8724688346081785";
+    /* LeaderBoard */
+    google_ad_slot = "7597006556";
+    google_ad_width = 728;
+    google_ad_height = 90;
+    //-->
             </script>
             <script type="text/javascript"
                 src="//pagead2.googlesyndication.com/pagead/show_ads.js">
@@ -169,7 +147,7 @@
                                             </td>
                                             <td align="right" colspan="2">
                                                 <asp:DropDownList ID="ddlCategoryName" runat="server" CssClass="arabiSky-homeSelectbox"
-                                                    Style="width: 250px;" OnSelectedIndexChanged="ddlCategoryName_SelectedIndexChanged">
+                                                    Style="width: 250px;" AutoPostBack="true" OnSelectedIndexChanged="ddlCategoryName_SelectedIndexChanged">
                                                 </asp:DropDownList>
                                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ddlCategoryName"
                                                     ValidationGroup="AddAds" ErrorMessage="الرجاء إختيار القسم" InitialValue="-2"></asp:RequiredFieldValidator>
