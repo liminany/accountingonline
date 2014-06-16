@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Web.Script.Serialization;
 using Newtonsoft.Json;
 using System.Collections;
+using System.Web.Script.Services;
 
 public partial class AdsPage : System.Web.UI.Page
 {
@@ -174,8 +175,8 @@ public partial class AdsPage : System.Web.UI.Page
     {
         try
         {
-            ManageSubCategory objManageSubCategory = new ManageSubCategory();
-            FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(int.Parse(ddlCategoryName.SelectedValue)), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
+            //ManageSubCategory objManageSubCategory = new ManageSubCategory();
+            //FormsFunction.BindDDL(ref ddlSubCategoryName, objManageSubCategory.GetAllSubCatByCatID(int.Parse(ddlCategoryName.SelectedValue)), "SubCategoriesName", "SubCategoriesID", "إختر القسم الفرعي");
         }
         catch (Exception ex)
         {
@@ -468,7 +469,31 @@ public partial class AdsPage : System.Web.UI.Page
     }
     #endregion
 
-    #region Web Methods
+    #region WebMethods
+    [WebMethod]
+    [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+    public static SubCategory[] FetchSubCatInformation(string sCatID)
+    {
+        try
+        {
+            ManageSubCategory objManageSubCategory = new ManageSubCategory();
+            List<SubCategory> lstSubCategory = new List<SubCategory>();
 
+            foreach (DataRow objDataRow in objManageSubCategory.GetAllSubCatByCatID(int.Parse(sCatID)).Tables[0].Rows)
+            {
+                SubCategory objSubCategory = new SubCategory();
+                objSubCategory.SubCategoryID = int.Parse(objDataRow["SubCategoriesID"].ToString());
+                objSubCategory.SubCategoryName = objDataRow["SubCategoriesName"].ToString();
+                lstSubCategory.Add(objSubCategory);
+            }
+            return lstSubCategory.ToArray();
+        }
+        catch (Exception ex)
+        {
+            _logger.Error("AdsPage:::FetchSubCatInformation:::" + ex.Message);
+            return null;
+
+        }
+    }
     #endregion
 }
