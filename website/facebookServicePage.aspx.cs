@@ -56,53 +56,42 @@ public partial class facebookServicePage : System.Web.UI.Page
                 EntityRegUsers objEntityRegUsers = new EntityRegUsers();
                 UserAuthentication objUserAuthentication = new UserAuthentication();
 
-                switch (Request.QueryString["action"].ToString())
+                objEntityRegUsers.UserCountAds = _nUserAdsQuta;
+                objEntityRegUsers.UserType = _nUserType;
+                objEntityRegUsers.UserStatus = _nUserStatus;
+                objEntityRegUsers.UserEmailAddress = oUser.email;
+                objEntityRegUsers.UserFullName = oUser.name;
+                objEntityRegUsers.UserFacebookID = oUser.id.ToString();
+                objEntityRegUsers.UserMobileNumber = string.Empty;
+                objEntityRegUsers.UserPassword = "facebookPassword";
+                objEntityRegUsers.UserCountry = FormsFunction.GetCookieValueCountryInfo();
+                objEntityRegUsers = objUserAuthentication.RegisterNewUserFromClient(objEntityRegUsers);
+                if (objEntityRegUsers.UserID <= 0)
                 {
-                    case "newUser":
-                        objEntityRegUsers.UserCountAds = _nUserAdsQuta;
-                        objEntityRegUsers.UserType = _nUserType;
-                        objEntityRegUsers.UserStatus = _nUserStatus;
-                        objEntityRegUsers.UserEmailAddress = oUser.email;
-                        objEntityRegUsers.UserFullName = oUser.name;
-                        objEntityRegUsers.UserFacebookID = oUser.id.ToString();
-                        objEntityRegUsers.UserMobileNumber = string.Empty;
-                        objEntityRegUsers.UserPassword = "facebookPassword";
-                        objEntityRegUsers.UserCountry = FormsFunction.GetCookieValueCountryInfo();
-                        objEntityRegUsers = objUserAuthentication.RegisterNewUserFromClient(objEntityRegUsers);
-                        if (objEntityRegUsers.UserID <= 0)
+                    objEntityRegUsers.UserEmailAddress = oUser.email;
+                    objEntityRegUsers.UserPassword = "facebookPassword";
+                    objEntityRegUsers = objUserAuthentication.ClientLoginUser(objEntityRegUsers);
+                    if (objEntityRegUsers.UserID == 0)
+                    {
+                        Response.Redirect("~/login?EID=1002");
+                    }
+                    else
+                    {
+                        if (objEntityRegUsers.UserStatus == 0)
                         {
-                            //The User Already Exists
-                            Response.Redirect("~/signup?EID=1001");
+                            Response.Redirect("~/login?EID=1003");
                         }
                         else
                         {
                             Session["UserInfo"] = objEntityRegUsers;
                             Response.Redirect("/", false);
                         }
-                        break;
-                    case "login":
-                        objEntityRegUsers.UserEmailAddress = oUser.email;
-                        objEntityRegUsers.UserPassword = "facebookPassword";
-                        objEntityRegUsers = objUserAuthentication.ClientLoginUser(objEntityRegUsers);
-                        if (objEntityRegUsers.UserID == 0)
-                        {
-                            Response.Redirect("~/login?EID=1002");
-                        }
-                        else
-                        {
-                            if (objEntityRegUsers.UserStatus == 0)
-                            {
-                                Response.Redirect("~/login?EID=1003");
-                            }
-                            else
-                            {
-                                Session["UserInfo"] = objEntityRegUsers;
-                                Response.Redirect("/", false);
-                            }
-                        }
-                        break;
-                    default:
-                        break;
+                    }
+                }
+                else
+                {
+                    Session["UserInfo"] = objEntityRegUsers;
+                    Response.Redirect("/", false);
                 }
             }
         }
