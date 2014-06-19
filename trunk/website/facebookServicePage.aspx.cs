@@ -118,6 +118,7 @@ public partial class facebookServicePage : System.Web.UI.Page
     {
         try
         {
+            FaceBookConnect.Authorize("user_photos,friends_photos", Request.Url.AbsoluteUri);
             FaceBookConnect.API_Key = "172727259569815";
             FaceBookConnect.API_Secret = "efdf1c48bd7278e3d738dbe71619a8d2";
             string code = Request.QueryString["code"];
