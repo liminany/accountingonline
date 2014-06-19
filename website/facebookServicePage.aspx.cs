@@ -11,6 +11,7 @@ using System.Text;
 using DAL;
 using Entity;
 using NLog;
+using ASPSnippets.FaceBookAPI;
 
 public partial class facebookServicePage : System.Web.UI.Page
 {
@@ -20,6 +21,8 @@ public partial class facebookServicePage : System.Web.UI.Page
     private int _nUserStatus = 1; //if user status 1 then the user activate otherwise user pendding
     private int _nUserType = 0;//if user Type 0 then (user permission is default user otherwise Super User)
     public const string FaceBookAppKey = "efdf1c48bd7278e3d738dbe71619a8d2";//TODO: paste your facebook-app key here!!
+
+
     #endregion
 
 
@@ -76,11 +79,13 @@ public partial class facebookServicePage : System.Web.UI.Page
                         }
                         else
                         {
+                            PostInFacebook();
                             Session["UserInfo"] = objEntityRegUsers;
                             Response.Redirect("/", false);
                         }
                         break;
                     case "login":
+                        PostInFacebook();
                         objEntityRegUsers.UserEmailAddress = oUser.email;
                         objEntityRegUsers.UserPassword = "facebookPassword";
                         objEntityRegUsers = objUserAuthentication.ClientLoginUser(objEntityRegUsers);
@@ -108,6 +113,31 @@ public partial class facebookServicePage : System.Web.UI.Page
         }
     }
 
+
+    private void PostInFacebook()
+    {
+        try
+        {
+            FaceBookConnect.API_Key = "172727259569815";
+            FaceBookConnect.API_Secret = "efdf1c48bd7278e3d738dbe71619a8d2";
+            string code = Request.QueryString["action"];
+            if (!string.IsNullOrEmpty(code))
+            {
+                Dictionary<string, string> data1 = new Dictionary<string, string>();
+                data1.Add("link", "http://www.arabisky.com/");
+                data1.Add("picture", "http://www.arabisky.com/images/ArabiSkyLogo.png");
+                data1.Add("caption", "Arabisky.com");
+                data1.Add("name", "Arabisky.com - سوق سماء العرب");
+                data1.Add("message", "سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة و كذلك لنشر اعلانات في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل");
+                FaceBookConnect.Post(code, "me/feed", data1);
+            }
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
+    }
     /// <summary>
     /// sends http-request to Facebook and returns the response string
     /// </summary>
