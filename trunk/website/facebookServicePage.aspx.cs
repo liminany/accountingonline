@@ -56,6 +56,8 @@ public partial class facebookServicePage : System.Web.UI.Page
                 EntityRegUsers objEntityRegUsers = new EntityRegUsers();
                 UserAuthentication objUserAuthentication = new UserAuthentication();
 
+
+
                 objEntityRegUsers.UserCountAds = _nUserAdsQuta;
                 objEntityRegUsers.UserType = _nUserType;
                 objEntityRegUsers.UserStatus = _nUserStatus;
@@ -92,7 +94,7 @@ public partial class facebookServicePage : System.Web.UI.Page
                 {
                     Session["UserInfo"] = objEntityRegUsers;
                     Response.Redirect("/", false);
-                }
+                } 
             }
         }
     }
