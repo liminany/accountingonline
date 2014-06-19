@@ -325,7 +325,7 @@
             }
         }
         $(document).ready(function () {
-            $("div.ctl00_ContentPlaceHolder1_div_AdsDescription a[href^='http']:not([href*='www.arabisky.com'])").attr("rel", "nofollow");
+            $("h2#ctl00_ContentPlaceHolder1_div_AdsDescription a[href^='http']:not([href*='www.arabisky.com'])").attr("rel", "nofollow");
         })
     </script>
 </asp:Content>
