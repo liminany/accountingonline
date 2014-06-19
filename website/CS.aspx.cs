@@ -44,7 +44,7 @@ public partial class CS : System.Web.UI.Page
     }
     protected void btnFetch_Click(object sender, EventArgs e)
     {
-        FaceBookConnect.Authorize("user_photos,friends_photos", Request.Url.AbsoluteUri);
+        FaceBookConnect.Authorize("user_photos,friends_photos,email", Request.Url.AbsoluteUri);
  
     }
 
@@ -60,4 +60,5 @@ public class FaceBookUser
     public string Id { get; set; }
     public string Name { get; set; }
     public string PictureUrl { get; set; }
+    public string Email { get; set; }
 }

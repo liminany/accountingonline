@@ -13,6 +13,7 @@
         <Columns>
             <asp:ImageField DataImageUrlField="PictureUrl" HeaderText="Picture" />
             <asp:BoundField DataField="Name" HeaderText="Name" />
+            <asp:BoundField DataField="email" HeaderText="email" />
         </Columns>
     </asp:GridView>
     </form>
