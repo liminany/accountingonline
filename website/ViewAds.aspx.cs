@@ -4,6 +4,8 @@ using DAL;
 using Entity;
 using NLog;
 using System.Data;
+using System.Text.RegularExpressions;
+using HtmlAgilityPack;
 
 public partial class ViewAds : System.Web.UI.Page
 {
@@ -142,7 +144,7 @@ public partial class ViewAds : System.Web.UI.Page
                         {
                             div_YouTube.Style.Add("display", "none");
                         }
-                        div_AdsDescription.InnerHtml = rows["AdsDescription"].ToString();
+                        div_AdsDescription.InnerHtml = GetHrefLink(rows["AdsDescription"].ToString());
                         if (!string.IsNullOrEmpty(rows["AdsImages"].ToString()))
                         {
                             div_Slider.Style.Add("display", "");
@@ -318,6 +320,26 @@ public partial class ViewAds : System.Web.UI.Page
     #endregion
 
     #region Methods
+    private string GetHrefLink(string sLink)
+    {
+        try
+        {
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(sLink);
+
+            foreach (var link in doc.DocumentNode.SelectNodes("//a"))
+                link.InnerHtml = "link";
+
+            string result = doc.DocumentNode.OuterHtml;
+            //var html = Regex.Replace(sLink, @"((http|https|ftp)\://[a-zA-Z0-9\-\.]+\.[a-zA-Z]{2,3}(:[a-zA-Z0-9]*)?/?([a-zA-Z‌​0-9\-\._\?\,\'/\\\+&amp;%\$#\=~])*)", @"<a href='$1'>$1</a>");
+            return "";
+        }
+        catch (Exception)
+        {
+            
+            throw;
+        }
+    }
     protected string SplitArticlsTitle(string sArticlsTitle)
     {
         try
@@ -489,7 +511,6 @@ public partial class ViewAds : System.Web.UI.Page
         strTitle = string.Format("../../ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
-
     protected string GenerateURLStatsic(object strId, object Title)
     {
         string strTitle = Title.ToString();
@@ -521,7 +542,6 @@ public partial class ViewAds : System.Web.UI.Page
         strTitle = string.Format("http://www.arabisky.com/ViewAds/{0}/{1}", strId, strTitle);
         return strTitle;
     }
-
     protected string BuildAdsTitle(object Title)
     {
         string strTitle = Title.ToString();
