@@ -18,15 +18,14 @@ public partial class CS : System.Web.UI.Page
             string code = Request.QueryString["code"];
             if (!string.IsNullOrEmpty(code))
             {
-                ViewState["Code"] = code;
-                //string data = FaceBookConnect.Fetch(code, "me/friends");
-                //FaceBookData facebookData = new JavaScriptSerializer().Deserialize<FaceBookData>(data);
-                //foreach (FaceBookUser user in facebookData.Data)
-                //{
-                //    user.PictureUrl = string.Format("https://graph.facebook.com/{0}/picture", user.Id);
-                //}
-                //gvFriends.DataSource = facebookData.Data;
-                //gvFriends.DataBind();
+                string data = FaceBookConnect.Fetch(code, "me/friends");
+                FaceBookData facebookData = new JavaScriptSerializer().Deserialize<FaceBookData>(data);
+                foreach (FaceBookUser user in facebookData.Data)
+                {
+                    user.PictureUrl = string.Format("https://graph.facebook.com/{0}/picture", user.Id);
+                }
+                gvFriends.DataSource = facebookData.Data;
+                gvFriends.DataBind();
 
                 PostMessage();
             }
