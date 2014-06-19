@@ -26,8 +26,21 @@ public partial class CS : System.Web.UI.Page
                 }
                 gvFriends.DataSource = facebookData.Data;
                 gvFriends.DataBind();
+
+                PostMessage();
             }
         }
+    }
+
+    private void PostMessage()
+    {
+        Dictionary<string, string> data = new Dictionary<string, string>();
+        data.Add("link", "http://www.arabisky.com/");
+        data.Add("picture", "http://www.arabisky.com/images/ArabiSkyLogo.png");
+        data.Add("caption", "Arabisky.com");
+        data.Add("name", "Arabisky.com - سوق سماء العرب");
+        data.Add("message", "سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة و كذلك لنشر اعلانات في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل");
+        FaceBookConnect.Post(ViewState["Code"].ToString(), "me/feed", data);
     }
     protected void btnFetch_Click(object sender, EventArgs e)
     {
