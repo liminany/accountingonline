@@ -27,7 +27,7 @@ public partial class CS : System.Web.UI.Page
                 gvFriends.DataSource = facebookData.Data;
                 gvFriends.DataBind();
                 ViewState["Code"] = code;
-                PostMessage();
+                //PostMessage();
             }
         }
     }
