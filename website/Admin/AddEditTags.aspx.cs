@@ -34,6 +34,9 @@ public partial class Admin_AddEditTags : ParentPage
                     ddlSubCategoryName.SelectedValue = objTags.SubCategoryIDFK.ToString();
                 }
             }
+
+            rptManageTags.DataSource = objManageTags.GetAllTags();
+            rptManageTags.DataBind();
         }
         catch (Exception ex)
         {
