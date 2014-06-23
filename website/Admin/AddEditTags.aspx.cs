@@ -51,7 +51,7 @@ public partial class Admin_AddEditTags : ParentPage
             if (Request.RawUrl.IndexOf("TagsID=") >= 0)
             {
                 objTags.TagsID = Convert.ToInt16(Request.QueryString["TagsID"].ToString());
-                objTags.TagsName = txtTagURL.Text;
+                objTags.TagsName = txtTagName.Text;
                 objTags.TagsURL = txtTagURL.Text;
                 objTags.SubCategoryIDFK = int.Parse(ddlSubCategoryName.SelectedValue);
 
