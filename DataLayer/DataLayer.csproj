@@ -50,6 +50,7 @@
     <Compile Include="CategoryAndSubCategory\ManageCategory.cs" />
     <Compile Include="CountryAndCity\ManageCity.cs" />
     <Compile Include="CountryAndCity\ManageCountry.cs" />
+    <Compile Include="ManageTags.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Statistic\DBDashboardStatstic.cs" />
     <Compile Include="Users\ContactUs.cs" />
