@@ -60,10 +60,6 @@
                         <div id="Div1">
                             <!--  start table-content  -->
                             <div id="table-content">
-                                <input type="button" value="إضافة مدينة جديدة" class="btnClass" style="width: 150px;"
-                                    onclick="window.location = 'AddEditCity'" />
-                                <div style="height: 20px; clear: both;">
-                                </div>
                                 <!--  start product-table ..................................................................................... -->
                                 <table border="0" width="100%" cellpadding="0" cellspacing="0" id="product-table">
                                     <asp:Repeater runat="server" ID="rptManageTags">
@@ -73,7 +69,7 @@
                                             </th>
                                             <th class="table-header-repeat line-left minwidth-1">
                                                 <a href="">اسم الوسم</a>
-                                            </th> 
+                                            </th>
                                             <th class="table-header-repeat line-left">
                                                 <a href="">القسم</a>
                                             </th>
@@ -92,7 +88,7 @@
                                                 <td align="center">
                                                     <%# DataBinder.Eval(Container.DataItem, "TagText")%>
                                                 </td>
- 
+
                                                 <td align="center">
                                                     <%# DataBinder.Eval(Container.DataItem, "subCategories")%>
                                                 </td>
@@ -106,6 +102,28 @@
                                                 </td>
                                             </tr>
                                         </ItemTemplate>
+                                        <AlternatingItemTemplate>
+                                            <tr>
+                                                <td align="center">
+                                                    <%# DataBinder.Eval(Container.DataItem, "ID")%>
+                                                </td>
+                                                <td align="center">
+                                                    <%# DataBinder.Eval(Container.DataItem, "TagText")%>
+                                                </td>
+
+                                                <td align="center">
+                                                    <%# DataBinder.Eval(Container.DataItem, "subCategories")%>
+                                                </td>
+                                                <td align="center">
+                                                    <%# DataBinder.Eval(Container.DataItem, "Status")%>
+                                                </td>
+                                                <td class="options-width" align="center">
+                                                    <a href='AddEditTags?TagsID=<%# DataBinder.Eval(Container.DataItem,"ID") %>'
+                                                        title="Edit" class="icon-1 info-tooltip"></a><a href='javascript:void(0)' onclick="DeleteCityInfo(<%# DataBinder.Eval(Container.DataItem,"ID") %>)"
+                                                            title="Delete" class="icon-2 info-tooltip"></a>
+                                                </td>
+                                            </tr>
+                                        </AlternatingItemTemplate>
                                     </asp:Repeater>
                                 </table>
                                 <!--  end product-table................................... -->
