@@ -33,10 +33,7 @@ public partial class Admin_AddEditTags : ParentPage
                     txtTagURL.Text = objTags.TagsURL;
                     ddlSubCategoryName.SelectedValue = objTags.SubCategoryIDFK.ToString();
                 }
-            }
-
-            rptManageTags.DataSource = objManageTags.GetAllTags();
-            rptManageTags.DataBind();
+            } 
         }
         catch (Exception ex)
         {
