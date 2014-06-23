@@ -72,6 +72,11 @@
                 <table border="0" width="100%" cellpadding="0" cellspacing="0">
                     <tbody id="tbDashbaord" runat="server">
                         <tr>
+                            <td>
+                                <a href="AddEditTags">Add New Tags</a>
+                            </td>
+                        </tr>
+                        <tr>
                             <td colspan="2" style="height: 20px; font-size: 20px;" align="center">
                                 <table width="100%" border="0" cellpadding="0" cellspacing="0" style="line-height: 26px;">
                                     <tr>
