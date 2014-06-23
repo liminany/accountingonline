@@ -73,10 +73,7 @@
                                             </th>
                                             <th class="table-header-repeat line-left minwidth-1">
                                                 <a href="">اسم الوسم</a>
-                                            </th>
-                                            <th class="table-header-repeat line-left minwidth-1">
-                                                <a href="">الرابط</a>
-                                            </th>
+                                            </th> 
                                             <th class="table-header-repeat line-left">
                                                 <a href="">القسم</a>
                                             </th>
@@ -95,9 +92,7 @@
                                                 <td align="center">
                                                     <%# DataBinder.Eval(Container.DataItem, "TagText")%>
                                                 </td>
-                                                <td align="center">
-                                                    <%# DataBinder.Eval(Container.DataItem, "TagURL")%>
-                                                </td>
+ 
                                                 <td align="center">
                                                     <%# DataBinder.Eval(Container.DataItem, "subCategories")%>
                                                 </td>
