@@ -67,7 +67,7 @@ public partial class Admin_AddEditTags : ParentPage
             }
             else
             {
-                objTags.TagsName = txtTagURL.Text;
+                objTags.TagsName = txtTagName.Text;
                 objTags.TagsURL = txtTagURL.Text;
                 objTags.SubCategoryIDFK = int.Parse(ddlSubCategoryName.SelectedValue);
                 int nReturnValue = objManageTags.AddNewTags(objTags);
