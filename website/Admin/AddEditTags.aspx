@@ -36,6 +36,7 @@
                         </asp:DropDownList>
                     </td>
                     <td>
+                        <asp:RequiredFieldValidator ControlToValidate="ddlSubCategoryName" InitialValue="-2" ID="RequiredFieldValidator1" runat="server" ErrorMessage="please choose sub cat"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
