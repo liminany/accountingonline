@@ -49,6 +49,7 @@
     <Compile Include="CityAndCountry\City.cs" />
     <Compile Include="CityAndCountry\Country.cs" />
     <Compile Include="DashboardStatstic.cs" />
+    <Compile Include="Tags.cs" />
     <Compile Include="SubCategory.cs" />
     <Compile Include="EnumSystem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
