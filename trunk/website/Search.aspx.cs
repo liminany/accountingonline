@@ -60,6 +60,7 @@ public partial class Search : System.Web.UI.Page
                         case "Brand":
                             sBrand_1 = Request.QueryString["Brand1"].ToString().Replace("-"," ");
                             sBrand_2 = Request.QueryString["Brand2"].ToString().Replace("-", " ");
+                            sp_SearchWords.InnerHtml = sBrand_1 + " " + sBrand_2;
                             sp_SearchTitle.InnerHtml = " بحث " + sBrand_1 + " -  " + sBrand_2;
                             nSearchSubCat = int.Parse(Request.QueryString["subID"].ToString());
                             Page.Title = "موقع سماء العرب | " + sBrand_1 + "-" + sBrand_2;
@@ -68,6 +69,7 @@ public partial class Search : System.Web.UI.Page
                             break;
                         case "AdvanceSearch":
                             sSearchText = Request.QueryString["TextSearch"].ToString().Trim();
+                            sp_SearchWords.InnerHtml = sSearchText;
                             nCountryCode = Convert.ToInt32(Request.QueryString["Country"].ToString());
                             nCityID = Convert.ToInt32(Request.QueryString["City"].ToString() == string.Empty ? "-2" : Request.QueryString["City"].ToString());
                             nCatID = Convert.ToInt32(Request.QueryString["Cat"].ToString() == string.Empty ? "-2" : Request.QueryString["Cat"].ToString());
@@ -81,6 +83,7 @@ public partial class Search : System.Web.UI.Page
                             break;
                         default:
                             sp_SearchTitle.InnerHtml = Request.QueryString["text"].ToString();
+                            sp_SearchWords.InnerHtml = Request.QueryString["text"].ToString();
                             sSearchText = Server.UrlDecode(Request.QueryString["text"].ToString().Trim()).Replace(" ", "-");;
                             nSearchSubCat = -2;
                             Page.Title = "موقع سماء العرب | " + sSearchText;
