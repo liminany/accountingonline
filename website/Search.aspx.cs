@@ -81,7 +81,7 @@ public partial class Search : System.Web.UI.Page
                             break;
                         default:
                             sp_SearchTitle.InnerHtml = Request.QueryString["text"].ToString();
-                            sSearchText = Server.UrlDecode(Request.QueryString["text"].ToString().Trim());
+                            sSearchText = Server.UrlDecode(Request.QueryString["text"].ToString().Trim()).Replace(" ", "-");;
                             nSearchSubCat = -2;
                             Page.Title = "موقع سماء العرب | " + sSearchText;
                             Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
@@ -92,8 +92,7 @@ public partial class Search : System.Web.UI.Page
                     sSearchText = sSearchText.Replace("ة", "ه");
                     sSearchText = sSearchText.Replace("أ", "ا");
                     sSearchText = sSearchText.Replace("إ", "ا");
-                    sSearchText = sSearchText.Replace("إ", "ا");
-                    sSearchText = sSearchText.Replace(" ", "-");
+                    sSearchText = sSearchText.Replace("إ", "ا"); 
                     hfSearchTeram.Value = Request.QueryString["text"].ToString();
                     DBAdsManager obDBAdsManager = new DBAdsManager();
                     DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(FormsFunction.GetCookieValueCountryInfo(), nSearchID, sSearchText, nSearchSubCat, nCityID, sBrand_1, sBrand_2, nCatID, nPriceForm, nPriceTo);
