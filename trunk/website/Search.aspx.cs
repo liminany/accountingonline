@@ -80,8 +80,8 @@ public partial class Search : System.Web.UI.Page
                             nSearchID = 6;
                             break;
                         default:
-                            sp_SearchTitle.InnerHtml = Server.UrlDecode(Request.QueryString["text"].ToString());
-                            sSearchText = Request.QueryString["text"].ToString().Trim();
+                            sp_SearchTitle.InnerHtml = Request.QueryString["text"].ToString();
+                            sSearchText = Server.UrlDecode(Request.QueryString["text"].ToString().Trim());
                             nSearchSubCat = -2;
                             Page.Title = "موقع سماء العرب | " + sSearchText;
                             Page.MetaDescription = "موقع سماء العرب - ArabiSky.com | " + sSearchText;
