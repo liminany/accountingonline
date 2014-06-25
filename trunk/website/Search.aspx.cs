@@ -93,7 +93,7 @@ public partial class Search : System.Web.UI.Page
                     sSearchText = sSearchText.Replace("أ", "ا");
                     sSearchText = sSearchText.Replace("إ", "ا");
                     sSearchText = sSearchText.Replace("إ", "ا");
-                    sSearchText = sSearchText.Replace(" ", "-");
+                    sSearchText = sSearchText.Replace("20%", "-");
 
                     DBAdsManager obDBAdsManager = new DBAdsManager();
                     DataSet objDataSetSearch = obDBAdsManager.ArabiSkySearch(FormsFunction.GetCookieValueCountryInfo(), nSearchID, sSearchText, nSearchSubCat, nCityID, sBrand_1, sBrand_2, nCatID, nPriceForm, nPriceTo);
