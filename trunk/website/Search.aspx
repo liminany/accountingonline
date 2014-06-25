@@ -17,9 +17,17 @@
         .tr_AdsRows:hover {
             background-color: #e0f4ff !important;
         }
+       .highlight { background-color: yellow }
     </style>
+    <script src="http://johannburkard.de/resources/Johann/jquery.highlight-4.closure.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("h2").highlight($("#ctl00_ContentPlaceHolder1_hfSearchTeram").val());
+        });
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <asp:HiddenField runat="server" ID="hfSearchTeram" />
     <div style="height: 100px;">
         <div style="float: right; width: 238px;">
             <a href='/'>سوق سماء العرب </a>»&nbsp;<span>بحث</span>
