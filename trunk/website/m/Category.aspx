@@ -100,8 +100,7 @@
                     <asp:Repeater runat="server" ID="rptSlimlerAds">
                         <ItemTemplate>
                             <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                <div class="cols" id="post_2793631">
-
+                                <div class="cols" id="post_<%# DataBinder.Eval(Container.DataItem, "AdsID")%>" onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                     <div class="image float-left-padright">
                                         <a onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                             <img style="width: 100px; height: 103px;" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>' alt="<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>" border="0" /></a>
@@ -112,7 +111,6 @@
                                         <div style="float: right; padding-right: 5px;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>" class="more_text">شاهد تفاصيل الإعلان...</a></div>
                                         <div class="clear"></div>
                                     </div>
-
                                 </div>
                             </a>
                             <div class="clear"></div>
