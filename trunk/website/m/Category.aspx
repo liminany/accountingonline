@@ -99,8 +99,9 @@
                 <div class="classifieds-home-block" id="classifieds-listview">
                     <asp:Repeater runat="server" ID="rptSlimlerAds">
                         <ItemTemplate>
-                            <div class="cols" id="post_2793631">
-                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                            <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                <div class="cols" id="post_2793631">
+
                                     <div class="image float-left-padright">
                                         <a onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                             <img style="width: 100px; height: 103px;" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>' alt="<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>" border="0" /></a>
@@ -108,11 +109,12 @@
                                     <div class="classifieds-home-list" style="margin-left: 105px; height: auto;">
                                         <h2 style="margin-bottom: 1px;"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></h2>
                                         <div class="classifieds-subtitle" style="float: left;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">Offer</a></div>
-                                        <div style="float: right; padding-right: 5px;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>" class="more_text">More details...</a></div>
+                                        <div style="float: right; padding-right: 5px;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>" class="more_text">شاهد تفاصيل الإعلان...</a></div>
                                         <div class="clear"></div>
                                     </div>
-                                </a>
-                            </div>
+
+                                </div>
+                            </a>
                             <div class="clear"></div>
                         </ItemTemplate>
                     </asp:Repeater>
