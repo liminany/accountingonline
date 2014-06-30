@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/m/MasterPage.master" AutoEventWireup="true" CodeFile="Category.aspx.cs" Inherits="m_Category" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-        <style type="text/css">
+    <style type="text/css">
         .thumb {
             padding: 3px;
             background-color: #fff;
@@ -100,20 +100,18 @@
                     <asp:Repeater runat="server" ID="rptSlimlerAds">
                         <ItemTemplate>
                             <div class="cols" id="post_2793631">
-                                <div class="image float-left-padright">
-                                    <a onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
-                                        <img style="width:100px;height:103px;" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>' alt="" border="0" /></a>
-                                </div>
-                                <div class="classifieds-home-list" style="margin-left: 105px; height: auto;">
-                                    <h2 style="margin-bottom: 1px;"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></h2>
-                                    <div class="classifieds-subtitle">
-                                        <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><span class="price_text">Rs. 25,000</span><br />
-                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>
+                                <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
+                                    <div class="image float-left-padright">
+                                        <a onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
+                                            <img style="width: 100px; height: 103px;" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>' alt="<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>" border="0" /></a>
                                     </div>
-                                    <div class="classifieds-subtitle" style="float: left;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">Offer</a></div>
-                                    <div style="float: right; padding-right: 5px;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>" class="more_text">More details...</a></div>
-                                    <div class="clear"></div>
-                                </div>
+                                    <div class="classifieds-home-list" style="margin-left: 105px; height: auto;">
+                                        <h2 style="margin-bottom: 1px;"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></h2>
+                                        <div class="classifieds-subtitle" style="float: left;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">Offer</a></div>
+                                        <div style="float: right; padding-right: 5px;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>" class="more_text">More details...</a></div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </a>
                             </div>
                             <div class="clear"></div>
                         </ItemTemplate>

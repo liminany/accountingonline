@@ -15,7 +15,7 @@ public partial class m_Category : System.Web.UI.Page
 
     #region variables
     private static Logger _logger = LogManager.GetCurrentClassLogger();
-    private int PageSize = 50;
+    private int PageSize = 30;
     #endregion
 
     #region Pageload
