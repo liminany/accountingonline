@@ -39,7 +39,7 @@ public partial class master : System.Web.UI.MasterPage
     {
         try
         {
-            //CheckDevice();
+            CheckDevice();
             if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
             {
                 if (FormsFunction.GetCookieData().Length != 0)
@@ -296,7 +296,14 @@ public partial class master : System.Web.UI.MasterPage
                 {
                     if (strUserAgent.Contains("ipad") || (strUserAgent.Contains("android") && !strUserAgent.Contains("mobile")))
                     {
-                        Response.Redirect("http://www.arabisky.com/m/default.aspx", false);
+                        if (Request.QueryString["AdsID"] != null)
+                        {
+                            Response.Redirect("http://www.arabisky.com/m/ViewAd.aspx?AdsID=" + Request.QueryString["AdsID"].ToString(), false);
+                        }
+                        else
+                        {
+                            Response.Redirect("http://www.arabisky.com/m/default.aspx", false);
+                        }
                     }
 
                 }
