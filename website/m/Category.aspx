@@ -1,6 +1,42 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/m/MasterPage.master" AutoEventWireup="true" CodeFile="Category.aspx.cs" Inherits="m_Category" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+        <style type="text/css">
+        .thumb {
+            padding: 3px;
+            background-color: #fff;
+            border: solid 1px #ccc;
+            box-shadow: 0 0 3px rgba(30, 30, 30, 0.2);
+        }
+
+        .tr_AdsRows td {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .tr_AdsRows:hover {
+            background-color: #e0f4ff !important;
+        }
+
+        .page_enabled, .page_disabled {
+            display: inline-block;
+            height: 35px;
+            min-width: 24px;
+            line-height: 36px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #ccc;
+        }
+
+        .page_enabled {
+            background-color: #eee;
+            color: #000;
+        }
+
+        .page_disabled {
+            background-color: #6C6C6C;
+            color: #fff !important;
+        }
+    </style>
     <div id="wrapper">
         <script type="text/javascript">
             $(document).ready(function () {
