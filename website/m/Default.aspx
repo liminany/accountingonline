@@ -25,7 +25,7 @@
                     <div class="icon float-left">
                         <img src="images/home-parent-caticon-150.png" alt="" />
                     </div>
-                    <div class="categoryText float-left">وظائف شاغرة</div>
+                    <div class="categoryText float-left">وظائف</div>
                     <span class="statusicon"></span>
                     <div class="clear"></div>
                 </a></li>
@@ -34,14 +34,6 @@
                         <img src="images/home-parent-caticon-46.png" alt="" />
                     </div>
                     <div class="categoryText float-left">للإيجار</div>
-                    <span class="statusicon"></span>
-                    <div class="clear"></div>
-                </a></li>
-                <li class="parent_cat_block_71"><a href="javascript:void(0);">
-                    <div class="icon float-left">
-                        <img src="images/home-parent-caticon-71.png" alt="" />
-                    </div>
-                    <div class="categoryText float-left">باحث عن عمل</div>
                     <span class="statusicon"></span>
                     <div class="clear"></div>
                 </a></li>
