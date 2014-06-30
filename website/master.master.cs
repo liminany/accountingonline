@@ -39,6 +39,7 @@ public partial class master : System.Web.UI.MasterPage
     {
         try
         {
+            CheckDevice();
             if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
             {
                 if (FormsFunction.GetCookieData().Length != 0)
@@ -268,6 +269,40 @@ public partial class master : System.Web.UI.MasterPage
         catch (Exception ex)
         {
             _logger.Error("masterpage:::lbtnCountry_Click:::" + ex.Message);
+        }
+    }
+    #endregion
+
+    #region Methods
+    public void CheckDevice()
+    {
+        try
+        {
+            string strUserAgent = Request.UserAgent.ToLower();
+            if (strUserAgent != null)
+            {
+                if (Request.Browser.IsMobileDevice == true
+                   || strUserAgent.Contains("iphone")
+                   || strUserAgent.Contains("ipod")
+                   || strUserAgent.Contains("android")
+                   || strUserAgent.Contains("iemobile")
+                   || strUserAgent.Contains("version")
+                   || strUserAgent.Contains("blackberry")
+                   || strUserAgent.Contains("windows ce")
+                   || strUserAgent.Contains("opera mini")
+                   || strUserAgent.Contains("palm")
+                   || strUserAgent.Contains("chrome")
+                   || strUserAgent.Contains("ipad"))
+                {
+                    Response.Redirect("http://www.arabisky.com/m/default.aspx", false);
+
+                }
+            }
+        }
+        catch (Exception)
+        {
+
+            throw;
         }
     }
     #endregion
