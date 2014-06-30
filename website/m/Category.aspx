@@ -66,7 +66,7 @@
                             <div class="cols" id="post_2793631">
                                 <div class="image float-left-padright">
                                     <a onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
-                                        <img style="width:30px;height:30px;" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>' alt="" border="0" /></a>
+                                        <img style="width:100px;height:103px;" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>' alt="" border="0" /></a>
                                 </div>
                                 <div class="classifieds-home-list" style="margin-left: 105px; height: auto;">
                                     <h2 style="margin-bottom: 1px;"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></h2>
