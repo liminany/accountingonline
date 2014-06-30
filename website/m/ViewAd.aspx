@@ -9,7 +9,7 @@
     <div id="containerInner" style="margin-bottom: 12px;">
 
         <div class="classifiedPost">
-            <div class="classifieds-title">
+            <div class="classifieds-title" style="border-bottom: 2px dashed #ccc; padding-top: 10px; width: 102%; float: right; height: 37px; color: #111111; background-color: #ededed; display: ; font-weight: bolder; font-size: 25px; text-align: right; padding-right: 25px;">
                 <span class="viewPagePremiumImage">
                     <img runat="server" src="./images/star.png" border="0"></span>
                 <h1 runat="server" id="spAdsTitle"></h1>
