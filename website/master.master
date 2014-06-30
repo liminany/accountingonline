@@ -312,6 +312,7 @@
                     <div class="arabiSky-footerSeperator">
                     </div>
                     <div class="arabiSky-footerLinksTop">
+                        <a href="~/m/Default" runat="server">نسخة الموبايل</a> | 
                         <a href="~/ContactUs" runat="server">تواصل معنا</a> | 
                         <a href="~/Help" runat="server">مساعدة</a> | 
                         <a href="~/country" runat="server">بلدان اخرى</a>
