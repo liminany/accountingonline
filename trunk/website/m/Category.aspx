@@ -69,15 +69,13 @@
                                         <img src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>' alt="" border="0" /></a>
                                 </div>
                                 <div class="classifieds-home-list" style="margin-left: 105px; height: auto;">
-                                    <h2 style="margin-bottom: 1px;">Houses & flats for rent</h2>
+                                    <h2 style="margin-bottom: 1px;"><%# DataBinder.Eval(Container.DataItem, "AdsTitle")%></h2>
                                     <div class="classifieds-subtitle">
-                                        <a href="rent-1-2-3-4-bedrooms-furnished-unfurnished-flats-in-kolkata-c41-v2793631.html"><span class="price_text">Rs. 25,000</span><br />
-                                            2 bedrooms flat<br />
-                                            New alipur<br />
-                                            900 Sq. Feet</a>
+                                        <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>"><span class="price_text">Rs. 25,000</span><br />
+                                        <%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>
                                     </div>
-                                    <div class="classifieds-subtitle" style="float: left;"><a href="rent-1-2-3-4-bedrooms-furnished-unfurnished-flats-in-kolkata-c41-v2793631.html">Offer</a></div>
-                                    <div style="float: right; padding-right: 5px;"><a href="rent-1-2-3-4-bedrooms-furnished-unfurnished-flats-in-kolkata-c41-v2793631.html" class="more_text">More details...</a></div>
+                                    <div class="classifieds-subtitle" style="float: left;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">Offer</a></div>
+                                    <div style="float: right; padding-right: 5px;"><a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>" class="more_text">More details...</a></div>
                                     <div class="clear"></div>
                                 </div>
                             </div>
