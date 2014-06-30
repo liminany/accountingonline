@@ -296,9 +296,9 @@ public partial class master : System.Web.UI.MasterPage
                 {
                     if (strUserAgent.Contains("ipad") || (strUserAgent.Contains("android") && !strUserAgent.Contains("mobile")))
                     {
-                        if (Request.QueryString["AdsID"] != null)
+                        if (Page.RouteData.Values["AdsID"] != null)
                         {
-                            Response.Redirect("http://www.arabisky.com/m/ViewAd.aspx?AdsID=" + Request.QueryString["AdsID"].ToString(), false);
+                            Response.Redirect("http://www.arabisky.com/m/ViewAd.aspx?AdsID=" + Page.RouteData.Values["AdsID"].ToString(), false);
                         }
                         else
                         {
