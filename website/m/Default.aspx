@@ -25,7 +25,7 @@
                     <div class="icon float-left">
                         <img src="images/home-parent-caticon-150.png" alt="" />
                     </div>
-                    <div class="categoryText float-left">وظائف شاغرة - وظائف خالية</div>
+                    <div class="categoryText float-left">وظائف شاغرة</div>
                     <span class="statusicon"></span>
                     <div class="clear"></div>
                 </a></li>
@@ -41,7 +41,7 @@
                     <div class="icon float-left">
                         <img src="images/home-parent-caticon-71.png" alt="" />
                     </div>
-                    <div class="categoryText float-left">الباحثين عن عمل</div>
+                    <div class="categoryText float-left">باحث عن عمل</div>
                     <span class="statusicon"></span>
                     <div class="clear"></div>
                 </a></li>
