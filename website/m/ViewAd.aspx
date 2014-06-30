@@ -14,8 +14,18 @@
                     <img runat="server" src="./images/star.png" border="0"></span>
                 <h1 runat="server" id="spAdsTitle"></h1>
             </div>
+            <div class="arabiSky-adDetails" style="float: right; width: 50%">
+                <ul style="font-size: 15px; font-weight: bolder;" itemprop="offerDetails" itemscope itemtype="http://data-vocabulary.org/Offer">
+                    <li style="text-align: right;" id="liSection" runat="server"></li>
+                    <li style="text-align: right;" id="liSubSection" runat="server"></li>
+                    <li style="text-align: right;" id="liCountry" runat="server"></li>
+                    <li style="text-align: right;" id="liCity" runat="server"></li>
+                    <li style="text-align: right;" id="liCreateDate" runat="server"></li>
+                    <li style="text-align: right;" id="liPrice" runat="server"></li>
+                </ul>
+            </div>
             <div style="width: 59%; float: right;">
-                <h2 itemprop="description" style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%; float: right; height: auto; word-wrap: break-word; padding-left: 10px;padding-top: 35px;font-size: 17px;" id="div_AdsDescription" runat="server"></h2>
+                <h2 itemprop="description" style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%; float: right; height: auto; word-wrap: break-word; padding-left: 10px; padding-top: 35px; font-size: 17px;" id="div_AdsDescription" runat="server"></h2>
 
                 <div style="clear: both; height: 20px;">
                 </div>
