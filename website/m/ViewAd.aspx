@@ -12,7 +12,7 @@
             <div class="classifieds-title">
                 <span class="viewPagePremiumImage">
                     <img runat="server" src="./images/star.png" border="0"></span>
-                <h1 runat="server" id="spAdsTitle">AC Furnished Paying Guest Room Rent For LADIES Kitchen, LIFT</h1>
+                <h1 runat="server" id="spAdsTitle"></h1>
             </div>
             <div class="classifieds-optionBlock">
                 <div class="classifieds-img">
