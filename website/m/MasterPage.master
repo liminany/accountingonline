@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,user-scalable=no""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="css/style.1403161077.css" />
     <script type="text/javascript" src="js/common.1403241416.js"></script>
     <script type="text/javascript" src="js/jquery.1339396013.js"></script>
@@ -146,10 +146,13 @@
             window.location = "/m/Default.aspx";
         }
     </script>
-
 </head>
 <body>
     <form id="form1" runat="server">
+        <div id="logo" style="text-align: center;">
+            <a href="~/m/Default.aspx" runat="server">
+                <img width="60" height="40" src="http://www.arabisky.com/images/ArabiSkyLogo.png" alt="" /></a>
+        </div>
         <div id="wrapper">
             <script type="text/javascript">
                 $(document).ready(function () {
@@ -187,10 +190,6 @@
 
             <header>
                 <div id="header">
-                    <div id="logo" class="float-left">
-                        <a href="~/m/Default.aspx" runat="server">
-                            <img width="30" src="http://www.arabisky.com/images/ArabiSkyLogo.png" alt="" /></a>
-                    </div>
                 </div>
                 <div class="topblock">
                     <div class="float-left selectCity" id="div_Country"><a href="javascript:void(0);" class="cities">الرجاء إختيار الدولة</a> </div>
@@ -246,6 +245,6 @@
         ga('require', 'displayfeatures');
         ga('set', 'dimension1', '10');
         ga("send", "pageview");
-            </script>
+    </script>
 </body>
 </html>
