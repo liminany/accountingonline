@@ -9,15 +9,13 @@
     <div id="containerInner" style="margin-bottom: 12px;">
 
         <div class="classifiedPost">
-            <div class="classifieds-title" style="border-bottom: 2px dashed #ccc; padding-top: 10px; width: 102%; float: right; height: 37px; color: #111111; background-color: #ededed; display: ; font-weight: bolder; font-size: 25px; text-align: right; padding-right: 25px;">
+            <div class="classifieds-title" style="border-bottom: 2px dashed #ccc; width: 100%; float: right; color: #111111; background-color: #ededed; font-weight: bolder; font-size: 11px; text-align: right;">
                 <span class="viewPagePremiumImage">
                     <img runat="server" src="./images/star.png" border="0"></span>
                 <h1 runat="server" id="spAdsTitle"></h1>
             </div>
             <div style="width: 59%; float: right;">
-                <h2 itemprop="description" style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%; float: right; height: auto; word-wrap: break-word; padding-left: 10px;"
-                    id="div_AdsDescription"
-                    runat="server"></h2>
+                <h2 itemprop="description" style="text-align: right; margin-right: 30px; margin-left: 30px; width: 80%; float: right; height: auto; word-wrap: break-word; padding-left: 10px;padding-top: 35px;font-size: 17px;" id="div_AdsDescription" runat="server"></h2>
 
                 <div style="clear: both; height: 20px;">
                 </div>
