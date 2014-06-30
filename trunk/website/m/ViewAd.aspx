@@ -1,6 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/m/MasterPage.master" AutoEventWireup="true" CodeFile="ViewAd.aspx.cs" Inherits="m_ViewAd" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <script>
+        $(document).ready(function () {
+            $("#div_Country").css("display", "none");
+        });
+    </script>
     <div id="containerInner" style="margin-bottom: 12px;">
         <div id="search-result">
             <div class="float-left search-result-text"><a href="pg-accommodation-c43.html" class="breadcrumb">PG accommodation</a> </div>

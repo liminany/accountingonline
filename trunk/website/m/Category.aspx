@@ -63,6 +63,7 @@
         </script>
         <script type="text/javascript">
             $(document).ready(function () {
+                $("#div_Country").css("display", "none");
                 $("#search_categories").click(function () {
                     $("#category-search-list").slideToggle("slow");
                 });
