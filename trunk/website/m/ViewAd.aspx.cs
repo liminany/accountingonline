@@ -37,8 +37,8 @@ public partial class m_ViewAd : System.Web.UI.Page
                 url = HttpContext.Current.Request.Url.AbsoluteUri;
                 if (!string.IsNullOrEmpty(Request.QueryString["AdsID"].ToString()))
                 {
- 
-                    foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Page.RouteData.Values["AdsID"].ToString())).Tables[0].Rows)
+
+                    foreach (DataRow rows in objDBAdsManager.GetAdsInformationByAdsID(Convert.ToInt32(Request.QueryString["AdsID"].ToString())).Tables[0].Rows)
                     {
                         spAdsTitle.InnerHtml = rows["AdsTitle"].ToString();
                         sAdsDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
