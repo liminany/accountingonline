@@ -294,7 +294,10 @@ public partial class master : System.Web.UI.MasterPage
                    || strUserAgent.Contains("chrome")
                    || strUserAgent.Contains("ipad"))
                 {
-                    Response.Redirect("http://www.arabisky.com/m/default.aspx", false);
+                    if (strUserAgent.Contains("ipad") || (strUserAgent.Contains("android") && !strUserAgent.Contains("mobile")))
+                    {
+                        Response.Redirect("http://www.arabisky.com/m/default.aspx", false);
+                    }
 
                 }
             }
