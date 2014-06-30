@@ -278,34 +278,21 @@ public partial class master : System.Web.UI.MasterPage
     {
         try
         {
-            string strUserAgent = Request.UserAgent.ToLower();
-            if (strUserAgent != null)
+            string strUserAgent = Request.UserAgent.ToString().ToLower();
+            bool MobileDevice = Request.Browser.IsMobileDevice;
+            if (Request.Cookies["MobileDevice"] != null)
             {
-                if (Request.Browser.IsMobileDevice == true
-                   || strUserAgent.Contains("iphone")
-                   || strUserAgent.Contains("ipod")
-                   || strUserAgent.Contains("android")
-                   || strUserAgent.Contains("iemobile")
-                   || strUserAgent.Contains("version")
-                   || strUserAgent.Contains("blackberry")
-                   || strUserAgent.Contains("windows ce")
-                   || strUserAgent.Contains("opera mini")
-                   || strUserAgent.Contains("palm")
-                   || strUserAgent.Contains("chrome")
-                   || strUserAgent.Contains("ipad"))
+                if (Request.Cookies["MobileDevice"].Value == "IgnoreMobile") { MobileDevice = false; }
+            }
+            else
+            {
+                if (strUserAgent != null)
                 {
-                    if (strUserAgent.Contains("ipad") || (strUserAgent.Contains("android") && !strUserAgent.Contains("mobile")))
+                    if (MobileDevice == true || strUserAgent.Contains("iphone") || strUserAgent.Contains("blackberry") || strUserAgent.Contains("mobile") ||
+                    strUserAgent.Contains("android") || strUserAgent.Contains("windows ce") || strUserAgent.Contains("opera mini") || strUserAgent.Contains("palm"))
                     {
-                        if (Page.RouteData.Values["AdsID"] != null)
-                        {
-                            Response.Redirect("http://www.arabisky.com/m/ViewAd.aspx?AdsID=" + Page.RouteData.Values["AdsID"].ToString(), false);
-                        }
-                        else
-                        {
-                            Response.Redirect("http://www.arabisky.com/m/default.aspx", false);
-                        }
+                        Response.Redirect("http://www.arabisky.com/m/default.aspx", false);
                     }
-
                 }
             }
         }
