@@ -39,7 +39,7 @@ public partial class master : System.Web.UI.MasterPage
     {
         try
         {
-            //CheckDevice();
+            CheckDevice();
             if (FormsFunction.GetCookieData().Length != 0 || Session["UserInfo"] != null)
             {
                 if (FormsFunction.GetCookieData().Length != 0)
