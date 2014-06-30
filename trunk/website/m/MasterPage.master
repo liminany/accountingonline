@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.1403161077.css" />
     <script type="text/javascript" src="js/common.1403241416.js"></script>
     <script type="text/javascript" src="js/jquery.1339396013.js"></script>
+    <script src="../js/ArabiSkyCookie.js"></script>
     <link rel="shortcut icon" href="images/favicon.ico" />
     <script type="text/javascript">
         $(document).ready(function () {
@@ -78,6 +79,72 @@
                 $(".categoriesMain").show("slow");
             });
         });
+
+
+        function funChooseCountry(e) {
+            switch (e) {
+                case "12":
+                    createCookie("ArabiSkyCheckCountryFull", "12", 1e3);
+                    break;
+                case "14":
+                    createCookie("ArabiSkyCheckCountryFull", "14", 1e3);
+                    break;
+                case "15":
+                    createCookie("ArabiSkyCheckCountryFull", "15", 1e3);
+                    break;
+                case "16":
+                    createCookie("ArabiSkyCheckCountryFull", "16", 1e3);
+                    break;
+                case "17":
+                    createCookie("ArabiSkyCheckCountryFull", "17", 1e3);
+                    break;
+                case "19":
+                    createCookie("ArabiSkyCheckCountryFull", "19", 1e3);
+                    break;
+                case "24":
+                    createCookie("ArabiSkyCheckCountryFull", "24", 1e3);
+                    break;
+                case "23":
+                    createCookie("ArabiSkyCheckCountryFull", "23", 1e3);
+                    break;
+                case "21":
+                    createCookie("ArabiSkyCheckCountryFull", "21", 1e3);
+                    break;
+                case "20":
+                    createCookie("ArabiSkyCheckCountryFull", "20", 1e3);
+                    break;
+                case "18":
+                    createCookie("ArabiSkyCheckCountryFull", "18", 1e3);
+                    break;
+                case "22":
+                    createCookie("ArabiSkyCheckCountryFull", "22", 1e3);
+                    break;
+                case "27":
+                    createCookie("ArabiSkyCheckCountryFull", "27", 1e3);
+                    break;
+                case "26":
+                    createCookie("ArabiSkyCheckCountryFull", "26", 1e3);
+                    break;
+                case "25":
+                    createCookie("ArabiSkyCheckCountryFull", "25", 1e3);
+                    break;
+                case "28":
+                    createCookie("ArabiSkyCheckCountryFull", "28", 1e3);
+                    break;
+                case "29":
+                    createCookie("ArabiSkyCheckCountryFull", "29", 1e3);
+                    break;
+                case "30":
+                    createCookie("ArabiSkyCheckCountryFull", "30", 1e3);
+                    break;
+                case "31":
+                    createCookie("ArabiSkyCheckCountryFull", "31", 1e3);
+                    break;
+                default:
+                    break;
+            }
+            window.location = "/m/Default.aspx";
+        }
     </script>
 
 </head>
@@ -121,7 +188,7 @@
             <header>
                 <div id="header">
                     <div id="logo" class="float-left">
-                        <a href="index-2.html">
+                        <a href="~/m/Default.aspx" runat="server">
                             <img width="30" src="http://www.arabisky.com/images/ArabiSkyLogo.png" alt="" /></a>
                     </div>
                 </div>
@@ -129,25 +196,25 @@
                     <div class="float-left selectCity"><a href="javascript:void(0);" class="cities">الرجاء إختيار الدولة</a> </div>
                     <div class="selectCityContent">
                         <ul>
-                            <li><span onclick="changeCity('bangalore', 'm.click.in');">الأردن</span></li>
-                            <li><span onclick="changeCity('chennai', 'm.click.in');">فلسطين</span></li>
-                            <li><span onclick="changeCity('mumbai', 'm.click.in');">السعودية</span></li>
-                            <li><span onclick="changeCity('delhi', 'm.click.in');">مصر</span></li>
-                            <li><span onclick="changeCity('gurgaon', 'm.click.in');">الإمارات</span></li>
-                            <li><span onclick="changeCity('noida', 'm.click.in');">سوريا</span></li>
-                            <li><span onclick="changeCity('hyderabad', 'm.click.in');">ليبيا</span></li>
-                            <li><span onclick="changeCity('cochin', 'm.click.in');">الكويت</span></li>
-                            <li><span onclick="changeCity('coimbatore', 'm.click.in');">قطر</span></li>
-                            <li><span onclick="changeCity('pune', 'm.click.in');">البحرين</span></li>
-                            <li><span onclick="changeCity('kolkata', 'm.click.in');">اليمن</span></li>
-                            <li><span onclick="changeCity('ahmedabad', 'm.click.in');">عُمان</span></li>
-                            <li><span onclick="changeCity('goa', 'm.click.in');">تونس</span></li>
-                            <li><span onclick="changeCity('goa', 'm.click.in');">الجزائر</span></li>
-                            <li><span onclick="changeCity('goa', 'm.click.in');">المغرب</span></li>
-                            <li><span onclick="changeCity('goa', 'm.click.in');">لبنان</span></li>
-                            <li><span onclick="changeCity('goa', 'm.click.in');">العراق</span></li>
-                            <li><span onclick="changeCity('goa', 'm.click.in');">السودان</span></li>
-                            <li><span onclick="changeCity('goa', 'm.click.in');">موريتانيا</span></li>
+                            <li><span onclick="funChooseCountry('12');">الأردن</span></li>
+                            <li><span onclick="funChooseCountry('15');">فلسطين</span></li>
+                            <li><span onclick="funChooseCountry('14');">السعودية</span></li>
+                            <li><span onclick="funChooseCountry('17');">مصر</span></li>
+                            <li><span onclick="funChooseCountry('19');">الإمارات</span></li>
+                            <li><span onclick="funChooseCountry('27');">سوريا</span></li>
+                            <li><span onclick="funChooseCountry('16');">ليبيا</span></li>
+                            <li><span onclick="funChooseCountry('23');">الكويت</span></li>
+                            <li><span onclick="funChooseCountry('21');">قطر</span></li>
+                            <li><span onclick="funChooseCountry('20');">البحرين</span></li>
+                            <li><span onclick="funChooseCountry('18');">اليمن</span></li>
+                            <li><span onclick="funChooseCountry('22');">عُمان</span></li>
+                            <li><span onclick="funChooseCountry('25');">تونس</span></li>
+                            <li><span onclick="funChooseCountry('26');">الجزائر</span></li>
+                            <li><span onclick="funChooseCountry('27');">المغرب</span></li>
+                            <li><span onclick="funChooseCountry('28');">لبنان</span></li>
+                            <li><span onclick="funChooseCountry('29');">العراق</span></li>
+                            <li><span onclick="funChooseCountry('30');">السودان</span></li>
+                            <li><span onclick="funChooseCountry('31');">موريتانيا</span></li>
                         </ul>
                     </div>
                     <div class="clear"></div>
@@ -174,5 +241,11 @@
             </div>
         </div>
     </form>
+    <script>(function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
+        ga('create', 'UA-43880128-1', { 'userId': '10' });
+        ga('require', 'displayfeatures');
+        ga('set', 'dimension1', '10');
+        ga("send", "pageview");
+            </script>
 </body>
 </html>
