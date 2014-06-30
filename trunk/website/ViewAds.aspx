@@ -1,4 +1,4 @@
-﻿ <%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
+﻿     <%@ Page Title="" Language="C#" MasterPageFile="~/master.master" AutoEventWireup="true"
     CodeFile="ViewAds.aspx.cs" Inherits="ViewAds"  %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <script type="text/javascript">
@@ -70,7 +70,7 @@
             <div class="arabiSky-indexHeadingLeftCurve">
             </div>
             <div class="arabiSky-indexHeadingContent" style="width: 97%;">
-                <div style="float: right;">
+                <div style="float: right;width: 79%;">
                     <h1 itemprop="name" style="color: #111111; font-size: 20px;" runat="server" id="spAdsTitle"></h1>
                 </div>
                 <div style="float: left;">
