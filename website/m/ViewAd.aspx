@@ -9,10 +9,14 @@
     <div id="containerInner" style="margin-bottom: 12px;">
 
         <div class="classifiedPost">
-            <div class="classifieds-title">
-                <span class="viewPagePremiumImage">
-                    <img runat="server" src="./images/star.png" border="0"></span>
-                <h1 runat="server" id="spAdsTitle">AC Furnished Paying Guest Room Rent For LADIES Kitchen, LIFT</h1>
+            <div class="arabiSky-indexHeadingContent" style="width: 97%;">
+                <div style="float: right;width: 79%;">
+                    <h1 itemprop="name" style="color: #111111; font-size: 20px;" runat="server" id="spAdsTitle"></h1>
+                </div>
+                <div style="float: left;">
+                    <span  itemprop="price" style="color: #111111; font-size: 17px; font-weight: bolder;" runat="server"
+                        id="sp_Price"></span>
+                </div>
             </div>
             <div class="classifieds-optionBlock">
                 <div class="classifieds-img">
