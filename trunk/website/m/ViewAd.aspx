@@ -15,10 +15,9 @@
                 <h1 runat="server" id="spAdsTitle"></h1>
             </div>
             <div class="classifieds-optionBlock">
-                <div class="classifieds-img">
-                    <div style="display: none; margin: 10px; text-align: center; width: 100%; padding-right: 10px;" id="div_Slider" runat="server">
-                    </div>
-                    <div id="slider_google_ads"></div>
+                <div class="classifieds-img" style="display: none; margin: 10px; text-align: center; width: 100%; padding-right: 10px;" id="div_Slider" runat="server">
+                    
+        
                 </div>
                 <div class="clear"></div>
             </div>
