@@ -100,7 +100,7 @@
                     <asp:Repeater runat="server" ID="rptSlimlerAds">
                         <ItemTemplate>
                             <a href="<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>">
-                                <div class="cols" id="post_<%# DataBinder.Eval(Container.DataItem, "AdsID")%>" onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
+                                <div class="cols" style="cursor:pointer;" id="post_<%# DataBinder.Eval(Container.DataItem, "AdsID")%>" onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                     <div class="image float-left-padright">
                                         <a onclick="window.location='<%# GenerateURL(DataBinder.Eval(Container.DataItem, "AdsID"),DataBinder.Eval(Container.DataItem, "AdsTitle")) %>'">
                                             <img style="width: 100px; height: 103px;" src='<%# CheckImage(DataBinder.Eval(Container.DataItem, "AdsImages").ToString()) %>' alt="<%# DataBinder.Eval(Container.DataItem, "AdsTitle")%>" border="0" /></a>
