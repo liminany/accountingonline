@@ -46,49 +46,49 @@ public partial class m_ViewAd : System.Web.UI.Page
                         Page.Title = "سوق سماء العرب - " + BuildAdsTitle(rows["AdsTitle"].ToString());
                         Page.MetaDescription = "سوق سماء العرب - " + rows["AdsTitle"].ToString() + " | " + rows["CityName"].ToString() + " | " + rows["CountryName"].ToString() + " | " + rows["CatName"].ToString() + " | " + rows["SubCategoriesName"].ToString();
 
- 
 
-                        //if (Convert.ToInt32(rows["AdsPrice"].ToString()) > 0)
-                        //{
-                        //    sp_Price.InnerHtml = string.Format("السعر {0} {1}", rows["AdsPrice"].ToString(), GetCurrancyTags());
-                        //}
-                        //else
-                        //{
-                        //    sp_Price.Style.Add("display", "none");
-                        //}
 
-                        //liCity.InnerHtml = "المدينة : " + rows["CityName"].ToString();
-                        //liCountry.InnerHtml = "البلد : " + rows["CountryName"].ToString();
-                        //liCreateDate.InnerHtml = "تاريخ الإضافة : " + Convert.ToDateTime(rows["AdsCreateDate"].ToString()).ToShortDateString();
-                        //liSection.InnerHtml = "القسم : " + rows["CatName"].ToString();
-                        //liSubSection.InnerHtml = "القسم الفرعي : " + rows["SubCategoriesName"].ToString();
-                      
-                        //nAdsID = Convert.ToInt32(rows["AdsID"].ToString());
-                        //nSubCatID = Convert.ToInt32(rows["SubCatID"].ToString());
-                        //nAdsHit = Convert.ToInt32(rows["AdsHit"].ToString());
- 
+                        if (Convert.ToInt32(rows["AdsPrice"].ToString()) > 0)
+                        {
+                            sp_Price.InnerHtml = string.Format("السعر {0} {1}", rows["AdsPrice"].ToString(), GetCurrancyTags());
+                        }
+                        else
+                        {
+                            sp_Price.Style.Add("display", "none");
+                        }
 
-                        //if (!string.IsNullOrEmpty(rows["AdsYoutubeURL"].ToString()))
-                        //{
-                        //    div_YouTube.Style.Add("display", "");
-                        //    div_YouTubeURL.InnerHtml = string.Format("<iframe width='680' height='400' src='{0}' frameborder='0' allowfullscreen=''></iframe>", RunVedio(rows["AdsYoutubeURL"].ToString()));
-                        //}
-                        //else
-                        //{
-                        //    div_YouTube.Style.Add("display", "none");
-                        //}
-                        //div_AdsDescription.InnerHtml = rows["AdsDescription"].ToString();
-                        //if (!string.IsNullOrEmpty(rows["AdsImages"].ToString()))
-                        //{
-                        //    div_Slider.Style.Add("display", "");
-                        
-                        //    ViewAdsImage(rows["AdsImages"].ToString(), rows["AdsTitle"].ToString(), rows["CatName"].ToString(), rows["SubCategoriesName"].ToString());
-                        //}
-                        //else
-                        //{
-                        //    div_Slider.Style.Add("display", "none");
-                           
-                        //}
+                        liCity.InnerHtml = "المدينة : " + rows["CityName"].ToString();
+                        liCountry.InnerHtml = "البلد : " + rows["CountryName"].ToString();
+                        liCreateDate.InnerHtml = "تاريخ الإضافة : " + Convert.ToDateTime(rows["AdsCreateDate"].ToString()).ToShortDateString();
+                        liSection.InnerHtml = "القسم : " + rows["CatName"].ToString();
+                        liSubSection.InnerHtml = "القسم الفرعي : " + rows["SubCategoriesName"].ToString();
+
+                        nAdsID = Convert.ToInt32(rows["AdsID"].ToString());
+                        nSubCatID = Convert.ToInt32(rows["SubCatID"].ToString());
+                        nAdsHit = Convert.ToInt32(rows["AdsHit"].ToString());
+
+
+                        if (!string.IsNullOrEmpty(rows["AdsYoutubeURL"].ToString()))
+                        {
+                            div_YouTube.Style.Add("display", "");
+                            div_YouTubeURL.InnerHtml = string.Format("<iframe width='680' height='400' src='{0}' frameborder='0' allowfullscreen=''></iframe>", RunVedio(rows["AdsYoutubeURL"].ToString()));
+                        }
+                        else
+                        {
+                            div_YouTube.Style.Add("display", "none");
+                        }
+                        div_AdsDescription.InnerHtml = rows["AdsDescription"].ToString();
+                        if (!string.IsNullOrEmpty(rows["AdsImages"].ToString()))
+                        {
+                            div_Slider.Style.Add("display", "");
+
+                            ViewAdsImage(rows["AdsImages"].ToString(), rows["AdsTitle"].ToString(), rows["CatName"].ToString(), rows["SubCategoriesName"].ToString());
+                        }
+                        else
+                        {
+                            div_Slider.Style.Add("display", "none");
+
+                        }
  
 
                         #region UserProfile
