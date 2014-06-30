@@ -40,6 +40,7 @@ public partial class m_Category : System.Web.UI.Page
             {
                 Response.Redirect("~/", false);
             }
+            this.GetCustomersPageWise(1);
         }
         catch (Exception ex)
         {
