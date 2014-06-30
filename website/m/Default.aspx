@@ -63,12 +63,12 @@
                 <div class="subCategoriesBlock" id="cat_39">
                     <div>
                         <ul>
-                            <li><a href="houses-flats-for-rent-c41.html">العقارات و الإسكان</a></li>
-                            <li><a href="houses-flats-for-sale-c40.html">السيارات و المركبات</a></li>
-                            <li><a href="commercial-for-rent-c100.html">الكهربائيات و الإلكترونيات</a></li>
-                            <li><a href="commercial-for-sale-c44.html">الأثاث و المفروشات</a></li>
-                            <li><a href="land-plots-c99.html">أرقام هواتف مميزة</a></li>
-                            <li><a href="pg-accommodation-c43.html">أشياء أخرى</a></li> 
+                            <li><a runat="server" href="~/m/Category?catID=6">العقارات و الإسكان</a></li>
+                            <li><a runat="server" href="~/m/Category?catID=7">السيارات و المركبات</a></li>
+                            <li><a runat="server" href="~/m/Category?catID=8">الكهربائيات و الإلكترونيات</a></li>
+                            <li><a runat="server" href="~/m/Category?catID=9">الأثاث و المفروشات</a></li>
+                            <li><a runat="server" href="~/m/Category?catID=10">أرقام هواتف مميزة</a></li>
+                            <li><a runat="server" href="~/m/Category?catID=11">أشياء أخرى</a></li>
                         </ul>
                     </div>
                 </div>
@@ -117,7 +117,7 @@
                     <div class="icon float-left">
                         <img src="images/home-parent-caticon-150.png" alt="" />
                     </div>
-                    <div class="categoryText float-left"><a href="automobiles-c150.html">وظائف شاغرة - وظائف خالية</a></div>
+                    <div class="categoryText float-left"><a href="automobiles-c150.html">وظائف شاغرة</a></div>
                     <div class="clear"></div>
                 </div>
                 <div class="subCategoriesBlock" id="cat_150">
@@ -155,7 +155,7 @@
                         <ul>
                             <li><a href="mobiles-iphones-c52.html">العقارات و الإسكان</a></li>
                             <li><a href="laptop-desktop-c51.html">السيارات و المركبات</a></li>
-                            <li><a href="camera-c166.html">أشياء أخرى</a></li> 
+                            <li><a href="camera-c166.html">أشياء أخرى</a></li>
                         </ul>
                     </div>
                 </div>
@@ -178,7 +178,7 @@
                 <div class="subCategoriesBlock" id="cat_71">
                     <div>
                         <ul>
-                            <li><a href="cook-c157.html">الباحثين عن عمل</a></li> 
+                            <li><a href="cook-c157.html">الباحثين عن عمل</a></li>
                         </ul>
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                 <div class="subCategoriesBlock" id="cat_165">
                     <div>
                         <ul>
-                            <li><a href="furniture-c53.html">مطلوب شراء</a></li> 
+                            <li><a href="furniture-c53.html">مطلوب شراء</a></li>
                         </ul>
                     </div>
                 </div>
