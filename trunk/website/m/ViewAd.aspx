@@ -15,7 +15,7 @@
                 <h1 runat="server" id="spAdsTitle"></h1>
             </div>
             <div class="arabiSky-adDetails" style="float: right; width: 50%">
-                <ul style="font-size: 15px; font-weight: bolder;padding-right: 40px;padding-top: 25px;" itemprop="offerDetails" itemscope itemtype="http://data-vocabulary.org/Offer">
+                <ul style="text-align: right;direction: rtl;font-size: 15px; font-weight: bolder;padding-right: 40px;padding-top: 25px;" itemprop="offerDetails" itemscope itemtype="http://data-vocabulary.org/Offer">
                     <li style="text-align: right;" id="liSection" runat="server"></li>
                     <li style="text-align: right;" id="liSubSection" runat="server"></li>
                     <li style="text-align: right;" id="liCountry" runat="server"></li>
