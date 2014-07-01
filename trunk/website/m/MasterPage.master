@@ -7,13 +7,7 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,user-scalable=no" />
-    <%= SquishIt.Framework.Bundle.JavaScript()
-               .Add("~/js/ArabiSkyJSTools.js")
-               .Add("~/m/js/common.1403241416.js")
-               .Add("~/m/js/jquery.1339396013.js")
-               .ForceRelease()
-               .Render("~/m/js/combined_#.js")
-    %>
+
     <link rel="stylesheet" type="text/css" href="css/style.1403161077.css" />
     <link rel="shortcut icon" href="images/favicon.ico" />
     <script type="text/javascript">
@@ -229,6 +223,13 @@
                     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                     </asp:ContentPlaceHolder>
                 </div>
+                <%= SquishIt.Framework.Bundle.JavaScript()
+               .Add("~/js/ArabiSkyJSTools.js")
+               .Add("~/m/js/common.1403241416.js")
+               .Add("~/m/js/jquery.1339396013.js")
+               .ForceRelease()
+               .Render("~/m/js/combined_#.js")
+                %>
             </section>
         </div>
         <div style="text-align: center;">
