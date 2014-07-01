@@ -9,6 +9,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0,user-scalable=no" />
     <link rel="stylesheet" async type="text/css" href="css/style.1403161077.css" />
     <link rel="shortcut icon" href="images/favicon.ico" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="logo" style="text-align: center;">
+            <a href="~/m/Default.aspx" runat="server">
+                <img width="100" height="80" src="http://www.arabisky.com/images/ArabiSkyLogo.png" alt="" /></a>
+        </div>
+        <div id="wrapper">
+            <header>
+                <div id="header">
+                </div>
+                <div class="topblock">
+                    <div class="float-left selectCity" id="div_Country"><a href="javascript:void(0);" class="cities">الرجاء إختيار الدولة</a> </div>
+                    <div class="selectCityContent">
+                        <ul>
+                            <li><span onclick="funChooseCountry('12');">الأردن</span></li>
+                            <li><span onclick="funChooseCountry('15');">فلسطين</span></li>
+                            <li><span onclick="funChooseCountry('14');">السعودية</span></li>
+                            <li><span onclick="funChooseCountry('17');">مصر</span></li>
+                            <li><span onclick="funChooseCountry('19');">الإمارات</span></li>
+                            <li><span onclick="funChooseCountry('27');">سوريا</span></li>
+                            <li><span onclick="funChooseCountry('16');">ليبيا</span></li>
+                            <li><span onclick="funChooseCountry('23');">الكويت</span></li>
+                            <li><span onclick="funChooseCountry('21');">قطر</span></li>
+                            <li><span onclick="funChooseCountry('20');">البحرين</span></li>
+                            <li><span onclick="funChooseCountry('18');">اليمن</span></li>
+                            <li><span onclick="funChooseCountry('22');">عُمان</span></li>
+                            <li><span onclick="funChooseCountry('25');">تونس</span></li>
+                            <li><span onclick="funChooseCountry('26');">الجزائر</span></li>
+                            <li><span onclick="funChooseCountry('27');">المغرب</span></li>
+                            <li><span onclick="funChooseCountry('28');">لبنان</span></li>
+                            <li><span onclick="funChooseCountry('29');">العراق</span></li>
+                            <li><span onclick="funChooseCountry('30');">السودان</span></li>
+                            <li><span onclick="funChooseCountry('31');">موريتانيا</span></li>
+                        </ul>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </header>
+            <div id="fancybox-overlay"></div>
+            <section>
+                <div id="categories-container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <%= SquishIt.Framework.Bundle.JavaScript()
+               .Add("~/js/ArabiSkyJSTools.js")
+               .Add("~/m/js/common.1403241416.js")
+               .Add("~/m/js/jquery.1339396013.js")
+               .ForceRelease()
+               .Render("~/m/js/combined_#.js")
+                %>
+            </section>
+        </div>
+        <div style="text-align: center;">
+            <div class="arabiSky-footerLinksTop">
+                <a href="http://www.arabisky.com/" runat="server">الموقع الكامل</a> | 
+                <a href="~/ContactUs" runat="server">تواصل معنا</a> | 
+                        <a href="~/Help" runat="server">مساعدة</a> |   
+          <a href='https://www.facebook.com/arabisky' target="_blank">
+              <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server" /></a>
+                | <a href='https://twitter.com/arabisky' target="_blank">
+                    <img src="~/images/twitter_footer.png" alt="ArabiSky.com" runat="server" /></a>
+                | <a href='https://plus.google.com/+ArabiskyClassified/' target="_blank">
+                    <img src="~/images/gplus_footer.png" alt="ArabiSky.com" runat="server" /></a>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".cities").click(function () {
+                $(".selectCityContent").slideToggle("slow");
+            });
+            $("#fancybox-overlay").hide();
+
+            $("#category-search-list").hide();
+            $("#search-resultContent").hide();
+
+            $("#postAdBlock").hide();
+            $("#post_btn").click(function () {
+                $("#fancybox-overlay").show();
+                $("#postAdBlock").show("slow");
+                trackEvent('Post Link - Click', 'Header Left');
+            });
+            $(".cancel").click(function () {
+                $("#postAdBlock").hide("slow");
+                $("#fancybox-overlay").hide();
+            });
+
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#search_categories").click(function () {
+                $("#category-search-list").slideToggle("slow");
+            });
+            $("#search_categories_header").click(function () {
+                $("#category-search-list").slideToggle("slow");
+            });
+        });
+    </script>
     <script type="text/javascript">
         $(document).ready(function () {
             $("#sub_cat_block_39").hide();  //real estate
@@ -143,108 +245,6 @@
             window.location = "/m/Default.aspx";
         }
     </script>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div id="logo" style="text-align: center;">
-            <a href="~/m/Default.aspx" runat="server">
-                <img width="100" height="80" src="http://www.arabisky.com/images/ArabiSkyLogo.png" alt="" /></a>
-        </div>
-        <div id="wrapper">
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $(".cities").click(function () {
-                        $(".selectCityContent").slideToggle("slow");
-                    });
-                    $("#fancybox-overlay").hide();
-
-                    $("#category-search-list").hide();
-                    $("#search-resultContent").hide();
-
-                    $("#postAdBlock").hide();
-                    $("#post_btn").click(function () {
-                        $("#fancybox-overlay").show();
-                        $("#postAdBlock").show("slow");
-                        trackEvent('Post Link - Click', 'Header Left');
-                    });
-                    $(".cancel").click(function () {
-                        $("#postAdBlock").hide("slow");
-                        $("#fancybox-overlay").hide();
-                    });
-
-                });
-            </script>
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $("#search_categories").click(function () {
-                        $("#category-search-list").slideToggle("slow");
-                    });
-                    $("#search_categories_header").click(function () {
-                        $("#category-search-list").slideToggle("slow");
-                    });
-                });
-            </script>
-
-            <header>
-                <div id="header">
-                </div>
-                <div class="topblock">
-                    <div class="float-left selectCity" id="div_Country"><a href="javascript:void(0);" class="cities">الرجاء إختيار الدولة</a> </div>
-                    <div class="selectCityContent">
-                        <ul>
-                            <li><span onclick="funChooseCountry('12');">الأردن</span></li>
-                            <li><span onclick="funChooseCountry('15');">فلسطين</span></li>
-                            <li><span onclick="funChooseCountry('14');">السعودية</span></li>
-                            <li><span onclick="funChooseCountry('17');">مصر</span></li>
-                            <li><span onclick="funChooseCountry('19');">الإمارات</span></li>
-                            <li><span onclick="funChooseCountry('27');">سوريا</span></li>
-                            <li><span onclick="funChooseCountry('16');">ليبيا</span></li>
-                            <li><span onclick="funChooseCountry('23');">الكويت</span></li>
-                            <li><span onclick="funChooseCountry('21');">قطر</span></li>
-                            <li><span onclick="funChooseCountry('20');">البحرين</span></li>
-                            <li><span onclick="funChooseCountry('18');">اليمن</span></li>
-                            <li><span onclick="funChooseCountry('22');">عُمان</span></li>
-                            <li><span onclick="funChooseCountry('25');">تونس</span></li>
-                            <li><span onclick="funChooseCountry('26');">الجزائر</span></li>
-                            <li><span onclick="funChooseCountry('27');">المغرب</span></li>
-                            <li><span onclick="funChooseCountry('28');">لبنان</span></li>
-                            <li><span onclick="funChooseCountry('29');">العراق</span></li>
-                            <li><span onclick="funChooseCountry('30');">السودان</span></li>
-                            <li><span onclick="funChooseCountry('31');">موريتانيا</span></li>
-                        </ul>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </header>
-            <div id="fancybox-overlay"></div>
-            <section>
-                <div id="categories-container">
-                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                    </asp:ContentPlaceHolder>
-                </div>
-                <%= SquishIt.Framework.Bundle.JavaScript()
-               .Add("~/js/ArabiSkyJSTools.js")
-               .Add("~/m/js/common.1403241416.js")
-               .Add("~/m/js/jquery.1339396013.js")
-               .ForceRelease()
-               .Render("~/m/js/combined_#.js")
-                %>
-            </section>
-        </div>
-        <div style="text-align: center;">
-            <div class="arabiSky-footerLinksTop">
-                <a href="http://www.arabisky.com/" runat="server">الموقع الكامل</a> | 
-                <a href="~/ContactUs" runat="server">تواصل معنا</a> | 
-                        <a href="~/Help" runat="server">مساعدة</a> |   
-          <a href='https://www.facebook.com/arabisky' target="_blank">
-              <img src="~/images/facebook_footer.png" alt="ArabiSky.com" runat="server"></a>
-                | <a href='https://twitter.com/arabisky' target="_blank">
-                    <img src="~/images/twitter_footer.png" alt="ArabiSky.com" runat="server"></a>
-                | <a href='https://plus.google.com/+ArabiskyClassified/' target="_blank">
-                    <img src="~/images/gplus_footer.png" alt="ArabiSky.com" runat="server"></a>
-            </div>
-        </div>
-    </form>
     <script>(function (e, t, n, r, i, s, o) { e["GoogleAnalyticsObject"] = i; e[i] = e[i] || function () { (e[i].q = e[i].q || []).push(arguments) }, e[i].l = 1 * new Date; s = t.createElement(n), o = t.getElementsByTagName(n)[0]; s.async = 1; s.src = r; o.parentNode.insertBefore(s, o) })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
         ga('create', 'UA-43880128-1', { 'userId': '10' });
         ga('require', 'displayfeatures');
