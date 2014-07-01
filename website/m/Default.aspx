@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
     <div id="categories-content">
-        <div class="selectText">الرجاء القسم المراد البحث فيه</div>
+        <div class="selectText">سوق سماء العرب للإعلانات المبوبة - الرجاء قم بإختيار البلد الخاصة بك</div>
         <div class="categoriesMain" id="categoriesBlock">
             <ul>
                 <li class="parent_cat_block_39"><a href="javascript:void(0);">
