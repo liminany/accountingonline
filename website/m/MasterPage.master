@@ -57,8 +57,8 @@
                 </div>
                 <%= SquishIt.Framework.Bundle.JavaScript()
                .Add("~/js/ArabiSkyJSTools.js")
-               .Add("~/m/js/common.1403241416.js")
                .Add("~/m/js/jquery.1339396013.js")
+               .Add("~/m/js/common.1403241416.js")
                .ForceRelease()
                .Render("~/m/js/combined_#.js")
                 %>
