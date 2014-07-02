@@ -24,14 +24,14 @@
     <meta name="twitter:creator" content="@khodrog">
     <meta name="twitter:title" content="ArabiSky - سوق سماء العرب | وظائف | إعلانات | بيع و شراء | سيارات و مركبات">
     <meta name="twitter:description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة و كذلك لنشر اعلانات في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل">
-    <meta name="twitter:image:src" content="http://www.arabisky.com/images/ArabiSkyLogo.png">
+    <meta name="twitter:image:src" content="https://www.arabisky.com/images/ArabiSkyLogo.png">
     <meta name="twitter:data1" content="سماء العرب للكل العرب">
     <meta name="twitter:label1" content="بدك شغل ادخل على موقعنا و دور على شغل">
     <meta name="twitter:data2" content="الاردن,الامارات,الجزائر,العراق,وجميع الدول العربية">
     <meta name="twitter:label2" content="Amman - Jordan">
     <meta name="twitter:domain" content="arabisky.com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
     <link href="<%= this.ResolveClientUrl("~/js/Fancybox/jquery.fancybox.css")%>" rel="stylesheet" type="text/css" />
     <link rel="publisher" href="https://plus.google.com/+ArabiskyClassified" />
     <link rel="author" href="https://plus.google.com/+ArabiskyClassified" />
@@ -135,7 +135,7 @@
 	  "description" : "تمتع مع سوق سماء العرب باسهل طريقة للبيع و الشراء و البحث عن وظائف عبر الانترنت",
 	  "brand" : {
 		"@type" : "Brand",
-		"logo" : "http://www.arabisky.com/images/ArabiSkyLogo.png"
+		"logo" : "https://www.arabisky.com/images/ArabiSkyLogo.png"
 	  }
 	}
     </script>
@@ -423,7 +423,7 @@
                                 </ul>
                     </div> 
                     <div class="arabiSky-copyright">
-                        &copy; جميع الحقوق محفوظة <b><a href='http://www.arabisky.com/' target="_blank">لسوق سماء
+                        &copy; جميع الحقوق محفوظة <b><a href='https://www.arabisky.com/' target="_blank">لسوق سماء
                             العرب للإعلانات المبوبة</a>
                     </div>
                 </div>

@@ -10,13 +10,13 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta itemprop="name" content="ArabiSky | سوق سماء العرب للإعلانات المبوبة" />
     <meta itemprop="description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل" />
-    <meta itemprop="image" content="http://www.arabisky.com/images/ArabiSkylogo.png" />
-    <meta property="og:image" content='http://www.arabisky.com/images/ArabiSkyLogo.png' />
+    <meta itemprop="image" content="https://www.arabisky.com/images/ArabiSkylogo.png" />
+    <meta property="og:image" content='https://www.arabisky.com/images/ArabiSkyLogo.png' />
     <meta property="og:title" content='ArabiSky  - سوق سماء العرب | وظائف | إعلانات | بيع و شراء' />
     <meta property="og:description" content="سوق سماء العرب هو الطريق الأسهل لنشر اعلانات مبوبة مجانية  لبيع او شراء العقارات و الإسكان او السيارات او المركبات او الكهربائيات و الإلكترونيات او الأثاث و المفروشات او أرقام هواتف مميزة  و كذلك لنشر اعلانات  في مجال الخدمات اوللاعلان عن وظائف شاغرة او لايجاد فرصة عمل في قسم الباحثين عن عمل" />
     <meta property="og:keyword" content="اعلانات مبوبة مجانية  ,  للبيع , شراء , العقارات و الإسكان , السيارات , المركبات , الكهربائيات و الإلكترونيات , الأثاث و المفروشات , أرقام هواتف مميزة, وظائف خالية , الخدمات , وظائف شاغرة , الباحثين عن عمل" />
-    <meta property="og:url" content="http://www.arabisky.com/" />
-	<link rel="canonical" href="http://www.arabisky.com"/>
+    <meta property="og:url" content="https://www.arabisky.com/" />
+	<link rel="canonical" href="https://www.arabisky.com"/>
     <script type="text/javascript">
         function MakeDownSearch() { var e = document.getElementById("ctl00_ContentPlaceHolder1_ddlCountryName").value; var t = document.getElementById("ctl00_ContentPlaceHolder1_ddlCityName").value; var n = document.getElementById("ctl00_ContentPlaceHolder1_home_search_cat_id_Default").value; var r = ""; if (e == "-2" || e == "") { r += "الرجاء إختيار البلد\n" } if (t == "-2" || t == "") { r += "الرجاء إختيار المدينة\n" } if (n == "-2" || n == "") { r += "الرجاء إختيار القسم\n" } if (r != "") { alert(r) } else { $("#" + "<%= lbtnRefreshGVDownSearch.ClientID %>").trigger("click"); } }
     </script>
@@ -45,9 +45,9 @@
                     <div>
                         <div style="float: right; width: 255px;">
                             <h1>سماء العرب للإعلانات المبوبة
-                                <a href="http://www.arabisky.com/Categories/3/سيارات">سيارات</a>
-                                ,<a href="http://www.arabisky.com/Categories/3/عقارات-اراضي-اسكان">عقارات</a>
-                                ,<a href="http://www.arabisky.com/Categories/3/وظائف-شاغرة">وظائف</a>
+                                <a href="https://www.arabisky.com/Categories/3/سيارات">سيارات</a>
+                                ,<a href="https://www.arabisky.com/Categories/3/عقارات-اراضي-اسكان">عقارات</a>
+                                ,<a href="https://www.arabisky.com/Categories/3/وظائف-شاغرة">وظائف</a>
                             </h1>
                             <h2 style="font-size: 13px; font-weight: lighter; padding-bottom: 0px;">تمتع مع سوق سماء العرب باسهل طريقة للبيع و الشراء و البحث عن وظائف عبر الانترنت
                             </h2>
